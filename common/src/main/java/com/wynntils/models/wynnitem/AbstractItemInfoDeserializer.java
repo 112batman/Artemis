@@ -13,12 +13,7 @@ import com.wynntils.core.text.StyledText;
 import com.wynntils.models.character.type.ClassType;
 import com.wynntils.models.elements.type.Element;
 import com.wynntils.models.elements.type.Skill;
-import com.wynntils.models.gear.type.GearAttackSpeed;
-import com.wynntils.models.gear.type.GearMajorId;
-import com.wynntils.models.gear.type.GearMetaInfo;
-import com.wynntils.models.gear.type.GearRequirements;
-import com.wynntils.models.gear.type.GearRestrictions;
-import com.wynntils.models.gear.type.GearType;
+import com.wynntils.models.gear.type.*;
 import com.wynntils.models.stats.StatCalculator;
 import com.wynntils.models.stats.type.DamageType;
 import com.wynntils.models.stats.type.FixedStats;
@@ -32,11 +27,8 @@ import com.wynntils.utils.colors.CustomColor;
 import com.wynntils.utils.type.Pair;
 import com.wynntils.utils.type.RangedValue;
 import com.wynntils.utils.wynn.WynnUtils;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Locale;
-import java.util.Map;
-import java.util.Optional;
+
+import java.util.*;
 
 public abstract class AbstractItemInfoDeserializer<T> implements JsonDeserializer<T> {
     protected Pair<String, String> parseNames(JsonObject json) {

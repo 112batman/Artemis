@@ -48,12 +48,12 @@ public class ChatTabsWidget extends AbstractWidget {
         this.parent = parent;
 
         this.deleteButton = new Button.Builder(
-                        Component.translatable("screens.wynntils.chatTabsGui.delete")
-                                .withStyle(ChatFormatting.RED),
-                        (button) -> {
-                            Services.ChatTab.removeTab(chatTab);
-                            McUtils.mc().setScreen(ChatTabEditingScreen.create());
-                        })
+                Component.translatable("screens.wynntils.chatTabsGui.delete")
+                        .withStyle(ChatFormatting.RED),
+                (button) -> {
+                    Services.ChatTab.removeTab(chatTab);
+                    McUtils.mc().setScreen(ChatTabEditingScreen.create());
+                })
                 .pos((int) (this.getX() + (this.width / this.gridDivisions * 17)), this.getY() + (this.height / 2) - 10)
                 .size((int) (this.width / gridDivisions * 5) - 3, 20)
                 .build();
@@ -95,7 +95,8 @@ public class ChatTabsWidget extends AbstractWidget {
     }
 
     @Override
-    protected void updateWidgetNarration(NarrationElementOutput narrationElementOutput) {}
+    protected void updateWidgetNarration(NarrationElementOutput narrationElementOutput) {
+    }
 
     private void setChatTabIndex(int offset) {
         int newIndex =

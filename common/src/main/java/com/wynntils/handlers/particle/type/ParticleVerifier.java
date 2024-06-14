@@ -4,8 +4,9 @@
  */
 package com.wynntils.handlers.particle.type;
 
-import java.util.List;
 import net.minecraft.core.Position;
+
+import java.util.List;
 
 public interface ParticleVerifier {
     boolean verifyNewPosition(List<Position> positions, Position addedPosition);

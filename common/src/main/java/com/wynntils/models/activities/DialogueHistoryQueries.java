@@ -14,11 +14,12 @@ import com.wynntils.handlers.container.type.ContainerContent;
 import com.wynntils.utils.mc.LoreUtils;
 import com.wynntils.utils.mc.McUtils;
 import com.wynntils.utils.wynn.InventoryUtils;
+import net.minecraft.world.item.ItemStack;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import net.minecraft.world.item.ItemStack;
 
 public class DialogueHistoryQueries {
     private static final int DIALOGUE_HISTORY_SLOT = 58;

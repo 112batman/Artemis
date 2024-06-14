@@ -10,11 +10,13 @@ import com.wynntils.core.consumers.features.Feature;
 import com.wynntils.core.consumers.overlays.Overlay;
 import com.wynntils.core.consumers.overlays.RenderState;
 import com.wynntils.mc.event.RenderEvent;
+
 import java.lang.reflect.Field;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
+
 import org.apache.commons.lang3.reflect.FieldUtils;
 
 public class OverlayGroupHolder {

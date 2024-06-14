@@ -5,8 +5,9 @@
 package com.wynntils.services.itemfilter.type;
 
 import com.wynntils.utils.type.Pair;
-import java.util.List;
 import net.minecraft.ChatFormatting;
+
+import java.util.List;
 
 public record ItemSearchQuery(
         String queryString,

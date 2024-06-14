@@ -5,11 +5,14 @@
 package com.wynntils.core.keybinds;
 
 import com.mojang.blaze3d.platform.InputConstants;
-import java.util.function.Consumer;
 import net.minecraft.client.KeyMapping;
 import net.minecraft.world.inventory.Slot;
 
-/** Wraps a {@link KeyMapping} with relevant context */
+import java.util.function.Consumer;
+
+/**
+ * Wraps a {@link KeyMapping} with relevant context
+ */
 public class KeyBind {
     private static final String CATEGORY = "Wynntils";
     private final Runnable onPress;
@@ -39,12 +42,12 @@ public class KeyBind {
     }
 
     /**
-     * @param name             Name of the keybind
-     * @param keyCode          The keyCode of the default keybind. Use {@link org.lwjgl.glfw.GLFW} for easy
-     *                         key code getting
-     * @param type             Type of key
-     * @param firstPress       Boolean for whether onPress should only be done on first press
-     * @param onPress          Code to run when button is pressed, or null
+     * @param name       Name of the keybind
+     * @param keyCode    The keyCode of the default keybind. Use {@link org.lwjgl.glfw.GLFW} for easy
+     *                   key code getting
+     * @param type       Type of key
+     * @param firstPress Boolean for whether onPress should only be done on first press
+     * @param onPress    Code to run when button is pressed, or null
      */
     public KeyBind(String name, int keyCode, InputConstants.Type type, boolean firstPress, Runnable onPress) {
         this.firstPress = firstPress;

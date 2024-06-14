@@ -12,11 +12,12 @@ import com.wynntils.services.itemfilter.type.StatFilterFactory;
 import com.wynntils.utils.MathUtils;
 import com.wynntils.utils.mc.ComponentUtils;
 import com.wynntils.utils.render.Texture;
-import java.util.ArrayList;
-import java.util.List;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import org.lwjgl.glfw.GLFW;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ItemSearchHelperWidget extends BasicTexturedButton {
     private static final int ELEMENTS_PER_PAGE = 4;
@@ -34,7 +35,8 @@ public class ItemSearchHelperWidget extends BasicTexturedButton {
             Texture texture,
             boolean scaleTexture,
             List<ItemProviderType> supportedProviderTypes) {
-        super(x, y, width, height, texture, (b) -> {}, List.of(), scaleTexture);
+        super(x, y, width, height, texture, (b) -> {
+        }, List.of(), scaleTexture);
         this.supportedProviderTypes = supportedProviderTypes;
 
         generateTooltipPages();

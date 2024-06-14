@@ -4,4 +4,5 @@
  */
 package com.wynntils.models.wynnitem.type;
 
-public record NamedItemEffect(ConsumableEffect type, int value) {}
+public record NamedItemEffect(ConsumableEffect type, int value) {
+}

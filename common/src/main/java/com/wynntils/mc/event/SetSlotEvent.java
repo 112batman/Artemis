@@ -8,7 +8,9 @@ import net.minecraft.world.Container;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.eventbus.api.Event;
 
-/** Fired when an item is set in a slot */
+/**
+ * Fired when an item is set in a slot
+ */
 public abstract class SetSlotEvent extends Event {
     private final Container container;
     private final int slot;

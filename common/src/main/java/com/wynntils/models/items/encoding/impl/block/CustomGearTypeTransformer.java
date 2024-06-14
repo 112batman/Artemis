@@ -22,8 +22,8 @@ public class CustomGearTypeTransformer extends DataTransformer<CustomGearTypeDat
                     yield ErrorOr.error("Gear type cannot be encoded.");
                 }
 
-                yield ErrorOr.of(new UnsignedByte[] {
-                    new UnsignedByte((byte) data.gearType().getEncodingId())
+                yield ErrorOr.of(new UnsignedByte[]{
+                        new UnsignedByte((byte) data.gearType().getEncodingId())
                 });
             }
         };

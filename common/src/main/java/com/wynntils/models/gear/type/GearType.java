@@ -5,8 +5,10 @@
 package com.wynntils.models.gear.type;
 
 import com.wynntils.models.character.type.ClassType;
+
 import java.util.List;
 import java.util.Locale;
+
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;

@@ -6,10 +6,11 @@ package com.wynntils.handlers.labels.event;
 
 import com.wynntils.core.text.StyledText;
 import com.wynntils.handlers.labels.type.LabelInfo;
-import java.util.Optional;
 import net.minecraft.world.entity.Entity;
 import net.minecraftforge.eventbus.api.Cancelable;
 import net.minecraftforge.eventbus.api.Event;
+
+import java.util.Optional;
 
 @Cancelable
 public class EntityLabelChangedEvent extends Event {

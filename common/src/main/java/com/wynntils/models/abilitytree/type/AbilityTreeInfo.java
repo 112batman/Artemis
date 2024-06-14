@@ -9,4 +9,5 @@ import java.util.List;
 /**
  * This class contains all relevant info to a specific class' ability tree.
  */
-public record AbilityTreeInfo(List<AbilityTreeSkillNode> nodes) {}
+public record AbilityTreeInfo(List<AbilityTreeSkillNode> nodes) {
+}

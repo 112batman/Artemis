@@ -5,11 +5,12 @@
 package com.wynntils.fabric;
 
 import com.wynntils.core.WynntilsMod;
-import java.io.File;
-import java.util.Optional;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.loader.api.FabricLoader;
 import net.fabricmc.loader.api.ModContainer;
+
+import java.io.File;
+import java.util.Optional;
 
 public class WynntilsModFabric implements ClientModInitializer {
     @Override

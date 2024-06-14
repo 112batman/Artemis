@@ -5,8 +5,9 @@
 package com.wynntils.models.elements.type;
 
 import com.wynntils.utils.StringUtils;
-import java.util.Locale;
 import net.minecraft.ChatFormatting;
+
+import java.util.Locale;
 
 public enum Skill {
     STRENGTH(Element.EARTH),

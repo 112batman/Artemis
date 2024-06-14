@@ -47,6 +47,7 @@ public class ServerProfile {
 
     /**
      * This makes the firstSeen match the user computer time instead of the server time
+     *
      * @param serverTime the input server time
      */
     public void matchTime(long serverTime) {

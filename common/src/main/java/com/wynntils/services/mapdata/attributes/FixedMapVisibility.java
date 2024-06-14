@@ -5,6 +5,7 @@
 package com.wynntils.services.mapdata.attributes;
 
 import com.wynntils.services.mapdata.attributes.type.MapVisibility;
+
 import java.util.Optional;
 
 public class FixedMapVisibility implements MapVisibility {

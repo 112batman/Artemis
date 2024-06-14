@@ -19,11 +19,13 @@ import com.wynntils.models.wynnalphabet.WynnAlphabet;
 import com.wynntils.models.wynnalphabet.type.TranscribeCondition;
 import com.wynntils.utils.colors.ColorChatFormatting;
 import com.wynntils.utils.type.IterationDecision;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Function;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
 import net.minecraft.network.chat.Style;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -197,11 +199,11 @@ public class TranscribeMessagesFeature extends Feature {
                 //               so we reduce the number of color codes in the string output
                 Style style = preText.isBlank()
                         ? part.getPartStyle()
+                        .getStyle()
+                        .withColor(transcribedPart
+                                .getPartStyle()
                                 .getStyle()
-                                .withColor(transcribedPart
-                                        .getPartStyle()
-                                        .getStyle()
-                                        .getColor())
+                                .getColor())
                         : part.getPartStyle().getStyle();
 
                 newParts.add(new StyledTextPart(preText, style, null, Style.EMPTY));

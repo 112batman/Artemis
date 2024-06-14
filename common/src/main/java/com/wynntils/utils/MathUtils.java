@@ -7,6 +7,7 @@ package com.wynntils.utils;
 import java.util.Locale;
 import java.util.Map;
 import java.util.TreeMap;
+
 import org.joml.Vector2f;
 
 public final class MathUtils {

@@ -12,6 +12,7 @@ import com.wynntils.models.containers.type.MythicFind;
 import com.wynntils.models.lootrun.type.TaskLocation;
 import com.wynntils.utils.EnumUtils;
 import com.wynntils.utils.type.CappedValue;
+
 import java.util.Comparator;
 import java.util.List;
 

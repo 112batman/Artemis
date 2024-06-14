@@ -8,6 +8,7 @@ import com.wynntils.core.WynntilsMod;
 import com.wynntils.core.components.Models;
 import com.wynntils.handlers.scoreboard.ScoreboardSegment;
 import com.wynntils.handlers.scoreboard.type.SegmentMatcher;
+
 import java.util.List;
 
 public class GuildObjectiveScoreboardPart extends AbstractObjectivesScoreboardPart {

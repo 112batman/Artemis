@@ -18,6 +18,7 @@ import com.wynntils.models.wynnitem.type.ItemEffect;
 import com.wynntils.models.wynnitem.type.NamedItemEffect;
 import com.wynntils.utils.type.CappedValue;
 import com.wynntils.utils.type.RangedValue;
+
 import java.util.List;
 
 public class CraftedConsumableItem extends GameItem

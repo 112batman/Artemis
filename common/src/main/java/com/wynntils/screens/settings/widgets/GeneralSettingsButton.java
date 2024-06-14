@@ -16,9 +16,10 @@ import com.wynntils.utils.render.RenderUtils;
 import com.wynntils.utils.render.type.HorizontalAlignment;
 import com.wynntils.utils.render.type.TextShadow;
 import com.wynntils.utils.render.type.VerticalAlignment;
-import java.util.List;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
+
+import java.util.List;
 
 public abstract class GeneralSettingsButton extends WynntilsButton {
     public static final CustomColor BACKGROUND_COLOR = new CustomColor(98, 34, 8);

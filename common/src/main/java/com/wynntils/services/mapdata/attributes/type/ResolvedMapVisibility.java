@@ -4,4 +4,5 @@
  */
 package com.wynntils.services.mapdata.attributes.type;
 
-public record ResolvedMapVisibility(float min, float max, float fade) {}
+public record ResolvedMapVisibility(float min, float max, float fade) {
+}

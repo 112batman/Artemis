@@ -22,6 +22,11 @@ import com.wynntils.models.worlds.event.WorldStateEvent;
 import com.wynntils.models.worlds.type.WorldState;
 import com.wynntils.utils.mc.McUtils;
 import com.wynntils.utils.type.TimedSet;
+import net.minecraft.client.multiplayer.PlayerInfo;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.scores.PlayerTeam;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+
 import java.lang.reflect.Type;
 import java.util.List;
 import java.util.Map;
@@ -33,10 +38,6 @@ import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Stream;
-import net.minecraft.client.multiplayer.PlayerInfo;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.scores.PlayerTeam;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 public final class PlayerModel extends Model {
     private static final Gson PLAYER_GSON = new GsonBuilder()
@@ -206,7 +207,8 @@ public final class PlayerModel extends Model {
         ApiResponse apiResponse = Managers.Net.callApi(UrlId.DATA_WYNNCRAFT_PLAYER, Map.of("username", username));
         apiResponse.handleJsonObject(
                 json -> {
-                    Type type = new TypeToken<WynnPlayerInfo>() {}.getType();
+                    Type type = new TypeToken<WynnPlayerInfo>() {
+                    }.getType();
 
                     future.complete(PLAYER_GSON.fromJson(json, type));
                 },

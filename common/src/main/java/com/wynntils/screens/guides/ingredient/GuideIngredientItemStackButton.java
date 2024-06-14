@@ -15,10 +15,11 @@ import com.wynntils.utils.colors.CustomColor;
 import com.wynntils.utils.mc.KeyboardUtils;
 import com.wynntils.utils.render.RenderUtils;
 import com.wynntils.utils.render.Texture;
-import java.util.Map;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
 import org.lwjgl.glfw.GLFW;
+
+import java.util.Map;
 
 public class GuideIngredientItemStackButton extends WynntilsButton {
     private final GuideIngredientItemStack itemStack;
@@ -101,7 +102,8 @@ public class GuideIngredientItemStackButton extends WynntilsButton {
 
     /* no-op */
     @Override
-    public void onPress() {}
+    public void onPress() {
+    }
 
     public GuideIngredientItemStack getItemStack() {
         return itemStack;

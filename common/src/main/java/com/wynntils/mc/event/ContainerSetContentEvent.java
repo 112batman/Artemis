@@ -4,10 +4,11 @@
  */
 package com.wynntils.mc.event;
 
-import java.util.List;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.eventbus.api.Cancelable;
 import net.minecraftforge.eventbus.api.Event;
+
+import java.util.List;
 
 public abstract class ContainerSetContentEvent extends Event {
     private final List<ItemStack> items;

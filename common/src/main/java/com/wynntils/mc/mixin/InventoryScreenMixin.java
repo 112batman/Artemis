@@ -17,10 +17,10 @@ public abstract class InventoryScreenMixin {
     @ModifyArg(
             method = "init()V",
             at =
-                    @At(
-                            value = "INVOKE",
-                            target =
-                                    "Lnet/minecraft/client/gui/components/ImageButton;<init>(IIIILnet/minecraft/client/gui/components/WidgetSprites;Lnet/minecraft/client/gui/components/Button$OnPress;)V"))
+            @At(
+                    value = "INVOKE",
+                    target =
+                            "Lnet/minecraft/client/gui/components/ImageButton;<init>(IIIILnet/minecraft/client/gui/components/WidgetSprites;Lnet/minecraft/client/gui/components/Button$OnPress;)V"))
     private Button.OnPress onRecipeBookButtonCreate(Button.OnPress onPress) {
         return button -> {
             RecipeBookOpenEvent event = new RecipeBookOpenEvent();

@@ -5,4 +5,5 @@
 package com.wynntils.models.seaskipper.type;
 
 public record SeaskipperDestinationProfile(
-        String destination, int combatLevel, int startX, int startZ, int endX, int endZ) {}
+        String destination, int combatLevel, int startX, int startZ, int endX, int endZ) {
+}

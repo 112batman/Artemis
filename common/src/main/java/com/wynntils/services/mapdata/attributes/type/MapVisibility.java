@@ -5,6 +5,7 @@
 package com.wynntils.services.mapdata.attributes.type;
 
 import com.wynntils.services.mapdata.attributes.MapVisibilityBuilder;
+
 import java.util.Optional;
 
 public interface MapVisibility {

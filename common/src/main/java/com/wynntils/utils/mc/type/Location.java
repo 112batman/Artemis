@@ -6,8 +6,10 @@ package com.wynntils.utils.mc.type;
 
 import com.wynntils.utils.MathUtils;
 import com.wynntils.utils.mc.PosUtils;
+
 import java.util.Comparator;
 import java.util.Objects;
+
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Position;
 import net.minecraft.world.phys.Vec3;

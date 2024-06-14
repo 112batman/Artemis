@@ -11,6 +11,7 @@ import com.wynntils.core.persisted.config.Category;
 import com.wynntils.core.persisted.config.ConfigCategory;
 import com.wynntils.mc.event.RenderEvent;
 import com.wynntils.overlays.infobox.InfoBoxOverlay;
+
 import java.util.ArrayList;
 import java.util.List;
 

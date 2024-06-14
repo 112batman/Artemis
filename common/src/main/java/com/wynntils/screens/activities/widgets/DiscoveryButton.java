@@ -21,12 +21,13 @@ import com.wynntils.utils.render.Texture;
 import com.wynntils.utils.render.type.HorizontalAlignment;
 import com.wynntils.utils.render.type.TextShadow;
 import com.wynntils.utils.render.type.VerticalAlignment;
-import java.util.ArrayList;
-import java.util.List;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
 import org.lwjgl.glfw.GLFW;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class DiscoveryButton extends WynntilsButton implements TooltipProvider {
     private static final CustomColor BUTTON_COLOR = new CustomColor(181, 174, 151);
@@ -67,15 +68,15 @@ public class DiscoveryButton extends WynntilsButton implements TooltipProvider {
 
         Texture stateTexture = discoveryInfo.isDiscovered()
                 ? switch (discoveryInfo.getType()) {
-                    case TERRITORY -> Texture.DISCOVERED_TERRITORY_ICON;
-                    case WORLD -> Texture.DISCOVERED_WORLD_ICON;
-                    case SECRET -> Texture.DISCOVERED_SECRET_ICON;
-                }
+            case TERRITORY -> Texture.DISCOVERED_TERRITORY_ICON;
+            case WORLD -> Texture.DISCOVERED_WORLD_ICON;
+            case SECRET -> Texture.DISCOVERED_SECRET_ICON;
+        }
                 : switch (discoveryInfo.getType()) {
-                    case TERRITORY -> Texture.UNDISCOVERED_TERRITORY_ICON;
-                    case WORLD -> Texture.UNDISCOVERED_WORLD_ICON;
-                    case SECRET -> Texture.UNDISCOVERED_SECRET_ICON;
-                };
+            case TERRITORY -> Texture.UNDISCOVERED_TERRITORY_ICON;
+            case WORLD -> Texture.UNDISCOVERED_WORLD_ICON;
+            case SECRET -> Texture.UNDISCOVERED_SECRET_ICON;
+        };
 
         RenderUtils.drawTexturedRect(
                 poseStack,
@@ -103,7 +104,8 @@ public class DiscoveryButton extends WynntilsButton implements TooltipProvider {
 
     // not called
     @Override
-    public void onPress() {}
+    public void onPress() {
+    }
 
     @Override
     public List<Component> getTooltipLines() {

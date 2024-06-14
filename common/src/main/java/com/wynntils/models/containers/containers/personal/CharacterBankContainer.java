@@ -6,6 +6,7 @@ package com.wynntils.models.containers.containers.personal;
 
 import com.wynntils.models.containers.type.HighlightableProfessionProperty;
 import com.wynntils.models.containers.type.PersonalStorageType;
+
 import java.util.regex.Pattern;
 
 public class CharacterBankContainer extends PersonalStorageContainer implements HighlightableProfessionProperty {

@@ -9,6 +9,7 @@ import com.wynntils.models.elements.type.Element;
 import com.wynntils.models.elements.type.Powder;
 import com.wynntils.models.elements.type.PowderTierInfo;
 import com.wynntils.models.elements.type.Skill;
+
 import java.util.List;
 
 public class ElementModel extends Model {

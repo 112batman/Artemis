@@ -5,6 +5,7 @@
 package com.wynntils.core.consumers.features;
 
 import com.wynntils.core.persisted.config.Config;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;

@@ -10,8 +10,10 @@ import com.wynntils.core.consumers.features.Configurable;
 import com.wynntils.core.persisted.PersistedValue;
 import com.wynntils.core.persisted.type.PersistedMetadata;
 import com.wynntils.utils.EnumUtils;
+
 import java.util.Objects;
 import java.util.stream.Stream;
+
 import net.minecraft.client.resources.language.I18n;
 import org.apache.commons.lang3.ClassUtils;
 import org.apache.commons.lang3.builder.EqualsBuilder;

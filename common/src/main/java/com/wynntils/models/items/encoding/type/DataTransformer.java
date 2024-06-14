@@ -10,6 +10,7 @@ import com.wynntils.utils.type.UnsignedByte;
 
 /**
  * Interface for transforming data into bytes.
+ *
  * @param <T> The type of data to transform.
  */
 public abstract class DataTransformer<T extends ItemData> {

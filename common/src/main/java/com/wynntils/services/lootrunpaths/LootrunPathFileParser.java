@@ -11,6 +11,11 @@ import com.wynntils.core.WynntilsMod;
 import com.wynntils.services.lootrunpaths.type.LootrunNote;
 import com.wynntils.services.lootrunpaths.type.LootrunPath;
 import com.wynntils.services.lootrunpaths.type.LootrunSaveResult;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Position;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.phys.Vec3;
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -20,15 +25,7 @@ import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Locale;
-import java.util.Set;
-import net.minecraft.core.BlockPos;
-import net.minecraft.core.Position;
-import net.minecraft.network.chat.Component;
-import net.minecraft.world.phys.Vec3;
+import java.util.*;
 
 public final class LootrunPathFileParser {
     public static UncompiledLootrunPath readJson(File file, JsonObject json) {

@@ -18,8 +18,10 @@ import com.wynntils.models.worlds.event.WorldStateEvent;
 import com.wynntils.models.worlds.type.WorldState;
 import com.wynntils.services.hades.HadesUser;
 import com.wynntils.utils.mc.McUtils;
+
 import java.util.ArrayList;
 import java.util.List;
+
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 public class WarModel extends Model {

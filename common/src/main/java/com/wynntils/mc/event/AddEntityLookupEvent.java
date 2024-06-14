@@ -4,11 +4,12 @@
  */
 package com.wynntils.mc.event;
 
-import java.util.Map;
-import java.util.UUID;
 import net.minecraft.world.level.entity.EntityAccess;
 import net.minecraftforge.eventbus.api.Cancelable;
 import net.minecraftforge.eventbus.api.Event;
+
+import java.util.Map;
+import java.util.UUID;
 
 @Cancelable
 public class AddEntityLookupEvent extends Event {

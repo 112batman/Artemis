@@ -41,5 +41,6 @@ public class CategoryButton extends WynntilsButton {
     }
 
     @Override
-    public void onPress() {}
+    public void onPress() {
+    }
 }

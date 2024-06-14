@@ -6,9 +6,10 @@ package com.wynntils.services.mapdata.providers.builtin;
 
 import com.wynntils.services.mapdata.attributes.type.MapIcon;
 import com.wynntils.utils.render.Texture;
+import net.minecraft.resources.ResourceLocation;
+
 import java.util.List;
 import java.util.stream.Stream;
-import net.minecraft.resources.ResourceLocation;
 
 public class MapIconsProvider extends BuiltInProvider {
     public static final String FALLBACK_ICON_ID = "wynntils:icon:symbols:waypoint";

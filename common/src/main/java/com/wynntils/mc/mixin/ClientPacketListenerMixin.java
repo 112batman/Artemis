@@ -10,37 +10,10 @@ import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.tree.RootCommandNode;
 import com.wynntils.core.events.MixinHelper;
 import com.wynntils.core.text.StyledText;
-import com.wynntils.mc.event.AddEntityEvent;
-import com.wynntils.mc.event.AdvancementUpdateEvent;
-import com.wynntils.mc.event.ChatPacketReceivedEvent;
-import com.wynntils.mc.event.ChatSentEvent;
-import com.wynntils.mc.event.CommandSentEvent;
-import com.wynntils.mc.event.CommandsAddedEvent;
-import com.wynntils.mc.event.ContainerSetContentEvent;
-import com.wynntils.mc.event.ContainerSetSlotEvent;
-import com.wynntils.mc.event.LocalSoundEvent;
-import com.wynntils.mc.event.MenuEvent;
-import com.wynntils.mc.event.MobEffectEvent;
-import com.wynntils.mc.event.ParticleAddedEvent;
-import com.wynntils.mc.event.PlayerInfoEvent;
-import com.wynntils.mc.event.PlayerInfoFooterChangedEvent;
-import com.wynntils.mc.event.PlayerTeleportEvent;
-import com.wynntils.mc.event.RemoveEntitiesEvent;
-import com.wynntils.mc.event.ScoreboardSetDisplayObjectiveEvent;
-import com.wynntils.mc.event.ScoreboardSetObjectiveEvent;
-import com.wynntils.mc.event.ScoreboardSetScoreEvent;
-import com.wynntils.mc.event.SetEntityDataEvent;
-import com.wynntils.mc.event.SetEntityPassengersEvent;
-import com.wynntils.mc.event.SetPlayerTeamEvent;
-import com.wynntils.mc.event.SetSpawnEvent;
-import com.wynntils.mc.event.SetXpEvent;
-import com.wynntils.mc.event.SubtitleSetTextEvent;
-import com.wynntils.mc.event.TeleportEntityEvent;
-import com.wynntils.mc.event.TitleSetTextEvent;
+import com.wynntils.mc.event.*;
 import com.wynntils.mc.mixin.accessors.ClientboundSetPlayerTeamPacketAccessor;
+import com.wynntils.mc.mixin.accessors.ReceivingLevelScreenAccessor;
 import com.wynntils.utils.mc.McUtils;
-import java.util.List;
-import java.util.UUID;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.ReceivingLevelScreen;
 import net.minecraft.client.multiplayer.ClientCommonPacketListenerImpl;
@@ -54,36 +27,9 @@ import net.minecraft.network.chat.ChatType;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MessageSignatureCache;
 import net.minecraft.network.chat.PlayerChatMessage;
-import net.minecraft.network.protocol.game.ClientboundAddEntityPacket;
-import net.minecraft.network.protocol.game.ClientboundCommandsPacket;
-import net.minecraft.network.protocol.game.ClientboundContainerClosePacket;
-import net.minecraft.network.protocol.game.ClientboundContainerSetContentPacket;
-import net.minecraft.network.protocol.game.ClientboundContainerSetSlotPacket;
-import net.minecraft.network.protocol.game.ClientboundLevelParticlesPacket;
-import net.minecraft.network.protocol.game.ClientboundOpenScreenPacket;
-import net.minecraft.network.protocol.game.ClientboundPlayerChatPacket;
-import net.minecraft.network.protocol.game.ClientboundPlayerInfoRemovePacket;
-import net.minecraft.network.protocol.game.ClientboundPlayerInfoUpdatePacket;
-import net.minecraft.network.protocol.game.ClientboundPlayerPositionPacket;
-import net.minecraft.network.protocol.game.ClientboundRemoveEntitiesPacket;
-import net.minecraft.network.protocol.game.ClientboundRemoveMobEffectPacket;
-import net.minecraft.network.protocol.game.ClientboundSetDefaultSpawnPositionPacket;
-import net.minecraft.network.protocol.game.ClientboundSetDisplayObjectivePacket;
-import net.minecraft.network.protocol.game.ClientboundSetEntityDataPacket;
-import net.minecraft.network.protocol.game.ClientboundSetExperiencePacket;
-import net.minecraft.network.protocol.game.ClientboundSetObjectivePacket;
-import net.minecraft.network.protocol.game.ClientboundSetPassengersPacket;
-import net.minecraft.network.protocol.game.ClientboundSetPlayerTeamPacket;
-import net.minecraft.network.protocol.game.ClientboundSetScorePacket;
-import net.minecraft.network.protocol.game.ClientboundSetSubtitleTextPacket;
-import net.minecraft.network.protocol.game.ClientboundSetTitleTextPacket;
-import net.minecraft.network.protocol.game.ClientboundSoundPacket;
-import net.minecraft.network.protocol.game.ClientboundSystemChatPacket;
-import net.minecraft.network.protocol.game.ClientboundTabListPacket;
-import net.minecraft.network.protocol.game.ClientboundTeleportEntityPacket;
-import net.minecraft.network.protocol.game.ClientboundUpdateAdvancementsPacket;
-import net.minecraft.network.protocol.game.ClientboundUpdateMobEffectPacket;
+import net.minecraft.network.protocol.game.*;
 import net.minecraft.network.syncher.SynchedEntityData;
+import net.minecraft.server.ServerScoreboard;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.phys.Vec3;
 import org.spongepowered.asm.mixin.Mixin;
@@ -94,6 +40,9 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.ModifyArg;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
+
+import java.util.List;
+import java.util.UUID;
 
 @Mixin(ClientPacketListener.class)
 public abstract class ClientPacketListenerMixin extends ClientCommonPacketListenerImpl {
@@ -379,7 +328,8 @@ public abstract class ClientPacketListenerMixin extends ClientCommonPacketListen
             // Signal loading complete to the loading screen,
             // or else we are stuck in an "infinite" loading state
             if (McUtils.mc().screen instanceof ReceivingLevelScreen receivingLevelScreen) {
-                receivingLevelScreen.loadingPacketsReceived();
+                ((ReceivingLevelScreenAccessor) receivingLevelScreen).setLevelReceived(() -> true);
+                receivingLevelScreen.tick();
             }
         }
     }
@@ -415,10 +365,10 @@ public abstract class ClientPacketListenerMixin extends ClientCommonPacketListen
     @Inject(
             method = "handlePlayerChat(Lnet/minecraft/network/protocol/game/ClientboundPlayerChatPacket;)V",
             at =
-                    @At(
-                            value = "INVOKE",
-                            target =
-                                    "Lnet/minecraft/client/multiplayer/chat/ChatListener;handlePlayerChatMessage(Lnet/minecraft/network/chat/PlayerChatMessage;Lcom/mojang/authlib/GameProfile;Lnet/minecraft/network/chat/ChatType$Bound;)V"),
+            @At(
+                    value = "INVOKE",
+                    target =
+                            "Lnet/minecraft/client/multiplayer/chat/ChatListener;handlePlayerChatMessage(Lnet/minecraft/network/chat/PlayerChatMessage;Lcom/mojang/authlib/GameProfile;Lnet/minecraft/network/chat/ChatType$Bound;)V"),
             cancellable = true)
     private void handlePlayerChat(
             ClientboundPlayerChatPacket packet,
@@ -442,7 +392,7 @@ public abstract class ClientPacketListenerMixin extends ClientCommonPacketListen
                     packet.chatType().resolve(this.registryAccess).get();
 
             this.minecraft.getChatListener().handlePlayerChatMessage(playerChatMessage, playerInfo.getProfile(), bound);
-            this.messageSignatureCache.push(playerChatMessage);
+            this.messageSignatureCache.push(playerChatMessage.signedBody(), playerChatMessage.signature());
 
             ci.cancel();
         }
@@ -451,10 +401,10 @@ public abstract class ClientPacketListenerMixin extends ClientCommonPacketListen
     @Inject(
             method = "handleSystemChat(Lnet/minecraft/network/protocol/game/ClientboundSystemChatPacket;)V",
             at =
-                    @At(
-                            value = "INVOKE",
-                            target =
-                                    "Lnet/minecraft/client/multiplayer/chat/ChatListener;handleSystemMessage(Lnet/minecraft/network/chat/Component;Z)V"),
+            @At(
+                    value = "INVOKE",
+                    target =
+                            "Lnet/minecraft/client/multiplayer/chat/ChatListener;handleSystemMessage(Lnet/minecraft/network/chat/Component;Z)V"),
             cancellable = true)
     private void handleSystemChat(ClientboundSystemChatPacket packet, CallbackInfo ci) {
         if (!isRenderThread()) return;
@@ -493,10 +443,10 @@ public abstract class ClientPacketListenerMixin extends ClientCommonPacketListen
         if (!isRenderThread()) return;
 
         ScoreboardSetScoreEvent event = new ScoreboardSetScoreEvent(
-                StyledText.fromString(packet.getOwner()),
-                packet.getObjectiveName(),
-                packet.getScore(),
-                packet.getMethod());
+                StyledText.fromString(packet.owner()),
+                packet.objectiveName(),
+                packet.score(),
+                ServerScoreboard.Method.CHANGE);
         MixinHelper.post(event);
     }
 
@@ -553,11 +503,11 @@ public abstract class ClientPacketListenerMixin extends ClientCommonPacketListen
     @Inject(
             method = "handleAddEntity(Lnet/minecraft/network/protocol/game/ClientboundAddEntityPacket;)V",
             at =
-                    @At(
-                            value = "INVOKE",
-                            target =
-                                    "Lnet/minecraft/client/multiplayer/ClientPacketListener;postAddEntitySoundInstance(Lnet/minecraft/world/entity/Entity;)V",
-                            shift = At.Shift.AFTER))
+            @At(
+                    value = "INVOKE",
+                    target =
+                            "Lnet/minecraft/client/multiplayer/ClientPacketListener;postAddEntitySoundInstance(Lnet/minecraft/world/entity/Entity;)V",
+                    shift = At.Shift.AFTER))
     private void handleAddEntity(ClientboundAddEntityPacket packet, CallbackInfo ci, @Local Entity entity) {
         if (!isRenderThread()) return;
 
@@ -583,10 +533,10 @@ public abstract class ClientPacketListenerMixin extends ClientCommonPacketListen
     @ModifyArg(
             method = "handleSetEntityData(Lnet/minecraft/network/protocol/game/ClientboundSetEntityDataPacket;)V",
             at =
-                    @At(
-                            value = "INVOKE",
-                            target =
-                                    "Lnet/minecraft/network/syncher/SynchedEntityData;assignValues(Ljava/util/List;)V"),
+            @At(
+                    value = "INVOKE",
+                    target =
+                            "Lnet/minecraft/network/syncher/SynchedEntityData;assignValues(Ljava/util/List;)V"),
             index = 0)
     private List<SynchedEntityData.DataValue<?>> handleSetEntityDataPre(
             List<SynchedEntityData.DataValue<?>> packedItems,

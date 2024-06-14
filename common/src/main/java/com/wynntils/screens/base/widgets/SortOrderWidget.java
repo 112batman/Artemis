@@ -9,10 +9,11 @@ import com.wynntils.models.activities.type.ActivitySortOrder;
 import com.wynntils.screens.base.TooltipProvider;
 import com.wynntils.utils.render.RenderUtils;
 import com.wynntils.utils.render.Texture;
-import java.util.List;
-import java.util.Locale;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
+
+import java.util.List;
+import java.util.Locale;
 
 public class SortOrderWidget extends WynntilsButton implements TooltipProvider {
     private final SortableActivityScreen sortableActivityScreen;

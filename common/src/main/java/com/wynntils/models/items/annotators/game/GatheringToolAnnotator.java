@@ -10,9 +10,11 @@ import com.wynntils.handlers.item.ItemAnnotation;
 import com.wynntils.models.items.items.game.GatheringToolItem;
 import com.wynntils.models.profession.type.ToolProfile;
 import com.wynntils.utils.type.CappedValue;
+
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;

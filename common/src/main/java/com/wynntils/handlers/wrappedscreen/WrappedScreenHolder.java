@@ -5,9 +5,10 @@
 package com.wynntils.handlers.wrappedscreen;
 
 import com.wynntils.handlers.wrappedscreen.type.WrappedScreenInfo;
+import net.minecraft.client.gui.screens.Screen;
+
 import java.lang.reflect.ParameterizedType;
 import java.util.regex.Pattern;
-import net.minecraft.client.gui.screens.Screen;
 
 /**
  * A class that holds all logic for a wrapped screen. This class is also a factory for the wrapped screen.
@@ -25,6 +26,7 @@ public abstract class WrappedScreenHolder<T extends Screen & WrappedScreen> {
 
     /**
      * Called when a wrapped screen is opened. This method should initialize the state of this class.
+     *
      * @param wrappedScreen The wrapped screen that was opened.
      */
     protected abstract void setWrappedScreen(T wrappedScreen);

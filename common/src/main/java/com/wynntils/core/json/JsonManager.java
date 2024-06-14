@@ -4,12 +4,7 @@
  */
 package com.wynntils.core.json;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParseException;
-import com.google.gson.JsonParser;
+import com.google.gson.*;
 import com.google.gson.stream.JsonReader;
 import com.wynntils.core.WynntilsMod;
 import com.wynntils.core.components.Manager;
@@ -19,12 +14,9 @@ import com.wynntils.services.itemrecord.type.SavedItem;
 import com.wynntils.utils.EnumUtils;
 import com.wynntils.utils.FileUtils;
 import com.wynntils.utils.colors.CustomColor;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
+import org.apache.commons.lang3.RandomStringUtils;
+
+import java.io.*;
 import java.lang.reflect.Field;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
@@ -32,7 +24,6 @@ import java.nio.charset.StandardCharsets;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
-import org.apache.commons.lang3.RandomStringUtils;
 
 public final class JsonManager extends Manager {
     public static final Gson GSON = new GsonBuilder()
@@ -74,7 +65,7 @@ public final class JsonManager extends Manager {
         }
 
         try (OutputStreamWriter fileWriter =
-                new OutputStreamWriter(new FileOutputStream(jsonFile), StandardCharsets.UTF_8)) {
+                     new OutputStreamWriter(new FileOutputStream(jsonFile), StandardCharsets.UTF_8)) {
             GSON.toJson(jsonObject, fileWriter);
         } catch (IOException e) {
             WynntilsMod.error("Failed to save json file " + jsonFile, e);

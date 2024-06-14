@@ -5,7 +5,9 @@
 package com.wynntils.models.damage.type;
 
 import com.wynntils.models.stats.type.DamageType;
+
 import java.util.Map;
+
 import net.minecraftforge.eventbus.api.Event;
 
 /**

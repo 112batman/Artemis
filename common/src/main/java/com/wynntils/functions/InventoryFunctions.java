@@ -18,10 +18,11 @@ import com.wynntils.utils.mc.McUtils;
 import com.wynntils.utils.type.CappedValue;
 import com.wynntils.utils.type.NamedValue;
 import com.wynntils.utils.wynn.InventoryUtils;
+import net.minecraft.world.item.ItemStack;
+
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
-import net.minecraft.world.item.ItemStack;
 
 public class InventoryFunctions {
     public static class AccessoryDurabilityFunction extends Function<CappedValue> {

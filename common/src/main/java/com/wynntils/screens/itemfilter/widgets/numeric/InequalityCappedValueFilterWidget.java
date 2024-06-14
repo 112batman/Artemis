@@ -10,6 +10,7 @@ import com.wynntils.services.itemfilter.filters.RangedStatFilters;
 import com.wynntils.services.itemfilter.type.StatFilter;
 import com.wynntils.services.itemfilter.type.StatProviderAndFilterPair;
 import com.wynntils.utils.type.CappedValue;
+
 import java.util.Optional;
 
 public class InequalityCappedValueFilterWidget extends InequalityNumericFilterWidget<CappedValue> {
@@ -25,7 +26,7 @@ public class InequalityCappedValueFilterWidget extends InequalityNumericFilterWi
 
         if (filterPair != null
                 && filterPair.statFilter()
-                        instanceof RangedStatFilters.RangedCappedValueStatFilter cappedValueStatFilter) {
+                instanceof RangedStatFilters.RangedCappedValueStatFilter cappedValueStatFilter) {
             if (cappedValueStatFilter.getMin() != Integer.MIN_VALUE
                     && cappedValueStatFilter.getMax() == Integer.MAX_VALUE) {
                 if (cappedValueStatFilter.isEqualsInString()) {

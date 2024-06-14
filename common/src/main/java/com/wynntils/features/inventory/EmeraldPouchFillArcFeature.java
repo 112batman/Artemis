@@ -17,7 +17,9 @@ import com.wynntils.models.items.items.game.EmeraldPouchItem;
 import com.wynntils.utils.colors.CustomColor;
 import com.wynntils.utils.render.RenderUtils;
 import com.wynntils.utils.type.CappedValue;
+
 import java.util.Optional;
+
 import net.minecraft.util.Mth;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.eventbus.api.SubscribeEvent;

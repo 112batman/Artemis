@@ -13,13 +13,6 @@ import com.wynntils.core.net.UrlId;
 import com.wynntils.models.worlds.event.WorldStateEvent;
 import com.wynntils.services.athena.event.AthenaLoginEvent;
 import com.wynntils.utils.mc.McUtils;
-import java.math.BigInteger;
-import java.security.PublicKey;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Locale;
-import java.util.Map;
-import javax.crypto.SecretKey;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.ClickEvent;
 import net.minecraft.network.chat.Component;
@@ -28,6 +21,14 @@ import net.minecraft.network.chat.Style;
 import net.minecraft.util.Crypt;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import org.apache.commons.codec.binary.Hex;
+
+import javax.crypto.SecretKey;
+import java.math.BigInteger;
+import java.security.PublicKey;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Locale;
+import java.util.Map;
 
 public final class WynntilsAccountService extends Service {
     private static final String NO_TOKEN = "<no token>";

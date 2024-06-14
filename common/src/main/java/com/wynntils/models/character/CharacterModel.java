@@ -30,10 +30,12 @@ import com.wynntils.utils.mc.McUtils;
 import com.wynntils.utils.mc.type.Location;
 import com.wynntils.utils.type.ConfirmedBoolean;
 import com.wynntils.utils.wynn.InventoryUtils;
+
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.Position;
 import net.minecraft.world.item.ItemStack;
@@ -111,7 +113,8 @@ public final class CharacterModel extends Model {
         return reskinned;
     }
 
-    /** Returns the current class name, wrt reskinned or not.
+    /**
+     * Returns the current class name, wrt reskinned or not.
      */
     public String getActualName() {
         return getClassType().getActualName(isReskinned());
@@ -221,7 +224,7 @@ public final class CharacterModel extends Model {
         if (forceParseEverything
                 || silverbullSubscriber.get() == ConfirmedBoolean.UNCONFIRMED
                 || (silverbullSubscriber.get() != ConfirmedBoolean.FALSE
-                        && System.currentTimeMillis() > silverbullExpiresAt.get())) {
+                && System.currentTimeMillis() > silverbullExpiresAt.get())) {
             // Open Cosmetics Menu
             queryBuilder
                     .then(QueryStep.clickOnSlot(COSMETICS_SLOT)

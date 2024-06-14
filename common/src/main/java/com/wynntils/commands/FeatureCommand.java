@@ -12,8 +12,10 @@ import com.wynntils.core.components.Managers;
 import com.wynntils.core.consumers.commands.Command;
 import com.wynntils.core.consumers.features.Feature;
 import com.wynntils.core.persisted.config.Category;
+
 import java.util.List;
 import java.util.Optional;
+
 import net.minecraft.ChatFormatting;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;

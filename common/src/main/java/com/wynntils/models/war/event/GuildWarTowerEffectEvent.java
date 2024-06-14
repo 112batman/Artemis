@@ -7,7 +7,9 @@ package com.wynntils.models.war.event;
 import net.minecraftforge.eventbus.api.Event;
 
 public abstract class GuildWarTowerEffectEvent extends Event {
-    public static class AuraSpawned extends GuildWarTowerEffectEvent {}
+    public static class AuraSpawned extends GuildWarTowerEffectEvent {
+    }
 
-    public static class VolleySpawned extends GuildWarTowerEffectEvent {}
+    public static class VolleySpawned extends GuildWarTowerEffectEvent {
+    }
 }

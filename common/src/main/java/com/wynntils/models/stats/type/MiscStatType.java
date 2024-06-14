@@ -6,6 +6,7 @@ package com.wynntils.models.stats.type;
 
 import com.wynntils.models.stats.builders.MiscStatKind;
 import com.wynntils.utils.type.RangedValue;
+
 import java.math.RoundingMode;
 import java.util.List;
 import java.util.Optional;

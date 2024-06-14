@@ -4,4 +4,5 @@
  */
 package com.wynntils.services.itemfilter.type;
 
-public record SortInfo(SortDirection direction, ItemStatProvider<?> provider) {}
+public record SortInfo(SortDirection direction, ItemStatProvider<?> provider) {
+}

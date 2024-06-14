@@ -9,10 +9,11 @@ import com.mojang.brigadier.tree.LiteralCommandNode;
 import com.wynntils.core.WynntilsMod;
 import com.wynntils.core.components.Managers;
 import com.wynntils.core.consumers.features.properties.RegisterCommand;
-import java.lang.reflect.Field;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;
 import org.apache.commons.lang3.reflect.FieldUtils;
+
+import java.lang.reflect.Field;
 
 public class FeatureCommands {
     private final LiteralArgumentBuilder<CommandSourceStack> commandNodeBuilder;

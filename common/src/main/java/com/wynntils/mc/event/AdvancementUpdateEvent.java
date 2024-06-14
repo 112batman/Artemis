@@ -4,13 +4,14 @@
  */
 package com.wynntils.mc.event;
 
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
 import net.minecraft.advancements.AdvancementHolder;
 import net.minecraft.advancements.AdvancementProgress;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.eventbus.api.Event;
+
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 public class AdvancementUpdateEvent extends Event {
     private final boolean reset;

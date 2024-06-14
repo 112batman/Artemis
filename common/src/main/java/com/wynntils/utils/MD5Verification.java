@@ -5,13 +5,16 @@
 package com.wynntils.utils;
 
 import com.wynntils.core.WynntilsMod;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.security.MessageDigest;
 import java.util.regex.Pattern;
 
-/** Helper class for getting the hex digest form of the md5 of an input */
+/**
+ * Helper class for getting the hex digest form of the md5 of an input
+ */
 public class MD5Verification {
     private String md5;
 

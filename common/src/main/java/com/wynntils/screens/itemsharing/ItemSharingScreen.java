@@ -31,8 +31,10 @@ import com.wynntils.utils.render.type.HorizontalAlignment;
 import com.wynntils.utils.render.type.TextShadow;
 import com.wynntils.utils.render.type.VerticalAlignment;
 import com.wynntils.utils.type.ErrorOr;
+
 import java.util.ArrayList;
 import java.util.List;
+
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.AbstractWidget;
@@ -267,13 +269,13 @@ public final class ItemSharingScreen extends WynntilsScreen {
         int shareButtonWidth = (Texture.ITEM_SHARING_BACKGROUND.width() - 20) / 2 - 5;
 
         options.add(this.addRenderableWidget(new Button.Builder(
-                        Component.translatable("screens.wynntils.itemSharing.shareParty"), (b) -> shareItem("party"))
+                Component.translatable("screens.wynntils.itemSharing.shareParty"), (b) -> shareItem("party"))
                 .pos(backgroundX + 10, backgroundY + 45)
                 .size(shareButtonWidth, 20)
                 .build()));
 
         options.add(this.addRenderableWidget(new Button.Builder(
-                        Component.translatable("screens.wynntils.itemSharing.shareGuild"), (b) -> shareItem("guild"))
+                Component.translatable("screens.wynntils.itemSharing.shareGuild"), (b) -> shareItem("guild"))
                 .pos(backgroundX + 20 + shareButtonWidth, backgroundY + 45)
                 .size(shareButtonWidth, 20)
                 .build()));
@@ -284,12 +286,12 @@ public final class ItemSharingScreen extends WynntilsScreen {
                 : Component.translatable("screens.wynntils.itemSharing.save");
 
         saveButton = new Button.Builder(saveButtonMessage, (b) -> {
-                    if (!savedItem) {
-                        shareItem("save");
-                    } else {
-                        McUtils.mc().setScreen(SavedItemsScreen.create());
-                    }
-                })
+            if (!savedItem) {
+                shareItem("save");
+            } else {
+                McUtils.mc().setScreen(SavedItemsScreen.create());
+            }
+        })
                 .pos(backgroundX + 10, backgroundY + Texture.ITEM_SHARING_BACKGROUND.height() - 30)
                 .size(shareButtonWidth, 20)
                 .build();
@@ -299,7 +301,7 @@ public final class ItemSharingScreen extends WynntilsScreen {
         options.add(saveButton);
 
         options.add(this.addRenderableWidget(new Button.Builder(
-                        Component.translatable("screens.wynntils.itemSharing.copy"), (b) -> shareItem("clipboard"))
+                Component.translatable("screens.wynntils.itemSharing.copy"), (b) -> shareItem("clipboard"))
                 .pos(backgroundX + 20 + shareButtonWidth, backgroundY + Texture.ITEM_SHARING_BACKGROUND.height() - 30)
                 .size(shareButtonWidth, 20)
                 .build()));
@@ -308,7 +310,8 @@ public final class ItemSharingScreen extends WynntilsScreen {
 
     private void addError(String error) {
         this.addRenderableWidget(
-                new Button.Builder(Component.translatable("screens.wynntils.itemSharing.error"), (b) -> {})
+                new Button.Builder(Component.translatable("screens.wynntils.itemSharing.error"), (b) -> {
+                })
                         .pos(backgroundX + 10, backgroundY + Texture.ITEM_SHARING_BACKGROUND.height() - 30)
                         .size(Texture.ITEM_SHARING_BACKGROUND.width() - 20, 20)
                         .tooltip(Tooltip.create(Component.literal(error)))

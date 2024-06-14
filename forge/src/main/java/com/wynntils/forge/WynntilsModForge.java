@@ -6,13 +6,14 @@ package com.wynntils.forge;
 
 import com.wynntils.core.WynntilsMod;
 import com.wynntils.mc.event.TitleScreenInitEvent;
-import java.io.File;
-import java.nio.file.Path;
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.loading.FMLEnvironment;
+
+import java.io.File;
+import java.nio.file.Path;
 
 @Mod(WynntilsMod.MOD_ID)
 public class WynntilsModForge {

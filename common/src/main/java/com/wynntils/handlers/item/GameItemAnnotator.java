@@ -4,4 +4,5 @@
  */
 package com.wynntils.handlers.item;
 
-public interface GameItemAnnotator extends ItemAnnotator {}
+public interface GameItemAnnotator extends ItemAnnotator {
+}

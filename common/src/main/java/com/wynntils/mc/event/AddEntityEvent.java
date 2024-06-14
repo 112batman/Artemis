@@ -4,11 +4,12 @@
  */
 package com.wynntils.mc.event;
 
-import java.util.UUID;
 import net.minecraft.network.protocol.game.ClientboundAddEntityPacket;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraftforge.eventbus.api.Event;
+
+import java.util.UUID;
 
 public class AddEntityEvent extends Event {
     private final int id;

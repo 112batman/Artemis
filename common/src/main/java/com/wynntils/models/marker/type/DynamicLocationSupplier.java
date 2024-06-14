@@ -5,6 +5,7 @@
 package com.wynntils.models.marker.type;
 
 import com.wynntils.utils.mc.type.Location;
+
 import java.util.function.Supplier;
 
 public class DynamicLocationSupplier implements LocationSupplier {

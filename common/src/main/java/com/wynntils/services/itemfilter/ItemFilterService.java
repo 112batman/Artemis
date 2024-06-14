@@ -66,6 +66,7 @@ import com.wynntils.services.itemfilter.type.StatValue;
 import com.wynntils.utils.type.CappedValue;
 import com.wynntils.utils.type.ErrorOr;
 import com.wynntils.utils.type.Pair;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -73,6 +74,7 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Stream;
+
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.resources.language.I18n;
 import net.minecraft.world.item.ItemStack;
@@ -278,8 +280,8 @@ public class ItemFilterService extends Service {
 
         return filterMatches(searchQuery, wynnItemOpt.get())
                 && itemNameMatches(
-                        searchQuery,
-                        StyledText.fromComponent(itemStack.getHoverName()).getStringWithoutFormatting());
+                searchQuery,
+                StyledText.fromComponent(itemStack.getHoverName()).getStringWithoutFormatting());
     }
 
     /**
@@ -360,8 +362,8 @@ public class ItemFilterService extends Service {
 
             String filterString = itemStatProvider.getName() + ":"
                     + String.join(
-                            LIST_SEPARATOR,
-                            filters.stream().map(StatFilter::asString).toList());
+                    LIST_SEPARATOR,
+                    filters.stream().map(StatFilter::asString).toList());
             filterStrings.add(filterString);
         }
         String filterString = String.join(" ", filterStrings);
@@ -382,7 +384,7 @@ public class ItemFilterService extends Service {
     /**
      * Returns an item stat provider for the given alias, or an error string if the alias does not match any stat providers.
      *
-     * @param name an alias of the stat provider
+     * @param name                   an alias of the stat provider
      * @param supportedProviderTypes the list of supported provider types
      * @return the item stat provider, or an error string if the alias does not match any stat providers.
      */
@@ -404,7 +406,7 @@ public class ItemFilterService extends Service {
     /**
      * Returns a stat filter for the given value, or an error string if the value does not match any stat filters.
      *
-     * @param type the type of the item stat provider
+     * @param type  the type of the item stat provider
      * @param value the value to parse
      * @return the stat filter, or an error string if the value does not match any stat filters.
      */
@@ -444,8 +446,8 @@ public class ItemFilterService extends Service {
     private boolean itemNameMatches(ItemSearchQuery searchQuery, String itemName) {
         return searchQuery.plainTextTokens().isEmpty()
                 || itemName.toLowerCase(Locale.ROOT)
-                        .contains(
-                                String.join(" ", searchQuery.plainTextTokens()).toLowerCase(Locale.ROOT));
+                .contains(
+                        String.join(" ", searchQuery.plainTextTokens()).toLowerCase(Locale.ROOT));
     }
 
     private ErrorOr<List<SortInfo>> getStatSortOrder(

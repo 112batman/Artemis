@@ -26,6 +26,7 @@ import com.wynntils.core.persisted.upfixers.config.OverlayRestructuringUpfixer;
 import com.wynntils.core.persisted.upfixers.config.QuestBookToContentRenamedConfigsUpfixer;
 import com.wynntils.core.persisted.upfixers.config.TowerAuraVignetteAndOverlayMovedToCommonFeature;
 import com.wynntils.core.persisted.upfixers.config.TowerAuraVignetteNameUpfixer;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -72,7 +73,7 @@ public class UpfixerManager extends Manager {
     /**
      * Runs all registered upfixers on the given persisted object.
      *
-     * @param persistedObject  The persisted object to run upfixers on.
+     * @param persistedObject The persisted object to run upfixers on.
      * @param persistedValues All registered persisted values.
      */
     public boolean runUpfixers(

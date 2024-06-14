@@ -15,8 +15,10 @@ import com.wynntils.utils.mc.McUtils;
 import com.wynntils.utils.render.TextRenderSetting;
 import com.wynntils.utils.render.TextRenderTask;
 import com.wynntils.utils.type.TimedSet;
+
 import java.util.List;
 import java.util.concurrent.TimeUnit;
+
 import net.minecraft.network.chat.Component;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 

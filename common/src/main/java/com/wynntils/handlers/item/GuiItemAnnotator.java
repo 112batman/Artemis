@@ -4,4 +4,5 @@
  */
 package com.wynntils.handlers.item;
 
-public interface GuiItemAnnotator extends ItemAnnotator {}
+public interface GuiItemAnnotator extends ItemAnnotator {
+}

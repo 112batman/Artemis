@@ -8,6 +8,7 @@ import com.wynntils.core.components.Models;
 import com.wynntils.handlers.bossbar.TrackedBar;
 import com.wynntils.models.war.type.WarTowerState;
 import com.wynntils.utils.type.RangedValue;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 

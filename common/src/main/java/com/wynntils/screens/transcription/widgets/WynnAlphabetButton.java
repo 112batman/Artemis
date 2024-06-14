@@ -79,5 +79,6 @@ public class WynnAlphabetButton extends WynntilsButton {
     }
 
     @Override
-    public void onPress() {}
+    public void onPress() {
+    }
 }

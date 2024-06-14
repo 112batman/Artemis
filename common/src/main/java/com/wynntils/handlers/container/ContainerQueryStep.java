@@ -50,6 +50,8 @@ public interface ContainerQueryStep {
      */
     void onError(String errorMsg);
 
-    /** A way to identify this query. It is used to help avoid queueing the same query twice. */
+    /**
+     * A way to identify this query. It is used to help avoid queueing the same query twice.
+     */
     String getName();
 }

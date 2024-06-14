@@ -7,5 +7,6 @@ package com.wynntils.models.profession.event;
 import net.minecraftforge.eventbus.api.Event;
 
 public abstract class ProfessionNodeGatheredEvent extends Event {
-    public static class LabelShown extends ProfessionNodeGatheredEvent {}
+    public static class LabelShown extends ProfessionNodeGatheredEvent {
+    }
 }

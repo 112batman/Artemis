@@ -5,6 +5,7 @@
 package com.wynntils.models.gear.type;
 
 import com.wynntils.core.WynntilsMod;
+
 import java.util.Locale;
 
 public enum GearAttackSpeed {

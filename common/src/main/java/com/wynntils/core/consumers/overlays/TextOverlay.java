@@ -130,7 +130,8 @@ public abstract class TextOverlay extends DynamicOverlay {
     protected abstract String getPreviewTemplate();
 
     @Override
-    protected void onConfigUpdate(Config<?> config) {}
+    protected void onConfigUpdate(Config<?> config) {
+    }
 
     public final boolean isRendered() {
         // If the enabled template is empty,

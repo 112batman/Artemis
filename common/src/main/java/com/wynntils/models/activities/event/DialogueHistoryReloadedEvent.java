@@ -6,4 +6,5 @@ package com.wynntils.models.activities.event;
 
 import net.minecraftforge.eventbus.api.Event;
 
-public class DialogueHistoryReloadedEvent extends Event {}
+public class DialogueHistoryReloadedEvent extends Event {
+}

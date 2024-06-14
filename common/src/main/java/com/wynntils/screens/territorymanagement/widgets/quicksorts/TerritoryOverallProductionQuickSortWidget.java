@@ -9,6 +9,7 @@ import com.wynntils.services.itemfilter.statproviders.territory.TerritoryOverall
 import com.wynntils.services.itemfilter.type.SortInfo;
 import com.wynntils.utils.colors.CommonColors;
 import com.wynntils.utils.colors.CustomColor;
+
 import java.util.List;
 
 public class TerritoryOverallProductionQuickSortWidget extends TerritoryQuickSortWidget {

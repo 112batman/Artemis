@@ -5,8 +5,9 @@
 package com.wynntils.models.containers.type;
 
 import com.wynntils.utils.render.Texture;
-import java.util.regex.Pattern;
 import net.minecraft.client.gui.screens.Screen;
+
+import java.util.regex.Pattern;
 
 public enum LootChestType {
     TIER_1(Texture.CHEST_T1, "Loot Chest 1", Pattern.compile("Loot Chest §7\\[§f✫§8✫✫✫§7\\]")),

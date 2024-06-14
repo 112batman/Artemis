@@ -17,10 +17,12 @@ import com.wynntils.models.players.label.GuildSeasonLeaderboardLabelInfo;
 import com.wynntils.models.players.profile.GuildProfile;
 import com.wynntils.models.worlds.event.WorldStateEvent;
 import com.wynntils.utils.StringUtils;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;

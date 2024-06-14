@@ -5,6 +5,7 @@
 package com.wynntils.models.war.type;
 
 import com.wynntils.utils.type.RangedValue;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -72,7 +73,7 @@ public class WarBattleInfo {
         return firstRelevantState == null || lastRelevantState == null
                 ? 0
                 : (long) Math.floor(
-                        (firstRelevantState.effectiveHealth() - lastRelevantState.effectiveHealth()) / seconds);
+                (firstRelevantState.effectiveHealth() - lastRelevantState.effectiveHealth()) / seconds);
     }
 
     public long getTowerEffectiveHp() {

@@ -7,6 +7,7 @@ package com.wynntils.core.notifications;
 import com.wynntils.core.text.StyledText;
 import com.wynntils.utils.render.TextRenderSetting;
 import com.wynntils.utils.render.TextRenderTask;
+
 import java.util.Objects;
 
 public class MessageContainer {

@@ -6,6 +6,7 @@ package com.wynntils.services.mapdata.providers.json;
 
 import com.wynntils.services.mapdata.attributes.type.MapAttributes;
 import com.wynntils.services.mapdata.type.MapCategory;
+
 import java.util.Optional;
 
 public class JsonCategory implements MapCategory {

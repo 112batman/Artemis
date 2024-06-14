@@ -6,4 +6,5 @@ package com.wynntils.models.rewards.type;
 
 import com.wynntils.utils.type.RangedValue;
 
-public record CharmRequirements(int level, RangedValue workingLevelRange) {}
+public record CharmRequirements(int level, RangedValue workingLevelRange) {
+}

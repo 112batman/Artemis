@@ -22,26 +22,28 @@ import com.wynntils.models.wynnitem.parsing.WynnItemParseResult;
 import com.wynntils.models.wynnitem.parsing.WynnItemParser;
 import com.wynntils.models.wynnitem.type.ItemObtainType;
 import com.wynntils.utils.type.CappedValue;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.regex.Matcher;
 import java.util.stream.Stream;
+
 import net.minecraft.world.item.ItemStack;
 
 /**
  * Gear and stats are complex, have lots of corner cases and suffer from a general
  * lack of comprehensible, exhaustive, correct and authoritive documentation. :-(
- *
+ * <p>
  * Here is a collection of generally helpful links:
- *
+ * <p>
  * 2016 Guide: https://forums.wynncraft.com/threads/how-identifications-are-calculated.128923/
  * 2019 Guide: https://forums.wynncraft.com/threads/stats-and-identifications-guide.246308/
  * The Damage Bible: https://docs.google.com/document/d/1BXdLrMWj-BakPcAWnuqvSFbwiz7oGTOMcEEdC5vCWs4
  * WynnBuilder "Wynnfo": https://hppeng-wynn.github.io/wynnfo/, especially
  * Damage Calculations: https://hppeng-wynn.github.io/wynnfo/pdfs/Damage_calculation.pdf
- *
+ * <p>
  * A note on percent vs raw numbers and how they combine, from HeyZeer0:
  * base = base + (base * percentage1) + (base * percentage2) + rawValue
  */
@@ -64,8 +66,8 @@ public final class GearModel extends Model {
                         && gear.tier() == gearBoxItem.getGearTier()
                         && canBeGearBox(gear)
                         && gearBoxItem
-                                .getLevelRange()
-                                .inRange(gear.requirements().level()))
+                        .getLevelRange()
+                        .inRange(gear.requirements().level()))
                 .toList();
         possibilitiesCache.put(gearBoxItem, possibleGear);
 
@@ -77,7 +79,7 @@ public final class GearModel extends Model {
         // Also check that the item has a source that can drop boxed items
         return !gear.metaInfo().preIdentified()
                 && gear.metaInfo().obtainInfo().stream()
-                        .anyMatch(x -> ItemObtainType.BOXED_ITEMS.contains(x.sourceType()));
+                .anyMatch(x -> ItemObtainType.BOXED_ITEMS.contains(x.sourceType()));
     }
 
     @Override

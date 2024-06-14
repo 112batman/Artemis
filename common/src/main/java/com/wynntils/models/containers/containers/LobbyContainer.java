@@ -6,6 +6,7 @@ package com.wynntils.models.containers.containers;
 
 import com.wynntils.models.containers.Container;
 import com.wynntils.models.containers.type.ScrollableContainerProperty;
+
 import java.util.regex.Pattern;
 
 public class LobbyContainer extends Container implements ScrollableContainerProperty {

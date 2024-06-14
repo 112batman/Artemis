@@ -5,6 +5,7 @@
 package com.wynntils.utils.mc;
 
 import java.util.List;
+
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipComponent;
 import net.minecraft.network.chat.Component;
@@ -20,9 +21,9 @@ public final class TooltipUtils {
     public static int getToolTipHeight(List<ClientTooltipComponent> lines) {
         return (lines.size() == 1 ? -2 : 0)
                 + lines.stream()
-                        .map(ClientTooltipComponent::getHeight)
-                        .mapToInt(Integer::intValue)
-                        .sum();
+                .map(ClientTooltipComponent::getHeight)
+                .mapToInt(Integer::intValue)
+                .sum();
     }
 
     public static List<ClientTooltipComponent> componentToClientTooltipComponent(List<Component> components) {

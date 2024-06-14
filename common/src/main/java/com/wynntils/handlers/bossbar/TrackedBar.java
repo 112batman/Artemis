@@ -7,11 +7,12 @@ package com.wynntils.handlers.bossbar;
 import com.wynntils.handlers.bossbar.type.BossBarProgress;
 import com.wynntils.mc.mixin.accessors.LerpingBossEventAccessor;
 import com.wynntils.utils.type.CappedValue;
+import net.minecraft.client.gui.components.LerpingBossEvent;
+
 import java.util.Collections;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import net.minecraft.client.gui.components.LerpingBossEvent;
 
 public class TrackedBar {
     public final List<Pattern> patterns;
@@ -28,9 +29,11 @@ public class TrackedBar {
         this.patterns = Collections.unmodifiableList(patterns);
     }
 
-    public void onUpdateName(Matcher match) {}
+    public void onUpdateName(Matcher match) {
+    }
 
-    public void onUpdateProgress(float progress) {}
+    public void onUpdateProgress(float progress) {
+    }
 
     public boolean isRendered() {
         return rendered;

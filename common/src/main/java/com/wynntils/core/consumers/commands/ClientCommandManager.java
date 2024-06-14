@@ -12,38 +12,20 @@ import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import com.mojang.brigadier.tree.CommandNode;
 import com.mojang.brigadier.tree.LiteralCommandNode;
 import com.mojang.brigadier.tree.RootCommandNode;
-import com.wynntils.commands.BombCommand;
-import com.wynntils.commands.CompassCommand;
-import com.wynntils.commands.ConfigCommand;
-import com.wynntils.commands.FeatureCommand;
-import com.wynntils.commands.FunctionCommand;
-import com.wynntils.commands.LocateCommand;
-import com.wynntils.commands.LootrunCommand;
-import com.wynntils.commands.MapCommand;
-import com.wynntils.commands.OnlineMembersCommand;
-import com.wynntils.commands.PlayerCommand;
-import com.wynntils.commands.QuestCommand;
-import com.wynntils.commands.ServersCommand;
-import com.wynntils.commands.StatisticsCommand;
-import com.wynntils.commands.TerritoryCommand;
-import com.wynntils.commands.WynntilsCommand;
+import com.wynntils.commands.*;
 import com.wynntils.core.WynntilsMod;
 import com.wynntils.core.components.Manager;
 import com.wynntils.mc.event.CommandsAddedEvent;
 import com.wynntils.utils.mc.McUtils;
-import java.util.ArrayList;
-import java.util.List;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.player.LocalPlayer;
-import net.minecraft.commands.CommandRuntimeException;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.SharedSuggestionProvider;
-import net.minecraft.network.chat.ClickEvent;
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.HoverEvent;
-import net.minecraft.network.chat.MutableComponent;
-import net.minecraft.network.chat.Style;
+import net.minecraft.network.chat.*;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+
+import java.util.ArrayList;
+import java.util.List;
 
 // Credits to Earthcomputer and Forge
 // Parts of this code originates from https://github.com/Earthcomputer/clientcommands, and other
@@ -112,14 +94,12 @@ public final class ClientCommandManager extends Manager {
 
         if (!parse.getExceptions().isEmpty()
                 || (parse.getContext().getCommand() == null
-                        && parse.getContext().getChild() == null)) {
+                && parse.getContext().getChild() == null)) {
             return false; // can't parse - let server handle command
         }
 
         try {
             clientDispatcher.execute(parse);
-        } catch (CommandRuntimeException e) {
-            McUtils.sendErrorToClient(e.getMessage());
         } catch (CommandSyntaxException e) {
             McUtils.sendErrorToClient(e.getRawMessage().getString());
             if (e.getInput() != null && e.getCursor() >= 0) {

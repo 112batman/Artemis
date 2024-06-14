@@ -21,6 +21,7 @@ import com.wynntils.services.itemfilter.filters.RangedStatFilters;
 import com.wynntils.services.itemfilter.type.StatProviderAndFilterPair;
 import com.wynntils.services.itemfilter.type.StatValue;
 import com.wynntils.utils.type.CappedValue;
+
 import java.util.Map;
 import java.util.function.Function;
 
@@ -161,9 +162,9 @@ public final class NumericFilterWidgetFactory {
                 if (percentageFilter.getMin() == percentageFilter.getMax()) {
                     return new SingleStatValueFilterWidget(x, y, width, height, filterPair, parent, filterScreen);
                 } else if ((percentageFilter.getMin() != Float.MIN_VALUE
-                                && percentageFilter.getMax() == Float.MAX_VALUE)
+                        && percentageFilter.getMax() == Float.MAX_VALUE)
                         || percentageFilter.getMax() != Float.MAX_VALUE
-                                && percentageFilter.getMin() == Float.MIN_VALUE) {
+                        && percentageFilter.getMin() == Float.MIN_VALUE) {
                     return new InequalityStatValueFilterWidget(x, y, width, height, filterPair, parent, filterScreen);
                 } else {
                     return new RangedStatValueFilterWidget(x, y, width, height, filterPair, parent, filterScreen);

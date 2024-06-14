@@ -39,7 +39,7 @@ public abstract class ContainerSetSlotEvent extends Event {
 
     /**
      * Note: This event goes through {@link com.wynntils.handlers.item.ItemHandler},
-     *       so you can use it to get {@link com.wynntils.models.items.WynnItem}s.
+     * so you can use it to get {@link com.wynntils.models.items.WynnItem}s.
      */
     @Cancelable
     public static class Pre extends ContainerSetSlotEvent {

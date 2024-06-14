@@ -17,7 +17,9 @@ import com.wynntils.utils.render.type.HorizontalAlignment;
 import com.wynntils.utils.render.type.TextShadow;
 import com.wynntils.utils.render.type.VerticalAlignment;
 import com.wynntils.utils.type.IterationDecision;
+
 import java.util.List;
+
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.renderer.MultiBufferSource;
@@ -65,12 +67,14 @@ public final class BufferedFontRenderer {
         renderX = switch (horizontalAlignment) {
             case LEFT -> x;
             case CENTER -> x - (font.width(text.getString()) / 2f * textScale);
-            case RIGHT -> x - font.width(text.getString()) * textScale;};
+            case RIGHT -> x - font.width(text.getString()) * textScale;
+        };
 
         renderY = switch (verticalAlignment) {
             case TOP -> y;
             case MIDDLE -> y - (font.lineHeight / 2f * textScale);
-            case BOTTOM -> y - font.lineHeight * textScale;};
+            case BOTTOM -> y - font.lineHeight * textScale;
+        };
 
         poseStack.pushPose();
         poseStack.translate(renderX, renderY, 0);
@@ -429,8 +433,8 @@ public final class BufferedFontRenderer {
         for (TextRenderTask line : lines) {
             renderText(poseStack, bufferSource, x, currentY, line, textScale);
             currentY += FontRenderer.getInstance()
-                            .calculateRenderHeight(
-                                    line.getText(), line.getSetting().maxWidth() / textScale)
+                    .calculateRenderHeight(
+                            line.getText(), line.getSetting().maxWidth() / textScale)
                     * textScale;
         }
     }

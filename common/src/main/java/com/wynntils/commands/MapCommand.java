@@ -11,9 +11,11 @@ import com.mojang.brigadier.suggestion.SuggestionProvider;
 import com.wynntils.core.components.Services;
 import com.wynntils.core.consumers.commands.Command;
 import com.wynntils.services.map.type.CustomPoiProvider;
+
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.Optional;
+
 import net.minecraft.ChatFormatting;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;

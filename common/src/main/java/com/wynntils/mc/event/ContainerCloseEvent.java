@@ -9,7 +9,9 @@ import net.minecraftforge.eventbus.api.Event;
 
 public abstract class ContainerCloseEvent extends Event {
     @Cancelable
-    public static class Pre extends ContainerCloseEvent {}
+    public static class Pre extends ContainerCloseEvent {
+    }
 
-    public static class Post extends ContainerCloseEvent {}
+    public static class Post extends ContainerCloseEvent {
+    }
 }

@@ -5,6 +5,8 @@
 package com.wynntils.screens.territorymanagement.type;
 
 import com.wynntils.utils.colors.CustomColor;
+
 import java.util.List;
 
-public record TerritoryColor(CustomColor borderColor, List<CustomColor> backgroundColors) {}
+public record TerritoryColor(CustomColor borderColor, List<CustomColor> backgroundColors) {
+}

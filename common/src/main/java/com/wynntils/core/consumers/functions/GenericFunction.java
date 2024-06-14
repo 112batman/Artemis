@@ -9,7 +9,7 @@ import com.wynntils.core.consumers.functions.arguments.FunctionArguments;
 /**
  * Generic functions are functions that calculate a value, based on their arguments.
  * They differ from {@link Function} in that they do not have any game-related logic.
- *
+ * <p>
  * Generic functions should always have required arguments, and should never have optional arguments.
  */
 public abstract class GenericFunction<T> extends Function<T> {

@@ -9,6 +9,7 @@ import com.google.gson.JsonElement;
 import com.wynntils.core.components.Managers;
 import com.wynntils.core.net.ApiResponse;
 import com.wynntils.core.net.UrlId;
+
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;

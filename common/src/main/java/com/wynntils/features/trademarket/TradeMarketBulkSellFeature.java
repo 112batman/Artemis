@@ -17,9 +17,11 @@ import com.wynntils.mc.event.ContainerSetSlotEvent;
 import com.wynntils.screens.base.widgets.WynntilsButton;
 import com.wynntils.utils.mc.McUtils;
 import com.wynntils.utils.wynn.ContainerUtils;
+
 import java.util.function.Supplier;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
 import net.minecraft.client.gui.screens.inventory.ContainerScreen;
 import net.minecraft.client.gui.screens.inventory.MenuAccess;
 import net.minecraft.network.chat.Component;
@@ -163,7 +165,7 @@ public class TradeMarketBulkSellFeature extends Feature {
                     isAll
                             ? Component.translatable("feature.wynntils.tradeMarketBulkSell.sellAll")
                             : Component.translatable(
-                                    "feature.wynntils.tradeMarketBulkSell.sell", amountSupplier.get()));
+                            "feature.wynntils.tradeMarketBulkSell.sell", amountSupplier.get()));
 
             this.amountSupplier = amountSupplier;
         }

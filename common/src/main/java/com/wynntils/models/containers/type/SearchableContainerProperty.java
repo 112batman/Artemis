@@ -5,6 +5,7 @@
 package com.wynntils.models.containers.type;
 
 import com.wynntils.services.itemfilter.type.ItemProviderType;
+
 import java.util.List;
 
 /**
@@ -17,6 +18,7 @@ public interface SearchableContainerProperty extends ScrollableContainerProperty
     /**
      * Returns the supported provider types for this container.
      * If basic search should be used, return an empty list.
+     *
      * @return The supported provider types or an empty list if basic search should be used.
      */
     List<ItemProviderType> supportedProviderTypes();

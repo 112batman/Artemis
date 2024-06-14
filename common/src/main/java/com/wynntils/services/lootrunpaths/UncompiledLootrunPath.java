@@ -6,9 +6,11 @@ package com.wynntils.services.lootrunpaths;
 
 import com.wynntils.services.lootrunpaths.type.LootrunNote;
 import com.wynntils.services.lootrunpaths.type.LootrunPath;
+import net.minecraft.core.BlockPos;
+
 import java.io.File;
 import java.util.List;
 import java.util.Set;
-import net.minecraft.core.BlockPos;
 
-public record UncompiledLootrunPath(LootrunPath path, Set<BlockPos> chests, List<LootrunNote> notes, File file) {}
+public record UncompiledLootrunPath(LootrunPath path, Set<BlockPos> chests, List<LootrunNote> notes, File file) {
+}

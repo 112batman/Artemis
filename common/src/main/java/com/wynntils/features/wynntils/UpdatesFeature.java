@@ -15,8 +15,10 @@ import com.wynntils.core.persisted.config.ConfigCategory;
 import com.wynntils.models.worlds.event.WorldStateEvent;
 import com.wynntils.services.athena.UpdateService;
 import com.wynntils.utils.mc.McUtils;
+
 import java.util.Objects;
 import java.util.concurrent.CompletableFuture;
+
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.ClickEvent;
 import net.minecraft.network.chat.Component;

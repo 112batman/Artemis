@@ -5,6 +5,7 @@
 package com.wynntils.services.mapdata.type;
 
 import com.wynntils.utils.mc.type.Location;
+
 import java.util.List;
 
 public interface MapPath extends MapFeature {

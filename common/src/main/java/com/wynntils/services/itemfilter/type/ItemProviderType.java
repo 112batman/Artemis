@@ -68,8 +68,10 @@ public enum ItemProviderType {
      * Special filter for territory items.
      */
     TERRITORY;
+
     /**
      * Returns all non-special item provider types.
+     *
      * @return A list of all non-special item provider types.
      */
     public static List<ItemProviderType> normalTypes() {
@@ -80,6 +82,7 @@ public enum ItemProviderType {
 
     /**
      * Returns all special item provider types.
+     *
      * @return A list of all special item provider types.
      */
     public static List<ItemProviderType> specialTypes() {

@@ -97,5 +97,6 @@ public class SpellCastMessageOverlay extends Overlay {
     }
 
     @Override
-    protected void onConfigUpdate(Config<?> config) {}
+    protected void onConfigUpdate(Config<?> config) {
+    }
 }

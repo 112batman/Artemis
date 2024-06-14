@@ -5,6 +5,7 @@
 package com.wynntils.models.rewards.type;
 
 import com.wynntils.utils.StringUtils;
+
 import java.util.Optional;
 
 public enum TomeType {

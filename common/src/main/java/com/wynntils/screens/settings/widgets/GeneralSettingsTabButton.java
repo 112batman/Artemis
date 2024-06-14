@@ -8,10 +8,11 @@ import com.mojang.blaze3d.vertex.PoseStack;
 import com.wynntils.screens.base.widgets.BasicTexturedButton;
 import com.wynntils.utils.render.RenderUtils;
 import com.wynntils.utils.render.Texture;
-import java.util.List;
-import java.util.function.Consumer;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
+
+import java.util.List;
+import java.util.function.Consumer;
 
 public abstract class GeneralSettingsTabButton extends BasicTexturedButton {
     private static final int MAX_OFFSET = -8;
@@ -49,11 +50,11 @@ public abstract class GeneralSettingsTabButton extends BasicTexturedButton {
         // slightly underneath the book
         if (isHovered
                 && ((offsetDirection == OffsetDirection.UP && mouseY >= 0)
-                        || (offsetDirection == OffsetDirection.RIGHT
-                                && mouseX <= Texture.CONFIG_BOOK_BACKGROUND.width())
-                        || (offsetDirection == OffsetDirection.DOWN
-                                && mouseY <= Texture.CONFIG_BOOK_BACKGROUND.height())
-                        || (offsetDirection == OffsetDirection.LEFT && mouseX >= 0))) {
+                || (offsetDirection == OffsetDirection.RIGHT
+                && mouseX <= Texture.CONFIG_BOOK_BACKGROUND.width())
+                || (offsetDirection == OffsetDirection.DOWN
+                && mouseY <= Texture.CONFIG_BOOK_BACKGROUND.height())
+                || (offsetDirection == OffsetDirection.LEFT && mouseX >= 0))) {
             isHovered = false;
         }
 

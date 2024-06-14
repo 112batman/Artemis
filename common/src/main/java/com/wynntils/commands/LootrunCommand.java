@@ -20,9 +20,11 @@ import com.wynntils.services.lootrunpaths.type.LootrunState;
 import com.wynntils.services.lootrunpaths.type.LootrunUndoResult;
 import com.wynntils.utils.mc.McUtils;
 import com.wynntils.utils.mc.PosUtils;
+
 import java.io.File;
 import java.util.List;
 import java.util.stream.Stream;
+
 import net.minecraft.ChatFormatting;
 import net.minecraft.Util;
 import net.minecraft.commands.CommandSourceStack;

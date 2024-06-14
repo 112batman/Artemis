@@ -17,17 +17,18 @@ import com.wynntils.mc.event.TickEvent;
 import com.wynntils.models.worlds.event.WorldStateEvent;
 import com.wynntils.models.worlds.type.WorldState;
 import com.wynntils.utils.mc.McUtils;
+import net.minecraft.ChatFormatting;
+import net.minecraft.client.gui.components.ChatComponent;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.MutableComponent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.regex.Pattern;
 import java.util.stream.Stream;
-import net.minecraft.ChatFormatting;
-import net.minecraft.client.gui.components.ChatComponent;
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.MutableComponent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 public final class ChatTabService extends Service {
     private ChatComponent fallbackChat;
@@ -228,6 +229,7 @@ public final class ChatTabService extends Service {
      * If no chat tab is actively selected, the message will be sent normally.
      * Since autocommands are still commands, they will be queued just like any other command.
      * They are also subject to the same ratelimits on Wynncraft.
+     *
      * @param message The message to send.
      */
     public void sendChat(String message) {

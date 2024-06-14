@@ -7,11 +7,13 @@ package com.wynntils.models.abilities.bossbars;
 import com.wynntils.core.WynntilsMod;
 import com.wynntils.handlers.bossbar.TrackedBar;
 import com.wynntils.models.abilities.type.OphanimOrb;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
 import net.minecraft.ChatFormatting;
 
 public class OphanimBar extends TrackedBar {

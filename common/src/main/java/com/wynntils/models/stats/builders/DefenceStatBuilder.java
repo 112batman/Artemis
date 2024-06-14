@@ -9,6 +9,7 @@ import com.wynntils.models.stats.type.DefenceStatType;
 import com.wynntils.models.stats.type.StatType;
 import com.wynntils.models.stats.type.StatUnit;
 import com.wynntils.utils.StringUtils;
+
 import java.util.function.Consumer;
 
 public final class DefenceStatBuilder extends StatBuilder<DefenceStatType> {

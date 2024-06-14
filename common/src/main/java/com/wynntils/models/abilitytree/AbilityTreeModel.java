@@ -17,6 +17,7 @@ import com.wynntils.models.abilitytree.type.AbilityTreeNodeState;
 import com.wynntils.models.abilitytree.type.AbilityTreeSkillNode;
 import com.wynntils.models.abilitytree.type.ParsedAbilityTree;
 import com.wynntils.models.character.type.ClassType;
+
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.List;
@@ -40,7 +41,8 @@ public class AbilityTreeModel extends Model {
     public void reloadData() {
         Download dl = Managers.Net.download(UrlId.DATA_STATIC_ABILITIES);
         dl.handleReader(reader -> {
-            Type type = new TypeToken<HashMap<String, AbilityTreeInfo>>() {}.getType();
+            Type type = new TypeToken<HashMap<String, AbilityTreeInfo>>() {
+            }.getType();
             Gson gson = new GsonBuilder().create();
 
             Map<String, AbilityTreeInfo> abilityMap = gson.fromJson(reader, type);

@@ -7,7 +7,9 @@ package com.wynntils.mc.event;
 import com.wynntils.core.text.StyledText;
 import net.minecraftforge.eventbus.api.Event;
 
-/** Fires on change to footer of scoreboard */
+/**
+ * Fires on change to footer of scoreboard
+ */
 public class PlayerInfoFooterChangedEvent extends Event {
     private final StyledText footer;
 

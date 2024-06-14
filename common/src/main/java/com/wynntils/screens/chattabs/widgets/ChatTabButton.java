@@ -78,5 +78,6 @@ public class ChatTabButton extends WynntilsButton {
 
     // unused
     @Override
-    public void onPress() {}
+    public void onPress() {
+    }
 }

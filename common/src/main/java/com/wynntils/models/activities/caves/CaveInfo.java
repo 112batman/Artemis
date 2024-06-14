@@ -11,6 +11,7 @@ import com.wynntils.models.activities.type.ActivityLength;
 import com.wynntils.models.activities.type.ActivityStatus;
 import com.wynntils.utils.mc.StyledTextUtils;
 import com.wynntils.utils.mc.type.Location;
+
 import java.util.List;
 import java.util.Optional;
 

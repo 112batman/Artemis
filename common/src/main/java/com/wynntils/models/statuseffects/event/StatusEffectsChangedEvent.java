@@ -6,4 +6,5 @@ package com.wynntils.models.statuseffects.event;
 
 import net.minecraftforge.eventbus.api.Event;
 
-public class StatusEffectsChangedEvent extends Event {}
+public class StatusEffectsChangedEvent extends Event {
+}

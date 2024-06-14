@@ -21,15 +21,12 @@ import com.wynntils.utils.render.buffered.BufferedFontRenderer;
 import com.wynntils.utils.render.type.HorizontalAlignment;
 import com.wynntils.utils.render.type.TextShadow;
 import com.wynntils.utils.render.type.VerticalAlignment;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.stream.Stream;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+
+import java.util.*;
+import java.util.stream.Stream;
 
 public class StatusEffectsOverlay extends Overlay {
     @Persisted
@@ -227,8 +224,9 @@ public class StatusEffectsOverlay extends Overlay {
                                 + modifierString.substring(index));
                     }
                 }
-                    // This shouldn't be reached
-                default -> {}
+                // This shouldn't be reached
+                default -> {
+                }
             }
 
             return this.effect

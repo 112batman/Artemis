@@ -27,11 +27,13 @@ import com.wynntils.utils.render.type.HorizontalAlignment;
 import com.wynntils.utils.render.type.TextShadow;
 import com.wynntils.utils.render.type.VerticalAlignment;
 import com.wynntils.utils.type.Pair;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.TreeMap;
+
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.Screen;
@@ -264,12 +266,12 @@ public final class SavedItemsScreen extends WynntilsContainerScreen<SavedItemsMe
                 && !editingCategory
                 && !addingCategory
                 && MathUtils.isInside(
-                        (int) mouseX,
-                        (int) mouseY,
-                        (int) categoryRenderX,
-                        (int) (categoryRenderX + 97),
-                        (int) categoryRenderY,
-                        (int) (categoryRenderY + 8))) {
+                (int) mouseX,
+                (int) mouseY,
+                (int) categoryRenderX,
+                (int) (categoryRenderX + 97),
+                (int) categoryRenderY,
+                (int) (categoryRenderY + 8))) {
             if (!editingCategory) {
                 editingCategory = true;
                 addCategoryInput();
@@ -532,9 +534,9 @@ public final class SavedItemsScreen extends WynntilsContainerScreen<SavedItemsMe
         int maxItemOffset = Math.max(
                 0,
                 Services.ItemRecord.savedItems.get().stream()
-                                .filter(savedItem -> savedItem.categories().contains(currentCategory))
-                                .toList()
-                                .size()
+                        .filter(savedItem -> savedItem.categories().contains(currentCategory))
+                        .toList()
+                        .size()
                         - MAX_ITEMS);
         return maxItemOffset / ITEMS_PER_ROW + (maxItemOffset % ITEMS_PER_ROW > 0 ? 1 : 0);
     }

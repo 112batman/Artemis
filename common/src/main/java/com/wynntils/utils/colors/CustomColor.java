@@ -11,6 +11,7 @@ import com.google.gson.JsonParseException;
 import com.google.gson.JsonSerializationContext;
 import com.google.gson.JsonSerializer;
 import com.wynntils.utils.MathUtils;
+
 import java.lang.reflect.Type;
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
@@ -20,6 +21,7 @@ import java.util.random.RandomGenerator;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.zip.CRC32;
+
 import net.minecraft.ChatFormatting;
 
 public class CustomColor {
@@ -87,7 +89,9 @@ public class CustomColor {
         return fromInt(cf.getColor() | 0xFF000000);
     }
 
-    /** 0xAARRGGBB format */
+    /**
+     * 0xAARRGGBB format
+     */
     public static CustomColor fromInt(int num) {
         return new CustomColor(num >> 16 & 255, num >> 8 & 255, num & 255, num >> 24 & 255);
     }
@@ -116,7 +120,9 @@ public class CustomColor {
         };
     }
 
-    /** "#rrggbb(aa)" or "rrggbb(aa)" */
+    /**
+     * "#rrggbb(aa)" or "rrggbb(aa)"
+     */
     public static CustomColor fromHexString(String hex) {
         Matcher hexMatcher = HEX_PATTERN.matcher(hex.trim());
 
@@ -132,7 +138,9 @@ public class CustomColor {
         }
     }
 
-    /** "rgba(r,g,b,a)" format as defined in toString() */
+    /**
+     * "rgba(r,g,b,a)" format as defined in toString()
+     */
     public static CustomColor fromString(String string) {
         Matcher stringMatcher = STRING_PATTERN.matcher(string.trim());
 
@@ -180,7 +188,9 @@ public class CustomColor {
         return new CustomColor(this, (int) (a * 255));
     }
 
-    /** 0xAARRGGBB format */
+    /**
+     * 0xAARRGGBB format
+     */
     public int asInt() {
         int a = Math.min(this.a, 255);
         int r = Math.min(this.r, 255);
@@ -190,10 +200,12 @@ public class CustomColor {
     }
 
     public float[] asFloatArray() {
-        return new float[] {r / 255f, g / 255f, b / 255f};
+        return new float[]{r / 255f, g / 255f, b / 255f};
     }
 
-    /** #rrggbb(aa) format */
+    /**
+     * #rrggbb(aa) format
+     */
     public String toHexString() {
         String colorHex = String.format("%06x", (0xFFFFFF & (r << 16) | (g << 8) | b));
 

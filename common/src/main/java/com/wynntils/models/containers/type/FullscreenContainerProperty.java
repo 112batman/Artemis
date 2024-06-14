@@ -9,4 +9,5 @@ package com.wynntils.models.containers.type;
  * These containers are displayed in the entire screen,
  * and temporarily replace the user's inventory.
  */
-public interface FullscreenContainerProperty {}
+public interface FullscreenContainerProperty {
+}

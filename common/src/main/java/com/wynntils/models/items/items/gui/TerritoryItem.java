@@ -8,6 +8,7 @@ import com.wynntils.models.territories.type.GuildResource;
 import com.wynntils.models.territories.type.GuildResourceValues;
 import com.wynntils.models.territories.type.TerritoryUpgrade;
 import com.wynntils.utils.type.CappedValue;
+
 import java.util.List;
 import java.util.Map;
 

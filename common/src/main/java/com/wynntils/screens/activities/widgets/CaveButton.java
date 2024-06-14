@@ -26,14 +26,15 @@ import com.wynntils.utils.render.type.HorizontalAlignment;
 import com.wynntils.utils.render.type.TextShadow;
 import com.wynntils.utils.render.type.VerticalAlignment;
 import com.wynntils.utils.type.Pair;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvents;
 import org.lwjgl.glfw.GLFW;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
 
 public class CaveButton extends WynntilsButton implements TooltipProvider {
     private static final Pair<CustomColor, CustomColor> BUTTON_COLOR =
@@ -111,7 +112,8 @@ public class CaveButton extends WynntilsButton implements TooltipProvider {
 
     // Not called
     @Override
-    public void onPress() {}
+    public void onPress() {
+    }
 
     @Override
     public boolean mouseClicked(double mouseX, double mouseY, int button) {
@@ -188,8 +190,8 @@ public class CaveButton extends WynntilsButton implements TooltipProvider {
         tooltipLines.add(Component.literal(""));
 
         tooltipLines.add((Models.CombatXp.getCombatLevel().current() >= caveInfo.getRecommendedLevel()
-                        ? Component.literal("✔").withStyle(ChatFormatting.GREEN)
-                        : Component.literal("✖").withStyle(ChatFormatting.RED))
+                ? Component.literal("✔").withStyle(ChatFormatting.GREEN)
+                : Component.literal("✖").withStyle(ChatFormatting.RED))
                 .append(Component.literal(" Recommended Combat Lv. Min: ").withStyle(ChatFormatting.GRAY))
                 .append(Component.literal(String.valueOf(caveInfo.getRecommendedLevel()))
                         .withStyle(ChatFormatting.WHITE)));

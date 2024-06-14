@@ -46,9 +46,9 @@ public class CoordinateOverlay extends TextOverlay {
     @Override
     public String getTemplate() {
         if (Managers.Feature.getFeatureInstance(MinimapFeature.class)
-                        .minimapOverlay
-                        .hideWhenUnmapped
-                        .get()
+                .minimapOverlay
+                .hideWhenUnmapped
+                .get()
                 == MinimapOverlay.UnmappedOption.MINIMAP_AND_COORDS) {
             return this.shouldBeColored.get() ? UNMAPPED_TEMPLATE_COLORED : UNMAPPED_TEMPLATE;
         } else {

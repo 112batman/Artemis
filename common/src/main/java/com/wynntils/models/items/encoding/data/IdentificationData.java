@@ -12,6 +12,7 @@ import com.wynntils.models.stats.type.StatPossibleValues;
 import com.wynntils.models.stats.type.StatType;
 import com.wynntils.utils.type.ErrorOr;
 import com.wynntils.utils.type.RangedValue;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -19,8 +20,8 @@ import java.util.Map;
 /**
  * This class represents the identification data of an item.
  * <p>
- *     pendingCalculations is a map of stats to be processed when fully compiling an item,
- *     since we don't know the base values when decoding data (if we are not using extended encoding).
+ * pendingCalculations is a map of stats to be processed when fully compiling an item,
+ * since we don't know the base values when decoding data (if we are not using extended encoding).
  * </p>
  */
 public record IdentificationData(

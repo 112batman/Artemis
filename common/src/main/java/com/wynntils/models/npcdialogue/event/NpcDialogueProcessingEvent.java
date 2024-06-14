@@ -6,11 +6,12 @@ package com.wynntils.models.npcdialogue.event;
 
 import com.wynntils.core.text.StyledText;
 import com.wynntils.models.npcdialogue.type.NpcDialogue;
+import net.minecraft.network.chat.Component;
+import net.minecraftforge.eventbus.api.Event;
+
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
-import net.minecraft.network.chat.Component;
-import net.minecraftforge.eventbus.api.Event;
 
 /**
  * Event that is fired at different stages during while processing an NPC dialogue.

@@ -7,6 +7,7 @@ package com.wynntils.services.mapdata.providers;
 import com.wynntils.services.mapdata.attributes.type.MapIcon;
 import com.wynntils.services.mapdata.type.MapCategory;
 import com.wynntils.services.mapdata.type.MapFeature;
+
 import java.util.stream.Stream;
 
 public interface MapDataProvider {

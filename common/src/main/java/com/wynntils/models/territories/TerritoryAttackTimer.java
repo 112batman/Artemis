@@ -8,7 +8,9 @@ import com.wynntils.core.components.Models;
 import com.wynntils.models.territories.profile.TerritoryProfile;
 import com.wynntils.models.territories.type.GuildResourceValues;
 import com.wynntils.utils.mc.McUtils;
+
 import java.util.Optional;
+
 import net.minecraft.ChatFormatting;
 
 public record TerritoryAttackTimer(String territoryName, long timerEnd) {

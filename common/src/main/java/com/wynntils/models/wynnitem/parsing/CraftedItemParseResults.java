@@ -10,6 +10,7 @@ import com.wynntils.models.gear.type.GearRequirements;
 import com.wynntils.models.stats.type.DamageType;
 import com.wynntils.utils.type.Pair;
 import com.wynntils.utils.type.RangedValue;
+
 import java.util.List;
 
 public record CraftedItemParseResults(
@@ -19,4 +20,5 @@ public record CraftedItemParseResults(
         List<Pair<DamageType, RangedValue>> damages,
         List<Pair<Element, Integer>> defences,
         GearRequirements requirements,
-        boolean allRequirementsMet) {}
+        boolean allRequirementsMet) {
+}

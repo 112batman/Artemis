@@ -6,6 +6,7 @@ package com.wynntils.services.chat;
 
 import com.wynntils.core.WynntilsMod;
 import com.wynntils.handlers.chat.type.RecipientType;
+
 import java.util.Objects;
 import java.util.Optional;
 import java.util.Set;

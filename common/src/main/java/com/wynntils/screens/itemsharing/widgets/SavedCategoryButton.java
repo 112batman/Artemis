@@ -39,5 +39,6 @@ public class SavedCategoryButton extends WynntilsButton {
 
     // Unused
     @Override
-    public void onPress() {}
+    public void onPress() {
+    }
 }

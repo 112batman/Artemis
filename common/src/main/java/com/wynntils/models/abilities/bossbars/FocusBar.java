@@ -6,6 +6,7 @@ package com.wynntils.models.abilities.bossbars;
 
 import com.wynntils.core.WynntilsMod;
 import com.wynntils.handlers.bossbar.TrackedBar;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 

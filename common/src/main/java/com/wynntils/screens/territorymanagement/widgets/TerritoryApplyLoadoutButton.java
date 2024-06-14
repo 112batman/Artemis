@@ -9,9 +9,11 @@ import com.wynntils.screens.base.widgets.WynntilsButton;
 import com.wynntils.utils.mc.ComponentUtils;
 import com.wynntils.utils.render.RenderUtils;
 import com.wynntils.utils.render.Texture;
+
 import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;

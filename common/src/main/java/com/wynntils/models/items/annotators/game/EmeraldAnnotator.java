@@ -9,8 +9,10 @@ import com.wynntils.handlers.item.GameItemAnnotator;
 import com.wynntils.handlers.item.ItemAnnotation;
 import com.wynntils.models.emeralds.type.EmeraldUnits;
 import com.wynntils.models.items.items.game.EmeraldItem;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
 import net.minecraft.world.item.ItemStack;
 
 public final class EmeraldAnnotator implements GameItemAnnotator {

@@ -26,7 +26,8 @@ public final class PosUtils {
         return new Vec3(position.x(), position.y(), position.z());
     }
 
-    /** Return true if the two positions is "roughly" the same, i.e. they only differ slightly
+    /**
+     * Return true if the two positions is "roughly" the same, i.e. they only differ slightly
      * in the y position.
      */
     public static boolean isSame(Position first, Position second) {

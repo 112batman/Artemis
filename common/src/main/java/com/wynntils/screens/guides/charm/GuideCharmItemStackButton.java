@@ -80,7 +80,8 @@ public class GuideCharmItemStackButton extends WynntilsButton {
 
     /* no-op */
     @Override
-    public void onPress() {}
+    public void onPress() {
+    }
 
     public GuideCharmItemStack getItemStack() {
         return itemStack;

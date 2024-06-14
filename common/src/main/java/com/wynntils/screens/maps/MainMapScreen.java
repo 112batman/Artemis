@@ -15,11 +15,7 @@ import com.wynntils.models.marker.type.DynamicLocationSupplier;
 import com.wynntils.models.marker.type.MarkerInfo;
 import com.wynntils.screens.base.widgets.BasicTexturedButton;
 import com.wynntils.services.lootrunpaths.LootrunPathInstance;
-import com.wynntils.services.map.pois.CustomPoi;
-import com.wynntils.services.map.pois.IconPoi;
-import com.wynntils.services.map.pois.Poi;
-import com.wynntils.services.map.pois.TerritoryPoi;
-import com.wynntils.services.map.pois.WaypointPoi;
+import com.wynntils.services.map.pois.*;
 import com.wynntils.utils.colors.CommonColors;
 import com.wynntils.utils.mc.KeyboardUtils;
 import com.wynntils.utils.mc.McUtils;
@@ -30,9 +26,6 @@ import com.wynntils.utils.render.RenderUtils;
 import com.wynntils.utils.render.Texture;
 import com.wynntils.utils.type.BoundingBox;
 import com.wynntils.utils.wynn.LocationUtils;
-import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.events.GuiEventListener;
@@ -40,6 +33,10 @@ import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvents;
 import org.lwjgl.glfw.GLFW;
+
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public final class MainMapScreen extends AbstractMapScreen {
     private MarkerInfo focusedMarker;
@@ -77,7 +74,8 @@ public final class MainMapScreen extends AbstractMapScreen {
                 10,
                 16,
                 Texture.HELP_ICON,
-                (b) -> {},
+                (b) -> {
+                },
                 List.of(
                         Component.literal("[>] ")
                                 .withStyle(ChatFormatting.YELLOW)
@@ -218,8 +216,8 @@ public final class MainMapScreen extends AbstractMapScreen {
 
             // When in an unmapped area, center to the middle of the map if the feature is enabled
             if (Managers.Feature.getFeatureInstance(MainMapFeature.class)
-                            .centerWhenUnmapped
-                            .get()
+                    .centerWhenUnmapped
+                    .get()
                     && Services.Map.getMapsForBoundingBox(textureBoundingBox).isEmpty()) {
                 centerMapOnWorld();
             }
@@ -234,9 +232,9 @@ public final class MainMapScreen extends AbstractMapScreen {
 
         if (holdingMapKey
                 && !Managers.Feature.getFeatureInstance(MainMapFeature.class)
-                        .openMapKeybind
-                        .getKeyMapping()
-                        .isDown()) {
+                .openMapKeybind
+                .getKeyMapping()
+                .isDown()) {
             this.onClose();
             return;
         }

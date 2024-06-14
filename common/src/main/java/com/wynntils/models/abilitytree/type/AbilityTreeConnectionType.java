@@ -6,58 +6,54 @@ package com.wynntils.models.abilitytree.type;
 
 import com.wynntils.core.WynntilsMod;
 import com.wynntils.utils.type.Pair;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 
+import java.util.*;
+
 public enum AbilityTreeConnectionType {
     VERTICAL(
             41,
-            Map.of(new boolean[] {true, false, true, false}, 42),
-            new boolean[] {true, false, true, false},
+            Map.of(new boolean[]{true, false, true, false}, 42),
+            new boolean[]{true, false, true, false},
             List.of()),
     HORIZONTAL(
             43,
-            Map.of(new boolean[] {false, true, false, true}, 44),
-            new boolean[] {false, true, false, true},
+            Map.of(new boolean[]{false, true, false, true}, 44),
+            new boolean[]{false, true, false, true},
             List.of()),
 
     DOWN_LEFT_TURN(
             37,
-            Map.of(new boolean[] {false, true, true, false}, 38),
-            new boolean[] {false, true, true, false},
+            Map.of(new boolean[]{false, true, true, false}, 38),
+            new boolean[]{false, true, true, false},
             List.of()),
     DOWN_RIGHT_TURN(
             39,
-            Map.of(new boolean[] {false, false, true, true}, 40),
-            new boolean[] {false, false, true, true},
+            Map.of(new boolean[]{false, false, true, true}, 40),
+            new boolean[]{false, false, true, true},
             List.of()),
 
     UP_LEFT_TURN(
             33,
-            Map.of(new boolean[] {true, false, false, true}, 34),
-            new boolean[] {true, false, false, true},
+            Map.of(new boolean[]{true, false, false, true}, 34),
+            new boolean[]{true, false, false, true},
             List.of()), // Due to the nature of the ability tree connections, this type is unused
     UP_RIGHT_TURN(
             35,
-            Map.of(new boolean[] {true, true, false, false}, 36),
-            new boolean[] {true, true, false, false},
+            Map.of(new boolean[]{true, true, false, false}, 36),
+            new boolean[]{true, true, false, false},
             List.of()), // Due to the nature of the ability tree connections, this type is unused
 
     THREE_WAY_UP(
             13,
             Map.of(
-                    new boolean[] {true, true, false, true}, 14,
-                    new boolean[] {true, false, false, true}, 15,
-                    new boolean[] {true, true, false, false}, 16,
-                    new boolean[] {false, true, false, true}, 17),
-            new boolean[] {true, true, false, true},
+                    new boolean[]{true, true, false, true}, 14,
+                    new boolean[]{true, false, false, true}, 15,
+                    new boolean[]{true, true, false, false}, 16,
+                    new boolean[]{false, true, false, true}, 17),
+            new boolean[]{true, true, false, true},
             List.of(
                     Pair.of(HORIZONTAL, UP_LEFT_TURN),
                     Pair.of(HORIZONTAL, UP_RIGHT_TURN),
@@ -66,11 +62,11 @@ public enum AbilityTreeConnectionType {
     THREE_WAY_RIGHT(
             18,
             Map.of(
-                    new boolean[] {true, true, true, false}, 19,
-                    new boolean[] {true, true, false, false}, 20,
-                    new boolean[] {false, true, true, false}, 21,
-                    new boolean[] {true, false, true, false}, 22),
-            new boolean[] {true, true, true, false},
+                    new boolean[]{true, true, true, false}, 19,
+                    new boolean[]{true, true, false, false}, 20,
+                    new boolean[]{false, true, true, false}, 21,
+                    new boolean[]{true, false, true, false}, 22),
+            new boolean[]{true, true, true, false},
             List.of(
                     Pair.of(VERTICAL, DOWN_RIGHT_TURN),
                     Pair.of(VERTICAL, UP_RIGHT_TURN),
@@ -78,11 +74,11 @@ public enum AbilityTreeConnectionType {
     THREE_WAY_DOWN(
             23,
             Map.of(
-                    new boolean[] {false, true, true, true}, 24,
-                    new boolean[] {false, false, true, true}, 25,
-                    new boolean[] {false, true, true, false}, 26,
-                    new boolean[] {false, true, false, true}, 27),
-            new boolean[] {false, true, true, true},
+                    new boolean[]{false, true, true, true}, 24,
+                    new boolean[]{false, false, true, true}, 25,
+                    new boolean[]{false, true, true, false}, 26,
+                    new boolean[]{false, true, false, true}, 27),
+            new boolean[]{false, true, true, true},
             List.of(
                     Pair.of(HORIZONTAL, DOWN_LEFT_TURN),
                     Pair.of(HORIZONTAL, DOWN_RIGHT_TURN),
@@ -90,11 +86,11 @@ public enum AbilityTreeConnectionType {
     THREE_WAY_LEFT(
             28,
             Map.of(
-                    new boolean[] {true, false, true, true}, 29,
-                    new boolean[] {true, false, false, true}, 30,
-                    new boolean[] {false, false, true, true}, 31,
-                    new boolean[] {true, false, true, false}, 32),
-            new boolean[] {true, false, true, true},
+                    new boolean[]{true, false, true, true}, 29,
+                    new boolean[]{true, false, false, true}, 30,
+                    new boolean[]{false, false, true, true}, 31,
+                    new boolean[]{true, false, true, false}, 32),
+            new boolean[]{true, false, true, true},
             List.of(
                     Pair.of(VERTICAL, DOWN_LEFT_TURN),
                     Pair.of(VERTICAL, UP_LEFT_TURN),
@@ -103,18 +99,18 @@ public enum AbilityTreeConnectionType {
     FOUR_WAY(
             1,
             Map.ofEntries(
-                    Map.entry(new boolean[] {true, true, true, true}, 2),
-                    Map.entry(new boolean[] {true, true, false, true}, 3),
-                    Map.entry(new boolean[] {true, true, true, false}, 4),
-                    Map.entry(new boolean[] {false, true, true, true}, 5),
-                    Map.entry(new boolean[] {true, false, true, true}, 6),
-                    Map.entry(new boolean[] {true, false, false, true}, 7),
-                    Map.entry(new boolean[] {true, true, false, false}, 8),
-                    Map.entry(new boolean[] {false, true, true, false}, 9),
-                    Map.entry(new boolean[] {false, false, true, true}, 10),
-                    Map.entry(new boolean[] {true, false, true, false}, 11),
-                    Map.entry(new boolean[] {false, true, false, true}, 12)),
-            new boolean[] {true, true, true, true},
+                    Map.entry(new boolean[]{true, true, true, true}, 2),
+                    Map.entry(new boolean[]{true, true, false, true}, 3),
+                    Map.entry(new boolean[]{true, true, true, false}, 4),
+                    Map.entry(new boolean[]{false, true, true, true}, 5),
+                    Map.entry(new boolean[]{true, false, true, true}, 6),
+                    Map.entry(new boolean[]{true, false, false, true}, 7),
+                    Map.entry(new boolean[]{true, true, false, false}, 8),
+                    Map.entry(new boolean[]{false, true, true, false}, 9),
+                    Map.entry(new boolean[]{false, false, true, true}, 10),
+                    Map.entry(new boolean[]{true, false, true, false}, 11),
+                    Map.entry(new boolean[]{false, true, false, true}, 12)),
+            new boolean[]{true, true, true, true},
             List.of(
                     Pair.of(VERTICAL, HORIZONTAL),
                     Pair.of(DOWN_LEFT_TURN, UP_RIGHT_TURN),

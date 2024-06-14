@@ -6,7 +6,9 @@ package com.wynntils.mc.event;
 
 import net.minecraftforge.eventbus.api.Event;
 
-/** Fired on connection to a server */
+/**
+ * Fired on connection to a server
+ */
 public abstract class ConnectionEvent extends Event {
     public static class ConnectedEvent extends ConnectionEvent {
         private final String host;
@@ -31,5 +33,6 @@ public abstract class ConnectionEvent extends Event {
         }
     }
 
-    public static class DisconnectedEvent extends ConnectionEvent {}
+    public static class DisconnectedEvent extends ConnectionEvent {
+    }
 }

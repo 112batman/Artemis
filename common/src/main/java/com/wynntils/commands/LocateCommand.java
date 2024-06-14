@@ -14,11 +14,13 @@ import com.wynntils.services.map.pois.Poi;
 import com.wynntils.services.map.type.ServiceKind;
 import com.wynntils.utils.StringUtils;
 import com.wynntils.utils.mc.McUtils;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
+
 import net.minecraft.ChatFormatting;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;

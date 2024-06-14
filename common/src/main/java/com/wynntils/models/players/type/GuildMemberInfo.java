@@ -11,4 +11,5 @@ public record GuildMemberInfo(
         String server,
         long contributedXp,
         int contributionRank,
-        String joinTimestamp) {}
+        String joinTimestamp) {
+}

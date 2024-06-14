@@ -9,6 +9,7 @@ import com.wynntils.core.consumers.functions.expressions.ConstantExpression;
 import com.wynntils.core.consumers.functions.expressions.Expression;
 import com.wynntils.core.consumers.functions.expressions.parser.ExpressionParser;
 import com.wynntils.utils.type.ErrorOr;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;

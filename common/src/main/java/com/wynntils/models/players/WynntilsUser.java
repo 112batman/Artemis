@@ -7,4 +7,5 @@ package com.wynntils.models.players;
 import com.wynntils.models.players.type.AccountType;
 import com.wynntils.models.players.type.CosmeticInfo;
 
-public record WynntilsUser(AccountType accountType, CosmeticInfo cosmetics) {}
+public record WynntilsUser(AccountType accountType, CosmeticInfo cosmetics) {
+}

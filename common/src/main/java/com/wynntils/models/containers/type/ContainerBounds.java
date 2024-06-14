@@ -12,8 +12,8 @@ public record ContainerBounds(int startRow, int startCol, int endRow, int endCol
     /**
      * @param startRow 0-indexed row of the first row containing items
      * @param startCol 0-indexed column of the first column containing items
-     * @param endRow 0-indexed row of the last row containing items
-     * @param endCol 0-indexed column of the last column containing items
+     * @param endRow   0-indexed row of the last row containing items
+     * @param endCol   0-indexed column of the last column containing items
      */
     public ContainerBounds(int startRow, int startCol, int endRow, int endCol) {
         this(startRow, startCol, endRow, endCol, buildSlots(startRow, startCol, endRow, endCol));

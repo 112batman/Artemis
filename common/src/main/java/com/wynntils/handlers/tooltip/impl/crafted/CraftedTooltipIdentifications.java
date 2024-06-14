@@ -15,12 +15,13 @@ import com.wynntils.models.stats.type.StatListDelimiter;
 import com.wynntils.models.stats.type.StatType;
 import com.wynntils.utils.StringUtils;
 import com.wynntils.utils.type.RangedValue;
-import java.util.ArrayList;
-import java.util.List;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.network.chat.Style;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public final class CraftedTooltipIdentifications {
     public static List<Component> buildTooltip(
@@ -99,7 +100,7 @@ public final class CraftedTooltipIdentifications {
                     .ifPresent(possibleValues -> {
                         line.append(Component.literal("/"
                                         + StringUtils.toSignedString(
-                                                possibleValues.range().high())
+                                        possibleValues.range().high())
                                         + statType.getUnit().getDisplayName())
                                 .withStyle(ChatFormatting.DARK_GRAY));
                     });
@@ -107,7 +108,7 @@ public final class CraftedTooltipIdentifications {
 
         line.append(Component.literal(" "
                         + Models.Stat.getDisplayName(
-                                statType, craftedItem.getRequiredClass(), currentClass, RangedValue.NONE))
+                        statType, craftedItem.getRequiredClass(), currentClass, RangedValue.NONE))
                 .withStyle(ChatFormatting.GRAY));
 
         return line;

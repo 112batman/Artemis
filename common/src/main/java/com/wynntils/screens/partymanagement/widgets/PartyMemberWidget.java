@@ -41,50 +41,50 @@ public class PartyMemberWidget extends AbstractWidget {
         this.isOffline = isOffline;
         this.gridDivisions = gridDivisions;
         this.promoteButton = new Button.Builder(
-                        Component.translatable("screens.wynntils.partyManagementGui.promote"),
-                        (button) -> Models.Party.partyPromote(playerName))
+                Component.translatable("screens.wynntils.partyManagementGui.promote"),
+                (button) -> Models.Party.partyPromote(playerName))
                 .pos((int) (this.getX() + (this.width / this.gridDivisions * 16)) + 1, this.getY())
                 .size(
                         (int) ((this.getX() + (this.width / this.gridDivisions * 20))
-                                        - (this.getX() + (this.width / this.gridDivisions * 16)))
+                                - (this.getX() + (this.width / this.gridDivisions * 16)))
                                 - 2,
                         20)
                 .build();
         this.kickButton = new Button.Builder(
-                        Component.translatable("screens.wynntils.partyManagementGui.kick"),
-                        (button) -> Models.Party.partyKick(playerName))
+                Component.translatable("screens.wynntils.partyManagementGui.kick"),
+                (button) -> Models.Party.partyKick(playerName))
                 .pos((int) (this.getX() + (this.width / this.gridDivisions * 20)) + 1, this.getY())
                 .size(
                         (int) ((this.getX() + (this.width / this.gridDivisions * 24))
-                                        - (this.getX() + (this.width / this.gridDivisions * 20)))
+                                - (this.getX() + (this.width / this.gridDivisions * 20)))
                                 - 2,
                         20)
                 .build();
         this.disbandButton = new Button.Builder(
-                        Component.translatable("screens.wynntils.partyManagementGui.disband"),
-                        (button) -> Models.Party.partyDisband())
+                Component.translatable("screens.wynntils.partyManagementGui.disband"),
+                (button) -> Models.Party.partyDisband())
                 .pos((int) (this.getX() + (this.width / this.gridDivisions * 20)) + 1, this.getY())
                 .size(
                         (int) ((this.getX() + (this.width / this.gridDivisions * 24))
-                                        - (this.getX() + (this.width / this.gridDivisions * 20)))
+                                - (this.getX() + (this.width / this.gridDivisions * 20)))
                                 - 2,
                         20)
                 .build();
         this.moveUpButton = new Button.Builder(
-                        Component.literal("🠝"), (button) -> Models.Party.increasePlayerPriority(playerName))
+                Component.literal("🠝"), (button) -> Models.Party.increasePlayerPriority(playerName))
                 .pos((int) (this.getX() + (this.width / this.gridDivisions * 24)) + 1, this.getY())
                 .size(
                         (int) ((this.getX() + (this.width / this.gridDivisions * 25))
-                                        - (this.getX() + (this.width / this.gridDivisions * 24)))
+                                - (this.getX() + (this.width / this.gridDivisions * 24)))
                                 - 2,
                         20)
                 .build();
         this.moveDownButton = new Button.Builder(
-                        Component.literal("🠟"), (button) -> Models.Party.decreasePlayerPriority(playerName))
+                Component.literal("🠟"), (button) -> Models.Party.decreasePlayerPriority(playerName))
                 .pos((int) (this.getX() + (this.width / this.gridDivisions * 25)) + 1, this.getY())
                 .size(
                         (int) ((this.getX() + (this.width / this.gridDivisions * 26))
-                                        - (this.getX() + (this.width / this.gridDivisions * 25)))
+                                - (this.getX() + (this.width / this.gridDivisions * 25)))
                                 - 2,
                         20)
                 .build();
@@ -191,5 +191,6 @@ public class PartyMemberWidget extends AbstractWidget {
     }
 
     @Override
-    protected void updateWidgetNarration(NarrationElementOutput narrationElementOutput) {}
+    protected void updateWidgetNarration(NarrationElementOutput narrationElementOutput) {
+    }
 }

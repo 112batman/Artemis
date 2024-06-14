@@ -7,13 +7,14 @@ package com.wynntils.core.text;
 import com.wynntils.utils.colors.CustomColor;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap;
-import java.util.Arrays;
-import java.util.Objects;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.ClickEvent;
 import net.minecraft.network.chat.HoverEvent;
 import net.minecraft.network.chat.Style;
 import net.minecraft.network.chat.TextColor;
+
+import java.util.Arrays;
+import java.util.Objects;
 
 public final class PartStyle {
     private static final String STYLE_PREFIX = "§";

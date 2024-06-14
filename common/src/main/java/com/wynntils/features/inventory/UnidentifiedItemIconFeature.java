@@ -18,8 +18,10 @@ import com.wynntils.models.items.items.game.GearBoxItem;
 import com.wynntils.utils.render.RenderUtils;
 import com.wynntils.utils.render.Texture;
 import com.wynntils.utils.type.Pair;
+
 import java.util.Map;
 import java.util.Optional;
+
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 

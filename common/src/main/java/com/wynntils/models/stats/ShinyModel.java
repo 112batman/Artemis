@@ -16,6 +16,7 @@ import com.wynntils.models.items.items.game.GearItem;
 import com.wynntils.models.stats.type.ShinyStat;
 import com.wynntils.models.stats.type.ShinyStatType;
 import com.wynntils.utils.mc.McUtils;
+
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -23,6 +24,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
+
 import net.minecraft.world.item.ItemStack;
 
 public class ShinyModel extends Model {
@@ -41,7 +43,8 @@ public class ShinyModel extends Model {
     private void loadShinyStatTypes() {
         Download dl = Managers.Net.download(UrlId.DATA_STATIC_SHINY_STATS);
         dl.handleReader(reader -> {
-            Type type = new TypeToken<List<ShinyStatType>>() {}.getType();
+            Type type = new TypeToken<List<ShinyStatType>>() {
+            }.getType();
             List<ShinyStatType> statTypes = Managers.Json.GSON.fromJson(reader, type);
 
             shinyStatTypes =

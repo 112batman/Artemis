@@ -6,6 +6,7 @@ package com.wynntils.models.stats.builders;
 
 import com.wynntils.models.stats.type.StatType;
 import com.wynntils.models.stats.type.StatUnit;
+
 import java.util.Locale;
 
 public enum MiscStatKind {

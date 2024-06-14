@@ -53,6 +53,7 @@ import com.wynntils.utils.mc.PosUtils;
 import com.wynntils.utils.mc.type.Location;
 import com.wynntils.utils.type.CappedValue;
 import com.wynntils.utils.type.Pair;
+
 import java.lang.reflect.Type;
 import java.util.Collection;
 import java.util.HashMap;
@@ -67,6 +68,7 @@ import java.util.UUID;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
+
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.item.ItemEntity;
@@ -74,7 +76,8 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import org.joml.Vector2d;
 
-/** A model dedicated to lootruns (the Wynncraft lootrun runs).
+/**
+ * A model dedicated to lootruns (the Wynncraft lootrun runs).
  * Don't confuse this with {@link com.wynntils.services.lootrunpaths.LootrunPathsService}.
  */
 public class LootrunModel extends Model {
@@ -178,7 +181,8 @@ public class LootrunModel extends Model {
     private void loadLootrunTaskLocations() {
         Download dl = Managers.Net.download(UrlId.DATA_STATIC_LOOTRUN_TASKS_NAMED);
         dl.handleReader(reader -> {
-            Type type = new TypeToken<Map<LootrunLocation, Set<TaskLocation>>>() {}.getType();
+            Type type = new TypeToken<Map<LootrunLocation, Set<TaskLocation>>>() {
+            }.getType();
             taskLocations = Managers.Json.GSON.fromJson(reader, type);
         });
     }
@@ -390,7 +394,7 @@ public class LootrunModel extends Model {
         double oldBeaconDistanceToPlayer = closestBeacon == null
                 ? Double.MAX_VALUE
                 : VectorUtils.distanceIgnoringY(
-                        closestBeacon.position(), McUtils.mc().player.position());
+                closestBeacon.position(), McUtils.mc().player.position());
         if (newBeaconDistanceToPlayer < BEACON_REMOVAL_RADIUS
                 && newBeaconDistanceToPlayer <= oldBeaconDistanceToPlayer) {
             setClosestBeacon(event.getBeacon());

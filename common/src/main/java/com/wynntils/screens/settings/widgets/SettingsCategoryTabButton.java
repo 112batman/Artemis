@@ -6,9 +6,10 @@ package com.wynntils.screens.settings.widgets;
 
 import com.wynntils.core.persisted.config.Category;
 import com.wynntils.utils.render.Texture;
+import net.minecraft.network.chat.Component;
+
 import java.util.List;
 import java.util.function.Consumer;
-import net.minecraft.network.chat.Component;
 
 public class SettingsCategoryTabButton extends GeneralSettingsTabButton {
     private Category category;

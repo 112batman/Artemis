@@ -7,6 +7,7 @@ package com.wynntils.services.map.pois;
 import com.wynntils.services.map.type.DisplayPriority;
 import com.wynntils.utils.mc.type.PoiLocation;
 import com.wynntils.utils.render.Texture;
+
 import java.util.function.Supplier;
 
 public class PointerPoi extends DynamicIconPoi {

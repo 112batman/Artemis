@@ -6,4 +6,5 @@ package com.wynntils.models.items.encoding.data;
 
 import com.wynntils.models.items.encoding.type.ItemData;
 
-public record EndData() implements ItemData {}
+public record EndData() implements ItemData {
+}

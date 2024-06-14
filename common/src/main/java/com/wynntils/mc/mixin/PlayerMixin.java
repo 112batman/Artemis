@@ -17,10 +17,10 @@ public abstract class PlayerMixin {
     @WrapWithCondition(
             method = "drop(Lnet/minecraft/world/item/ItemStack;ZZ)Lnet/minecraft/world/entity/item/ItemEntity;",
             at =
-                    @At(
-                            value = "INVOKE",
-                            target =
-                                    "Lnet/minecraft/world/entity/player/Player;swing(Lnet/minecraft/world/InteractionHand;)V"))
+            @At(
+                    value = "INVOKE",
+                    target =
+                            "Lnet/minecraft/world/entity/player/Player;swing(Lnet/minecraft/world/InteractionHand;)V"))
     private boolean onSwingInInventoryScreen(Player player, InteractionHand hand) {
         ArmSwingEvent event = new ArmSwingEvent(ArmSwingEvent.ArmSwingContext.DROP_ITEM_FROM_INVENTORY_SCREEN, hand);
         MixinHelper.post(event);

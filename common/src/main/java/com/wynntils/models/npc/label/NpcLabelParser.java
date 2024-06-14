@@ -7,7 +7,9 @@ package com.wynntils.models.npc.label;
 import com.wynntils.core.text.StyledText;
 import com.wynntils.handlers.labels.type.LabelParser;
 import com.wynntils.utils.mc.type.Location;
+
 import java.util.regex.Pattern;
+
 import net.minecraft.world.entity.Entity;
 
 public class NpcLabelParser implements LabelParser<NpcLabelInfo> {

@@ -12,6 +12,7 @@ import com.wynntils.core.text.StyledTextPart;
 import com.wynntils.models.wynnalphabet.type.TranscribeCondition;
 import com.wynntils.utils.StringUtils;
 import com.wynntils.utils.mc.McUtils;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -19,6 +20,7 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.HoverEvent;
@@ -100,9 +102,9 @@ public class WynnAlphabetModel extends Model {
         Component hoverComponent = originalTextAsTooltip
                 ? Component.literal(transcriptedString)
                 : Component.translatable(
-                        "feature.wynntils.transcribeMessages.transcribedFrom",
-                        StringUtils.capitalizeFirst(alphabet.toString().toLowerCase(Locale.ROOT)),
-                        originalString);
+                "feature.wynntils.transcribeMessages.transcribedFrom",
+                StringUtils.capitalizeFirst(alphabet.toString().toLowerCase(Locale.ROOT)),
+                originalString);
         partStyle = partStyle.withHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, hoverComponent));
 
         return new StyledTextPart(

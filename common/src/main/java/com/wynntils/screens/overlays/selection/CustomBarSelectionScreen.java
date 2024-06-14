@@ -13,13 +13,8 @@ import com.wynntils.features.overlays.CustomBarsOverlayFeature;
 import com.wynntils.utils.mc.McUtils;
 import com.wynntils.utils.render.Texture;
 import com.wynntils.utils.render.buffered.BufferedRenderUtils;
-import com.wynntils.utils.render.type.BarTexture;
-import com.wynntils.utils.render.type.HealthTexture;
-import com.wynntils.utils.render.type.ManaTexture;
-import com.wynntils.utils.render.type.ObjectivesTextures;
-import com.wynntils.utils.render.type.UniversalTexture;
+import com.wynntils.utils.render.type.*;
 import com.wynntils.utils.type.Pair;
-import java.util.List;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.Button;
@@ -29,6 +24,8 @@ import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvents;
 import org.lwjgl.glfw.GLFW;
+
+import java.util.List;
 
 public class CustomBarSelectionScreen extends WynntilsScreen {
     // The order of these matters, they must match that in CustomBarsOverlayFeature
@@ -62,12 +59,13 @@ public class CustomBarSelectionScreen extends WynntilsScreen {
         calculateBarPosition();
 
         textureButton = this.addRenderableWidget(new Button.Builder(
-                        Component.literal(availableBars
-                                .get(barTypeIndex)
-                                .b()
-                                .get(barTextureIndex)
-                                .toString()),
-                        (b) -> {})
+                Component.literal(availableBars
+                        .get(barTypeIndex)
+                        .b()
+                        .get(barTextureIndex)
+                        .toString()),
+                (b) -> {
+                })
                 .pos((int) ((this.width / 2f) - 30), (int) (barY + 20))
                 .size(60, 20)
                 .tooltip(Tooltip.create(Component.translatable("screens.wynntils.customBarSelection.textureTooltip")))
@@ -79,14 +77,14 @@ public class CustomBarSelectionScreen extends WynntilsScreen {
                 .build());
 
         this.addRenderableWidget(new Button.Builder(
-                        Component.translatable("screens.wynntils.customBarSelection.cancel"), (button) -> onClose())
+                Component.translatable("screens.wynntils.customBarSelection.cancel"), (button) -> onClose())
                 .pos((int) (this.width / 2f) - 90, (int) (barY + 45))
                 .size(80, 20)
                 .build());
 
         this.addRenderableWidget(new Button.Builder(
-                        Component.translatable("screens.wynntils.customBarSelection.select"),
-                        (button) -> addCustomBar())
+                Component.translatable("screens.wynntils.customBarSelection.select"),
+                (button) -> addCustomBar())
                 .pos((int) (this.width / 2f) + 10, (int) (barY + 45))
                 .size(80, 20)
                 .build());
@@ -163,11 +161,11 @@ public class CustomBarSelectionScreen extends WynntilsScreen {
         // Calculate the central position to render the current selected bar at
         barX = (this.width - availableBars.get(barTypeIndex).a().width()) / 2f;
         barY = (this.height
-                        - availableBars
-                                .get(barTypeIndex)
-                                .b()
-                                .get(barTextureIndex)
-                                .getHeight())
+                - availableBars
+                .get(barTypeIndex)
+                .b()
+                .get(barTextureIndex)
+                .getHeight())
                 / 2f;
     }
 

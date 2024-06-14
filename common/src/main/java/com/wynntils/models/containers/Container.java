@@ -4,9 +4,10 @@
  */
 package com.wynntils.models.containers;
 
+import net.minecraft.client.gui.screens.Screen;
+
 import java.util.function.Predicate;
 import java.util.regex.Pattern;
-import net.minecraft.client.gui.screens.Screen;
 
 public abstract class Container {
     private final Predicate<Screen> screenPredicate;

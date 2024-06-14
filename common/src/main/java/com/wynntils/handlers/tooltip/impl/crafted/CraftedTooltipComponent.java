@@ -5,10 +5,11 @@
 package com.wynntils.handlers.tooltip.impl.crafted;
 
 import com.wynntils.models.items.properties.CraftedItemProperty;
-import java.util.List;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
+
+import java.util.List;
 
 public abstract class CraftedTooltipComponent<T extends CraftedItemProperty> {
     public abstract List<Component> buildHeaderTooltip(T craftedItem);

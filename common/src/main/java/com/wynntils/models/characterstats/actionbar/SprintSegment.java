@@ -9,6 +9,7 @@ import com.wynntils.core.text.StyledText;
 import com.wynntils.handlers.actionbar.ActionBarSegment;
 import com.wynntils.handlers.actionbar.type.ActionBarPosition;
 import com.wynntils.utils.type.CappedValue;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 

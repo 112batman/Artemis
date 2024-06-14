@@ -6,4 +6,5 @@ package com.wynntils.models.wynnitem.type;
 
 import java.util.Optional;
 
-public record ItemObtainInfo(ItemObtainType sourceType, Optional<String> name) {}
+public record ItemObtainInfo(ItemObtainType sourceType, Optional<String> name) {
+}

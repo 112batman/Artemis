@@ -6,6 +6,7 @@ package com.wynntils.functions.generic;
 
 import com.wynntils.core.consumers.functions.GenericFunction;
 import com.wynntils.core.consumers.functions.arguments.FunctionArguments;
+
 import java.util.List;
 import java.util.Objects;
 

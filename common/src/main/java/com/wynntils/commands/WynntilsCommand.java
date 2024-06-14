@@ -19,6 +19,7 @@ import com.wynntils.screens.wynntilsmenu.WynntilsMenuScreen;
 import com.wynntils.services.athena.UpdateService;
 import com.wynntils.utils.FileUtils;
 import com.wynntils.utils.mc.McUtils;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -29,6 +30,7 @@ import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
 import net.minecraft.ChatFormatting;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;
@@ -253,7 +255,7 @@ public class WynntilsCommand extends Command {
         result.handleInputStream(
                 is -> {
                     try (InputStreamReader isReader = new InputStreamReader(is, StandardCharsets.UTF_8);
-                            BufferedReader reader = new BufferedReader(isReader)) {
+                         BufferedReader reader = new BufferedReader(isReader)) {
                         String line;
                         while ((line = reader.readLine()) != null) {
                             Matcher m = STATUS_HEADING.matcher(line);

@@ -16,12 +16,14 @@ import com.wynntils.models.gear.type.SetInfo;
 import com.wynntils.models.items.items.game.GearItem;
 import com.wynntils.models.items.properties.SetItemProperty;
 import com.wynntils.models.stats.type.StatType;
+
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
+
 import net.minecraft.world.item.ItemStack;
 
 public class SetModel extends Model {
@@ -100,7 +102,8 @@ public class SetModel extends Model {
     private void loadSetData() {
         Download dl = Managers.Net.download(UrlId.DATA_STATIC_ITEM_SETS);
         dl.handleReader(reader -> {
-            TypeToken<Map<String, RawSetInfo>> type = new TypeToken<>() {};
+            TypeToken<Map<String, RawSetInfo>> type = new TypeToken<>() {
+            };
             Map<String, RawSetInfo> rawSets = Managers.Json.GSON.fromJson(reader, type.getType());
             rawSets.forEach((setName, rawSetInfo) -> {
                 List<Map<StatType, Integer>> bonuses = rawSetInfo.bonuses.stream()

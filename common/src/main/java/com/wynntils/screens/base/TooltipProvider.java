@@ -4,8 +4,9 @@
  */
 package com.wynntils.screens.base;
 
-import java.util.List;
 import net.minecraft.network.chat.Component;
+
+import java.util.List;
 
 public interface TooltipProvider {
     List<Component> getTooltipLines();

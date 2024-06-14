@@ -32,22 +32,17 @@ import com.wynntils.utils.colors.CustomColor;
 import com.wynntils.utils.mc.LoreUtils;
 import com.wynntils.utils.mc.McUtils;
 import com.wynntils.utils.type.CappedValue;
-import java.lang.reflect.Type;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Locale;
-import java.util.Map;
-import java.util.Objects;
-import java.util.Optional;
-import java.util.Set;
-import java.util.concurrent.CompletableFuture;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-import java.util.stream.Collectors;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+
+import java.lang.reflect.Type;
+import java.util.*;
+import java.util.concurrent.CompletableFuture;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
 public class GuildModel extends Model {
     private static final Gson GUILD_PROFILE_GSON = new GsonBuilder()
@@ -472,7 +467,8 @@ public class GuildModel extends Model {
         ApiResponse apiResponse = Managers.Net.callApi(UrlId.DATA_WYNNCRAFT_GUILD, Map.of("name", guildToSearch));
         apiResponse.handleJsonObject(
                 json -> {
-                    Type type = new TypeToken<GuildInfo>() {}.getType();
+                    Type type = new TypeToken<GuildInfo>() {
+                    }.getType();
 
                     future.complete(GUILD_PROFILE_GSON.fromJson(json, type));
                 },
@@ -488,7 +484,8 @@ public class GuildModel extends Model {
     private void loadGuildList() {
         Download dl = Managers.Net.download(UrlId.DATA_ATHENA_GUILD_LIST);
         dl.handleJsonArray(json -> {
-            Type type = new TypeToken<List<GuildProfile>>() {}.getType();
+            Type type = new TypeToken<List<GuildProfile>>() {
+            }.getType();
             List<GuildProfile> guildProfiles = GUILD_PROFILE_GSON.fromJson(json, type);
 
             Map<String, GuildProfile> profileMap = guildProfiles.stream()

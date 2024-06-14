@@ -4,4 +4,5 @@
  */
 package com.wynntils.models.wynnitem.type;
 
-public record ItemEffect(String type, int value) {}
+public record ItemEffect(String type, int value) {
+}

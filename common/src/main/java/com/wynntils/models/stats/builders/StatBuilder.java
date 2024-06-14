@@ -5,6 +5,7 @@
 package com.wynntils.models.stats.builders;
 
 import com.wynntils.models.stats.type.StatType;
+
 import java.util.function.Consumer;
 
 public abstract class StatBuilder<T extends StatType> {

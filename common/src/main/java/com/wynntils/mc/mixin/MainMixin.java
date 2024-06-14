@@ -5,13 +5,13 @@
 package com.wynntils.mc.mixin;
 
 import com.wynntils.utils.SystemUtils;
-import java.awt.HeadlessException;
-import java.awt.Toolkit;
 import net.minecraft.client.main.Main;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+
+import java.awt.*;
 
 // Credits to
 // https://github.com/comp500/ScreenshotToClipboard/blob/1.18-arch/common/src/main/java/link/infra/screenshotclipboard/common/mixin/AWTHackMixin.java

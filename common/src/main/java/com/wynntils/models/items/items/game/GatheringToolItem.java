@@ -11,6 +11,7 @@ import com.wynntils.models.items.properties.ProfessionItemProperty;
 import com.wynntils.models.profession.type.ProfessionType;
 import com.wynntils.models.profession.type.ToolProfile;
 import com.wynntils.utils.type.CappedValue;
+
 import java.util.List;
 
 public class GatheringToolItem extends GameItem

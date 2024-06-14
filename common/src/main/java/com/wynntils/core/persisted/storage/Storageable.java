@@ -9,5 +9,6 @@ import com.wynntils.core.persisted.PersistedOwner;
 public interface Storageable extends PersistedOwner {
     String getStorageJsonName();
 
-    default void onStorageLoad() {}
+    default void onStorageLoad() {
+    }
 }

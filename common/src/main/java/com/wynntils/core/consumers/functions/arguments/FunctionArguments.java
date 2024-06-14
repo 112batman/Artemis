@@ -9,6 +9,7 @@ import com.wynntils.utils.type.CappedValue;
 import com.wynntils.utils.type.ErrorOr;
 import com.wynntils.utils.type.NamedValue;
 import com.wynntils.utils.type.RangedValue;
+
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
@@ -40,8 +41,8 @@ public final class FunctionArguments {
 
         public ErrorOr<FunctionArguments> buildWithValues(List<Object> values) {
             if (arguments.stream()
-                            .filter(argument -> argument instanceof ListArgument<?>)
-                            .count()
+                    .filter(argument -> argument instanceof ListArgument<?>)
+                    .count()
                     > 1) {
                 throw new IllegalArgumentException("Only one list argument is allowed.");
             }

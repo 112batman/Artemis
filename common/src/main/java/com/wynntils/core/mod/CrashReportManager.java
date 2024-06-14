@@ -5,11 +5,12 @@
 package com.wynntils.core.mod;
 
 import com.wynntils.core.components.Manager;
+import net.minecraft.CrashReportCategory;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Supplier;
-import net.minecraft.CrashReportCategory;
 
 public final class CrashReportManager extends Manager {
     private static final Map<String, Supplier<String>> CRASH_HANDLERS = new HashMap<>();

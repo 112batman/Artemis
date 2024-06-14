@@ -9,9 +9,10 @@ import com.wynntils.core.consumers.functions.Function;
 import com.wynntils.core.consumers.functions.arguments.FunctionArguments;
 import com.wynntils.utils.mc.McUtils;
 import com.wynntils.utils.type.CappedValue;
+import net.minecraft.client.player.LocalPlayer;
+
 import java.util.List;
 import java.util.Locale;
-import net.minecraft.client.player.LocalPlayer;
 
 public class CharacterFunctions {
     public static class CappedManaFunction extends Function<CappedValue> {

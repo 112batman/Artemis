@@ -28,9 +28,6 @@ import com.wynntils.utils.render.type.TextShadow;
 import com.wynntils.utils.render.type.VerticalAlignment;
 import com.wynntils.utils.type.BoundingBox;
 import com.wynntils.utils.type.BoundingShape;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.AbstractWidget;
@@ -38,6 +35,10 @@ import net.minecraft.client.gui.components.events.GuiEventListener;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.network.chat.Component;
+
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
 
 public final class CustomSeaskipperScreen extends AbstractMapScreen {
     // Constants
@@ -72,7 +73,8 @@ public final class CustomSeaskipperScreen extends AbstractMapScreen {
     private int scrollAreaHeight;
     private int scrollOffset = 0;
 
-    private CustomSeaskipperScreen() {}
+    private CustomSeaskipperScreen() {
+    }
 
     public static Screen create() {
         return new CustomSeaskipperScreen();
@@ -92,8 +94,8 @@ public final class CustomSeaskipperScreen extends AbstractMapScreen {
         renderedBorderXOffset -= 1;
         mapWidth -= (departureListWidth) - 5;
         departureBoardY = (this.height
-                        - (Texture.DESTINATION_LIST.height() * currentTextureScale
-                                + (Texture.TRAVEL_BUTTON.height() / 2) * currentTextureScale))
+                - (Texture.DESTINATION_LIST.height() * currentTextureScale
+                + (Texture.TRAVEL_BUTTON.height() / 2) * currentTextureScale))
                 / 2;
         scrollButtonRenderX = 5 + departureListWidth * 0.933f;
         destinationButtonsRenderX = 5 + departureListWidth * 0.027f;
@@ -620,11 +622,11 @@ public final class CustomSeaskipperScreen extends AbstractMapScreen {
 
         scrollButtonRenderY = (int) (departureBoardY + 4 * currentTextureScale * 0.933f)
                 + MathUtils.map(
-                        scrollOffset,
-                        0,
-                        availablePois.size() - MAX_DESTINATIONS,
-                        0,
-                        scrollAreaHeight - Texture.SCROLL_BUTTON.height() * currentTextureScale);
+                scrollOffset,
+                0,
+                availablePois.size() - MAX_DESTINATIONS,
+                0,
+                scrollAreaHeight - Texture.SCROLL_BUTTON.height() * currentTextureScale);
 
         RenderUtils.drawScalingTexturedRect(
                 poseStack,

@@ -11,6 +11,7 @@ import com.wynntils.models.items.properties.GearTierItemProperty;
 import com.wynntils.models.items.properties.GearTypeItemProperty;
 import com.wynntils.models.items.properties.LeveledItemProperty;
 import com.wynntils.models.stats.type.StatActualValue;
+
 import java.util.List;
 
 public class UnknownGearItem extends GameItem

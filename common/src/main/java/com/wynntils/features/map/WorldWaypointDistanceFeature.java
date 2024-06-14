@@ -28,8 +28,10 @@ import com.wynntils.utils.render.Texture;
 import com.wynntils.utils.render.type.HorizontalAlignment;
 import com.wynntils.utils.render.type.TextShadow;
 import com.wynntils.utils.render.type.VerticalAlignment;
+
 import java.util.ArrayList;
 import java.util.List;
+
 import net.minecraft.client.Camera;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.core.Position;
@@ -178,8 +180,8 @@ public class WorldWaypointDistanceFeature extends Feature {
 
                 // pointer position is determined by finding the point on circle centered around displayPosition
                 double angle = Math.toDegrees(StrictMath.atan2(
-                                displayPositionY - event.getWindow().getGuiScaledHeight() / 2,
-                                displayPositionX - event.getWindow().getGuiScaledWidth() / 2))
+                        displayPositionY - event.getWindow().getGuiScaledHeight() / 2,
+                        displayPositionX - event.getWindow().getGuiScaledWidth() / 2))
                         + 90f;
                 float radius = icon.width() / 2 + 8f;
 
@@ -326,5 +328,6 @@ public class WorldWaypointDistanceFeature extends Feature {
     }
 
     private record RenderedMarkerInfo(
-            double distance, String distanceText, MarkerInfo markerInfo, Vec3 screenCoordinates) {}
+            double distance, String distanceText, MarkerInfo markerInfo, Vec3 screenCoordinates) {
+    }
 }

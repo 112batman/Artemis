@@ -6,4 +6,5 @@ package com.wynntils.models.items.items.game;
 
 import com.wynntils.models.items.WynnItem;
 
-public class GameItem extends WynnItem {}
+public class GameItem extends WynnItem {
+}

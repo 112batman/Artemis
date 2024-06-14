@@ -19,10 +19,12 @@ import com.wynntils.utils.render.RenderUtils;
 import com.wynntils.utils.render.type.HorizontalAlignment;
 import com.wynntils.utils.render.type.TextShadow;
 import com.wynntils.utils.render.type.VerticalAlignment;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
+
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.AbstractWidget;
 import net.minecraft.client.gui.components.Button;
@@ -69,22 +71,22 @@ public class ProviderFilterListWidget extends AbstractWidget {
 
         if (provider.getType().equals(String.class) && provider.getValidInputs().isEmpty()) {
             addStringFilterButton = new Button.Builder(
-                            Component.translatable("screens.wynntils.itemFilter.addNewFilter"), (button -> {
-                                int renderY;
+                    Component.translatable("screens.wynntils.itemFilter.addNewFilter"), (button -> {
+                int renderY;
 
-                                if (widgets.isEmpty()) {
-                                    renderY = getY() + 2;
-                                } else {
-                                    renderY = widgets.get(widgets.size() - 1).getY() + 24;
-                                }
+                if (widgets.isEmpty()) {
+                    renderY = getY() + 2;
+                } else {
+                    renderY = widgets.get(widgets.size() - 1).getY() + 24;
+                }
 
-                                widgets.add(
-                                        new StringFilterWidget(getX() + 5, renderY, 175, 20, null, this, filterScreen));
+                widgets.add(
+                        new StringFilterWidget(getX() + 5, renderY, 175, 20, null, this, filterScreen));
 
-                                scroll(1);
+                scroll(1);
 
-                                addStringFilterButton.active = false;
-                            }))
+                addStringFilterButton.active = false;
+            }))
                     .pos(getX() + 55, getY() + 125)
                     .size(85, 20)
                     .build();
@@ -96,25 +98,25 @@ public class ProviderFilterListWidget extends AbstractWidget {
                     .build();
 
             addNumericFilterButton = new Button.Builder(
-                            Component.translatable("screens.wynntils.itemFilter.addNewFilter"), (button -> {
-                                int renderY;
+                    Component.translatable("screens.wynntils.itemFilter.addNewFilter"), (button -> {
+                int renderY;
 
-                                if (widgets.isEmpty()) {
-                                    renderY = getY() + 2;
-                                } else {
-                                    renderY = widgets.get(widgets.size() - 1).getY() + 24;
-                                }
+                if (widgets.isEmpty()) {
+                    renderY = getY() + 2;
+                } else {
+                    renderY = widgets.get(widgets.size() - 1).getY() + 24;
+                }
 
-                                GeneralFilterWidget filterWidget = getNumericFilterWidget(renderY);
+                GeneralFilterWidget filterWidget = getNumericFilterWidget(renderY);
 
-                                if (filterWidget == null) return;
+                if (filterWidget == null) return;
 
-                                widgets.add(filterWidget);
+                widgets.add(filterWidget);
 
-                                scroll(1);
+                scroll(1);
 
-                                addNumericFilterButton.active = false;
-                            }))
+                addNumericFilterButton.active = false;
+            }))
                     .pos(getX() + 95, getY() + 125)
                     .size(85, 20)
                     .build();
@@ -497,7 +499,8 @@ public class ProviderFilterListWidget extends AbstractWidget {
     }
 
     @Override
-    protected void updateWidgetNarration(NarrationElementOutput narrationElementOutput) {}
+    protected void updateWidgetNarration(NarrationElementOutput narrationElementOutput) {
+    }
 
     private enum NumericType {
         SINGLE,

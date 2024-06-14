@@ -9,6 +9,7 @@ import com.wynntils.models.stats.StatCalculator;
 import com.wynntils.models.stats.type.ShinyStat;
 import com.wynntils.models.stats.type.StatActualValue;
 import com.wynntils.models.stats.type.StatType;
+
 import java.util.List;
 import java.util.Optional;
 

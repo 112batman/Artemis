@@ -5,12 +5,13 @@
 package com.wynntils.core.events;
 
 import com.wynntils.core.WynntilsMod;
-import java.util.Locale;
 import net.minecraftforge.eventbus.BusBuilderImpl;
 import net.minecraftforge.eventbus.EventBus;
 import net.minecraftforge.eventbus.api.BusBuilder;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.eventbus.api.IEventBus;
+
+import java.util.Locale;
 
 public final class EventBusWrapper extends EventBus {
     private EventBusWrapper(BusBuilderImpl busBuilder) {

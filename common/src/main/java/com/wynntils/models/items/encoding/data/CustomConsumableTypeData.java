@@ -7,4 +7,5 @@ package com.wynntils.models.items.encoding.data;
 import com.wynntils.models.gear.type.ConsumableType;
 import com.wynntils.models.items.encoding.type.ItemData;
 
-public record CustomConsumableTypeData(ConsumableType consumableType) implements ItemData {}
+public record CustomConsumableTypeData(ConsumableType consumableType) implements ItemData {
+}

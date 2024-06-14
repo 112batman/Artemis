@@ -11,9 +11,10 @@ import com.wynntils.models.abilities.type.ShamanTotem;
 import com.wynntils.utils.mc.McUtils;
 import com.wynntils.utils.mc.PosUtils;
 import com.wynntils.utils.mc.type.Location;
+import net.minecraft.ChatFormatting;
+
 import java.util.List;
 import java.util.Locale;
-import net.minecraft.ChatFormatting;
 
 public class SpellFunctions {
     public static class ArrowShieldCountFunction extends Function<Integer> {

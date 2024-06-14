@@ -9,6 +9,7 @@ import com.wynntils.screens.itemfilter.widgets.ProviderFilterListWidget;
 import com.wynntils.services.itemfilter.filters.RangedStatFilters;
 import com.wynntils.services.itemfilter.type.StatFilter;
 import com.wynntils.services.itemfilter.type.StatProviderAndFilterPair;
+
 import java.util.Optional;
 
 public class InequalityIntegerFilterWidget extends InequalityNumericFilterWidget<Integer> {

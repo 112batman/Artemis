@@ -9,6 +9,7 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.wynntils.core.WynntilsMod;
 import com.wynntils.core.net.event.NetResultProcessedEvent;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -129,7 +130,8 @@ public abstract class NetResult {
         };
     }
 
-    protected void onHandlingFailed() {}
+    protected void onHandlingFailed() {
+    }
 
     protected abstract CompletableFuture<InputStream> getInputStreamFuture();
 }

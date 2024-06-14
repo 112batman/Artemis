@@ -37,7 +37,7 @@ public class CustomConsumableTypeDataTransformer extends DataTransformer<CustomC
     private ErrorOr<UnsignedByte[]> encodeCustomConsumableTypeData(CustomConsumableTypeData data) {
         // The data is a single byte, containing the id of the type of the item.
         return ErrorOr.of(
-                new UnsignedByte[] {UnsignedByte.of((byte) data.consumableType().getEncodingId())});
+                new UnsignedByte[]{UnsignedByte.of((byte) data.consumableType().getEncodingId())});
     }
 
     private ErrorOr<CustomConsumableTypeData> decodeCustomConsumableTypeData(ArrayReader<UnsignedByte> byteReader) {

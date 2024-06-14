@@ -5,8 +5,6 @@
 package com.wynntils.mc.event;
 
 import com.mojang.blaze3d.vertex.PoseStack;
-import java.util.Collections;
-import java.util.List;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
@@ -14,9 +12,12 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.eventbus.api.Cancelable;
 import net.minecraftforge.eventbus.api.Event;
 
+import java.util.Collections;
+import java.util.List;
+
 /**
  * This event is fired when an item tooltip is rendered.
- *
+ * <p>
  * However, starting Minecraft 1.20, there is no longer a concrete way of rendering item tooltips.
  * We still have {@link GuiGraphics#renderTooltip(Font, ItemStack, int, int)}, but some screens tend to convert an item into tooltip themselves.
  * This leads to us having to call this event from 3 locations, which the secondary location being {@link net.minecraft.client.gui.screens.inventory.AbstractContainerScreen#renderTooltip(GuiGraphics, int, int)}.`

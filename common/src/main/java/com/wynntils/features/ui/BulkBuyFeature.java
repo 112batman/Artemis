@@ -18,10 +18,12 @@ import com.wynntils.utils.mc.KeyboardUtils;
 import com.wynntils.utils.mc.LoreUtils;
 import com.wynntils.utils.mc.McUtils;
 import com.wynntils.utils.wynn.ContainerUtils;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -74,6 +76,7 @@ public class BulkBuyFeature extends Feature {
      * When shift is pressed:
      * Replaces the price in the lore with the bulk buy price.
      * Also replaces the "✔" with a "✖" with a if the user can't afford the bulk buy.
+     *
      * @param oldLore Lore of the item that user wants to bulk buy
      * @return New lore with the above replacements
      */

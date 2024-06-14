@@ -16,14 +16,11 @@ import com.wynntils.utils.mc.RenderedStringUtils;
 import com.wynntils.utils.mc.StyledTextUtils;
 import com.wynntils.utils.mc.type.Location;
 import com.wynntils.utils.type.Pair;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Locale;
-import java.util.Objects;
-import java.util.Optional;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
+
+import java.util.*;
 
 public class QuestInfo {
     private static final int NEXT_TASK_MAX_WIDTH = 200;
@@ -182,8 +179,8 @@ public class QuestInfo {
         if (!questInfo.isMiniQuest()
                 || questInfo.getAdditionalRequirements().level().a() != 0) {
             tooltipLines.add((Models.CombatXp.getCombatLevel().current() >= questInfo.getLevel()
-                            ? Component.literal("✔").withStyle(ChatFormatting.GREEN)
-                            : Component.literal("✖").withStyle(ChatFormatting.RED))
+                    ? Component.literal("✔").withStyle(ChatFormatting.GREEN)
+                    : Component.literal("✖").withStyle(ChatFormatting.RED))
                     .append(Component.literal(" Combat Lv. Min: ").withStyle(ChatFormatting.GRAY))
                     .append(Component.literal(String.valueOf(questInfo.getLevel()))
                             .withStyle(ChatFormatting.WHITE)));

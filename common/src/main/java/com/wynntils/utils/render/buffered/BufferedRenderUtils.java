@@ -9,7 +9,9 @@ import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.wynntils.utils.colors.CustomColor;
 import com.wynntils.utils.render.Texture;
+
 import java.util.List;
+
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
@@ -414,19 +416,19 @@ public final class BufferedRenderUtils {
      * drawProgressBar
      * Draws a progress bar (textureY1 and textureY2 now specify both textures with background being on top of the bar)
      *
-     * @param poseStack poseStack to use
+     * @param poseStack    poseStack to use
      * @param bufferSource bufferSource to use
-     * @param texture   the texture to use
-     * @param customColor the color for the bar
-     * @param x1        left x on screen
-     * @param y1        top y on screen
-     * @param x2        right x on screen
-     * @param y2        bottom right on screen
-     * @param textureX1 texture left x for the part
-     * @param textureY1 texture top y for the part (top of background)
-     * @param textureX2 texture right x for the part
-     * @param textureY2 texture bottom y for the part (bottom of bar)
-     * @param progress  progress of the bar, 0.0f to 1.0f is left to right and 0.0f to -1.0f is right to left
+     * @param texture      the texture to use
+     * @param customColor  the color for the bar
+     * @param x1           left x on screen
+     * @param y1           top y on screen
+     * @param x2           right x on screen
+     * @param y2           bottom right on screen
+     * @param textureX1    texture left x for the part
+     * @param textureY1    texture top y for the part (top of background)
+     * @param textureX2    texture right x for the part
+     * @param textureY2    texture bottom y for the part (bottom of bar)
+     * @param progress     progress of the bar, 0.0f to 1.0f is left to right and 0.0f to -1.0f is right to left
      */
     public static void drawColoredProgressBar(
             PoseStack poseStack,
@@ -525,18 +527,18 @@ public final class BufferedRenderUtils {
      * drawProgressBar
      * Draws a progress bar (textureY1 and textureY2 now specify both textures with background being on top of the bar)
      *
-     * @param poseStack poseStack to use
+     * @param poseStack    poseStack to use
      * @param bufferSource bufferSource to use
-     * @param texture   the texture to use
-     * @param x1        left x on screen
-     * @param y1        top y on screen
-     * @param x2        right x on screen
-     * @param y2        bottom right on screen
-     * @param textureX1 texture left x for the part
-     * @param textureY1 texture top y for the part (top of background)
-     * @param textureX2 texture right x for the part
-     * @param textureY2 texture bottom y for the part (bottom of bar)
-     * @param progress  progress of the bar, 0.0f to 1.0f is left to right and 0.0f to -1.0f is right to left
+     * @param texture      the texture to use
+     * @param x1           left x on screen
+     * @param y1           top y on screen
+     * @param x2           right x on screen
+     * @param y2           bottom right on screen
+     * @param textureX1    texture left x for the part
+     * @param textureY1    texture top y for the part (top of background)
+     * @param textureX2    texture right x for the part
+     * @param textureY2    texture bottom y for the part (bottom of bar)
+     * @param progress     progress of the bar, 0.0f to 1.0f is left to right and 0.0f to -1.0f is right to left
      */
     public static void drawProgressBar(
             PoseStack poseStack,
@@ -659,10 +661,10 @@ public final class BufferedRenderUtils {
      * white will allow drawing.
      *
      * @param texture mask texture(please use Textures.Masks)
-     * @param x1 bottom-left x(on screen)
-     * @param y1 bottom-left y(on screen)
-     * @param x2 top-right x(on screen)
-     * @param y2 top-right y(on screen)
+     * @param x1      bottom-left x(on screen)
+     * @param y1      bottom-left y(on screen)
+     * @param x2      top-right x(on screen)
+     * @param y2      top-right y(on screen)
      */
     private static void createMask(
             PoseStack poseStack,

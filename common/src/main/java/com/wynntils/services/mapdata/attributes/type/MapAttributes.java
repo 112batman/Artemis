@@ -6,6 +6,7 @@ package com.wynntils.services.mapdata.attributes.type;
 
 import com.wynntils.utils.colors.CustomColor;
 import com.wynntils.utils.render.type.TextShadow;
+
 import java.util.Optional;
 
 /**

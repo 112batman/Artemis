@@ -35,10 +35,10 @@ public abstract class EntityRendererMixin<T extends Entity> {
             method =
                     "renderNameTag(Lnet/minecraft/world/entity/Entity;Lnet/minecraft/network/chat/Component;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;I)V",
             at =
-                    @At(
-                            value = "INVOKE_ASSIGN",
-                            target = "Lnet/minecraft/client/Options;getBackgroundOpacity(F)F",
-                            shift = At.Shift.AFTER),
+            @At(
+                    value = "INVOKE_ASSIGN",
+                    target = "Lnet/minecraft/client/Options;getBackgroundOpacity(F)F",
+                    shift = At.Shift.AFTER),
             cancellable = true)
     private void onNameTagRenderPre(
             T entity,

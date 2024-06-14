@@ -12,12 +12,13 @@ import com.wynntils.models.ingredients.type.IngredientInfo;
 import com.wynntils.models.wynnitem.WynnItemModel;
 import com.wynntils.models.wynnitem.type.ItemObtainInfo;
 import com.wynntils.models.wynnitem.type.ItemObtainType;
+import net.minecraft.ChatFormatting;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Stream;
-import net.minecraft.ChatFormatting;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 public class IngredientModel extends Model {
     private static final Map<ChatFormatting, Integer> TIER_COLOR_CODES = Map.of(

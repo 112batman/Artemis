@@ -12,11 +12,12 @@ import com.wynntils.utils.colors.CommonColors;
 import com.wynntils.utils.mc.McUtils;
 import com.wynntils.utils.render.RenderUtils;
 import com.wynntils.utils.render.Texture;
-import java.util.List;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.AbstractWidget;
 import net.minecraft.client.gui.narration.NarrationElementOutput;
 import net.minecraft.network.chat.Component;
+
+import java.util.List;
 
 public class IconFilterWidget extends AbstractWidget {
     private final boolean included;
@@ -46,9 +47,9 @@ public class IconFilterWidget extends AbstractWidget {
 
         tooltip = included
                 ? List.of(Component.translatable(
-                        "screens.wynntils.iconFilter.filterExclude.tooltip", EnumUtils.toNiceString(icon)))
+                "screens.wynntils.iconFilter.filterExclude.tooltip", EnumUtils.toNiceString(icon)))
                 : List.of(Component.translatable(
-                        "screens.wynntils.iconFilter.filterInclude.tooltip", EnumUtils.toNiceString(icon)));
+                "screens.wynntils.iconFilter.filterInclude.tooltip", EnumUtils.toNiceString(icon)));
     }
 
     @Override
@@ -89,5 +90,6 @@ public class IconFilterWidget extends AbstractWidget {
     }
 
     @Override
-    protected void updateWidgetNarration(NarrationElementOutput narrationElementOutput) {}
+    protected void updateWidgetNarration(NarrationElementOutput narrationElementOutput) {
+    }
 }

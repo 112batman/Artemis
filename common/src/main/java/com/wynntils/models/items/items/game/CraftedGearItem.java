@@ -25,17 +25,18 @@ import com.wynntils.models.stats.type.StatType;
 import com.wynntils.utils.type.CappedValue;
 import com.wynntils.utils.type.Pair;
 import com.wynntils.utils.type.RangedValue;
+
 import java.util.List;
 import java.util.Optional;
 
 public class CraftedGearItem extends GameItem
         implements GearTierItemProperty,
-                GearTypeItemProperty,
-                DurableItemProperty,
-                LeveledItemProperty,
-                PowderedItemProperty,
-                CraftedItemProperty,
-                RequirementItemProperty {
+        GearTypeItemProperty,
+        DurableItemProperty,
+        LeveledItemProperty,
+        PowderedItemProperty,
+        CraftedItemProperty,
+        RequirementItemProperty {
     private final String name;
     private final int effectStrength;
     private final GearType gearType;

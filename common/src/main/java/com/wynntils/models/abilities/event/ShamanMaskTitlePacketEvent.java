@@ -8,4 +8,5 @@ import net.minecraftforge.eventbus.api.Cancelable;
 import net.minecraftforge.eventbus.api.Event;
 
 @Cancelable
-public class ShamanMaskTitlePacketEvent extends Event {}
+public class ShamanMaskTitlePacketEvent extends Event {
+}

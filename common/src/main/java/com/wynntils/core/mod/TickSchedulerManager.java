@@ -6,12 +6,13 @@ package com.wynntils.core.mod;
 
 import com.wynntils.core.components.Manager;
 import com.wynntils.mc.event.TickAlwaysEvent;
+import net.minecraftforge.eventbus.api.EventPriority;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-import net.minecraftforge.eventbus.api.EventPriority;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 public final class TickSchedulerManager extends Manager {
     private final Map<Runnable, Integer> tasks = new ConcurrentHashMap<>();

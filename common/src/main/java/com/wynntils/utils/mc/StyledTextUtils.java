@@ -8,11 +8,13 @@ import com.wynntils.core.text.PartStyle;
 import com.wynntils.core.text.StyledText;
 import com.wynntils.core.text.StyledTextPart;
 import com.wynntils.utils.mc.type.Location;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.ClickEvent;
 import net.minecraft.network.chat.Component;
@@ -58,6 +60,7 @@ public final class StyledTextUtils {
      * Multi-line messages use new lines not just to split the multi-line message, but also to format the message.
      * If a part is only a new line, we know it's a new message, but if the new line is in the middle of a part,
      * we know it's a new line in the same message, which we don't want to split.
+     *
      * @param styledText The styled text to split
      * @return A list of styled texts, each representing a line
      */

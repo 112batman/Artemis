@@ -18,6 +18,7 @@ import com.wynntils.services.itemfilter.type.ItemStatProvider;
 import com.wynntils.services.itemfilter.type.StatValue;
 import com.wynntils.utils.type.Pair;
 import com.wynntils.utils.type.RangedValue;
+
 import java.util.List;
 import java.util.Optional;
 

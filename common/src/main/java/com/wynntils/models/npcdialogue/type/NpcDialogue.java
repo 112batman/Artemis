@@ -6,8 +6,9 @@ package com.wynntils.models.npcdialogue.type;
 
 import com.wynntils.core.text.StyledText;
 import com.wynntils.handlers.chat.type.NpcDialogueType;
-import java.util.List;
 import net.minecraft.network.chat.Component;
+
+import java.util.List;
 
 /**
  * Represents the current dialogue of an NPC.

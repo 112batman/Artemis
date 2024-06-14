@@ -15,6 +15,7 @@ import com.wynntils.utils.mc.McUtils;
 import com.wynntils.utils.type.BoundingBox;
 import com.wynntils.utils.type.BoundingCircle;
 import com.wynntils.utils.type.BoundingShape;
+
 import java.io.IOException;
 import java.lang.reflect.Type;
 import java.net.URI;
@@ -63,7 +64,8 @@ public final class MapService extends Service {
 
         Download dl = Managers.Net.download(UrlId.DATA_STATIC_MAPS);
         dl.handleReader(reader -> {
-            Type type = new TypeToken<List<MapPartProfile>>() {}.getType();
+            Type type = new TypeToken<List<MapPartProfile>>() {
+            }.getType();
 
             List<MapPartProfile> mapPartList = WynntilsMod.GSON.fromJson(reader, type);
             for (MapPartProfile mapPart : mapPartList) {

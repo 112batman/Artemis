@@ -8,6 +8,7 @@ import com.wynntils.core.consumers.functions.expressions.ConstantExpression;
 import com.wynntils.core.consumers.functions.expressions.Expression;
 import com.wynntils.core.consumers.functions.expressions.FunctionExpression;
 import com.wynntils.utils.type.ErrorOr;
+
 import java.util.List;
 import java.util.Optional;
 import java.util.function.Function;
@@ -16,7 +17,8 @@ public final class ExpressionParser {
     private static final List<Function<String, ErrorOr<Optional<Expression>>>> registeredExpressions =
             List.of(FunctionExpression::tryParse, ConstantExpression::tryParse);
 
-    private ExpressionParser() {}
+    private ExpressionParser() {
+    }
 
     public static ErrorOr<Expression> tryParse(String rawExpression) {
         for (Function<String, ErrorOr<Optional<Expression>>> expression : registeredExpressions) {

@@ -7,11 +7,12 @@ package com.wynntils.services.itemfilter.type;
 import com.google.common.base.CaseFormat;
 import com.wynntils.core.persisted.Translatable;
 import com.wynntils.models.items.WynnItem;
+import net.minecraft.client.resources.language.I18n;
+
 import java.lang.reflect.ParameterizedType;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
-import net.minecraft.client.resources.language.I18n;
 
 public abstract class ItemStatProvider<T extends Comparable<T>> implements Translatable, Comparator<WynnItem> {
     protected final String name;
@@ -35,6 +36,7 @@ public abstract class ItemStatProvider<T extends Comparable<T>> implements Trans
 
     /**
      * Returns the type of filter this stat provider is for.
+     *
      * @return The type of filter this stat provider is for
      */
     public abstract List<ItemProviderType> getFilterTypes();

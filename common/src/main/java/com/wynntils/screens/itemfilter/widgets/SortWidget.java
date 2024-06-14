@@ -16,8 +16,10 @@ import com.wynntils.utils.render.type.HorizontalAlignment;
 import com.wynntils.utils.render.type.TextShadow;
 import com.wynntils.utils.render.type.VerticalAlignment;
 import com.wynntils.utils.type.Pair;
+
 import java.util.ArrayList;
 import java.util.List;
+
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.AbstractWidget;
 import net.minecraft.client.gui.components.Button;
@@ -45,20 +47,20 @@ public class SortWidget extends AbstractWidget {
         this.sortInfo = sortInfo;
 
         Button sortButton = new Button.Builder(
-                        Component.literal(sortInfo.direction() == SortDirection.DESCENDING ? "v" : "ʌ"),
-                        (button) -> toggleSortDirection())
+                Component.literal(sortInfo.direction() == SortDirection.DESCENDING ? "v" : "ʌ"),
+                (button) -> toggleSortDirection())
                 .pos(x + width - 70, y)
                 .size(50, 20)
                 .build();
 
         Button upButton = new Button.Builder(
-                        Component.literal("🠝"), (button) -> filterScreen.reorderSort(sortInfo, -1))
+                Component.literal("🠝"), (button) -> filterScreen.reorderSort(sortInfo, -1))
                 .pos(x + width - 20, y)
                 .size(10, 20)
                 .build();
 
         Button downButton = new Button.Builder(
-                        Component.literal("🠟"), (button) -> filterScreen.reorderSort(sortInfo, 1))
+                Component.literal("🠟"), (button) -> filterScreen.reorderSort(sortInfo, 1))
                 .pos(x + width - 10, y)
                 .size(10, 20)
                 .build();
@@ -126,5 +128,6 @@ public class SortWidget extends AbstractWidget {
     }
 
     @Override
-    protected void updateWidgetNarration(NarrationElementOutput narrationElementOutput) {}
+    protected void updateWidgetNarration(NarrationElementOutput narrationElementOutput) {
+    }
 }

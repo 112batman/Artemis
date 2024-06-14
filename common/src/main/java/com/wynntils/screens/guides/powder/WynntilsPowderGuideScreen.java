@@ -18,11 +18,12 @@ import com.wynntils.utils.render.Texture;
 import com.wynntils.utils.render.type.HorizontalAlignment;
 import com.wynntils.utils.render.type.TextShadow;
 import com.wynntils.utils.render.type.VerticalAlignment;
-import java.util.List;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.resources.language.I18n;
 import net.minecraft.network.chat.Component;
+
+import java.util.List;
 
 public final class WynntilsPowderGuideScreen
         extends WynntilsListScreen<GuidePowderItemStack, GuidePowderItemStackButton> {

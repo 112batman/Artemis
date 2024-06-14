@@ -27,19 +27,20 @@ import com.wynntils.models.stats.type.StatPossibleValues;
 import com.wynntils.models.stats.type.StatType;
 import com.wynntils.utils.type.Pair;
 import com.wynntils.utils.type.RangedValue;
+
 import java.util.List;
 import java.util.Optional;
 
 public class GearItem extends GameItem
         implements GearTierItemProperty,
-                GearTypeItemProperty,
-                LeveledItemProperty,
-                PowderedItemProperty,
-                RerollableItemProperty,
-                ShinyItemProperty,
-                IdentifiableItemProperty<GearInfo, GearInstance>,
-                SetItemProperty,
-                RequirementItemProperty {
+        GearTypeItemProperty,
+        LeveledItemProperty,
+        PowderedItemProperty,
+        RerollableItemProperty,
+        ShinyItemProperty,
+        IdentifiableItemProperty<GearInfo, GearInstance>,
+        SetItemProperty,
+        RequirementItemProperty {
     private final GearInfo gearInfo;
     private final GearInstance gearInstance;
 

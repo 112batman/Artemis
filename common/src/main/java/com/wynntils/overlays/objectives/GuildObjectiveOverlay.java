@@ -78,10 +78,10 @@ public class GuildObjectiveOverlay extends ObjectiveOverlayBase {
 
         float renderY = this.getRenderY()
                 + switch (this.getRenderVerticalAlignment()) {
-                    case TOP -> 0;
-                    case MIDDLE -> (this.getHeight() - renderedHeight) / 2f;
-                    case BOTTOM -> this.getHeight() - renderedHeight;
-                };
+            case TOP -> 0;
+            case MIDDLE -> (this.getHeight() - renderedHeight) / 2f;
+            case BOTTOM -> this.getHeight() - renderedHeight;
+        };
 
         final String text = guildObjective.asObjectiveString();
         BufferedFontRenderer.getInstance()
@@ -121,5 +121,6 @@ public class GuildObjectiveOverlay extends ObjectiveOverlayBase {
     }
 
     @Override
-    protected void onConfigUpdate(Config<?> config) {}
+    protected void onConfigUpdate(Config<?> config) {
+    }
 }

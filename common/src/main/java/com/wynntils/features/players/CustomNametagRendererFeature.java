@@ -26,9 +26,11 @@ import com.wynntils.utils.render.RenderUtils;
 import com.wynntils.utils.render.Texture;
 import com.wynntils.utils.wynn.ItemUtils;
 import com.wynntils.utils.wynn.RaycastUtils;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.network.chat.Component;
@@ -264,5 +266,6 @@ public class CustomNametagRendererFeature extends Feature {
         }
     }
 
-    private record CustomNametag(Component nametagComponent, float nametagScale) {}
+    private record CustomNametag(Component nametagComponent, float nametagScale) {
+    }
 }

@@ -15,4 +15,5 @@ public record WidgetParams(
         int height,
         StatProviderAndFilterPair filterPair,
         ProviderFilterListWidget parent,
-        ItemFilterScreen filterScreen) {}
+        ItemFilterScreen filterScreen) {
+}

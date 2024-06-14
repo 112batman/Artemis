@@ -8,6 +8,7 @@ import com.wynntils.models.character.type.ClassType;
 import com.wynntils.models.spells.type.SpellType;
 import com.wynntils.models.stats.type.SpellStatType;
 import com.wynntils.models.stats.type.StatUnit;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;

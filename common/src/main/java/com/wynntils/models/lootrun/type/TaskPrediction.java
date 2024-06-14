@@ -6,4 +6,5 @@ package com.wynntils.models.lootrun.type;
 
 import com.wynntils.models.beacons.type.Beacon;
 
-public record TaskPrediction(Beacon beacon, TaskLocation taskLocation, double predictionScore) {}
+public record TaskPrediction(Beacon beacon, TaskLocation taskLocation, double predictionScore) {
+}

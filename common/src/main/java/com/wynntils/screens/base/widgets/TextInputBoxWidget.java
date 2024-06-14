@@ -18,8 +18,6 @@ import com.wynntils.utils.render.type.HorizontalAlignment;
 import com.wynntils.utils.render.type.TextShadow;
 import com.wynntils.utils.render.type.VerticalAlignment;
 import com.wynntils.utils.type.Pair;
-import java.util.List;
-import java.util.function.Consumer;
 import net.minecraft.client.KeyboardHandler;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;
@@ -31,6 +29,9 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.Mth;
 import org.lwjgl.glfw.GLFW;
+
+import java.util.List;
+import java.util.function.Consumer;
 
 public class TextInputBoxWidget extends AbstractWidget {
     private static final int CURSOR_PADDING = 3;
@@ -510,7 +511,8 @@ public class TextInputBoxWidget extends AbstractWidget {
     }
 
     @Override
-    public void updateWidgetNarration(NarrationElementOutput narrationElementOutput) {}
+    public void updateWidgetNarration(NarrationElementOutput narrationElementOutput) {
+    }
 
     public void setTextBoxInput(String textBoxInput) {
         this.textBoxInput = textBoxInput;
@@ -621,5 +623,6 @@ public class TextInputBoxWidget extends AbstractWidget {
     /**
      * If there is no on update consumer given in the constructor, this method gets called instead.
      */
-    protected void onUpdate(String text) {}
+    protected void onUpdate(String text) {
+    }
 }

@@ -5,6 +5,7 @@
 package com.wynntils.models.items.properties;
 
 import com.wynntils.models.profession.type.ProfessionType;
+
 import java.util.List;
 
 public interface ProfessionItemProperty {

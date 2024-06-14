@@ -41,7 +41,7 @@ public record SavableSkillPointSet(
     }
 
     public int[] getSkillPointsAsArray() {
-        return new int[] {strength, dexterity, intelligence, defence, agility};
+        return new int[]{strength, dexterity, intelligence, defence, agility};
     }
 
     public int getSkillPointsSum() {

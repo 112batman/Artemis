@@ -12,6 +12,7 @@ import com.wynntils.services.mapdata.attributes.type.ResolvedMapAttributes;
 import com.wynntils.services.mapdata.attributes.type.ResolvedMapVisibility;
 import com.wynntils.services.mapdata.type.MapCategory;
 import com.wynntils.services.mapdata.type.MapFeature;
+
 import java.util.Optional;
 import java.util.function.Function;
 import java.util.stream.Stream;

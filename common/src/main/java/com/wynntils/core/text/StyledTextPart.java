@@ -5,16 +5,13 @@
 package com.wynntils.core.text;
 
 import com.wynntils.utils.wynn.WynnUtils;
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.*;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.function.Function;
-import net.minecraft.ChatFormatting;
-import net.minecraft.network.chat.ClickEvent;
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.HoverEvent;
-import net.minecraft.network.chat.MutableComponent;
-import net.minecraft.network.chat.Style;
 
 public final class StyledTextPart {
     private final String text;

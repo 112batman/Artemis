@@ -5,6 +5,7 @@
 package com.wynntils.models.dungeon.type;
 
 import com.wynntils.utils.EnumUtils;
+
 import java.util.Arrays;
 import java.util.stream.Collectors;
 

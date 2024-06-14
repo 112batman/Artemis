@@ -19,9 +19,6 @@ import com.wynntils.utils.mc.PosUtils;
 import com.wynntils.utils.render.buffered.CustomRenderType;
 import com.wynntils.utils.type.Pair;
 import it.unimi.dsi.fastutil.longs.Long2ObjectMap;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
 import net.minecraft.client.Camera;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.multiplayer.ClientLevel;
@@ -40,6 +37,10 @@ import net.minecraft.world.phys.AABB;
 import org.joml.Matrix4f;
 import org.joml.Quaternionf;
 import org.joml.Vector3f;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
 
 public final class LootrunRenderer {
     private static final MultiBufferSource.BufferSource BUFFER_SOURCE =
@@ -87,8 +88,8 @@ public final class LootrunRenderer {
                 }
 
                 if (Managers.Feature.getFeatureInstance(LootrunFeature.class)
-                                .showNotes
-                                .get()
+                        .showNotes
+                        .get()
                         && lootrun.notes().containsKey(chunkLong)) {
                     renderNotes(poseStack, lootrun, color, chunkLong);
                 }

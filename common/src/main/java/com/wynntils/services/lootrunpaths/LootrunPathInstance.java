@@ -8,10 +8,11 @@ import com.wynntils.services.lootrunpaths.type.ColoredPath;
 import com.wynntils.services.lootrunpaths.type.LootrunNote;
 import com.wynntils.services.lootrunpaths.type.LootrunPath;
 import it.unimi.dsi.fastutil.longs.Long2ObjectMap;
-import java.util.List;
-import java.util.Set;
 import net.minecraft.core.BlockPos;
 import org.joml.Vector2d;
+
+import java.util.List;
+import java.util.Set;
 
 public record LootrunPathInstance(
         String name,
@@ -19,4 +20,5 @@ public record LootrunPathInstance(
         List<Vector2d> simplifiedPath,
         Long2ObjectMap<List<ColoredPath>> points,
         Long2ObjectMap<Set<BlockPos>> chests,
-        Long2ObjectMap<List<LootrunNote>> notes) {}
+        Long2ObjectMap<List<LootrunNote>> notes) {
+}

@@ -11,6 +11,7 @@ import com.wynntils.models.items.encoding.ItemTransformerRegistry;
 import com.wynntils.models.items.encoding.type.EncodingSettings;
 import com.wynntils.utils.EncodedByteBuffer;
 import com.wynntils.utils.type.ErrorOr;
+
 import java.util.List;
 import java.util.regex.Pattern;
 

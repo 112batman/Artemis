@@ -21,12 +21,13 @@ import com.wynntils.models.containers.ContainerModel;
 import com.wynntils.utils.mc.McUtils;
 import com.wynntils.utils.type.Pair;
 import com.wynntils.utils.wynn.InventoryUtils;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Consumer;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 
 public class AbilityTreeContainerQueries {
     private static final int ABILITY_TREE_SLOT = 9;

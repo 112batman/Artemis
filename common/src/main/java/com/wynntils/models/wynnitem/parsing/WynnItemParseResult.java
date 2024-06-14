@@ -11,6 +11,7 @@ import com.wynntils.models.stats.type.ShinyStat;
 import com.wynntils.models.stats.type.StatActualValue;
 import com.wynntils.models.wynnitem.type.ItemEffect;
 import com.wynntils.models.wynnitem.type.NamedItemEffect;
+
 import java.util.List;
 import java.util.Optional;
 
@@ -31,4 +32,5 @@ public record WynnItemParseResult(
         int durabilityMax,
         Optional<ShinyStat> shinyStat,
         boolean allRequirementsMet,
-        Optional<SetInstance> setInstance) {}
+        Optional<SetInstance> setInstance) {
+}

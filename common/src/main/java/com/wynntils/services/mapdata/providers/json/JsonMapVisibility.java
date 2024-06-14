@@ -5,6 +5,7 @@
 package com.wynntils.services.mapdata.providers.json;
 
 import com.wynntils.services.mapdata.attributes.type.MapVisibility;
+
 import java.util.Optional;
 
 public final class JsonMapVisibility implements MapVisibility {

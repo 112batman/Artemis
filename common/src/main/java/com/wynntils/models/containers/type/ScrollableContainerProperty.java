@@ -5,9 +5,10 @@
 package com.wynntils.models.containers.type;
 
 import com.wynntils.core.text.StyledText;
+import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+
 import java.util.Optional;
 import java.util.regex.Pattern;
-import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 
 /**
  * Marker interface for properties that are used in containers that can be scrolled.

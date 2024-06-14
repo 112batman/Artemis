@@ -17,8 +17,10 @@ import com.wynntils.mc.event.ItemTooltipRenderEvent;
 import com.wynntils.screens.trademarket.TradeMarketSearchResultScreen;
 import com.wynntils.utils.mc.KeyboardUtils;
 import com.wynntils.utils.mc.McUtils;
+
 import java.util.ArrayList;
 import java.util.List;
+
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;

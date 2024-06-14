@@ -18,6 +18,7 @@ import it.unimi.dsi.fastutil.ints.Int2ObjectAVLTreeMap;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import it.unimi.dsi.fastutil.ints.Int2ObjectSortedMap;
 import it.unimi.dsi.fastutil.objects.ObjectSortedSet;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -25,6 +26,7 @@ import java.util.TreeMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Stream;
+
 import net.minecraft.nbt.ListTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
@@ -448,7 +450,8 @@ public class TradeMarketSearchResultHolder extends WrappedScreenHolder<TradeMark
         return itemStack.getItem() == Items.SNOW && (loreTag == null || loreTag.isEmpty());
     }
 
-    public record QueuedAction(PageLoadingMode pageLoadingMode, int requestedPage, ItemStack requestedItemStack) {}
+    public record QueuedAction(PageLoadingMode pageLoadingMode, int requestedPage, ItemStack requestedItemStack) {
+    }
 
     public enum PageLoadingMode {
         LOAD_ITEMS,

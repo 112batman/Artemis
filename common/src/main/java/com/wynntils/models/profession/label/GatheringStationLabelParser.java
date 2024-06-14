@@ -8,9 +8,10 @@ import com.wynntils.core.text.StyledText;
 import com.wynntils.handlers.labels.type.LabelParser;
 import com.wynntils.models.profession.type.ProfessionType;
 import com.wynntils.utils.mc.type.Location;
+import net.minecraft.world.entity.Entity;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import net.minecraft.world.entity.Entity;
 
 public class GatheringStationLabelParser implements LabelParser<ProfessionCraftingStationLabelInfo> {
     private static final Pattern GATHERING_STATION_LABEL_PATTERN =

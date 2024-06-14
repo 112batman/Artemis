@@ -12,7 +12,9 @@ import com.wynntils.handlers.chat.event.ChatMessageReceivedEvent;
 import com.wynntils.mc.event.ChatSentEvent;
 import com.wynntils.mc.event.ScreenOpenedEvent;
 import com.wynntils.utils.mc.McUtils;
+
 import java.util.regex.Pattern;
+
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 @ConfigCategory(Category.TRADEMARKET)

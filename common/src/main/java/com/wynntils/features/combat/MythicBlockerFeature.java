@@ -19,7 +19,9 @@ import com.wynntils.models.items.items.gui.IngredientPouchItem;
 import com.wynntils.models.items.properties.GearTierItemProperty;
 import com.wynntils.utils.mc.McUtils;
 import com.wynntils.utils.wynn.ContainerUtils;
+
 import java.util.Optional;
+
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.NonNullList;
 import net.minecraft.network.chat.Component;

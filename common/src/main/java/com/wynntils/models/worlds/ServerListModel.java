@@ -14,6 +14,7 @@ import com.wynntils.core.net.UrlId;
 import com.wynntils.models.worlds.event.WorldStateEvent;
 import com.wynntils.models.worlds.profile.ServerProfile;
 import com.wynntils.models.worlds.type.WorldState;
+
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
@@ -23,6 +24,7 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
+
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 public final class ServerListModel extends Model {

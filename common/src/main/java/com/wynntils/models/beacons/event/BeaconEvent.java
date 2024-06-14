@@ -5,7 +5,9 @@
 package com.wynntils.models.beacons.event;
 
 import com.wynntils.models.beacons.type.Beacon;
+
 import java.util.List;
+
 import net.minecraft.world.entity.Entity;
 import net.minecraftforge.eventbus.api.Event;
 

@@ -8,6 +8,7 @@ import com.wynntils.models.items.items.gui.TerritoryItem;
 import com.wynntils.models.territories.type.TerritoryUpgrade;
 import com.wynntils.utils.colors.CommonColors;
 import com.wynntils.utils.colors.CustomColor;
+
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;

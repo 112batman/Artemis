@@ -15,6 +15,7 @@ import com.wynntils.utils.colors.CommonColors;
 import com.wynntils.utils.mc.type.Location;
 import com.wynntils.utils.mc.type.PoiLocation;
 import com.wynntils.utils.render.Texture;
+
 import java.util.Optional;
 import java.util.stream.Stream;
 
@@ -28,18 +29,18 @@ public class ActivityMarkerProvider implements MarkerProvider<MarkerPoi> {
         this.spawnInfo = spawnLocation == null
                 ? null
                 : new ActivityMarkerInfo(
-                        spawnLocation,
-                        new MarkerInfo(
-                                ACTIVITY_LOCATION_NAME,
-                                new StaticLocationSupplier(spawnLocation),
-                                Texture.QUESTS_SCROLL_ICON,
-                                CommonColors.WHITE,
-                                CommonColors.WHITE,
-                                CommonColors.WHITE),
-                        new MarkerPoi(
-                                PoiLocation.fromLocation(spawnLocation),
-                                ACTIVITY_LOCATION_NAME,
-                                Texture.QUESTS_SCROLL_ICON));
+                spawnLocation,
+                new MarkerInfo(
+                        ACTIVITY_LOCATION_NAME,
+                        new StaticLocationSupplier(spawnLocation),
+                        Texture.QUESTS_SCROLL_ICON,
+                        CommonColors.WHITE,
+                        CommonColors.WHITE,
+                        CommonColors.WHITE),
+                new MarkerPoi(
+                        PoiLocation.fromLocation(spawnLocation),
+                        ACTIVITY_LOCATION_NAME,
+                        Texture.QUESTS_SCROLL_ICON));
     }
 
     public Optional<Location> getSpawnLocation() {
@@ -50,18 +51,18 @@ public class ActivityMarkerProvider implements MarkerProvider<MarkerPoi> {
         this.trackedActivityInfo = trackedActivityLocation == null
                 ? null
                 : new ActivityMarkerInfo(
-                        trackedActivityLocation,
-                        new MarkerInfo(
-                                ACTIVITY_LOCATION_NAME,
-                                new StaticLocationSupplier(trackedActivityLocation),
-                                Texture.QUESTS_SCROLL_ICON,
-                                beaconColor.getColor(),
-                                CommonColors.WHITE,
-                                CommonColors.WHITE),
-                        new MarkerPoi(
-                                PoiLocation.fromLocation(trackedActivityLocation),
-                                ACTIVITY_LOCATION_NAME,
-                                Texture.QUESTS_SCROLL_ICON));
+                trackedActivityLocation,
+                new MarkerInfo(
+                        ACTIVITY_LOCATION_NAME,
+                        new StaticLocationSupplier(trackedActivityLocation),
+                        Texture.QUESTS_SCROLL_ICON,
+                        beaconColor.getColor(),
+                        CommonColors.WHITE,
+                        CommonColors.WHITE),
+                new MarkerPoi(
+                        PoiLocation.fromLocation(trackedActivityLocation),
+                        ACTIVITY_LOCATION_NAME,
+                        Texture.QUESTS_SCROLL_ICON));
     }
 
     public Location getTrackedActivityLocation() {
@@ -100,10 +101,11 @@ public class ActivityMarkerProvider implements MarkerProvider<MarkerPoi> {
     public boolean isEnabled() {
         // FIXME: Move the config after config refactor
         return Managers.Feature.getFeatureInstance(ContentTrackerFeature.class)
-                        .autoTrackCoordinates
-                        .get()
+                .autoTrackCoordinates
+                .get()
                 && (spawnInfo != null || trackedActivityInfo != null);
     }
 
-    private record ActivityMarkerInfo(Location location, MarkerInfo markerInfo, MarkerPoi markerPoi) {}
+    private record ActivityMarkerInfo(Location location, MarkerInfo markerInfo, MarkerPoi markerPoi) {
+    }
 }

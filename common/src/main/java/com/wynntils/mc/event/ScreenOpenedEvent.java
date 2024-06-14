@@ -8,7 +8,9 @@ import net.minecraft.client.gui.screens.Screen;
 import net.minecraftforge.eventbus.api.Cancelable;
 import net.minecraftforge.eventbus.api.Event;
 
-/** Fired on setting the active screen */
+/**
+ * Fired on setting the active screen
+ */
 public abstract class ScreenOpenedEvent extends Event {
     private final Screen screen;
 

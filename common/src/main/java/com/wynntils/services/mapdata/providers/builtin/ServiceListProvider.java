@@ -9,6 +9,7 @@ import com.wynntils.services.mapdata.attributes.type.MapAttributes;
 import com.wynntils.services.mapdata.type.MapFeature;
 import com.wynntils.services.mapdata.type.MapLocation;
 import com.wynntils.utils.mc.type.Location;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;

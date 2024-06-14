@@ -29,12 +29,14 @@ import com.wynntils.utils.mc.LoreUtils;
 import com.wynntils.utils.wynn.ContainerUtils;
 import com.wynntils.utils.wynn.InventoryUtils;
 import it.unimi.dsi.fastutil.ints.Int2ObjectFunction;
+
 import java.util.ArrayList;
 import java.util.EnumMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.TreeMap;
+
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -76,12 +78,12 @@ public class SkillPointModel extends Model {
      * Saves only the current assigned skill points to the loadout list.
      */
     public void saveCurrentSkillPoints(String name) {
-        saveSkillPoints(name, new int[] {
-            getAssignedSkillPoints(Skill.STRENGTH),
-            getAssignedSkillPoints(Skill.DEXTERITY),
-            getAssignedSkillPoints(Skill.INTELLIGENCE),
-            getAssignedSkillPoints(Skill.DEFENCE),
-            getAssignedSkillPoints(Skill.AGILITY)
+        saveSkillPoints(name, new int[]{
+                getAssignedSkillPoints(Skill.STRENGTH),
+                getAssignedSkillPoints(Skill.DEXTERITY),
+                getAssignedSkillPoints(Skill.INTELLIGENCE),
+                getAssignedSkillPoints(Skill.DEFENCE),
+                getAssignedSkillPoints(Skill.AGILITY)
         });
     }
 
@@ -118,12 +120,12 @@ public class SkillPointModel extends Model {
     }
 
     public void saveCurrentBuild(String name) {
-        saveBuild(name, new int[] {
-            getAssignedSkillPoints(Skill.STRENGTH),
-            getAssignedSkillPoints(Skill.DEXTERITY),
-            getAssignedSkillPoints(Skill.INTELLIGENCE),
-            getAssignedSkillPoints(Skill.DEFENCE),
-            getAssignedSkillPoints(Skill.AGILITY)
+        saveBuild(name, new int[]{
+                getAssignedSkillPoints(Skill.STRENGTH),
+                getAssignedSkillPoints(Skill.DEXTERITY),
+                getAssignedSkillPoints(Skill.INTELLIGENCE),
+                getAssignedSkillPoints(Skill.DEFENCE),
+                getAssignedSkillPoints(Skill.AGILITY)
         });
     }
 

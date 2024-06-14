@@ -13,20 +13,12 @@ import com.wynntils.core.components.Managers;
 import com.wynntils.utils.FileUtils;
 import com.wynntils.utils.StringUtils;
 import com.wynntils.utils.type.Pair;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
+
+import java.io.*;
 import java.lang.reflect.Type;
 import java.net.URI;
 import java.nio.charset.StandardCharsets;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Locale;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 import java.util.function.Function;
 
 /**
@@ -122,7 +114,7 @@ public final class UrlManager extends Manager {
         // Verify that arguments match with what is specified
         assert (arguments.keySet().equals(new HashSet<>(urlInfo.arguments())))
                 : "Arguments mismatch for " + urlInfo.url + ", expected: " + urlInfo.arguments() + " got: "
-                        + arguments.keySet();
+                + arguments.keySet();
 
         // Replace %{argKey} with arg value in URL string
         return arguments.keySet().stream()
@@ -259,7 +251,8 @@ public final class UrlManager extends Manager {
             throws IOException, JsonSyntaxException {
         byte[] data = inputStream.readAllBytes();
         String json = new String(data, StandardCharsets.UTF_8);
-        Type type = new TypeToken<List<UrlProfile>>() {}.getType();
+        Type type = new TypeToken<List<UrlProfile>>() {
+        }.getType();
         List<UrlProfile> urlProfiles = WynntilsMod.GSON.fromJson(json, type);
 
         Map<UrlId, UrlInfo> newMap = new HashMap<>();
@@ -331,7 +324,8 @@ public final class UrlManager extends Manager {
         }
     }
 
-    public record UrlInfo(String url, List<String> arguments, Method method, Encoding encoding, Optional<String> md5) {}
+    public record UrlInfo(String url, List<String> arguments, Method method, Encoding encoding, Optional<String> md5) {
+    }
 
     private static final class UrlProfile {
         int version;

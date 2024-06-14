@@ -8,6 +8,7 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonPrimitive;
 import com.wynntils.core.persisted.PersistedValue;
 import com.wynntils.core.persisted.upfixers.Upfixer;
+
 import java.util.Set;
 
 public class CustomCommandKeybindSlashStartUpfixer implements Upfixer {

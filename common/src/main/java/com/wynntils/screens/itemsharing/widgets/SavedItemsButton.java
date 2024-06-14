@@ -10,8 +10,10 @@ import com.wynntils.utils.mc.ComponentUtils;
 import com.wynntils.utils.mc.McUtils;
 import com.wynntils.utils.render.RenderUtils;
 import com.wynntils.utils.render.Texture;
+
 import java.util.List;
 import java.util.function.Consumer;
+
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
 
@@ -50,5 +52,6 @@ public class SavedItemsButton extends WynntilsButton {
 
     // Unused
     @Override
-    public void onPress() {}
+    public void onPress() {
+    }
 }

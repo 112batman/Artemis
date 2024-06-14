@@ -101,7 +101,8 @@ public class GuideEmeraldPouchItemStackButton extends WynntilsButton {
 
     /* no-op */
     @Override
-    public void onPress() {}
+    public void onPress() {
+    }
 
     public GuideEmeraldPouchItemStack getItemStack() {
         return itemStack;

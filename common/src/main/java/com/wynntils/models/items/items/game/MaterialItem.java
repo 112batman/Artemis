@@ -9,6 +9,7 @@ import com.wynntils.models.items.properties.ProfessionItemProperty;
 import com.wynntils.models.items.properties.QualityTierItemProperty;
 import com.wynntils.models.profession.type.MaterialProfile;
 import com.wynntils.models.profession.type.ProfessionType;
+
 import java.util.List;
 
 public class MaterialItem extends GameItem

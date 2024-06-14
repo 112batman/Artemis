@@ -16,8 +16,10 @@ import com.wynntils.models.war.event.GuildWarTowerEffectEvent;
 import com.wynntils.models.war.type.WarBattleInfo;
 import com.wynntils.models.war.type.WarTowerState;
 import com.wynntils.models.worlds.event.WorldStateEvent;
+
 import java.util.List;
 import java.util.Optional;
+
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 public class GuildWarTowerModel extends Model {

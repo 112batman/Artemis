@@ -15,8 +15,10 @@ import com.wynntils.utils.render.Texture;
 import com.wynntils.utils.render.type.HorizontalAlignment;
 import com.wynntils.utils.render.type.TextShadow;
 import com.wynntils.utils.render.type.VerticalAlignment;
+
 import java.util.List;
 import java.util.function.Consumer;
+
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
 
@@ -55,12 +57,12 @@ public class PresetButton extends BasicTexturedButton {
         // of the button is rendered underneath the background
         if (isHovered
                 && MathUtils.isInside(
-                        mouseX,
-                        mouseY,
-                        0,
-                        Texture.ITEM_FILTER_BACKGROUND.width(),
-                        0,
-                        Texture.ITEM_FILTER_BACKGROUND.height())) {
+                mouseX,
+                mouseY,
+                0,
+                Texture.ITEM_FILTER_BACKGROUND.width(),
+                0,
+                Texture.ITEM_FILTER_BACKGROUND.height())) {
             isHovered = false;
         }
 

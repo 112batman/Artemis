@@ -39,12 +39,6 @@ import com.wynntils.utils.render.Texture;
 import com.wynntils.utils.render.type.HorizontalAlignment;
 import com.wynntils.utils.render.type.TextShadow;
 import com.wynntils.utils.render.type.VerticalAlignment;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Objects;
-import java.util.stream.Stream;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.AbstractWidget;
@@ -54,6 +48,9 @@ import net.minecraft.client.gui.components.events.GuiEventListener;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
 import org.lwjgl.glfw.GLFW;
+
+import java.util.*;
+import java.util.stream.Stream;
 
 public final class OverlaySelectionScreen extends WynntilsScreen {
     private static final float SCROLL_FACTOR = 10f;
@@ -123,8 +120,8 @@ public final class OverlaySelectionScreen extends WynntilsScreen {
 
         // region Preview renderables
         exitPreviewButton = this.addRenderableWidget(new Button.Builder(
-                        Component.translatable("screens.wynntils.overlaySelection.exitPreview"),
-                        (button) -> togglePreview(false))
+                Component.translatable("screens.wynntils.overlaySelection.exitPreview"),
+                (button) -> togglePreview(false))
                 .pos((Texture.OVERLAY_SELECTION_GUI.width() / 2) - 40, (int) (this.height - 25 - translationY))
                 .size(80, 20)
                 .tooltip(Tooltip.create(Component.translatable("screens.wynntils.overlaySelection.exitPreviewTooltip")))
@@ -464,7 +461,7 @@ public final class OverlaySelectionScreen extends WynntilsScreen {
             // Don't deselect custom overlays as they will always fail the above check
             if (filterType == FilterType.BUILT_IN
                     || !(selectedOverlay instanceof CustomBarOverlayBase
-                            || selectedOverlay instanceof InfoBoxOverlay)) {
+                    || selectedOverlay instanceof InfoBoxOverlay)) {
                 setSelectedOverlay(null);
             }
         }
@@ -928,11 +925,11 @@ public final class OverlaySelectionScreen extends WynntilsScreen {
     private void renderOverlayScroll(PoseStack poseStack) {
         overlayScrollY = 24
                 + MathUtils.map(
-                        overlayScrollOffset,
-                        0,
-                        getMaxOverlayScrollOffset(),
-                        0,
-                        177 - Texture.CONFIG_BOOK_SCROLL_BUTTON.height());
+                overlayScrollOffset,
+                0,
+                getMaxOverlayScrollOffset(),
+                0,
+                177 - Texture.CONFIG_BOOK_SCROLL_BUTTON.height());
 
         RenderUtils.drawTexturedRect(poseStack, Texture.SCROLL_BUTTON, 132, overlayScrollY);
     }
@@ -940,11 +937,11 @@ public final class OverlaySelectionScreen extends WynntilsScreen {
     private void renderConfigScroll(PoseStack poseStack) {
         configScrollY = 24
                 + MathUtils.map(
-                        configScrollOffset,
-                        0,
-                        getMaxConfigScrollOffset(),
-                        0,
-                        177 - Texture.CONFIG_BOOK_SCROLL_BUTTON.height());
+                configScrollOffset,
+                0,
+                getMaxConfigScrollOffset(),
+                0,
+                177 - Texture.CONFIG_BOOK_SCROLL_BUTTON.height());
 
         RenderUtils.drawTexturedRect(poseStack, Texture.SCROLL_BUTTON, 344, configScrollY);
     }

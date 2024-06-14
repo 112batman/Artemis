@@ -16,8 +16,8 @@ public class RerollDataTransformer extends DataTransformer<RerollData> {
     @Override
     public ErrorOr<UnsignedByte[]> encodeData(ItemTransformingVersion version, RerollData data) {
         return switch (version) {
-            case VERSION_1 -> ErrorOr.of(new UnsignedByte[] {
-                UnsignedByte.of((byte) data.rerolls()),
+            case VERSION_1 -> ErrorOr.of(new UnsignedByte[]{
+                    UnsignedByte.of((byte) data.rerolls()),
             });
         };
     }

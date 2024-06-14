@@ -20,6 +20,7 @@ import com.wynntils.core.persisted.PersistedValue;
 import com.wynntils.core.persisted.upfixers.Upfixer;
 import com.wynntils.utils.EnumUtils;
 import com.wynntils.utils.colors.CustomColor;
+
 import java.io.IOException;
 import java.util.Set;
 

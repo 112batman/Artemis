@@ -19,9 +19,9 @@ public abstract class SlotMixin {
     @WrapOperation(
             method = "set(Lnet/minecraft/world/item/ItemStack;)V",
             at =
-                    @At(
-                            value = "INVOKE",
-                            target = "Lnet/minecraft/world/Container;setItem(ILnet/minecraft/world/item/ItemStack;)V"))
+            @At(
+                    value = "INVOKE",
+                    target = "Lnet/minecraft/world/Container;setItem(ILnet/minecraft/world/item/ItemStack;)V"))
     private void onSetItem(Container container, int slot, ItemStack itemStack, Operation<Void> original) {
         SetSlotEvent.Pre event = new SetSlotEvent.Pre(container, slot, itemStack);
         MixinHelper.post(event);

@@ -8,6 +8,7 @@ import com.wynntils.core.consumers.functions.templates.ExpressionTemplatePart;
 import com.wynntils.core.consumers.functions.templates.LiteralTemplatePart;
 import com.wynntils.core.consumers.functions.templates.Template;
 import com.wynntils.core.consumers.functions.templates.TemplatePart;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;

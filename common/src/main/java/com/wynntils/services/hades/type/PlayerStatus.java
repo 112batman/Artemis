@@ -6,4 +6,5 @@ package com.wynntils.services.hades.type;
 
 import com.wynntils.utils.type.CappedValue;
 
-public record PlayerStatus(float x, float y, float z, CappedValue health, CappedValue mana) {}
+public record PlayerStatus(float x, float y, float z, CappedValue health, CappedValue mana) {
+}

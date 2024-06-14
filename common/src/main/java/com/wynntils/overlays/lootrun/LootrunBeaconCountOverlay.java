@@ -15,18 +15,18 @@ public class LootrunBeaconCountOverlay extends TextOverlay {
 
     private static final String PREVIEW_TEMPLATE =
             """
-            §eYellow: 0
-            §9Blue: 0
-            §5Purple: 0
-            §7Gray: 0/3
-            §6Orange: 0
-            §bAqua: 0
-            §8Dark Gray: 0/1
-            §aGreen: 0
-            §cRed: 0 (0)
-            §fWhite: 0/1
-            §4R§ca§6i§en§ab§2o§bw§9: 0/1
-            """;
+                    §eYellow: 0
+                    §9Blue: 0
+                    §5Purple: 0
+                    §7Gray: 0/3
+                    §6Orange: 0
+                    §bAqua: 0
+                    §8Dark Gray: 0/1
+                    §aGreen: 0
+                    §cRed: 0 (0)
+                    §fWhite: 0/1
+                    §4R§ca§6i§en§ab§2o§bw§9: 0/1
+                    """;
 
     public LootrunBeaconCountOverlay() {
         super(

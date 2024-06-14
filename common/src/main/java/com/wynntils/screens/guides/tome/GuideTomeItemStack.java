@@ -12,14 +12,15 @@ import com.wynntils.models.items.WynnItemData;
 import com.wynntils.models.items.items.game.TomeItem;
 import com.wynntils.models.rewards.type.TomeInfo;
 import com.wynntils.screens.guides.GuideItemStack;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.TooltipFlag;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
 
 public class GuideTomeItemStack extends GuideItemStack {
     private final TomeInfo tomeInfo;

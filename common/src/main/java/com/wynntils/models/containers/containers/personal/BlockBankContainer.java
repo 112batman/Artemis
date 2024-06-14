@@ -6,6 +6,7 @@ package com.wynntils.models.containers.containers.personal;
 
 import com.wynntils.models.containers.type.PersonalStorageType;
 import com.wynntils.services.itemfilter.type.ItemProviderType;
+
 import java.util.List;
 import java.util.regex.Pattern;
 

@@ -30,6 +30,7 @@ import com.wynntils.models.stats.type.StatPossibleValues;
 import com.wynntils.models.stats.type.StatType;
 import com.wynntils.models.stats.type.StatUnit;
 import com.wynntils.utils.type.RangedValue;
+
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -180,7 +181,8 @@ public final class StatModel extends Model {
     private void loadIdentificationKeys() {
         Download dl = Managers.Net.download(UrlId.DATA_STATIC_IDENTIFICATION_KEYS);
         dl.handleReader(reader -> {
-            Type type = new TypeToken<Map<String, Integer>>() {}.getType();
+            Type type = new TypeToken<Map<String, Integer>>() {
+            }.getType();
             Map<String, Integer> apiNamesToIdMap = Managers.Json.GSON.fromJson(reader, type);
 
             Map<StatType, Integer> tempMap = new HashMap<>();

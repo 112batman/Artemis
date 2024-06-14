@@ -14,13 +14,15 @@ import com.wynntils.utils.render.FontRenderer;
 import com.wynntils.utils.render.type.HorizontalAlignment;
 import com.wynntils.utils.render.type.TextShadow;
 import com.wynntils.utils.render.type.VerticalAlignment;
-import java.util.List;
-import java.util.function.BiConsumer;
-import java.util.function.Consumer;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.Checkbox;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
+
+import java.util.List;
+import java.util.function.BiConsumer;
+import java.util.function.Consumer;
 
 public class WynntilsCheckbox extends Checkbox {
     private final int maxTextWidth;
@@ -31,7 +33,10 @@ public class WynntilsCheckbox extends Checkbox {
 
     public WynntilsCheckbox(
             int x, int y, int width, int height, Component message, boolean selected, int maxTextWidth) {
-        super(x, y, width, height, message, selected);
+        super(x, y, message, Minecraft.getInstance().font, selected, (arg, bl) -> {
+        });
+        this.width = width;
+        this.height = height;
         this.maxTextWidth = maxTextWidth;
         this.color = CommonColors.WHITE;
     }
@@ -45,7 +50,10 @@ public class WynntilsCheckbox extends Checkbox {
             boolean selected,
             int maxTextWidth,
             Consumer<Integer> onClick) {
-        super(x, y, width, height, message, selected);
+        super(x, y, message, Minecraft.getInstance().font, selected, (arg, bl) -> {
+        });
+        this.width = width;
+        this.height = height;
         this.maxTextWidth = maxTextWidth;
         this.color = CommonColors.WHITE;
         this.onClick = (checkbox, button) -> onClick.accept(button);
@@ -61,7 +69,10 @@ public class WynntilsCheckbox extends Checkbox {
             int maxTextWidth,
             Consumer<Integer> onClick,
             List<Component> tooltip) {
-        super(x, y, width, height, message, selected);
+        super(x, y, message, Minecraft.getInstance().font, selected, (arg, bl) -> {
+        });
+        this.width = width;
+        this.height = height;
         this.maxTextWidth = maxTextWidth;
         this.color = CommonColors.WHITE;
         this.onClick = (checkbox, button) -> onClick.accept(button);
@@ -78,7 +89,10 @@ public class WynntilsCheckbox extends Checkbox {
             int maxTextWidth,
             BiConsumer<WynntilsCheckbox, Integer> onClick,
             List<Component> tooltip) {
-        super(x, y, width, height, message, selected);
+        super(x, y, message, Minecraft.getInstance().font, selected, (arg, bl) -> {
+        });
+        this.width = width;
+        this.height = height;
         this.maxTextWidth = maxTextWidth;
         this.color = CommonColors.WHITE;
         this.onClick = onClick;
@@ -94,7 +108,10 @@ public class WynntilsCheckbox extends Checkbox {
             boolean selected,
             int maxTextWidth,
             CustomColor color) {
-        super(x, y, width, height, message, selected);
+        super(x, y, message, Minecraft.getInstance().font, selected, (arg, bl) -> {
+        });
+        this.width = width;
+        this.height = height;
         this.maxTextWidth = maxTextWidth;
         this.color = color;
     }
@@ -113,7 +130,7 @@ public class WynntilsCheckbox extends Checkbox {
 
         guiGraphics.blitSprite(resourceLocation, this.getX(), this.getY(), this.width, this.height);
         guiGraphics.setColor(1.0F, 1.0F, 1.0F, 1.0F);
-        if (this.showLabel) {
+        if (true) {
             FontRenderer.getInstance()
                     .renderScrollingText(
                             guiGraphics.pose(),

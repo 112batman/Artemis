@@ -5,12 +5,9 @@
 package com.wynntils.models.profession.type;
 
 import com.wynntils.utils.type.Pair;
-import java.util.Collection;
-import java.util.List;
-import java.util.Locale;
-import java.util.Map;
-import java.util.Optional;
 import net.minecraft.ChatFormatting;
+
+import java.util.*;
 
 public final class MaterialProfile {
     private static final Map<MaterialType, List<SourceMaterial>> SOURCE_MATERIALS = Map.of(
@@ -176,5 +173,6 @@ public final class MaterialProfile {
                 + tier + '}';
     }
 
-    public record SourceMaterial(String name, int level) {}
+    public record SourceMaterial(String name, int level) {
+    }
 }

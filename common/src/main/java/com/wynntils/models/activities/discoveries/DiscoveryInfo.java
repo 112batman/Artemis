@@ -11,11 +11,12 @@ import com.wynntils.models.activities.type.ActivityInfo;
 import com.wynntils.models.activities.type.ActivityStatus;
 import com.wynntils.models.activities.type.DiscoveryType;
 import com.wynntils.utils.mc.ComponentUtils;
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.Component;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
-import net.minecraft.ChatFormatting;
-import net.minecraft.network.chat.Component;
 
 public class DiscoveryInfo {
     private final String name;

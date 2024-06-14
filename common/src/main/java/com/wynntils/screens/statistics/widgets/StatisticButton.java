@@ -22,8 +22,10 @@ import com.wynntils.utils.render.RenderUtils;
 import com.wynntils.utils.render.type.HorizontalAlignment;
 import com.wynntils.utils.render.type.TextShadow;
 import com.wynntils.utils.render.type.VerticalAlignment;
+
 import java.util.ArrayList;
 import java.util.List;
+
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
@@ -101,7 +103,8 @@ public class StatisticButton extends WynntilsButton implements TooltipProvider {
     }
 
     @Override
-    public void onPress() {}
+    public void onPress() {
+    }
 
     @Override
     public List<Component> getTooltipLines() {
@@ -130,8 +133,8 @@ public class StatisticButton extends WynntilsButton implements TooltipProvider {
         }
 
         lines.add((Services.Statistics.screenOverallMode.get()
-                        ? Component.translatable("screens.wynntils.statistics.shiftMiddleClickToResetOverall")
-                        : Component.translatable("screens.wynntils.statistics.shiftMiddleClickToResetCurrent"))
+                ? Component.translatable("screens.wynntils.statistics.shiftMiddleClickToResetOverall")
+                : Component.translatable("screens.wynntils.statistics.shiftMiddleClickToResetCurrent"))
                 .withStyle(ChatFormatting.BOLD)
                 .withStyle(ChatFormatting.RED));
 

@@ -6,4 +6,5 @@ package com.wynntils.handlers.bossbar.type;
 
 import com.wynntils.utils.type.CappedValue;
 
-public record BossBarProgress(CappedValue value, float progress) {}
+public record BossBarProgress(CappedValue value, float progress) {
+}

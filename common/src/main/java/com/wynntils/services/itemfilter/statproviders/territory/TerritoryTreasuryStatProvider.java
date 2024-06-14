@@ -5,6 +5,7 @@
 package com.wynntils.services.itemfilter.statproviders.territory;
 
 import com.wynntils.models.items.items.gui.TerritoryItem;
+
 import java.util.Optional;
 
 public class TerritoryTreasuryStatProvider extends TerritoryStatProvider<Integer> {

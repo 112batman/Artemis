@@ -19,5 +19,6 @@ public abstract class WynncraftConnectionEvent extends Event {
         }
     }
 
-    public static final class Disconnected extends WynncraftConnectionEvent {}
+    public static final class Disconnected extends WynncraftConnectionEvent {
+    }
 }

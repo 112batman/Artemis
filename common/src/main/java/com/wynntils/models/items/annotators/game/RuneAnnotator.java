@@ -8,9 +8,11 @@ import com.wynntils.core.text.StyledText;
 import com.wynntils.handlers.item.GameItemAnnotator;
 import com.wynntils.handlers.item.ItemAnnotation;
 import com.wynntils.models.items.items.game.RuneItem;
+
 import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
 import net.minecraft.world.item.ItemStack;
 
 public final class RuneAnnotator implements GameItemAnnotator {

@@ -12,9 +12,11 @@ import com.wynntils.mc.event.ItemTooltipRenderEvent;
 import com.wynntils.models.items.items.gui.ServerItem;
 import com.wynntils.models.worlds.profile.ServerProfile;
 import com.wynntils.utils.mc.LoreUtils;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraftforge.eventbus.api.SubscribeEvent;

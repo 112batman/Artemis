@@ -22,6 +22,7 @@ import com.wynntils.models.territories.type.TerritoryConnectionType;
 import com.wynntils.screens.territorymanagement.TerritoryManagementHolder;
 import com.wynntils.services.map.pois.TerritoryPoi;
 import com.wynntils.services.map.type.TerritoryDefenseFilterType;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Comparator;
@@ -38,10 +39,11 @@ import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+
 import net.minecraft.advancements.Advancement;
 import net.minecraft.advancements.AdvancementHolder;
+import net.minecraft.advancements.AdvancementType;
 import net.minecraft.advancements.DisplayInfo;
-import net.minecraft.advancements.FrameType;
 import net.minecraft.core.Position;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 
@@ -151,7 +153,7 @@ public final class TerritoryModel extends Model {
             if (territoryName.isEmpty()) continue;
 
             // headquarters frame is challenge
-            boolean headquarters = displayInfo.getFrame() == FrameType.CHALLENGE;
+            boolean headquarters = displayInfo.getType() == AdvancementType.CHALLENGE;
 
             // description is a raw string with \n, so we have to split
             StyledText description = StyledText.fromComponent(displayInfo.getDescription());
@@ -207,7 +209,7 @@ public final class TerritoryModel extends Model {
                 // territories
                 if ((territoryInfo != null && territoryInfo.getTradingRoutes().contains(current.getName()))
                         || (currentTerritoryInfo != null
-                                && currentTerritoryInfo.getTradingRoutes().contains(territoryItem.getName()))) {
+                        && currentTerritoryInfo.getTradingRoutes().contains(territoryItem.getName()))) {
                     connectedTerritories.add(territoryItem);
                     queue.add(territoryItem);
 

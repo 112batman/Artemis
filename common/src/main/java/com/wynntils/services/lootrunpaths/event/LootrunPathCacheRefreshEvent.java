@@ -6,4 +6,5 @@ package com.wynntils.services.lootrunpaths.event;
 
 import net.minecraftforge.eventbus.api.Event;
 
-public class LootrunPathCacheRefreshEvent extends Event {}
+public class LootrunPathCacheRefreshEvent extends Event {
+}

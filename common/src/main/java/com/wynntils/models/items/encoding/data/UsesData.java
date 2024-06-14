@@ -7,4 +7,5 @@ package com.wynntils.models.items.encoding.data;
 import com.wynntils.models.items.encoding.type.ItemData;
 import com.wynntils.utils.type.CappedValue;
 
-public record UsesData(CappedValue uses) implements ItemData {}
+public record UsesData(CappedValue uses) implements ItemData {
+}

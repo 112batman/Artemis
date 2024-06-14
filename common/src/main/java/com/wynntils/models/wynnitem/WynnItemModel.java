@@ -5,13 +5,7 @@
 package com.wynntils.models.wynnitem;
 
 import com.google.common.reflect.TypeToken;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonDeserializationContext;
-import com.google.gson.JsonDeserializer;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParseException;
+import com.google.gson.*;
 import com.wynntils.core.WynntilsMod;
 import com.wynntils.core.components.Managers;
 import com.wynntils.core.components.Model;
@@ -21,6 +15,7 @@ import com.wynntils.models.wynnitem.type.ItemObtainInfo;
 import com.wynntils.models.wynnitem.type.ItemObtainType;
 import com.wynntils.models.wynnitem.type.MaterialConversionInfo;
 import com.wynntils.utils.JsonUtils;
+
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.List;
@@ -56,7 +51,8 @@ public class WynnItemModel extends Model {
     private void loadObtainData() {
         Download dl = Managers.Net.download(UrlId.DATA_STATIC_ITEM_OBTAIN);
         dl.handleReader(reader -> {
-            Type obtainType = new TypeToken<Map<String, List<ItemObtainInfo>>>() {}.getType();
+            Type obtainType = new TypeToken<Map<String, List<ItemObtainInfo>>>() {
+            }.getType();
             Gson gson = new GsonBuilder()
                     .registerTypeHierarchyAdapter(ItemObtainInfo.class, new ItemObtainInfoDeserializer())
                     .create();
@@ -67,7 +63,8 @@ public class WynnItemModel extends Model {
     private void loadMaterialConversionData() {
         Download dl = Managers.Net.download(UrlId.DATA_STATIC_MATERIAL_CONVERSION);
         dl.handleReader(reader -> {
-            Type materialConversionType = new TypeToken<List<MaterialConversionInfo>>() {}.getType();
+            Type materialConversionType = new TypeToken<List<MaterialConversionInfo>>() {
+            }.getType();
             allMaterialConversions = WynntilsMod.GSON.fromJson(reader, materialConversionType);
 
             // Store in fast lookup map

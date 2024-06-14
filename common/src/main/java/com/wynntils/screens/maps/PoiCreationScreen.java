@@ -27,9 +27,6 @@ import com.wynntils.utils.render.Texture;
 import com.wynntils.utils.render.type.HorizontalAlignment;
 import com.wynntils.utils.render.type.TextShadow;
 import com.wynntils.utils.render.type.VerticalAlignment;
-import java.util.List;
-import java.util.Optional;
-import java.util.regex.Pattern;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.screens.Screen;
@@ -37,6 +34,10 @@ import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.resources.language.I18n;
 import net.minecraft.network.chat.Component;
 import org.lwjgl.glfw.GLFW;
+
+import java.util.List;
+import java.util.Optional;
+import java.util.regex.Pattern;
 
 public final class PoiCreationScreen extends AbstractMapScreen implements TextboxScreen {
     private static final Pattern COORDINATE_PATTERN = Pattern.compile("[-+]?\\d{1,8}");
@@ -226,22 +227,22 @@ public final class PoiCreationScreen extends AbstractMapScreen implements Textbo
 
         // region Icon
         this.addRenderableWidget(new Button.Builder(Component.literal("<"), (button) -> {
-                    if (selectedIconIndex - 1 < 0) {
-                        selectedIconIndex = Services.Poi.POI_ICONS.size() - 1;
-                    } else {
-                        selectedIconIndex--;
-                    }
-                })
+            if (selectedIconIndex - 1 < 0) {
+                selectedIconIndex = Services.Poi.POI_ICONS.size() - 1;
+            } else {
+                selectedIconIndex--;
+            }
+        })
                 .pos((int) (dividedWidth * 10), (int) (dividedHeight * 34))
                 .size(20, 20)
                 .build());
         this.addRenderableWidget(new Button.Builder(Component.literal(">"), (button) -> {
-                    if (selectedIconIndex + 1 >= Services.Poi.POI_ICONS.size()) {
-                        selectedIconIndex = 0;
-                    } else {
-                        selectedIconIndex++;
-                    }
-                })
+            if (selectedIconIndex + 1 >= Services.Poi.POI_ICONS.size()) {
+                selectedIconIndex = 0;
+            } else {
+                selectedIconIndex++;
+            }
+        })
                 .pos((int) (dividedWidth * 14), (int) (dividedHeight * 34))
                 .size(20, 20)
                 .build());
@@ -283,18 +284,18 @@ public final class PoiCreationScreen extends AbstractMapScreen implements Textbo
 
         // region Visibility
         this.addRenderableWidget(new Button.Builder(
-                        Component.literal("<"),
-                        (button) -> selectedVisiblity = CustomPoi.Visibility.values()[
-                                (selectedVisiblity.ordinal() - 1 + CustomPoi.Visibility.values().length)
-                                        % CustomPoi.Visibility.values().length])
+                Component.literal("<"),
+                (button) -> selectedVisiblity = CustomPoi.Visibility.values()[
+                        (selectedVisiblity.ordinal() - 1 + CustomPoi.Visibility.values().length)
+                                % CustomPoi.Visibility.values().length])
                 .pos((int) (dividedWidth * 10), (int) (dividedHeight * 40))
                 .size(20, 20)
                 .build());
         this.addRenderableWidget(new Button.Builder(
-                        Component.literal(">"),
-                        (button) -> selectedVisiblity = CustomPoi.Visibility.values()[
-                                (selectedVisiblity.ordinal() + 1 + CustomPoi.Visibility.values().length)
-                                        % CustomPoi.Visibility.values().length])
+                Component.literal(">"),
+                (button) -> selectedVisiblity = CustomPoi.Visibility.values()[
+                        (selectedVisiblity.ordinal() + 1 + CustomPoi.Visibility.values().length)
+                                % CustomPoi.Visibility.values().length])
                 .pos((int) (dividedWidth * 22) - 19, (int) (dividedHeight * 40))
                 .size(20, 20)
                 .build());
@@ -306,17 +307,17 @@ public final class PoiCreationScreen extends AbstractMapScreen implements Textbo
 
         // region Screen Interactions
         this.addRenderableWidget(new Button.Builder(
-                        Component.translatable("screens.wynntils.poiCreation.cancel"), (button) -> this.onClose())
+                Component.translatable("screens.wynntils.poiCreation.cancel"), (button) -> this.onClose())
                 .pos((int) (dividedWidth * 6), (int) (dividedHeight * 54))
                 .size((int) (dividedWidth * 8), 20)
                 .build());
 
         this.addRenderableWidget(
                 saveButton = new Button.Builder(
-                                Component.translatable("screens.wynntils.poiCreation.save"), (button) -> {
-                                    savePoi();
-                                    this.onClose();
-                                })
+                        Component.translatable("screens.wynntils.poiCreation.save"), (button) -> {
+                    savePoi();
+                    this.onClose();
+                })
                         .pos((int) (dividedWidth * 18), (int) (dividedHeight * 54))
                         .size((int) (dividedWidth * 8), 20)
                         .build());
@@ -570,7 +571,7 @@ public final class PoiCreationScreen extends AbstractMapScreen implements Textbo
                 && CustomColor.fromHexString(colorInput.getTextBoxInput()) != CustomColor.NONE
                 && COORDINATE_PATTERN.matcher(xInput.getTextBoxInput()).matches()
                 && (COORDINATE_PATTERN.matcher(yInput.getTextBoxInput()).matches()
-                        || yInput.getTextBoxInput().isEmpty())
+                || yInput.getTextBoxInput().isEmpty())
                 && COORDINATE_PATTERN.matcher(zInput.getTextBoxInput()).matches();
     }
 

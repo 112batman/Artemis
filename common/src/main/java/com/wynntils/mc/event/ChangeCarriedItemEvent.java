@@ -10,4 +10,5 @@ import net.minecraftforge.eventbus.api.Event;
  * This event is only fired when the selected hotbar item changes. If for example, the player
  * has hotbar 5 selected and presses 5 again, this event will not be fired.
  */
-public class ChangeCarriedItemEvent extends Event {}
+public class ChangeCarriedItemEvent extends Event {
+}

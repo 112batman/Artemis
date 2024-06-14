@@ -10,12 +10,14 @@ import com.wynntils.models.worlds.event.WorldStateEvent;
 import com.wynntils.models.worlds.type.WorldState;
 import com.wynntils.services.translation.type.TranslationProvider;
 import com.wynntils.utils.TaskUtils;
+
 import java.lang.reflect.Constructor;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.Future;
 import java.util.function.Consumer;
+
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 public final class TranslationService extends Service {

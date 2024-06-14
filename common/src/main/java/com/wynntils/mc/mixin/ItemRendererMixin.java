@@ -23,10 +23,10 @@ public abstract class ItemRendererMixin {
             method =
                     "render(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemDisplayContext;ZLcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;IILnet/minecraft/client/resources/model/BakedModel;)V",
             at =
-                    @At(
-                            target = "Lcom/mojang/blaze3d/vertex/PoseStack;translate(FFF)V",
-                            shift = At.Shift.BEFORE,
-                            value = "INVOKE"))
+            @At(
+                    target = "Lcom/mojang/blaze3d/vertex/PoseStack;translate(FFF)V",
+                    shift = At.Shift.BEFORE,
+                    value = "INVOKE"))
     private void onRenderItem(
             ItemStack itemStack,
             ItemDisplayContext itemDisplayContext,

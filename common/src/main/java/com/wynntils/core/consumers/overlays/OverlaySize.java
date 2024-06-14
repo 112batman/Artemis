@@ -21,7 +21,8 @@ public class OverlaySize {
     private float height;
 
     // For GSON
-    public OverlaySize() {}
+    public OverlaySize() {
+    }
 
     public OverlaySize(float width, float height) {
         this.width = width;

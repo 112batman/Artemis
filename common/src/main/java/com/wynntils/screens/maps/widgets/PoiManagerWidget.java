@@ -20,8 +20,6 @@ import com.wynntils.utils.render.RenderUtils;
 import com.wynntils.utils.render.type.HorizontalAlignment;
 import com.wynntils.utils.render.type.TextShadow;
 import com.wynntils.utils.render.type.VerticalAlignment;
-import java.util.List;
-import java.util.Optional;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.AbstractWidget;
 import net.minecraft.client.gui.components.Button;
@@ -29,6 +27,9 @@ import net.minecraft.client.gui.narration.NarrationElementOutput;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvents;
 import org.lwjgl.glfw.GLFW;
+
+import java.util.List;
+import java.util.Optional;
 
 public class PoiManagerWidget extends AbstractWidget {
     private final boolean selected;
@@ -65,16 +66,16 @@ public class PoiManagerWidget extends AbstractWidget {
         color = poi.getVisibility() == CustomPoi.Visibility.HIDDEN ? CommonColors.GRAY : CommonColors.WHITE;
 
         editButton = new Button.Builder(
-                        Component.translatable("screens.wynntils.poiManagementGui.edit"),
-                        (button) -> McUtils.mc().setScreen(PoiCreationScreen.create(managementScreen, poi)))
+                Component.translatable("screens.wynntils.poiManagementGui.edit"),
+                (button) -> McUtils.mc().setScreen(PoiCreationScreen.create(managementScreen, poi)))
                 .pos(x + width - 20 - (manageButtonsWidth * 2), y)
                 .size(manageButtonsWidth, 20)
                 .build();
 
         deleteButton = new Button.Builder(
-                        Component.translatable("screens.wynntils.poiManagementGui.delete"), (button) -> {
-                            managementScreen.deletePoi(poi);
-                        })
+                Component.translatable("screens.wynntils.poiManagementGui.delete"), (button) -> {
+            managementScreen.deletePoi(poi);
+        })
                 .pos(x + width - 20 - manageButtonsWidth, y)
                 .size(manageButtonsWidth, 20)
                 .build();
@@ -241,5 +242,6 @@ public class PoiManagerWidget extends AbstractWidget {
     }
 
     @Override
-    protected void updateWidgetNarration(NarrationElementOutput narrationElementOutput) {}
+    protected void updateWidgetNarration(NarrationElementOutput narrationElementOutput) {
+    }
 }

@@ -26,12 +26,7 @@ import com.wynntils.utils.colors.CommonColors;
 import com.wynntils.utils.colors.CustomColor;
 import com.wynntils.utils.mc.McUtils;
 import com.wynntils.utils.mc.type.PoiLocation;
-import com.wynntils.utils.render.FontRenderer;
-import com.wynntils.utils.render.MapRenderer;
-import com.wynntils.utils.render.RenderUtils;
-import com.wynntils.utils.render.TextRenderSetting;
-import com.wynntils.utils.render.TextRenderTask;
-import com.wynntils.utils.render.Texture;
+import com.wynntils.utils.render.*;
 import com.wynntils.utils.render.type.HorizontalAlignment;
 import com.wynntils.utils.render.type.PointerType;
 import com.wynntils.utils.render.type.TextShadow;
@@ -39,10 +34,11 @@ import com.wynntils.utils.render.type.VerticalAlignment;
 import com.wynntils.utils.type.BoundingBox;
 import com.wynntils.utils.type.BoundingCircle;
 import com.wynntils.utils.type.BoundingShape;
-import java.util.List;
-import java.util.stream.Stream;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.renderer.MultiBufferSource;
+
+import java.util.List;
+import java.util.stream.Stream;
 
 public class MinimapOverlay extends Overlay {
     private static final int DEFAULT_SIZE = 130;
@@ -323,8 +319,8 @@ public class MinimapOverlay extends Overlay {
             }
 
             final float compassSize = Math.max(
-                            waypointPoi.getWidth(currentZoom, poiScale.get()),
-                            waypointPoi.getHeight(currentZoom, poiScale.get()))
+                    waypointPoi.getWidth(currentZoom, poiScale.get()),
+                    waypointPoi.getHeight(currentZoom, poiScale.get()))
                     * 0.8f;
 
             float compassRenderX = compassOffsetX + centerX;
@@ -593,5 +589,6 @@ public class MinimapOverlay extends Overlay {
         }
     }
 
-    private record BorderInfo(int tx1, int ty1, int tx2, int ty2) {}
+    private record BorderInfo(int tx1, int ty1, int tx2, int ty2) {
+    }
 }

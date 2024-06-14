@@ -9,12 +9,13 @@ import com.wynntils.screens.base.TooltipProvider;
 import com.wynntils.utils.colors.CustomColor;
 import com.wynntils.utils.render.RenderUtils;
 import com.wynntils.utils.render.Texture;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.function.Supplier;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Supplier;
 
 public class FilterButton extends WynntilsButton implements TooltipProvider {
     private static final Component DEFAULT_ENABLED_TOOLTIP =

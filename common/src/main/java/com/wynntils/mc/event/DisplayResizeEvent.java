@@ -6,4 +6,5 @@ package com.wynntils.mc.event;
 
 import net.minecraftforge.eventbus.api.Event;
 
-public class DisplayResizeEvent extends Event {}
+public class DisplayResizeEvent extends Event {
+}

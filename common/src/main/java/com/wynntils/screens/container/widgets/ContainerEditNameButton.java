@@ -11,11 +11,12 @@ import com.wynntils.screens.base.widgets.WynntilsButton;
 import com.wynntils.utils.mc.McUtils;
 import com.wynntils.utils.render.RenderUtils;
 import com.wynntils.utils.render.Texture;
-import java.util.List;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
 import org.lwjgl.glfw.GLFW;
+
+import java.util.List;
 
 public class ContainerEditNameButton extends WynntilsButton {
     private static final List<Component> CANCEL_TOOLTIP = List.of(
@@ -58,7 +59,8 @@ public class ContainerEditNameButton extends WynntilsButton {
 
     // unused
     @Override
-    public void onPress() {}
+    public void onPress() {
+    }
 
     @Override
     public boolean mouseClicked(double mouseX, double mouseY, int button) {

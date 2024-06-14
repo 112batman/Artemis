@@ -19,6 +19,7 @@ import com.wynntils.core.events.EventBusWrapper;
 import com.wynntils.core.mod.event.WynntilsCrashEvent;
 import com.wynntils.core.mod.type.CrashType;
 import com.wynntils.utils.mc.McUtils;
+
 import java.io.File;
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -27,6 +28,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+
 import net.minecraft.SharedConstants;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -34,7 +36,9 @@ import org.apache.commons.lang3.reflect.FieldUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-/** The common implementation of Wynntils */
+/**
+ * The common implementation of Wynntils
+ */
 public final class WynntilsMod {
     public static final String MOD_ID = "wynntils";
     public static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();

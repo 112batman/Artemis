@@ -7,7 +7,9 @@ package com.wynntils.models.lootrun.particle;
 import com.wynntils.handlers.particle.type.Particle;
 import com.wynntils.handlers.particle.type.ParticleType;
 import com.wynntils.handlers.particle.type.ParticleVerifier;
+
 import java.util.List;
+
 import net.minecraft.core.Position;
 import net.minecraft.world.phys.Vec3;
 

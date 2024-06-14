@@ -21,9 +21,10 @@ import com.wynntils.utils.render.buffered.BufferedRenderUtils;
 import com.wynntils.utils.render.type.HorizontalAlignment;
 import com.wynntils.utils.render.type.TextShadow;
 import com.wynntils.utils.render.type.VerticalAlignment;
+import net.minecraft.client.renderer.MultiBufferSource;
+
 import java.util.List;
 import java.util.function.Supplier;
-import net.minecraft.client.renderer.MultiBufferSource;
 
 public class TerritoryPoi implements Poi {
     private final Supplier<TerritoryProfile> territoryProfileSupplier;
@@ -95,7 +96,7 @@ public class TerritoryPoi implements Poi {
                 && guildMapScreen.isResourceMode()) {
             colors = territoryInfo.getResourceColors();
         } else if ((isTerritoryInfoUsable()
-                        && territoryInfo.getGuildName().equals(TerritoryProfile.GuildInfo.NONE.name()))
+                && territoryInfo.getGuildName().equals(TerritoryProfile.GuildInfo.NONE.name()))
                 || territoryProfile.getGuildInfo() == TerritoryProfile.GuildInfo.NONE) {
             // Uncaptured territory at season reset
             colors = List.of(CommonColors.WHITE);

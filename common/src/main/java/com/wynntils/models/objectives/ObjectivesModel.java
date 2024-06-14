@@ -8,6 +8,7 @@ import com.wynntils.core.WynntilsMod;
 import com.wynntils.core.components.Handlers;
 import com.wynntils.core.components.Model;
 import com.wynntils.handlers.scoreboard.ScoreboardPart;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;

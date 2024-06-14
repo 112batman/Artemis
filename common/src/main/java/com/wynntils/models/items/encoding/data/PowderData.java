@@ -8,6 +8,7 @@ import com.wynntils.models.elements.type.Powder;
 import com.wynntils.models.items.encoding.type.ItemData;
 import com.wynntils.models.items.properties.PowderedItemProperty;
 import com.wynntils.utils.type.Pair;
+
 import java.util.List;
 
 public record PowderData(int powderSlots, List<Pair<Powder, Integer>> powders) implements ItemData {

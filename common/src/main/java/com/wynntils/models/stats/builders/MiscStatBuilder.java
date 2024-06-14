@@ -5,6 +5,7 @@
 package com.wynntils.models.stats.builders;
 
 import com.wynntils.models.stats.type.MiscStatType;
+
 import java.util.function.Consumer;
 
 public final class MiscStatBuilder extends StatBuilder<MiscStatType> {

@@ -16,8 +16,9 @@ import com.wynntils.utils.render.buffered.BufferedFontRenderer;
 import com.wynntils.utils.render.type.HorizontalAlignment;
 import com.wynntils.utils.render.type.TextShadow;
 import com.wynntils.utils.render.type.VerticalAlignment;
-import java.util.Optional;
 import net.minecraft.client.renderer.MultiBufferSource;
+
+import java.util.Optional;
 
 public class LabelPoi implements Poi {
     private static final CustomColor AQUA = new CustomColor(0f, 0.8f, 0.8f);

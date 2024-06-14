@@ -13,8 +13,10 @@ import com.wynntils.models.items.items.game.PotionItem;
 import com.wynntils.models.wynnitem.parsing.WynnItemParseResult;
 import com.wynntils.models.wynnitem.parsing.WynnItemParser;
 import com.wynntils.utils.type.CappedValue;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
 import net.minecraft.world.item.ItemStack;
 
 public final class PotionAnnotator implements GameItemAnnotator {

@@ -24,6 +24,7 @@ import com.wynntils.utils.StringUtils;
 import com.wynntils.utils.type.CappedValue;
 import com.wynntils.utils.type.ErrorOr;
 import com.wynntils.utils.type.RangedValue;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;

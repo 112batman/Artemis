@@ -12,7 +12,9 @@ import com.wynntils.handlers.chat.event.ChatMessageReceivedEvent;
 import com.wynntils.mc.event.ScreenClosedEvent;
 import com.wynntils.mc.event.ScreenOpenedEvent;
 import com.wynntils.utils.mc.McUtils;
+
 import java.util.regex.Pattern;
+
 import net.minecraft.client.gui.screens.ChatScreen;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 

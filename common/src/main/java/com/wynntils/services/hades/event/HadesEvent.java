@@ -9,7 +9,9 @@ import net.minecraftforge.eventbus.api.Event;
 
 public abstract class HadesEvent extends Event {
     @EventThread(EventThread.Type.IO)
-    public static class Authenticated extends HadesEvent {}
+    public static class Authenticated extends HadesEvent {
+    }
 
-    public static class Disconnected extends HadesEvent {}
+    public static class Disconnected extends HadesEvent {
+    }
 }

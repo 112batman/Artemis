@@ -5,7 +5,9 @@
 package com.wynntils.models.worlds.type;
 
 import com.wynntils.core.components.Models;
+
 import java.util.concurrent.TimeUnit;
+
 import net.minecraft.ChatFormatting;
 
 public record BombInfo(String user, BombType bomb, String server, long startTime, float length) {

@@ -32,9 +32,6 @@ import com.wynntils.utils.render.type.TextShadow;
 import com.wynntils.utils.render.type.VerticalAlignment;
 import com.wynntils.utils.type.BoundingBox;
 import com.wynntils.utils.type.CappedValue;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.events.GuiEventListener;
@@ -42,6 +39,10 @@ import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.network.chat.Component;
 import org.lwjgl.glfw.GLFW;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
 
 public final class GuildMapScreen extends AbstractMapScreen {
     private boolean resourceMode = false;
@@ -54,7 +55,8 @@ public final class GuildMapScreen extends AbstractMapScreen {
     private BasicTexturedButton territoryDefenseFilterButton;
     private BasicTexturedButton hybridModeButton;
 
-    private GuildMapScreen() {}
+    private GuildMapScreen() {
+    }
 
     public static Screen create() {
         return new GuildMapScreen();
@@ -75,7 +77,8 @@ public final class GuildMapScreen extends AbstractMapScreen {
                 10,
                 16,
                 Texture.HELP_ICON,
-                (b) -> {},
+                (b) -> {
+                },
                 List.of(
                         Component.literal("[>] ")
                                 .withStyle(ChatFormatting.YELLOW)
@@ -179,9 +182,9 @@ public final class GuildMapScreen extends AbstractMapScreen {
 
         if (holdingMapKey
                 && !Managers.Feature.getFeatureInstance(GuildMapFeature.class)
-                        .openGuildMapKeybind
-                        .getKeyMapping()
-                        .isDown()) {
+                .openGuildMapKeybind
+                .getKeyMapping()
+                .isDown()) {
             this.onClose();
             return;
         }
@@ -327,7 +330,7 @@ public final class GuildMapScreen extends AbstractMapScreen {
     private void renderPois(PoseStack poseStack, int mouseX, int mouseY) {
         List<TerritoryPoi> advancementPois = territoryDefenseFilterEnabled
                 ? Models.Territory.getFilteredTerritoryPoisFromAdvancement(
-                        territoryDefenseFilterLevel.getLevel(), territoryDefenseFilterType)
+                territoryDefenseFilterLevel.getLevel(), territoryDefenseFilterType)
                 : Models.Territory.getTerritoryPoisFromAdvancement();
 
         List<Poi> renderedPois = new ArrayList<>();
@@ -341,8 +344,8 @@ public final class GuildMapScreen extends AbstractMapScreen {
                 // If the API and advamcement pois don't match, we use the API pois without advancement info
                 if (territoryProfile != null
                         && territoryProfile
-                                .getGuild()
-                                .equals(poi.getTerritoryInfo().getGuildName())) {
+                        .getGuild()
+                        .equals(poi.getTerritoryInfo().getGuildName())) {
                     renderedPois.add(poi);
                 } else {
                     renderedPois.add(new TerritoryPoi(territoryProfile, poi.getTerritoryInfo()));
@@ -375,8 +378,8 @@ public final class GuildMapScreen extends AbstractMapScreen {
 
         final float centerHeight = 75
                 + (territoryInfo.getStorage().values().size()
-                                + territoryInfo.getGenerators().size())
-                        * 10
+                + territoryInfo.getGenerators().size())
+                * 10
                 + (territoryInfo.isHeadquarters() ? 20 : 0);
 
         RenderUtils.drawTexturedRect(poseStack, Texture.MAP_INFO_TOOLTIP_TOP, 0, 0);
@@ -450,12 +453,12 @@ public final class GuildMapScreen extends AbstractMapScreen {
 
         StyledText treasury = StyledText.fromString(ChatFormatting.GRAY
                 + "✦ Treasury: %s"
-                        .formatted(territoryInfo.getTreasury().getTreasuryColor()
-                                + territoryInfo.getTreasury().getAsString()));
+                .formatted(territoryInfo.getTreasury().getTreasuryColor()
+                        + territoryInfo.getTreasury().getAsString()));
         StyledText defences = StyledText.fromString(ChatFormatting.GRAY
                 + "Territory Defences: %s"
-                        .formatted(territoryInfo.getDefences().getDefenceColor()
-                                + territoryInfo.getDefences().getAsString()));
+                .formatted(territoryInfo.getDefences().getDefenceColor()
+                        + territoryInfo.getDefences().getAsString()));
 
         FontRenderer.getInstance()
                 .renderText(
@@ -590,13 +593,13 @@ public final class GuildMapScreen extends AbstractMapScreen {
     private List<Component> getCompleteFilterTooltip() {
         Component lastLine = territoryDefenseFilterEnabled
                 ? Component.translatable("screens.wynntils.guildMap.cycleDefenseFilter.description4")
-                        .withStyle(ChatFormatting.GRAY)
-                        .append(territoryDefenseFilterLevel.getDefenceColor()
-                                + territoryDefenseFilterLevel.getAsString())
-                        .append(territoryDefenseFilterType.asComponent())
+                .withStyle(ChatFormatting.GRAY)
+                .append(territoryDefenseFilterLevel.getDefenceColor()
+                        + territoryDefenseFilterLevel.getAsString())
+                .append(territoryDefenseFilterType.asComponent())
                 : Component.translatable("screens.wynntils.guildMap.cycleDefenseFilter.description4")
-                        .withStyle(ChatFormatting.GRAY)
-                        .append("Off");
+                .withStyle(ChatFormatting.GRAY)
+                .append("Off");
         return List.of(
                 Component.literal("[>] ")
                         .withStyle(ChatFormatting.BLUE)
@@ -622,8 +625,8 @@ public final class GuildMapScreen extends AbstractMapScreen {
                         .append(
                                 (hybridMode
                                         ? Component.translatable("screens.wynntils.guildMap.hybridMode.hybrid")
-                                                .withStyle(ChatFormatting.GREEN)
+                                        .withStyle(ChatFormatting.GREEN)
                                         : Component.translatable("screens.wynntils.guildMap.hybridMode.advancement")
-                                                .withStyle(ChatFormatting.RED))));
+                                        .withStyle(ChatFormatting.RED))));
     }
 }

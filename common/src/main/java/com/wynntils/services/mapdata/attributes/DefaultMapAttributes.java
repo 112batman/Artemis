@@ -11,6 +11,7 @@ import com.wynntils.services.mapdata.attributes.type.MapVisibility;
 import com.wynntils.utils.colors.CommonColors;
 import com.wynntils.utils.colors.CustomColor;
 import com.wynntils.utils.render.type.TextShadow;
+
 import java.util.Optional;
 
 /**
@@ -20,7 +21,8 @@ import java.util.Optional;
 public final class DefaultMapAttributes implements MapAttributes {
     public static DefaultMapAttributes INSTANCE = new DefaultMapAttributes();
 
-    private DefaultMapAttributes() {}
+    private DefaultMapAttributes() {
+    }
 
     @Override
     public Optional<String> getLabel() {

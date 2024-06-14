@@ -27,11 +27,13 @@ import com.wynntils.utils.render.type.HorizontalAlignment;
 import com.wynntils.utils.render.type.TextShadow;
 import com.wynntils.utils.render.type.VerticalAlignment;
 import com.wynntils.utils.type.Pair;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
 import java.util.function.Supplier;
+
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.Tooltip;
@@ -77,7 +79,7 @@ public final class SkillPointLoadoutsScreen extends WynntilsGridLayoutScreen {
             summaryParts.add(Pair.of(
                     () -> (Models.SkillPoint.hasIllegalAssigned() ? ChatFormatting.RED : "")
                             + I18n.get(
-                                    "screens.wynntils.skillPointLoadouts.assigned", Models.SkillPoint.getAssignedSum()),
+                            "screens.wynntils.skillPointLoadouts.assigned", Models.SkillPoint.getAssignedSum()),
                     Models.SkillPoint::getAssignedSkillPoints));
             summaryParts.add(Pair.of(
                     () -> I18n.get("screens.wynntils.skillPointLoadouts.gear", Models.SkillPoint.getGearSum()),
@@ -415,8 +417,8 @@ public final class SkillPointLoadoutsScreen extends WynntilsGridLayoutScreen {
                                 poseStack,
                                 dividedWidth
                                         * (selectedLoadout.value().armourNames().isEmpty()
-                                                ? 35
-                                                : 44), // left align accessories if no armour
+                                        ? 35
+                                        : 44), // left align accessories if no armour
                                 dividedHeight * startingHeight,
                                 tasks);
             } else {

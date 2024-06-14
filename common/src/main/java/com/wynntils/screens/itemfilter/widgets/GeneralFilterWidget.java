@@ -24,5 +24,6 @@ public abstract class GeneralFilterWidget extends AbstractWidget {
     protected abstract StatProviderAndFilterPair getFilterPair();
 
     @Override
-    protected void updateWidgetNarration(NarrationElementOutput narrationElementOutput) {}
+    protected void updateWidgetNarration(NarrationElementOutput narrationElementOutput) {
+    }
 }

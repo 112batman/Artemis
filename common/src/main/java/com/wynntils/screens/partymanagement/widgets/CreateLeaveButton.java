@@ -18,7 +18,7 @@ public class CreateLeaveButton extends WynntilsButton {
                 height,
                 Models.Party.isInParty()
                         ? Component.translatable("screens.wynntils.partyManagementGui.leavePartyButton")
-                                .withStyle(ChatFormatting.RED)
+                        .withStyle(ChatFormatting.RED)
                         : Component.translatable("screens.wynntils.partyManagementGui.createPartyButton"));
     }
 

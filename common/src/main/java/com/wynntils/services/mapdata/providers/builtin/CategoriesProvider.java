@@ -17,6 +17,7 @@ import com.wynntils.services.mapdata.type.MapCategory;
 import com.wynntils.utils.MathUtils;
 import com.wynntils.utils.colors.CommonColors;
 import com.wynntils.utils.colors.CustomColor;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -163,7 +164,7 @@ public class CategoriesProvider extends BuiltInProvider {
                                 case 2 -> TIER_2_VISIBILITY;
                                 case 3 -> TIER_3_VISIBILITY;
                                 case 4 -> TIER_4_VISIBILITY;
-                                    // This should never happen
+                                // This should never happen
                                 default -> FixedMapVisibility.ICON_ALWAYS;
                             });
                 }

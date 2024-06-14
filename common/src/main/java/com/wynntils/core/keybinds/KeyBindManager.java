@@ -18,6 +18,11 @@ import com.wynntils.mc.event.TickEvent;
 import com.wynntils.mc.mixin.accessors.OptionsAccessor;
 import com.wynntils.utils.mc.McUtils;
 import com.wynntils.utils.type.Pair;
+import net.minecraft.client.KeyMapping;
+import net.minecraft.client.Options;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import org.apache.commons.lang3.reflect.FieldUtils;
+
 import java.lang.reflect.Field;
 import java.util.LinkedList;
 import java.util.List;
@@ -25,12 +30,10 @@ import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Consumer;
-import net.minecraft.client.KeyMapping;
-import net.minecraft.client.Options;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import org.apache.commons.lang3.reflect.FieldUtils;
 
-/** Registers and handles keybinds */
+/**
+ * Registers and handles keybinds
+ */
 public final class KeyBindManager extends Manager {
     private final Set<KeyBind> enabledKeyBinds = ConcurrentHashMap.newKeySet();
     private final Map<Feature, List<Pair<KeyBind, String>>> keyBinds = new ConcurrentHashMap<>();

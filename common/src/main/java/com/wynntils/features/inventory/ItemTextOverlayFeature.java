@@ -34,7 +34,9 @@ import com.wynntils.utils.render.FontRenderer;
 import com.wynntils.utils.render.TextRenderSetting;
 import com.wynntils.utils.render.TextRenderTask;
 import com.wynntils.utils.render.type.TextShadow;
+
 import java.util.Optional;
+
 import net.minecraft.ChatFormatting;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -454,5 +456,6 @@ public class ItemTextOverlayFeature extends Feature {
     /**
      * Describes an item's text overlay, with its color, position relative to the item's slot, and text scale.
      */
-    private record TextOverlay(TextRenderTask task, int xOffset, int yOffset, float scale) {}
+    private record TextOverlay(TextRenderTask task, int xOffset, int yOffset, float scale) {
+    }
 }

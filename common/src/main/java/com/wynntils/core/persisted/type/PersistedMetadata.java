@@ -5,6 +5,7 @@
 package com.wynntils.core.persisted.type;
 
 import com.wynntils.core.persisted.PersistedOwner;
+
 import java.lang.reflect.Type;
 
 public record PersistedMetadata<T>(
@@ -14,4 +15,5 @@ public record PersistedMetadata<T>(
         T defaultValue,
         String i18nKeyOverride,
         boolean allowNull,
-        String jsonName) {}
+        String jsonName) {
+}

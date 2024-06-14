@@ -5,6 +5,7 @@
 package com.wynntils.utils;
 
 import com.google.common.net.UrlEscapers;
+
 import java.nio.ByteBuffer;
 import java.nio.charset.StandardCharsets;
 import java.text.DecimalFormat;
@@ -14,6 +15,7 @@ import java.util.Base64;
 import java.util.List;
 import java.util.Locale;
 import java.util.regex.Pattern;
+
 import net.minecraft.ChatFormatting;
 import org.apache.commons.lang3.time.DateFormatUtils;
 
@@ -130,7 +132,8 @@ public final class StringUtils {
         return true;
     }
 
-    /** This is slightly less generous in allowing a match than partialMatch,
+    /**
+     * This is slightly less generous in allowing a match than partialMatch,
      * but not as strict as a contains(). It will require all sequences of characters
      * in the searchTerm to be consecutive in the toMatch string as well, until
      * a whitespace is encountered. E.g. "t vo" would match "The void", but "tvo" would not.
@@ -173,6 +176,7 @@ public final class StringUtils {
 
     /**
      * Converts a float to a string, but if the float is an integer, it will return the integer as a string
+     *
      * @param value the float to convert
      * @return the float as a string
      */

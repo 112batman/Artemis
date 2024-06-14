@@ -8,6 +8,7 @@ import com.wynntils.models.elements.type.Skill;
 import com.wynntils.models.stats.type.SkillStatType;
 import com.wynntils.models.stats.type.StatUnit;
 import com.wynntils.utils.StringUtils;
+
 import java.util.Locale;
 import java.util.function.Consumer;
 

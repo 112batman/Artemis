@@ -4,20 +4,17 @@
  */
 package com.wynntils.models.players.type;
 
-import com.google.gson.JsonDeserializationContext;
-import com.google.gson.JsonDeserializer;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParseException;
+import com.google.gson.*;
 import com.wynntils.core.components.Models;
 import com.wynntils.utils.mc.McUtils;
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.Component;
+
 import java.lang.reflect.Type;
 import java.time.Instant;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
-import net.minecraft.ChatFormatting;
-import net.minecraft.network.chat.Component;
 
 public record WynnPlayerInfo(
         String username,

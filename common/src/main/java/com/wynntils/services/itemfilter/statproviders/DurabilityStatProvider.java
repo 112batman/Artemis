@@ -9,6 +9,7 @@ import com.wynntils.models.items.properties.DurableItemProperty;
 import com.wynntils.services.itemfilter.type.ItemProviderType;
 import com.wynntils.services.itemfilter.type.ItemStatProvider;
 import com.wynntils.utils.type.CappedValue;
+
 import java.util.List;
 import java.util.Optional;
 

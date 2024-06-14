@@ -27,15 +27,6 @@ import com.wynntils.utils.render.Texture;
 import com.wynntils.utils.render.type.HorizontalAlignment;
 import com.wynntils.utils.render.type.TextShadow;
 import com.wynntils.utils.render.type.VerticalAlignment;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.EnumMap;
-import java.util.List;
-import java.util.Map;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.AbstractWidget;
@@ -44,6 +35,11 @@ import net.minecraft.client.gui.components.Tooltip;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.resources.language.I18n;
 import net.minecraft.network.chat.Component;
+
+import java.util.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public final class PoiManagementScreen extends WynntilsGridLayoutScreen {
     // Constants
@@ -166,16 +162,16 @@ public final class PoiManagementScreen extends WynntilsGridLayoutScreen {
 
         // region import/export
         this.addRenderableWidget(new Button.Builder(
-                        Component.translatable("screens.wynntils.poiManagementGui.import"),
-                        (button) -> importFromClipboard())
+                Component.translatable("screens.wynntils.poiManagementGui.import"),
+                (button) -> importFromClipboard())
                 .pos((int) (dividedWidth * 22), (int) (dividedHeight * 58))
                 .size(importExportButtonWidth, 20)
                 .tooltip(Tooltip.create(Component.translatable("screens.wynntils.poiManagementGui.import.tooltip")))
                 .build());
 
         exportButton = new Button.Builder(
-                        Component.translatable("screens.wynntils.poiManagementGui.export"),
-                        (button) -> exportToClipboard())
+                Component.translatable("screens.wynntils.poiManagementGui.export"),
+                (button) -> exportToClipboard())
                 .pos((int) (dividedWidth * 36), (int) (dividedHeight * 58))
                 .size(importExportButtonWidth, 20)
                 .tooltip(Tooltip.create(Component.translatable("screens.wynntils.poiManagementGui.exportAll.tooltip")))
@@ -186,7 +182,7 @@ public final class PoiManagementScreen extends WynntilsGridLayoutScreen {
 
         // region delete buttons
         undoDeleteButton = new Button.Builder(
-                        Component.translatable("screens.wynntils.poiManagementGui.undo"), (button) -> undoDelete())
+                Component.translatable("screens.wynntils.poiManagementGui.undo"), (button) -> undoDelete())
                 .pos((int) (dividedWidth * 55), (int) (dividedHeight * 58))
                 .size((int) (dividedWidth * 8), 20)
                 .build();
@@ -194,8 +190,8 @@ public final class PoiManagementScreen extends WynntilsGridLayoutScreen {
         this.addRenderableWidget(undoDeleteButton);
 
         deleteSelectedButton = new Button.Builder(
-                        Component.translatable("screens.wynntils.poiManagementGui.deleteSelected"),
-                        (button) -> deleteSelectedPois())
+                Component.translatable("screens.wynntils.poiManagementGui.deleteSelected"),
+                (button) -> deleteSelectedPois())
                 .pos((int) (dividedWidth * 55), (int) (dividedHeight * 58) - 25)
                 .size((int) (dividedWidth * 8), 20)
                 .build();
@@ -207,8 +203,8 @@ public final class PoiManagementScreen extends WynntilsGridLayoutScreen {
 
         // region marker buttons
         setMarkersButton = new Button.Builder(
-                        Component.translatable("screens.wynntils.poiManagementGui.setMarkers"),
-                        (button) -> toggleMarkers(true))
+                Component.translatable("screens.wynntils.poiManagementGui.setMarkers"),
+                (button) -> toggleMarkers(true))
                 .pos((int) dividedWidth, (int) (dividedHeight * 58) - 75)
                 .size((int) (dividedWidth * 8), 20)
                 .tooltip(Tooltip.create(Component.translatable("screens.wynntils.poiManagementGui.setMarkers.tooltip")))
@@ -219,8 +215,8 @@ public final class PoiManagementScreen extends WynntilsGridLayoutScreen {
         this.addRenderableWidget(setMarkersButton);
 
         removeMarkersButton = new Button.Builder(
-                        Component.translatable("screens.wynntils.poiManagementGui.removeMarkers"),
-                        (button) -> toggleMarkers(false))
+                Component.translatable("screens.wynntils.poiManagementGui.removeMarkers"),
+                (button) -> toggleMarkers(false))
                 .pos((int) dividedWidth, (int) (dividedHeight * 58) - 50)
                 .size((int) (dividedWidth * 8), 20)
                 .tooltip(Tooltip.create(
@@ -234,8 +230,8 @@ public final class PoiManagementScreen extends WynntilsGridLayoutScreen {
 
         // region select buttons
         deselectAllButton = new Button.Builder(
-                        Component.translatable("screens.wynntils.poiManagementGui.deselectAll"),
-                        (button) -> toggleSelectAll(false))
+                Component.translatable("screens.wynntils.poiManagementGui.deselectAll"),
+                (button) -> toggleSelectAll(false))
                 .pos((int) dividedWidth, (int) (dividedHeight * 58))
                 .size((int) (dividedWidth * 8), 20)
                 .build();
@@ -245,8 +241,8 @@ public final class PoiManagementScreen extends WynntilsGridLayoutScreen {
         this.addRenderableWidget(deselectAllButton);
 
         selectAllButton = new Button.Builder(
-                        Component.translatable("screens.wynntils.poiManagementGui.selectAll"),
-                        (button) -> toggleSelectAll(true))
+                Component.translatable("screens.wynntils.poiManagementGui.selectAll"),
+                (button) -> toggleSelectAll(true))
                 .pos((int) dividedWidth, (int) (dividedHeight * 58) - 25)
                 .size((int) (dividedWidth * 8), 20)
                 .build();
@@ -278,10 +274,10 @@ public final class PoiManagementScreen extends WynntilsGridLayoutScreen {
         int filterButtonWidth = (int) (dividedWidth * 10);
 
         filterButton = new Button.Builder(
-                        Component.translatable("screens.wynntils.poiManagementGui.filter"), (button) -> {
-                            scrollOffset = 0;
-                            McUtils.mc().setScreen(IconFilterScreen.create(this, filteredIcons));
-                        })
+                Component.translatable("screens.wynntils.poiManagementGui.filter"), (button) -> {
+            scrollOffset = 0;
+            McUtils.mc().setScreen(IconFilterScreen.create(this, filteredIcons));
+        })
                 .pos((int) (dividedWidth * 44), (int) (dividedHeight * 3))
                 .size(filterButtonWidth, 20)
                 .build();
@@ -539,7 +535,7 @@ public final class PoiManagementScreen extends WynntilsGridLayoutScreen {
             // Export tooltip should display how many of the pois will be exported
             Component tooltip = addedPoi
                     ? Component.translatable(
-                            "screens.wynntils.poiManagementGui.exportSelected.tooltip", selectedPois.size())
+                    "screens.wynntils.poiManagementGui.exportSelected.tooltip", selectedPois.size())
                     : Component.translatable("screens.wynntils.poiManagementGui.exportAll.tooltip");
 
             exportButton.setTooltip(Tooltip.create(tooltip));
@@ -969,8 +965,8 @@ public final class PoiManagementScreen extends WynntilsGridLayoutScreen {
     private void exportToClipboard() {
         List<CustomPoi> poisToExport = selectedPois.isEmpty()
                 ? Managers.Feature.getFeatureInstance(MainMapFeature.class)
-                        .customPois
-                        .get()
+                .customPois
+                .get()
                 : selectedPois;
 
         McUtils.mc()

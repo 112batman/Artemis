@@ -6,7 +6,6 @@ package com.wynntils.mc.mixin;
 
 import com.mojang.blaze3d.platform.InputConstants;
 import com.wynntils.core.keybinds.KeyBindManager;
-import java.util.Map;
 import net.minecraft.client.KeyMapping;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
@@ -14,6 +13,8 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+
+import java.util.Map;
 
 @Mixin(KeyMapping.class)
 public abstract class KeyMappingMixin {

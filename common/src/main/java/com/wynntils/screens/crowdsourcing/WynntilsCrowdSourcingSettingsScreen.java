@@ -13,7 +13,9 @@ import com.wynntils.screens.crowdsourcing.widgets.CrowdSourcedDataWidget;
 import com.wynntils.screens.wynntilsmenu.WynntilsMenuScreen;
 import com.wynntils.utils.StringUtils;
 import com.wynntils.utils.render.Texture;
+
 import java.util.Arrays;
+
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.resources.language.I18n;
 import net.minecraft.network.chat.Component;

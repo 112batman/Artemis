@@ -8,6 +8,7 @@ import com.wynntils.services.mapdata.attributes.type.MapIcon;
 import com.wynntils.services.mapdata.providers.MapDataProvider;
 import com.wynntils.services.mapdata.type.MapCategory;
 import com.wynntils.services.mapdata.type.MapFeature;
+
 import java.util.stream.Stream;
 
 public abstract class BuiltInProvider implements MapDataProvider {

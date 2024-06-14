@@ -5,6 +5,7 @@
 package com.wynntils.models.spells.event;
 
 import java.util.regex.Matcher;
+
 import net.minecraftforge.eventbus.api.Event;
 
 public class SpellSegmentUpdateEvent extends Event {

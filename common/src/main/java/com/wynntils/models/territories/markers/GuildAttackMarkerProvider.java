@@ -15,6 +15,7 @@ import com.wynntils.services.map.pois.MarkerPoi;
 import com.wynntils.utils.colors.CommonColors;
 import com.wynntils.utils.colors.CustomColor;
 import com.wynntils.utils.render.Texture;
+
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Stream;
@@ -34,7 +35,7 @@ public class GuildAttackMarkerProvider implements MarkerProvider<MarkerPoi> {
                     CustomColor beaconColor = attackTimer.defense().isEmpty()
                             ? CommonColors.WHITE
                             : CustomColor.fromChatFormatting(
-                                    attackTimer.defense().get().getDefenceColor());
+                            attackTimer.defense().get().getDefenceColor());
 
                     TerritoryProfile territoryProfile =
                             Models.Territory.getTerritoryProfile(attackTimer.territoryName());

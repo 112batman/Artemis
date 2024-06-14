@@ -6,4 +6,5 @@ package com.wynntils.models.stats.type;
 
 import com.wynntils.utils.type.RangedValue;
 
-public record StatActualValue(StatType statType, int value, int stars, RangedValue internalRoll) {}
+public record StatActualValue(StatType statType, int value, int stars, RangedValue internalRoll) {
+}

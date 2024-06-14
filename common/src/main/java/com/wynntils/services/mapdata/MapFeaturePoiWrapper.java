@@ -15,8 +15,9 @@ import com.wynntils.services.mapdata.type.MapFeature;
 import com.wynntils.services.mapdata.type.MapLocation;
 import com.wynntils.utils.mc.type.PoiLocation;
 import com.wynntils.utils.render.FontRenderer;
-import java.util.Optional;
 import net.minecraft.client.renderer.MultiBufferSource;
+
+import java.util.Optional;
 
 public class MapFeaturePoiWrapper implements Poi {
     public static final int SPACING = 2;

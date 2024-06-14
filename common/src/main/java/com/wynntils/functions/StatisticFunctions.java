@@ -9,9 +9,10 @@ import com.wynntils.core.consumers.functions.Function;
 import com.wynntils.core.consumers.functions.arguments.FunctionArguments;
 import com.wynntils.services.statistics.type.StatisticEntry;
 import com.wynntils.services.statistics.type.StatisticKind;
+import net.minecraft.client.resources.language.I18n;
+
 import java.util.List;
 import java.util.Objects;
-import net.minecraft.client.resources.language.I18n;
 
 public final class StatisticFunctions {
     public static class StatisticsTotalFunction extends StatisticFunction<Long> {

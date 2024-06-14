@@ -6,6 +6,7 @@ package com.wynntils.models.rewards.type;
 
 import com.wynntils.models.stats.StatCalculator;
 import com.wynntils.models.stats.type.StatActualValue;
+
 import java.util.List;
 import java.util.Optional;
 

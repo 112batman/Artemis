@@ -31,5 +31,6 @@ public abstract class ArrowShieldEvent extends Event {
         }
     }
 
-    public static final class Removed extends ArrowShieldEvent {}
+    public static final class Removed extends ArrowShieldEvent {
+    }
 }

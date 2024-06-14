@@ -9,6 +9,10 @@ import com.wynntils.core.WynntilsMod;
 import com.wynntils.core.components.Manager;
 import com.wynntils.core.components.Managers;
 import com.wynntils.core.net.event.NetResultProcessedEvent;
+import net.minecraft.SharedConstants;
+import net.minecraft.Util;
+import org.apache.commons.codec.digest.DigestUtils;
+
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
@@ -20,9 +24,6 @@ import java.time.Duration;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import net.minecraft.SharedConstants;
-import net.minecraft.Util;
-import org.apache.commons.codec.digest.DigestUtils;
 
 public final class NetManager extends Manager {
     static final HttpClient HTTP_CLIENT = HttpClient.newHttpClient();
@@ -144,7 +145,7 @@ public final class NetManager extends Manager {
             assert (urlInfo.method() == UrlManager.Method.POST);
             assert (arguments.keySet().equals(new HashSet<>(urlInfo.arguments())))
                     : "Arguments mismatch for " + urlId + ", expected: " + urlInfo.arguments() + " got: "
-                            + arguments.keySet();
+                    + arguments.keySet();
 
             JsonObject jsonArgs = new JsonObject();
             arguments.forEach(jsonArgs::addProperty);

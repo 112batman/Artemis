@@ -5,6 +5,7 @@
 package com.wynntils.services.stopwatch;
 
 import com.wynntils.core.components.Service;
+
 import java.util.List;
 
 public class StopwatchService extends Service {

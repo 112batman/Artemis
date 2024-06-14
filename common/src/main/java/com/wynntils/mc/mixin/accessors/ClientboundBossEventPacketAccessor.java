@@ -4,10 +4,11 @@
  */
 package com.wynntils.mc.mixin.accessors;
 
-import java.util.UUID;
 import net.minecraft.network.protocol.game.ClientboundBossEventPacket;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.gen.Accessor;
+
+import java.util.UUID;
 
 @Mixin(ClientboundBossEventPacket.class)
 public interface ClientboundBossEventPacketAccessor {

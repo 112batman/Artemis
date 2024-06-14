@@ -18,8 +18,10 @@ import com.wynntils.utils.render.type.HorizontalAlignment;
 import com.wynntils.utils.render.type.TextShadow;
 import com.wynntils.utils.render.type.VerticalAlignment;
 import com.wynntils.utils.type.Pair;
+
 import java.util.ArrayList;
 import java.util.List;
+
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.AbstractWidget;
@@ -101,13 +103,13 @@ public class LoadoutWidget extends AbstractWidget {
                         poseStack,
                         StyledText.fromString(name + " (" + loadout.getSkillPointsSum() + " - "
                                 + (loadout.getMinimumCombatLevel()
-                                                > Models.CombatXp.getCombatLevel()
-                                                        .current()
-                                        ? ChatFormatting.RED
-                                        : "")
+                                > Models.CombatXp.getCombatLevel()
+                                .current()
+                                ? ChatFormatting.RED
+                                : "")
                                 + I18n.get(
-                                        "screens.wynntils.skillPointLoadouts.widgetLevelText",
-                                        loadout.getMinimumCombatLevel())
+                                "screens.wynntils.skillPointLoadouts.widgetLevelText",
+                                loadout.getMinimumCombatLevel())
                                 + ChatFormatting.WHITE
                                 + ")"),
                         dividedWidth * 4,
@@ -137,5 +139,6 @@ public class LoadoutWidget extends AbstractWidget {
     }
 
     @Override
-    protected void updateWidgetNarration(NarrationElementOutput narrationElementOutput) {}
+    protected void updateWidgetNarration(NarrationElementOutput narrationElementOutput) {
+    }
 }

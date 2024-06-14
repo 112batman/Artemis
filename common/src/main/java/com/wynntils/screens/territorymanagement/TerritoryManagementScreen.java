@@ -41,10 +41,12 @@ import com.wynntils.utils.render.type.TextShadow;
 import com.wynntils.utils.render.type.VerticalAlignment;
 import com.wynntils.utils.type.Pair;
 import com.wynntils.utils.wynn.ContainerUtils;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.AbstractWidget;
@@ -155,7 +157,7 @@ public class TerritoryManagementScreen extends WynntilsScreen implements Wrapped
                 Texture.DEFENSE_FILTER_ICON,
                 (button) -> {
                     Storage<Boolean> screenTerritoryProductionTooltip = Managers.Feature.getFeatureInstance(
-                                    CustomTerritoryManagementScreenFeature.class)
+                            CustomTerritoryManagementScreenFeature.class)
                             .screenTerritoryProductionTooltip;
                     screenTerritoryProductionTooltip.store(!screenTerritoryProductionTooltip.get());
                 },
@@ -177,7 +179,7 @@ public class TerritoryManagementScreen extends WynntilsScreen implements Wrapped
                 Texture.HELP_ICON,
                 (button) -> {
                     Storage<Boolean> screenHighlightLegend = Managers.Feature.getFeatureInstance(
-                                    CustomTerritoryManagementScreenFeature.class)
+                            CustomTerritoryManagementScreenFeature.class)
                             .screenHighlightLegend;
                     screenHighlightLegend.store(!screenHighlightLegend.get());
                 },

@@ -5,8 +5,9 @@
 package com.wynntils.models.players.event;
 
 import com.wynntils.hades.protocol.enums.PacketAction;
-import java.util.Set;
 import net.minecraftforge.eventbus.api.Event;
+
+import java.util.Set;
 
 public abstract class HadesRelationsUpdateEvent extends Event {
     private final Set<String> changedPlayers;

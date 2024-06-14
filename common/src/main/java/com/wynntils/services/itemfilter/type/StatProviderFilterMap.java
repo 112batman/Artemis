@@ -5,6 +5,7 @@
 package com.wynntils.services.itemfilter.type;
 
 import com.wynntils.models.items.WynnItem;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;

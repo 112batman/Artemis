@@ -11,8 +11,10 @@ import com.wynntils.handlers.item.ItemAnnotation;
 import com.wynntils.models.activities.type.ActivityInfo;
 import com.wynntils.models.activities.type.ActivityType;
 import com.wynntils.models.items.items.gui.ActivityItem;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 

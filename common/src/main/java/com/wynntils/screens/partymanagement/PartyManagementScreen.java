@@ -20,11 +20,13 @@ import com.wynntils.utils.render.RenderUtils;
 import com.wynntils.utils.render.type.HorizontalAlignment;
 import com.wynntils.utils.render.type.TextShadow;
 import com.wynntils.utils.render.type.VerticalAlignment;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.regex.Pattern;
+
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.AbstractWidget;
@@ -75,8 +77,8 @@ public final class PartyManagementScreen extends WynntilsGridLayoutScreen {
         this.addRenderableWidget(inviteInput);
 
         inviteButton = new Button.Builder(
-                        Component.translatable("screens.wynntils.partyManagementGui.invite"),
-                        (button) -> inviteFromField())
+                Component.translatable("screens.wynntils.partyManagementGui.invite"),
+                (button) -> inviteFromField())
                 .pos((int) (dividedWidth * 57) + 1, (int) (dividedHeight * PARTY_LIST_DIV_HEIGHT) + 1)
                 .size((int) (dividedWidth * 3) - 1, BUTTON_HEIGHT)
                 .build();
@@ -85,17 +87,17 @@ public final class PartyManagementScreen extends WynntilsGridLayoutScreen {
 
         // region Management button row (except create/leave)
         this.addRenderableWidget(new Button.Builder(
-                        Component.translatable("screens.wynntils.partyManagementGui.refreshButton")
-                                .withStyle(ChatFormatting.GREEN),
-                        (button) -> refreshAll())
+                Component.translatable("screens.wynntils.partyManagementGui.refreshButton")
+                        .withStyle(ChatFormatting.GREEN),
+                (button) -> refreshAll())
                 .pos((int) (dividedWidth * 36) + 1, (int) (dividedHeight * MGMT_ROW_DIV_HEIGHT))
                 .size(mgmtButtonWidth, BUTTON_HEIGHT)
                 .build());
 
         kickOfflineButton = new Button.Builder(
-                        Component.translatable("screens.wynntils.partyManagementGui.kickOfflineButton")
-                                .withStyle(ChatFormatting.RED),
-                        (button) -> Models.Party.partyKickOffline())
+                Component.translatable("screens.wynntils.partyManagementGui.kickOfflineButton")
+                        .withStyle(ChatFormatting.RED),
+                (button) -> Models.Party.partyKickOffline())
                 .pos((int) (dividedWidth * 44) + 1, (int) (dividedHeight * MGMT_ROW_DIV_HEIGHT))
                 .size(mgmtButtonWidth, BUTTON_HEIGHT)
                 .build();

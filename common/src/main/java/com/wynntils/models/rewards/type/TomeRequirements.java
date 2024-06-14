@@ -4,4 +4,5 @@
  */
 package com.wynntils.models.rewards.type;
 
-public record TomeRequirements(int level, boolean tomeSeeking) {}
+public record TomeRequirements(int level, boolean tomeSeeking) {
+}

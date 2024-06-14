@@ -10,6 +10,7 @@ import com.wynntils.core.components.Managers;
 import com.wynntils.core.components.Service;
 import com.wynntils.core.net.Download;
 import com.wynntils.core.net.UrlId;
+
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
@@ -41,7 +42,8 @@ public final class SplashService extends Service {
     private void updateCurrentSplash() {
         Download dl = Managers.Net.download(UrlId.DATA_STATIC_SPLASHES);
         dl.handleReader(reader -> {
-            Type type = new TypeToken<List<String>>() {}.getType();
+            Type type = new TypeToken<List<String>>() {
+            }.getType();
             allSplashes = WynntilsMod.GSON.fromJson(reader, type);
             if (allSplashes.isEmpty()) {
                 // Use fallback in case of failure

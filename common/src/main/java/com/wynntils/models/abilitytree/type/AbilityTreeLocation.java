@@ -10,8 +10,8 @@ import com.google.common.collect.ComparisonChain;
  * Represents a location on the ability tree.
  *
  * @param page The page of the ability tree. Index starts at 1.
- * @param row The row of the ability tree. Index starts at 0.
- * @param col The column of the ability tree. Index starts at 0.
+ * @param row  The row of the ability tree. Index starts at 0.
+ * @param col  The column of the ability tree. Index starts at 0.
  */
 public record AbilityTreeLocation(int page, int row, int col) implements Comparable<AbilityTreeLocation> {
     private static final int MAX_ROWS = 6;

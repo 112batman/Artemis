@@ -5,6 +5,7 @@
 package com.wynntils.models.containers.containers.personal;
 
 import com.wynntils.models.containers.type.PersonalStorageType;
+
 import java.util.regex.Pattern;
 
 public class BookshelfContainer extends PersonalStorageContainer {

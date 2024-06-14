@@ -18,13 +18,14 @@ import com.wynntils.models.stats.type.DamageType;
 import com.wynntils.utils.StringUtils;
 import com.wynntils.utils.type.Pair;
 import com.wynntils.utils.type.RangedValue;
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.MutableComponent;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Optional;
-import net.minecraft.ChatFormatting;
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.MutableComponent;
 
 public class CraftedGearTooltipComponent extends CraftedTooltipComponent<CraftedGearItem> {
     @Override
@@ -151,7 +152,7 @@ public class CraftedGearTooltipComponent extends CraftedTooltipComponent<Crafted
         // item type + durability
         footer.add(Component.literal("Crafted "
                         + StringUtils.capitalizeFirst(
-                                craftedItem.getGearType().name().toLowerCase(Locale.ROOT)))
+                        craftedItem.getGearType().name().toLowerCase(Locale.ROOT)))
                 .withStyle(ChatFormatting.DARK_AQUA)
                 .append(Component.literal(" [" + craftedItem.getDurability().current() + "/"
                                 + craftedItem.getDurability().max() + " Durability]")

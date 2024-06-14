@@ -12,14 +12,15 @@ import com.wynntils.models.items.items.game.PowderItem;
 import com.wynntils.screens.guides.GuideItemStack;
 import com.wynntils.utils.MathUtils;
 import com.wynntils.utils.StringUtils;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Locale;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
 
 public final class GuidePowderItemStack extends GuideItemStack {
     private final int tier;

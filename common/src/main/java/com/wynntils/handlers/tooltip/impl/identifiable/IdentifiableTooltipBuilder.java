@@ -11,12 +11,14 @@ import com.wynntils.models.character.type.ClassType;
 import com.wynntils.models.items.properties.IdentifiableItemProperty;
 import com.wynntils.utils.mc.LoreUtils;
 import com.wynntils.utils.type.Pair;
-import java.util.List;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
 
+import java.util.List;
+
 /**
  * A builder for identifiable item tooltips.
+ *
  * @param <T> The type of the gear info
  * @param <U> The type of the gear instance
  */

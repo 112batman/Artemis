@@ -10,6 +10,7 @@ import com.wynntils.mc.mixin.accessors.MinecraftAccessor;
 import com.wynntils.utils.mc.KeyboardUtils;
 import com.wynntils.utils.mc.McUtils;
 import com.wynntils.utils.mc.type.Location;
+
 import java.util.List;
 
 public class MinecraftFunctions {

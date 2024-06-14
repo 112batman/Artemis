@@ -11,10 +11,11 @@ import com.wynntils.screens.maps.CustomSeaskipperScreen;
 import com.wynntils.utils.mc.McUtils;
 import com.wynntils.utils.render.RenderUtils;
 import com.wynntils.utils.render.Texture;
-import java.util.List;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
+
+import java.util.List;
 
 public class SeaskipperTravelButton extends WynntilsButton {
     private final CustomSeaskipperScreen seaskipperScreen;

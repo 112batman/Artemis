@@ -5,13 +5,14 @@
 package com.wynntils.mc.mixin;
 
 import com.wynntils.mc.extension.ChatComponentExtension;
-import java.util.List;
 import net.minecraft.client.GuiMessage;
 import net.minecraft.client.gui.components.ChatComponent;
 import net.minecraft.network.chat.Component;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
+
+import java.util.List;
 
 @Mixin(ChatComponent.class)
 public abstract class ChatComponentMixin implements ChatComponentExtension {
@@ -20,7 +21,8 @@ public abstract class ChatComponentMixin implements ChatComponentExtension {
     private List<GuiMessage> allMessages;
 
     @Shadow
-    private void refreshTrimmedMessage() {}
+    private void refreshTrimmedMessage() {
+    }
 
     @Override
     public void deleteMessage(Component component) {

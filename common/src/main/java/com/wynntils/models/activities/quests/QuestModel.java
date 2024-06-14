@@ -12,23 +12,14 @@ import com.wynntils.core.net.ApiResponse;
 import com.wynntils.core.net.UrlId;
 import com.wynntils.core.text.StyledText;
 import com.wynntils.models.activities.event.ActivityUpdatedEvent;
-import com.wynntils.models.activities.type.ActivityDifficulty;
-import com.wynntils.models.activities.type.ActivityInfo;
-import com.wynntils.models.activities.type.ActivityLength;
-import com.wynntils.models.activities.type.ActivitySortOrder;
-import com.wynntils.models.activities.type.ActivityType;
+import com.wynntils.models.activities.type.*;
 import com.wynntils.utils.mc.McUtils;
 import com.wynntils.utils.mc.type.Location;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
-import java.util.stream.Stream;
 import net.minecraft.world.phys.Vec3;
 import org.apache.commons.lang3.StringUtils;
+
+import java.util.*;
+import java.util.stream.Stream;
 
 public final class QuestModel extends Model {
     private static final String MINI_QUEST_PREFIX = "Mini-Quest - ";

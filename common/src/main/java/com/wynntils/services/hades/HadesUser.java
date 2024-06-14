@@ -9,6 +9,7 @@ import com.wynntils.utils.colors.CommonColors;
 import com.wynntils.utils.colors.CustomColor;
 import com.wynntils.utils.mc.type.PoiLocation;
 import com.wynntils.utils.type.CappedValue;
+
 import java.util.UUID;
 
 public class HadesUser {

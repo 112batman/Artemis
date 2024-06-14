@@ -23,14 +23,15 @@ import com.wynntils.screens.wynntilsmenu.WynntilsMenuScreen;
 import com.wynntils.utils.StringUtils;
 import com.wynntils.utils.mc.McUtils;
 import com.wynntils.utils.render.Texture;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.resources.language.I18n;
 import net.minecraft.network.chat.Component;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public final class WynntilsGuidesListScreen extends WynntilsListScreen<Screen, GuidesButton> {
     private static final List<Screen> GUIDES = List.of(

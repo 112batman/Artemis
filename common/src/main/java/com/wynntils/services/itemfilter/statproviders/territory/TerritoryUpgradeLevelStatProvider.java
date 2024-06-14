@@ -7,6 +7,7 @@ package com.wynntils.services.itemfilter.statproviders.territory;
 import com.google.common.base.CaseFormat;
 import com.wynntils.models.items.items.gui.TerritoryItem;
 import com.wynntils.models.territories.type.TerritoryUpgrade;
+
 import java.util.Optional;
 
 public class TerritoryUpgradeLevelStatProvider extends TerritoryStatProvider<Integer> {

@@ -19,20 +19,10 @@ import com.wynntils.mc.event.ScreenOpenedEvent;
 import com.wynntils.mc.event.TickEvent;
 import com.wynntils.models.containers.containers.reward.LootChestContainer;
 import com.wynntils.services.lootrunpaths.event.LootrunPathCacheRefreshEvent;
-import com.wynntils.services.lootrunpaths.type.LootrunNote;
-import com.wynntils.services.lootrunpaths.type.LootrunPath;
-import com.wynntils.services.lootrunpaths.type.LootrunSaveResult;
-import com.wynntils.services.lootrunpaths.type.LootrunState;
-import com.wynntils.services.lootrunpaths.type.LootrunUndoResult;
+import com.wynntils.services.lootrunpaths.type.*;
 import com.wynntils.utils.FileUtils;
 import com.wynntils.utils.mc.McUtils;
 import com.wynntils.utils.mc.PosUtils;
-import java.io.File;
-import java.io.FileReader;
-import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.client.resources.language.I18n;
@@ -44,6 +34,13 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+
+import java.io.File;
+import java.io.FileReader;
+import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
 
 public final class LootrunPathsService extends Service {
     public static final File LOOTRUNS = WynntilsMod.getModStorageDir("lootruns");

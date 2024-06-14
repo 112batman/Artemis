@@ -49,8 +49,11 @@ public abstract class Feature extends AbstractConfigurable implements Storageabl
         return "feature." + getTranslationKeyName();
     }
 
-    /** Used to react to config option updates */
-    protected void onConfigUpdate(Config<?> config) {}
+    /**
+     * Used to react to config option updates
+     */
+    protected void onConfigUpdate(Config<?> config) {
+    }
 
     private void callOnConfigUpdate(Config<?> config) {
         try {
@@ -66,11 +69,15 @@ public abstract class Feature extends AbstractConfigurable implements Storageabl
         }
     }
 
-    public void onEnable() {}
+    public void onEnable() {
+    }
 
-    public void onDisable() {}
+    public void onDisable() {
+    }
 
-    /** Whether a feature is enabled */
+    /**
+     * Whether a feature is enabled
+     */
     public final boolean isEnabled() {
         return Managers.Feature.isEnabled(this);
     }
@@ -93,7 +100,9 @@ public abstract class Feature extends AbstractConfigurable implements Storageabl
         callOnConfigUpdate(config);
     }
 
-    /** Updates the feature's enabled/disabled state to match the user's setting, if necessary */
+    /**
+     * Updates the feature's enabled/disabled state to match the user's setting, if necessary
+     */
     private void tryUserToggle() {
         if (userEnabled.get()) {
             Managers.Feature.enableFeature(this);

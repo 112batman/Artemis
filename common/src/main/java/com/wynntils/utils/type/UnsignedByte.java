@@ -51,6 +51,7 @@ public final class UnsignedByte {
 
     /**
      * Returns the value of this {@link UnsignedByte} as an int.
+     *
      * @return the value of this {@link UnsignedByte} as an int, in the range 0 to 255
      */
     public short value() {

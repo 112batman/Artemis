@@ -9,6 +9,7 @@ import com.wynntils.core.consumers.functions.Function;
 import com.wynntils.core.consumers.functions.arguments.FunctionArguments;
 import com.wynntils.core.consumers.functions.arguments.parser.ArgumentParser;
 import com.wynntils.utils.type.ErrorOr;
+
 import java.util.List;
 import java.util.Optional;
 import java.util.regex.Matcher;
@@ -139,6 +140,6 @@ public final class FunctionExpression extends Expression {
         return argumentExpressions.hasError()
                 ? ErrorOr.error(argumentExpressions.getError())
                 : ErrorOr.of(Optional.of(new FunctionExpression(
-                        rawExpression, function, argumentExpressions.getValue(), isFormatted, decimals)));
+                rawExpression, function, argumentExpressions.getValue(), isFormatted, decimals)));
     }
 }

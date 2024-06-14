@@ -5,6 +5,7 @@
 package com.wynntils.models.activities.type;
 
 import com.wynntils.core.text.StyledText;
+
 import java.util.List;
 import java.util.Optional;
 
@@ -21,4 +22,5 @@ public record ActivityInfo(
         Optional<ActivityDifficulty> difficulty,
         ActivityRequirements requirements,
         List<String> rewards,
-        ActivityTrackingState trackingState) {}
+        ActivityTrackingState trackingState) {
+}

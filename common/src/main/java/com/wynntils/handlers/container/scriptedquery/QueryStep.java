@@ -15,7 +15,9 @@ import com.wynntils.handlers.container.type.ContainerContentVerification;
 import com.wynntils.handlers.container.type.ContainerPredicate;
 import com.wynntils.handlers.container.type.ContainerVerification;
 import com.wynntils.utils.wynn.ContainerUtils;
+
 import java.util.function.Supplier;
+
 import net.minecraft.world.item.Item;
 import org.lwjgl.glfw.GLFW;
 
@@ -24,7 +26,8 @@ public class QueryStep {
     private static final ContainerVerification EXPECT_SAME_MENU = (title, type) -> false;
     private static final ContainerContentVerification WAIT_FOR_SET_CONTENT =
             (container, changes, changeType) -> changeType == ContainerContentChangeType.SET_CONTENT;
-    private static final ContainerAction IGNORE_INCOMING_CONTAINER = c -> {};
+    private static final ContainerAction IGNORE_INCOMING_CONTAINER = c -> {
+    };
 
     private final ContainerPredicate startAction;
     private ContainerVerification verification = EXPECT_SAME_MENU;

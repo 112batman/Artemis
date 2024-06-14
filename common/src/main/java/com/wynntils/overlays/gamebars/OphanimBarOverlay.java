@@ -14,6 +14,7 @@ import com.wynntils.models.abilities.type.OphanimOrb;
 import com.wynntils.utils.colors.CommonColors;
 import com.wynntils.utils.render.type.HorizontalAlignment;
 import com.wynntils.utils.render.type.VerticalAlignment;
+
 import java.util.stream.Collectors;
 
 public class OphanimBarOverlay extends BaseBarOverlay {
@@ -48,7 +49,7 @@ public class OphanimBarOverlay extends BaseBarOverlay {
     protected String text() {
         return Models.BossBar.ophanimBar.getHealed() + "% ❤ - "
                 + Models.BossBar.ophanimBar.getOrbs().stream()
-                        .map(OphanimOrb::getString)
-                        .collect(Collectors.joining());
+                .map(OphanimOrb::getString)
+                .collect(Collectors.joining());
     }
 }

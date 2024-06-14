@@ -12,6 +12,7 @@ import com.wynntils.models.stats.type.StatType;
 import com.wynntils.utils.MathUtils;
 import com.wynntils.utils.type.Pair;
 import com.wynntils.utils.type.RangedValue;
+
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.DoubleSummaryStatistics;

@@ -14,11 +14,12 @@ import com.wynntils.models.rewards.type.TomeRequirements;
 import com.wynntils.models.stats.type.StatType;
 import com.wynntils.utils.StringUtils;
 import com.wynntils.utils.type.Pair;
-import java.util.ArrayList;
-import java.util.List;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class TomeTooltipComponent extends IdentifiableTooltipComponent<TomeInfo, TomeInstance> {
     @Override

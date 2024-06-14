@@ -5,9 +5,10 @@
 package com.wynntils.handlers.scoreboard;
 
 import com.wynntils.core.text.StyledText;
+import org.apache.commons.lang3.ArrayUtils;
+
 import java.util.List;
 import java.util.Objects;
-import org.apache.commons.lang3.ArrayUtils;
 
 public final class ScoreboardSegment {
     private final ScoreboardPart scoreboardPart;

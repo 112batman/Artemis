@@ -17,8 +17,9 @@ import com.wynntils.utils.render.buffered.BufferedFontRenderer;
 import com.wynntils.utils.render.buffered.BufferedRenderUtils;
 import com.wynntils.utils.render.type.HorizontalAlignment;
 import com.wynntils.utils.render.type.VerticalAlignment;
-import java.util.Optional;
 import net.minecraft.client.renderer.MultiBufferSource;
+
+import java.util.Optional;
 
 public class MapFeatureRenderer {
     private static final int SPACING = 2;

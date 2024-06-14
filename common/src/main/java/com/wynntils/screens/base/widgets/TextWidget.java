@@ -20,5 +20,6 @@ public class TextWidget extends WynntilsButton {
     }
 
     @Override
-    public void onPress() {}
+    public void onPress() {
+    }
 }

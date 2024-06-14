@@ -22,12 +22,13 @@ import com.wynntils.screens.maps.CustomSeaskipperScreen;
 import com.wynntils.services.map.pois.SeaskipperDestinationPoi;
 import com.wynntils.utils.mc.McUtils;
 import com.wynntils.utils.wynn.ContainerUtils;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import org.lwjgl.glfw.GLFW;
+
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import org.lwjgl.glfw.GLFW;
 
 public final class SeaskipperModel extends Model {
     private static final StyledText OAK_BOAT_NAME = StyledText.fromString("§bOak Boat");
@@ -147,7 +148,8 @@ public final class SeaskipperModel extends Model {
         Download dl = Managers.Net.download(UrlId.DATA_STATIC_SEASKIPPER_DESTINATIONS);
 
         dl.handleReader(reader -> {
-            Type type = new TypeToken<ArrayList<SeaskipperDestinationProfile>>() {}.getType();
+            Type type = new TypeToken<ArrayList<SeaskipperDestinationProfile>>() {
+            }.getType();
             List<SeaskipperDestinationProfile> profiles = WynntilsMod.GSON.fromJson(reader, type);
 
             allDestinations = profiles.stream()

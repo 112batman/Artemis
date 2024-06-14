@@ -18,7 +18,9 @@ import com.wynntils.models.items.properties.CountedItemProperty;
 import com.wynntils.models.items.properties.LeveledItemProperty;
 import com.wynntils.models.items.properties.UsesItemProperty;
 import com.wynntils.utils.mc.KeyboardUtils;
+
 import java.util.Optional;
+
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import org.lwjgl.glfw.GLFW;
 

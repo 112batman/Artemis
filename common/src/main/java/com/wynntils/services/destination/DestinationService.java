@@ -9,6 +9,7 @@ import com.wynntils.core.components.Managers;
 import com.wynntils.core.components.Service;
 import com.wynntils.core.net.Download;
 import com.wynntils.core.net.UrlId;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -30,6 +31,7 @@ public class DestinationService extends Service {
 
     /**
      * Get the abbreviation of a location
+     *
      * @param location Full location name of the destination (eg. "Ragni")
      * @return Abbreviation of the location (eg. "Ra"). Reads from destination json first, if not found returns first + next non-conflicting letter of the location name.
      */
@@ -40,6 +42,7 @@ public class DestinationService extends Service {
 
     /**
      * Finds the next non-conflicting abbreviation for a location, excluding spaces
+     *
      * @param location Full location name of the destination (eg. "Ragni")
      */
     private String findNextAbbreviation(String location) {

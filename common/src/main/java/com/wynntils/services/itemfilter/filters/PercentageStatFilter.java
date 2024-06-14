@@ -9,6 +9,7 @@ import com.wynntils.services.itemfilter.type.StatFilter;
 import com.wynntils.services.itemfilter.type.StatFilterFactory;
 import com.wynntils.services.itemfilter.type.StatValue;
 import com.wynntils.utils.StringUtils;
+
 import java.util.Optional;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -45,15 +46,15 @@ public class PercentageStatFilter extends StatFilter<StatValue> {
 
         if (min == Float.MIN_VALUE) {
             return (equalsInString
-                            ? "<=" + StringUtils.floatToSimpleString(min)
-                            : "<" + StringUtils.floatToSimpleString(max + 1))
+                    ? "<=" + StringUtils.floatToSimpleString(min)
+                    : "<" + StringUtils.floatToSimpleString(max + 1))
                     + "%";
         }
 
         if (max == Float.MAX_VALUE) {
             return (equalsInString
-                            ? ">=" + StringUtils.floatToSimpleString(min)
-                            : ">" + StringUtils.floatToSimpleString(min - 1))
+                    ? ">=" + StringUtils.floatToSimpleString(min)
+                    : ">" + StringUtils.floatToSimpleString(min - 1))
                     + "%";
         }
 

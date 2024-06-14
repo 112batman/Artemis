@@ -11,6 +11,7 @@ import com.wynntils.models.stats.type.DamageType;
 import com.wynntils.models.stats.type.StatType;
 import com.wynntils.models.stats.type.StatUnit;
 import com.wynntils.utils.StringUtils;
+
 import java.util.function.Consumer;
 
 public final class DamageStatBuilder extends StatBuilder<DamageStatType> {
@@ -73,8 +74,8 @@ public final class DamageStatBuilder extends StatBuilder<DamageStatType> {
 
     private static String buildInternalRollName(String apiName) {
         return switch (apiName) {
-                // A few damage stats do not follow normal rules, but instead has legacy names
-                // This list comes from Wynncraft internals, courtesy of HeyZeer0
+            // A few damage stats do not follow normal rules, but instead has legacy names
+            // This list comes from Wynncraft internals, courtesy of HeyZeer0
             case "spellDamageBonus" -> "SPELLDAMAGE";
             case "spellDamageBonusRaw" -> "SPELLDAMAGERAW";
             case "mainAttackDamageBonus" -> "DAMAGEBONUS";

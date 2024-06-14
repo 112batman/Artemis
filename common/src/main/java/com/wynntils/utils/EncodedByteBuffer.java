@@ -6,6 +6,7 @@ package com.wynntils.utils;
 
 import com.wynntils.utils.type.ArrayReader;
 import com.wynntils.utils.type.UnsignedByte;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Base64;
@@ -128,8 +129,8 @@ public final class EncodedByteBuffer {
     public String toString() {
         return "EncodedByteBuffer{" + "bytes="
                 + Arrays.stream(bytes)
-                        .map(UnsignedByte::value)
-                        .map(Objects::toString)
-                        .collect(Collectors.joining(", ")) + '}';
+                .map(UnsignedByte::value)
+                .map(Objects::toString)
+                .collect(Collectors.joining(", ")) + '}';
     }
 }

@@ -5,9 +5,11 @@
 package com.wynntils.models.stats.type;
 
 import com.wynntils.models.elements.type.Element;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
+
 import net.minecraft.ChatFormatting;
 
 public enum DamageType {

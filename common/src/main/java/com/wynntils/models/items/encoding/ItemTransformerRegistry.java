@@ -28,6 +28,7 @@ import com.wynntils.models.items.items.game.GearItem;
 import com.wynntils.models.items.items.game.TomeItem;
 import com.wynntils.utils.EncodedByteBuffer;
 import com.wynntils.utils.type.ErrorOr;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -37,13 +38,13 @@ import java.util.Optional;
 /**
  * This class holds all the {@link ItemTransformer} instances,
  * for all gear types and encoding versions.
- *
+ * <p>
  * The process of item encoding:
  * A compatible {@link com.wynntils.models.items.WynnItem} is passed to the {@link ItemTransformer},
  * which encodes the item into a list of {@link ItemData} objects.
  * Each {@link ItemData} object is then encoded into a byte array,
  * using the appropriate {@link DataTransformer} to do the encoding to {@link EncodedByteBuffer}.
- *
+ * <p>
  * The process of item decoding:
  * The {@link EncodedByteBuffer} is decoded into a list of {@link ItemData} objects, using the appropriate {@link DataTransformer}.
  * The {@link ItemTransformer} then decodes the {@link ItemData} objects into a {@link com.wynntils.models.items.WynnItem}.

@@ -10,6 +10,7 @@ import com.wynntils.models.items.properties.GearTypeItemProperty;
 import com.wynntils.services.itemfilter.type.ItemProviderType;
 import com.wynntils.services.itemfilter.type.ItemStatProvider;
 import com.wynntils.utils.EnumUtils;
+
 import java.util.List;
 import java.util.Optional;
 

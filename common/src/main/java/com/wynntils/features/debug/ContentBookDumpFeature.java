@@ -30,6 +30,7 @@ import com.wynntils.utils.mc.McUtils;
 import com.wynntils.utils.mc.StyledTextUtils;
 import com.wynntils.utils.mc.type.Location;
 import com.wynntils.utils.type.Pair;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -45,6 +46,7 @@ import java.util.Objects;
 import java.util.Optional;
 import java.util.Queue;
 import java.util.stream.Collectors;
+
 import net.minecraft.network.chat.Component;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -188,7 +190,7 @@ public class ContentBookDumpFeature extends Feature {
         FileUtils.mkdir(jsonFile.getParentFile());
 
         try (OutputStreamWriter fileWriter =
-                new OutputStreamWriter(new FileOutputStream(jsonFile), StandardCharsets.UTF_8)) {
+                     new OutputStreamWriter(new FileOutputStream(jsonFile), StandardCharsets.UTF_8)) {
             GSON.toJson(element.getAsJsonObject(), fileWriter);
         } catch (IOException e) {
             WynntilsMod.error("Failed to save json file " + jsonFile, e);

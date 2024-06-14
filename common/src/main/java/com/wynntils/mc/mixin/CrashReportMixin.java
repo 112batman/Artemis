@@ -17,10 +17,10 @@ public abstract class CrashReportMixin {
     @Inject(
             method = "getDetails(Ljava/lang/StringBuilder;)V",
             at =
-                    @At(
-                            value = "INVOKE",
-                            target =
-                                    "Lnet/minecraft/SystemReport;appendToCrashReportString(Ljava/lang/StringBuilder;)V"))
+            @At(
+                    value = "INVOKE",
+                    target =
+                            "Lnet/minecraft/SystemReport;appendToCrashReportString(Ljava/lang/StringBuilder;)V"))
     private void addWynntilsDetails(StringBuilder builder, CallbackInfo ci) {
         // This needs to go directly to CrashReportManager and not through Managers
         CrashReportCategory wynntilsCrashDetails = CrashReportManager.generateDetails();

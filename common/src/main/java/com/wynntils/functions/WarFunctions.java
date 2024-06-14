@@ -9,6 +9,7 @@ import com.wynntils.core.consumers.functions.Function;
 import com.wynntils.core.consumers.functions.arguments.FunctionArguments;
 import com.wynntils.models.war.type.WarBattleInfo;
 import com.wynntils.utils.type.RangedValue;
+
 import java.util.List;
 import java.util.Optional;
 import java.util.concurrent.TimeUnit;

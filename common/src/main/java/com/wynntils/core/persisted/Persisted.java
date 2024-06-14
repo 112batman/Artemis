@@ -12,6 +12,8 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.FIELD)
 public @interface Persisted {
-    /** The base part of the translation key to use for this option */
+    /**
+     * The base part of the translation key to use for this option
+     */
     String i18nKey() default "";
 }

@@ -19,7 +19,9 @@ import com.wynntils.models.items.items.game.MultiHealthPotionItem;
 import com.wynntils.models.items.items.game.PotionItem;
 import com.wynntils.utils.mc.McUtils;
 import com.wynntils.utils.type.CappedValue;
+
 import java.util.Optional;
+
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;

@@ -13,8 +13,10 @@ import com.wynntils.screens.base.WynntilsMenuScreenBase;
 import com.wynntils.screens.maps.GuildMapScreen;
 import com.wynntils.screens.wynntilsmenu.WynntilsMenuScreen;
 import com.wynntils.utils.mc.McUtils;
+
 import java.util.ArrayList;
 import java.util.List;
+
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.components.AbstractWidget;
 import net.minecraft.client.gui.components.Button;

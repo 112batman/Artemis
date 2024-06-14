@@ -31,15 +31,16 @@ import com.wynntils.utils.render.type.HorizontalAlignment;
 import com.wynntils.utils.render.type.TextShadow;
 import com.wynntils.utils.render.type.VerticalAlignment;
 import com.wynntils.utils.type.Pair;
-import java.util.Comparator;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.concurrent.TimeUnit;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+
+import java.util.Comparator;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class NpcDialogueOverlay extends Overlay {
     private static final StyledText PRESS_SNEAK_TO_CONTINUE = StyledText.fromString("§cPress SNEAK to continue");
@@ -246,9 +247,9 @@ public class NpcDialogueOverlay extends Overlay {
                                 + Math.max(0, Math.round(timeUntilProgress / 1000f))
                                 + " seconds (Press "
                                 + StyledText.fromComponent(feature.cancelAutoProgressKeybind
-                                                .getKeyMapping()
-                                                .getTranslatedKeyMessage())
-                                        .getStringWithoutFormatting()
+                                        .getKeyMapping()
+                                        .getTranslatedKeyMessage())
+                                .getStringWithoutFormatting()
                                 + " to cancel)",
                         renderSetting);
                 helperRenderTasks.add(autoProgressMessage);

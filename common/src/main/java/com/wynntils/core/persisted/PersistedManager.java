@@ -12,6 +12,7 @@ import com.wynntils.core.persisted.config.Config;
 import com.wynntils.core.persisted.config.NullableConfig;
 import com.wynntils.core.persisted.type.PersistedMetadata;
 import com.wynntils.utils.type.Pair;
+
 import java.lang.reflect.Field;
 import java.lang.reflect.Type;
 import java.util.Arrays;
@@ -20,6 +21,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
+
 import org.apache.commons.lang3.reflect.FieldUtils;
 
 public final class PersistedManager extends Manager {

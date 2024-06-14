@@ -5,7 +5,9 @@
 package com.wynntils.models.spells.type;
 
 import com.wynntils.utils.mc.McUtils;
+
 import java.util.Arrays;
+
 import net.minecraft.network.protocol.game.ServerboundSwingPacket;
 import net.minecraft.network.protocol.game.ServerboundUseItemPacket;
 import net.minecraft.world.InteractionHand;

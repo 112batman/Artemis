@@ -14,9 +14,11 @@ import com.wynntils.models.activities.quests.QuestInfo;
 import com.wynntils.models.activities.type.ActivitySortOrder;
 import com.wynntils.utils.StringUtils;
 import com.wynntils.utils.mc.McUtils;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
+
 import net.minecraft.ChatFormatting;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;

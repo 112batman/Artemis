@@ -8,6 +8,7 @@ import com.wynntils.handlers.actionbar.ActionBarSegment;
 import com.wynntils.handlers.actionbar.type.ActionBarPosition;
 import com.wynntils.models.elements.type.Element;
 import com.wynntils.models.elements.type.Powder;
+
 import java.util.Arrays;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

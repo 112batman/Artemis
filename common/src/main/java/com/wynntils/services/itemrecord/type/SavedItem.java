@@ -16,8 +16,10 @@ import com.wynntils.models.items.WynnItem;
 import com.wynntils.models.items.encoding.type.EncodingSettings;
 import com.wynntils.utils.EncodedByteBuffer;
 import com.wynntils.utils.type.ErrorOr;
+
 import java.lang.reflect.Type;
 import java.util.Set;
+
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 
@@ -117,5 +119,6 @@ public record SavedItem(String base64, Set<String> categories, ItemStack itemSta
         }
     }
 
-    private record ItemStackInfo(int itemId, int damage, int hideFlags, boolean unbreakable, int color) {}
+    private record ItemStackInfo(int itemId, int damage, int hideFlags, boolean unbreakable, int color) {
+    }
 }

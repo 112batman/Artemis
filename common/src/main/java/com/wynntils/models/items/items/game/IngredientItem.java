@@ -10,6 +10,7 @@ import com.wynntils.models.items.properties.NamedItemProperty;
 import com.wynntils.models.items.properties.ProfessionItemProperty;
 import com.wynntils.models.items.properties.QualityTierItemProperty;
 import com.wynntils.models.profession.type.ProfessionType;
+
 import java.util.List;
 
 public class IngredientItem extends GameItem

@@ -5,6 +5,7 @@
 package com.wynntils.models.players.type;
 
 import com.wynntils.models.territories.type.GuildResource;
+
 import java.util.Collections;
 import java.util.EnumMap;
 import java.util.Map;

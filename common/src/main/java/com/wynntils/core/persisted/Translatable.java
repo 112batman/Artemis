@@ -5,7 +5,9 @@
 package com.wynntils.core.persisted;
 
 import com.google.common.base.CaseFormat;
+
 import java.util.Locale;
+
 import net.minecraft.client.resources.language.I18n;
 
 public interface Translatable {

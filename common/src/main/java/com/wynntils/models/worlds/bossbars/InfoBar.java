@@ -9,6 +9,7 @@ import com.wynntils.handlers.bossbar.TrackedBar;
 import com.wynntils.models.worlds.type.BombInfo;
 import com.wynntils.models.worlds.type.BombType;
 import com.wynntils.utils.type.CappedValue;
+
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

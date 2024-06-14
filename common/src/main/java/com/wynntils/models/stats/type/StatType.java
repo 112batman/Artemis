@@ -5,6 +5,7 @@
 package com.wynntils.models.stats.type;
 
 import com.wynntils.utils.type.RangedValue;
+
 import java.math.RoundingMode;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +20,7 @@ public abstract class StatType {
             RangedValue.of(101, 124), // 1 star
             RangedValue.of(125, 129), // 2 stars
             RangedValue.of(130, 130) // 3 stars
-            );
+    );
 
     private final String key;
     private final String displayName;
@@ -78,23 +79,24 @@ public abstract class StatType {
         boolean usePostiveRange = baseValue > 0;
         return usePostiveRange
                 ? new StatCalculationInfo(
-                        RangedValue.of(30, 130),
-                        calculateAsInverted() ? RoundingMode.HALF_DOWN : RoundingMode.HALF_UP,
-                        Optional.of(1),
-                        Optional.empty(),
-                        treatAsInverted() ? List.of() : STAR_INTERNAL_ROLL_RANGES)
+                RangedValue.of(30, 130),
+                calculateAsInverted() ? RoundingMode.HALF_DOWN : RoundingMode.HALF_UP,
+                Optional.of(1),
+                Optional.empty(),
+                treatAsInverted() ? List.of() : STAR_INTERNAL_ROLL_RANGES)
                 : new StatCalculationInfo(
-                        RangedValue.of(70, 130),
-                        calculateAsInverted() ? RoundingMode.HALF_UP : RoundingMode.HALF_DOWN,
-                        Optional.empty(),
-                        Optional.of(-1),
-                        List.of());
+                RangedValue.of(70, 130),
+                calculateAsInverted() ? RoundingMode.HALF_UP : RoundingMode.HALF_DOWN,
+                Optional.empty(),
+                Optional.of(-1),
+                List.of());
     }
 
     /**
      * Whether the stat should be displayed as inverted.
      * This should be true if a value with a positive sign should be displayed as negative.
      * Usually this should be used in combination with {@link #calculateAsInverted()} or {@link #treatAsInverted()}.
+     *
      * @return true if the stat should be displayed as inverted, false otherwise
      */
     public boolean displayAsInverted() {
@@ -105,11 +107,12 @@ public abstract class StatType {
      * Whether the stat should be treated as negative when calculating the total stat value.
      * This is used when calculating the percentage values of a stat.
      * <p><b>
-     *     Note that this does not modify the calculated internal roll, deliberately.
-     *     This means that the highest internal roll value will result in the "worst" stat value.
+     * Note that this does not modify the calculated internal roll, deliberately.
+     * This means that the highest internal roll value will result in the "worst" stat value.
      * </b></p>
      *
      * <p> Use this if a stat has an inverted effect, compared to a base stat, but needs to be treated according to the base stat's sign. </p>
+     *
      * @return true if the stat should be treated as negative, false otherwise
      */
     public boolean treatAsInverted() {
@@ -118,6 +121,7 @@ public abstract class StatType {
 
     /**
      * Whether the stat should be calculated as inverted (the base value is given a negative sign before being used in calculations).
+     *
      * @return true if the stat should be calculated as inverted, false otherwise
      */
     public boolean calculateAsInverted() {

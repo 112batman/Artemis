@@ -5,8 +5,10 @@
 package com.wynntils.models.gear.type;
 
 import com.wynntils.models.stats.type.StatType;
+
 import java.util.List;
 import java.util.Map;
+
 import net.minecraft.util.Mth;
 
 public record SetInfo(String name, List<Map<StatType, Integer>> bonuses, List<String> items) {

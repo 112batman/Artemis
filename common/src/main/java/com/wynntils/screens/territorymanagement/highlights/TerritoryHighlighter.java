@@ -6,6 +6,7 @@ package com.wynntils.screens.territorymanagement.highlights;
 
 import com.wynntils.models.items.items.gui.TerritoryItem;
 import com.wynntils.utils.colors.CustomColor;
+
 import java.util.List;
 import java.util.Optional;
 

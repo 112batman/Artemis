@@ -15,6 +15,7 @@ import com.wynntils.overlays.custombars.ExperienceTexturedCustomBarOverlay;
 import com.wynntils.overlays.custombars.HealthTexturedCustomBarOverlay;
 import com.wynntils.overlays.custombars.ManaTexturedCustomBarOverlay;
 import com.wynntils.overlays.custombars.UniversalTexturedCustomBarOverlay;
+
 import java.util.ArrayList;
 import java.util.List;
 

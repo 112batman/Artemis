@@ -26,19 +26,16 @@ import com.wynntils.utils.mc.SkinUtils;
 import com.wynntils.utils.render.Texture;
 import com.wynntils.utils.render.buffered.BufferedFontRenderer;
 import com.wynntils.utils.render.buffered.BufferedRenderUtils;
-import com.wynntils.utils.render.type.HealthTexture;
-import com.wynntils.utils.render.type.HorizontalAlignment;
-import com.wynntils.utils.render.type.ManaTexture;
-import com.wynntils.utils.render.type.TextShadow;
-import com.wynntils.utils.render.type.VerticalAlignment;
+import com.wynntils.utils.render.type.*;
 import com.wynntils.utils.type.CappedValue;
-import java.util.Comparator;
-import java.util.List;
-import java.util.stream.Collectors;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+
+import java.util.Comparator;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class PartyMembersOverlay extends ContainerOverlay<PartyMembersOverlay.PartyMemberOverlay> {
     private static final HadesUser DUMMY_USER_1 =
@@ -221,6 +218,7 @@ public class PartyMembersOverlay extends ContainerOverlay<PartyMembersOverlay.Pa
         }
 
         @Override
-        protected void onConfigUpdate(Config<?> config) {}
+        protected void onConfigUpdate(Config<?> config) {
+        }
     }
 }

@@ -6,21 +6,18 @@ package com.wynntils.models.abilitytree.parser;
 
 import com.wynntils.core.text.PartStyle;
 import com.wynntils.core.text.StyledText;
-import com.wynntils.models.abilitytree.type.AbilityTreeLocation;
-import com.wynntils.models.abilitytree.type.AbilityTreeNodeState;
-import com.wynntils.models.abilitytree.type.AbilityTreeSkillNode;
-import com.wynntils.models.abilitytree.type.ArchetypeRequirement;
-import com.wynntils.models.abilitytree.type.ItemInformation;
+import com.wynntils.models.abilitytree.type.*;
 import com.wynntils.utils.mc.LoreUtils;
 import com.wynntils.utils.type.IterationDecision;
 import com.wynntils.utils.type.Pair;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 
 public final class AbilityTreeParser {
     private static final Pattern NODE_NAME_PATTERN = Pattern.compile("§.(Unlock )?§l(.+)(§r§. ability)?");

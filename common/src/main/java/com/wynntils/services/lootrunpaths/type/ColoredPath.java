@@ -6,4 +6,5 @@ package com.wynntils.services.lootrunpaths.type;
 
 import java.util.List;
 
-public record ColoredPath(List<ColoredPosition> points) {}
+public record ColoredPath(List<ColoredPosition> points) {
+}

@@ -24,6 +24,7 @@ import com.wynntils.models.npcdialogue.type.NpcDialogue;
 import com.wynntils.models.worlds.event.WorldStateEvent;
 import com.wynntils.overlays.NpcDialogueOverlay;
 import com.wynntils.utils.mc.McUtils;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -31,6 +32,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
+
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.protocol.game.ServerboundPlayerCommandPacket;
@@ -282,8 +284,8 @@ public class NpcDialogueFeature extends Feature {
                 + Math.max(0, Math.round(timeUntilProgress / 1000f))
                 + " seconds (Press "
                 + StyledText.fromComponent(
-                                cancelAutoProgressKeybind.getKeyMapping().getTranslatedKeyMessage())
-                        .getStringWithoutFormatting()
+                        cancelAutoProgressKeybind.getKeyMapping().getTranslatedKeyMessage())
+                .getStringWithoutFormatting()
                 + " to cancel)");
 
         if (autoProgressContainer != null) {

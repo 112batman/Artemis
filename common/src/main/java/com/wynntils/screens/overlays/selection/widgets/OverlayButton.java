@@ -24,10 +24,11 @@ import com.wynntils.utils.render.RenderUtils;
 import com.wynntils.utils.render.type.HorizontalAlignment;
 import com.wynntils.utils.render.type.TextShadow;
 import com.wynntils.utils.render.type.VerticalAlignment;
-import java.util.List;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
 import org.lwjgl.glfw.GLFW;
+
+import java.util.List;
 
 public class OverlayButton extends WynntilsButton {
     private static final CustomColor ENABLED_COLOR = new CustomColor(0, 116, 0, 255);
@@ -128,7 +129,7 @@ public class OverlayButton extends WynntilsButton {
         // Don't want to display tooltip when the tile is outside the mask from the screen
         if (isHovered
                 && (mouseY <= selectionScreen.getConfigMaskTopY()
-                        || mouseY >= selectionScreen.getConfigMaskBottomY())) {
+                || mouseY >= selectionScreen.getConfigMaskBottomY())) {
             isHovered = false;
         }
 
@@ -185,7 +186,8 @@ public class OverlayButton extends WynntilsButton {
     }
 
     @Override
-    public void onPress() {}
+    public void onPress() {
+    }
 
     @Override
     public boolean keyPressed(int keyCode, int scanCode, int modifiers) {

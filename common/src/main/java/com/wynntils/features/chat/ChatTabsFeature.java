@@ -29,8 +29,10 @@ import com.wynntils.screens.chattabs.widgets.ChatTabSettingsButton;
 import com.wynntils.services.chat.ChatTab;
 import com.wynntils.utils.mc.KeyboardUtils;
 import com.wynntils.utils.mc.McUtils;
+
 import java.util.ArrayList;
 import java.util.List;
+
 import net.minecraft.client.gui.components.events.GuiEventListener;
 import net.minecraft.client.gui.screens.ChatScreen;
 import net.minecraftforge.eventbus.api.EventPriority;

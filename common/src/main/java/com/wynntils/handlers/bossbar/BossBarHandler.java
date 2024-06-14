@@ -10,20 +10,16 @@ import com.wynntils.core.text.StyledText;
 import com.wynntils.handlers.bossbar.event.BossBarAddedEvent;
 import com.wynntils.mc.event.BossHealthUpdateEvent;
 import com.wynntils.utils.type.Pair;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
-import java.util.UUID;
-import java.util.function.Consumer;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 import net.minecraft.client.gui.components.LerpingBossEvent;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.protocol.game.ClientboundBossEventPacket;
 import net.minecraft.world.BossEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+
+import java.util.*;
+import java.util.function.Consumer;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class BossBarHandler extends Handler {
     private final Map<UUID, TrackedBar> presentBars = new HashMap<>();
@@ -138,12 +134,14 @@ public class BossBarHandler extends Handler {
         // We need to cancel the event even though we don't process it here
         @Override
         public void updateStyle(UUID id, BossEvent.BossBarColor color, BossEvent.BossBarOverlay overlay) {
-            handleBarUpdate(id, trackedBar -> {});
+            handleBarUpdate(id, trackedBar -> {
+            });
         }
 
         @Override
         public void updateProperties(UUID id, boolean darkenScreen, boolean playMusic, boolean createWorldFog) {
-            handleBarUpdate(id, trackedBar -> {});
+            handleBarUpdate(id, trackedBar -> {
+            });
         }
     }
 }

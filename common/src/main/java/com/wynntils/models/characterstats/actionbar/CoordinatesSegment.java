@@ -6,6 +6,7 @@ package com.wynntils.models.characterstats.actionbar;
 
 import com.wynntils.handlers.actionbar.ActionBarSegment;
 import com.wynntils.handlers.actionbar.type.ActionBarPosition;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 

@@ -7,4 +7,5 @@ package com.wynntils.models.items.encoding.data;
 import com.wynntils.models.gear.type.GearRequirements;
 import com.wynntils.models.items.encoding.type.ItemData;
 
-public record RequirementsData(GearRequirements requirements) implements ItemData {}
+public record RequirementsData(GearRequirements requirements) implements ItemData {
+}

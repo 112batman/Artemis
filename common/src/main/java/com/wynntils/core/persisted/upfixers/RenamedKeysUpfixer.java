@@ -8,6 +8,7 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.wynntils.core.persisted.PersistedValue;
 import com.wynntils.utils.type.Pair;
+
 import java.util.List;
 import java.util.Set;
 

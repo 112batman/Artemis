@@ -6,6 +6,7 @@ package com.wynntils.models.items.items.game;
 
 import com.wynntils.models.emeralds.type.EmeraldUnits;
 import com.wynntils.models.items.properties.EmeraldValuedItemProperty;
+
 import java.util.function.Supplier;
 
 public class EmeraldItem extends GameItem implements EmeraldValuedItemProperty {

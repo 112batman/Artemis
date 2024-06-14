@@ -19,8 +19,10 @@ import com.wynntils.mc.event.UseItemEvent;
 import com.wynntils.models.items.items.game.HorseItem;
 import com.wynntils.utils.mc.McUtils;
 import com.wynntils.utils.wynn.InventoryUtils;
+
 import java.util.List;
 import java.util.Optional;
+
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.network.chat.Component;
@@ -110,7 +112,9 @@ public class HorseMountFeature extends Feature {
         }
     }
 
-    /** Horse should be nearby when this is called */
+    /**
+     * Horse should be nearby when this is called
+     */
     private void mountHorse(Entity horse) {
         if (playWhistle.get()) {
             McUtils.playSoundAmbient(HORSE_WHISTLE_SOUND);

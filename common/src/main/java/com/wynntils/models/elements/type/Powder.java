@@ -7,10 +7,11 @@ package com.wynntils.models.elements.type;
 import com.wynntils.core.text.StyledText;
 import com.wynntils.utils.StringUtils;
 import com.wynntils.utils.colors.CustomColor;
-import java.util.Locale;
 import net.minecraft.ChatFormatting;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
+
+import java.util.Locale;
 
 public enum Powder {
     EARTH(Element.EARTH, Items.LIME_DYE, Items.GREEN_DYE, ChatFormatting.DARK_GREEN, ChatFormatting.GREEN, "Quake"),

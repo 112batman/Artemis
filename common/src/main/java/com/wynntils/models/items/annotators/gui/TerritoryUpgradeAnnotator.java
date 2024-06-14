@@ -9,8 +9,10 @@ import com.wynntils.handlers.item.GuiItemAnnotator;
 import com.wynntils.handlers.item.ItemAnnotation;
 import com.wynntils.models.items.items.gui.TerritoryUpgradeItem;
 import com.wynntils.models.territories.type.TerritoryUpgrade;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
 import net.minecraft.world.item.ItemStack;
 
 public class TerritoryUpgradeAnnotator implements GuiItemAnnotator {

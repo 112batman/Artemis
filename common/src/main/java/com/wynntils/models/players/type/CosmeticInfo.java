@@ -4,4 +4,5 @@
  */
 package com.wynntils.models.players.type;
 
-public record CosmeticInfo(boolean hasEars, boolean hasCape, boolean hasElytra, String texture) {}
+public record CosmeticInfo(boolean hasEars, boolean hasCape, boolean hasElytra, String texture) {
+}

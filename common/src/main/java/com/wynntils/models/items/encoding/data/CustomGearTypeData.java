@@ -7,4 +7,5 @@ package com.wynntils.models.items.encoding.data;
 import com.wynntils.models.gear.type.GearType;
 import com.wynntils.models.items.encoding.type.ItemData;
 
-public record CustomGearTypeData(GearType gearType) implements ItemData {}
+public record CustomGearTypeData(GearType gearType) implements ItemData {
+}

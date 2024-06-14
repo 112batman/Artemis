@@ -19,8 +19,10 @@ import com.wynntils.models.worlds.type.WorldState;
 import com.wynntils.utils.JsonUtils;
 import com.wynntils.utils.mc.McUtils;
 import com.wynntils.utils.type.ConfirmedBoolean;
+
 import java.util.Locale;
 import java.util.Map;
+
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.ClickEvent;
 import net.minecraft.network.chat.Component;
@@ -65,10 +67,10 @@ public class TelemetryFeature extends Feature {
         MutableComponent component = Component.literal("Wynntils Telemetry\n").withStyle(ChatFormatting.AQUA);
         component.append(Component.literal(
                         """
-                        Wynntils can send telemetry data when a component fails.
-                        This data does not contain any personal information,
-                        but is helpful for developers for fixing bugs in Wynntils.
-                        """)
+                                Wynntils can send telemetry data when a component fails.
+                                This data does not contain any personal information,
+                                but is helpful for developers for fixing bugs in Wynntils.
+                                """)
                 .withStyle(ChatFormatting.GRAY));
 
         component.append(Component.literal("Click here")

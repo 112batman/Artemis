@@ -14,7 +14,9 @@ import com.wynntils.mc.event.MouseScrollEvent;
 import com.wynntils.models.containers.type.ScrollableContainerProperty;
 import com.wynntils.utils.mc.McUtils;
 import com.wynntils.utils.wynn.ContainerUtils;
+
 import java.util.Optional;
+
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraftforge.eventbus.api.SubscribeEvent;

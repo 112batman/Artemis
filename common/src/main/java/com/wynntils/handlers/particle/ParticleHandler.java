@@ -12,12 +12,14 @@ import com.wynntils.handlers.particle.type.ParticleType;
 import com.wynntils.handlers.particle.type.ParticleVerifier;
 import com.wynntils.handlers.particle.type.UnverifiedParticle;
 import com.wynntils.mc.event.ParticleAddedEvent;
+
 import java.util.ArrayList;
 import java.util.EnumMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+
 import net.minecraft.core.Position;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.eventbus.api.SubscribeEvent;

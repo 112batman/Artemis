@@ -5,7 +5,9 @@
 package com.wynntils.core.persisted.config;
 
 import com.wynntils.utils.render.Texture;
+
 import java.util.Locale;
+
 import net.minecraft.client.resources.language.I18n;
 
 public enum Category {

@@ -188,7 +188,8 @@ public abstract class BarOverlay extends DynamicOverlay {
     }
 
     @Override
-    protected void onConfigUpdate(Config<?> config) {}
+    protected void onConfigUpdate(Config<?> config) {
+    }
 
     protected abstract boolean isRendered();
 
@@ -206,5 +207,6 @@ public abstract class BarOverlay extends DynamicOverlay {
 
     protected abstract BarOverlayTemplatePair getPreviewTemplate();
 
-    public record BarOverlayTemplatePair(String textTemplate, String valueTemplate) {}
+    public record BarOverlayTemplatePair(String textTemplate, String valueTemplate) {
+    }
 }

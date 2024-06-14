@@ -32,12 +32,12 @@ public class SuggestionPlayerWidget extends AbstractWidget {
         this.playerName = playerName;
         this.gridDivisions = gridDivisions;
         this.inviteButton = new Button.Builder(
-                        Component.translatable("screens.wynntils.partyManagementGui.invite"),
-                        (button) -> Models.Party.partyInvite(playerName))
+                Component.translatable("screens.wynntils.partyManagementGui.invite"),
+                (button) -> Models.Party.partyInvite(playerName))
                 .pos((int) (this.getX() + (this.width / this.gridDivisions * 20)) + 1, this.getY())
                 .size(
                         (int) ((this.getX() + (this.width / this.gridDivisions * 24))
-                                        - (this.getX() + (this.width / this.gridDivisions * 20)))
+                                - (this.getX() + (this.width / this.gridDivisions * 20)))
                                 - 2,
                         20)
                 .build();
@@ -104,5 +104,6 @@ public class SuggestionPlayerWidget extends AbstractWidget {
     }
 
     @Override
-    protected void updateWidgetNarration(NarrationElementOutput narrationElementOutput) {}
+    protected void updateWidgetNarration(NarrationElementOutput narrationElementOutput) {
+    }
 }

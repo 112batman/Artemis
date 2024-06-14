@@ -4,12 +4,13 @@
  */
 package com.wynntils.mc.event;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 import net.minecraft.network.protocol.game.ClientboundSetEntityDataPacket;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraftforge.eventbus.api.Event;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class SetEntityDataEvent extends Event {
     private final int id;

@@ -12,6 +12,7 @@ import com.wynntils.models.territories.type.GuildResource;
 import com.wynntils.models.territories.type.TerritoryUpgrade;
 import com.wynntils.utils.mc.LoreUtils;
 import com.wynntils.utils.type.CappedValue;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Deque;
@@ -20,6 +21,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 

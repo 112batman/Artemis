@@ -16,13 +16,14 @@ import com.wynntils.models.worlds.event.WorldStateEvent;
 import com.wynntils.models.worlds.type.WorldState;
 import com.wynntils.utils.mc.McUtils;
 import com.wynntils.utils.wynn.WynnUtils;
+import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+
 import java.util.List;
 import java.util.Locale;
 import java.util.Optional;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 public final class EmeraldModel extends Model {
     public static final int EMERALD_BLOCK_VALUE = 64;
@@ -131,11 +132,11 @@ public final class EmeraldModel extends Model {
     }
 
     public int[] emeraldsPerUnit(int emeralds) {
-        return new int[] {
-            emeralds % EMERALD_BLOCK_VALUE,
-            (emeralds / EMERALD_BLOCK_VALUE) % 64,
-            (emeralds / LIQUID_EMERALD_VALUE) % 64,
-            emeralds / LIQUID_EMERALD_STACK_VALUE
+        return new int[]{
+                emeralds % EMERALD_BLOCK_VALUE,
+                (emeralds / EMERALD_BLOCK_VALUE) % 64,
+                (emeralds / LIQUID_EMERALD_VALUE) % 64,
+                emeralds / LIQUID_EMERALD_STACK_VALUE
         };
     }
 

@@ -14,11 +14,6 @@ import com.wynntils.utils.MathUtils;
 import com.wynntils.utils.mc.PosUtils;
 import it.unimi.dsi.fastutil.longs.Long2ObjectMap;
 import it.unimi.dsi.fastutil.longs.Long2ObjectOpenHashMap;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Set;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.CubicSpline;
@@ -27,6 +22,8 @@ import net.minecraft.util.ToFloatFunction;
 import net.minecraft.world.level.ChunkPos;
 import net.minecraft.world.phys.Vec3;
 import org.joml.Vector2d;
+
+import java.util.*;
 
 public final class LootrunCompiler {
     private static final List<Integer> COLORS = List.of(
@@ -67,10 +64,10 @@ public final class LootrunCompiler {
         for (Vec3 element : raw.points()) {
             if (!currentPositions.points().isEmpty()
                     && currentPositions
-                                    .points()
-                                    .get(currentPositions.points().size() - 1)
-                                    .distanceTo(element)
-                            >= 32) {
+                    .points()
+                    .get(currentPositions.points().size() - 1)
+                    .distanceTo(element)
+                    >= 32) {
                 currentPositions = new LootrunPath(new ArrayList<>());
                 positions.add(currentPositions);
             }
@@ -136,8 +133,8 @@ public final class LootrunCompiler {
             Vec3 position = positions.get(i);
 
             if (Managers.Feature.getFeatureInstance(LootrunFeature.class)
-                            .rainbowLootRun
-                            .get()
+                    .rainbowLootRun
+                    .get()
                     && !recording) {
                 int cycleDistance = Managers.Feature.getFeatureInstance(LootrunFeature.class)
                         .cycleDistance
@@ -173,13 +170,13 @@ public final class LootrunCompiler {
                                 position,
                                 recording
                                         ? Managers.Feature.getFeatureInstance(LootrunFeature.class)
-                                                .recordingPathColor
-                                                .get()
-                                                .asInt()
+                                        .recordingPathColor
+                                        .get()
+                                        .asInt()
                                         : Managers.Feature.getFeatureInstance(LootrunFeature.class)
-                                                .activePathColor
-                                                .get()
-                                                .asInt()));
+                                        .activePathColor
+                                        .get()
+                                        .asInt()));
             }
         }
 

@@ -9,6 +9,7 @@ import com.wynntils.models.gear.type.GearTier;
 import com.wynntils.models.stats.type.StatPossibleValues;
 import com.wynntils.models.stats.type.StatType;
 import com.wynntils.utils.type.Pair;
+
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;

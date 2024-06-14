@@ -4,4 +4,5 @@
  */
 package com.wynntils.core.persisted.config;
 
-public interface NullableConfig {}
+public interface NullableConfig {
+}

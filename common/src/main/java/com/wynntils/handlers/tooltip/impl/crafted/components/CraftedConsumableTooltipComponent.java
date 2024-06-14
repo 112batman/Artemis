@@ -8,11 +8,12 @@ import com.wynntils.core.components.Models;
 import com.wynntils.handlers.tooltip.impl.crafted.CraftedTooltipComponent;
 import com.wynntils.models.items.items.game.CraftedConsumableItem;
 import com.wynntils.utils.StringUtils;
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.Component;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
-import net.minecraft.ChatFormatting;
-import net.minecraft.network.chat.Component;
 
 public class CraftedConsumableTooltipComponent extends CraftedTooltipComponent<CraftedConsumableItem> {
     @Override
@@ -34,7 +35,7 @@ public class CraftedConsumableTooltipComponent extends CraftedTooltipComponent<C
                         .withStyle(ChatFormatting.DARK_RED)
                         .append(Component.literal(
                                         StringUtils.capitalizeFirst(
-                                                        effect.type().name().toLowerCase(Locale.ROOT)) + ": ")
+                                                effect.type().name().toLowerCase(Locale.ROOT)) + ": ")
                                 .withStyle(ChatFormatting.GRAY))
                         .append(Component.literal(String.valueOf(effect.value()))
                                 .withStyle(ChatFormatting.WHITE)

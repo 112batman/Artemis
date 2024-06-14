@@ -6,6 +6,7 @@ package com.wynntils.core.consumers.functions.expressions;
 
 import com.google.common.collect.ImmutableMap;
 import com.wynntils.utils.type.ErrorOr;
+
 import java.util.Map;
 import java.util.Optional;
 import java.util.function.Function;

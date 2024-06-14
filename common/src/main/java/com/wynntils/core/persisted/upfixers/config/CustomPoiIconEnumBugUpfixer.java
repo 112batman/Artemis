@@ -9,6 +9,7 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.wynntils.core.persisted.PersistedValue;
 import com.wynntils.core.persisted.upfixers.Upfixer;
+
 import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

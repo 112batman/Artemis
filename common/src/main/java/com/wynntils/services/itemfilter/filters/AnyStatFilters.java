@@ -8,6 +8,7 @@ import com.wynntils.services.itemfilter.type.StatFilter;
 import com.wynntils.services.itemfilter.type.StatFilterFactory;
 import com.wynntils.services.itemfilter.type.StatValue;
 import com.wynntils.utils.type.CappedValue;
+
 import java.util.Optional;
 
 public class AnyStatFilters {

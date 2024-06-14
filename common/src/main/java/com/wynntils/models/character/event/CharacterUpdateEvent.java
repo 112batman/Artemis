@@ -6,4 +6,5 @@ package com.wynntils.models.character.event;
 
 import net.minecraftforge.eventbus.api.Event;
 
-public class CharacterUpdateEvent extends Event {}
+public class CharacterUpdateEvent extends Event {
+}

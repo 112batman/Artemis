@@ -10,6 +10,7 @@ import com.wynntils.models.items.properties.UsesItemProperty;
 import com.wynntils.models.wynnitem.type.ItemEffect;
 import com.wynntils.models.wynnitem.type.NamedItemEffect;
 import com.wynntils.utils.type.CappedValue;
+
 import java.util.List;
 
 public class PotionItem extends GameItem implements UsesItemProperty, LeveledItemProperty {

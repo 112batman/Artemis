@@ -32,5 +32,6 @@ public class QuestInfoButton extends WynntilsButton {
     }
 
     @Override
-    public void onPress() {}
+    public void onPress() {
+    }
 }

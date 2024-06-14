@@ -10,6 +10,7 @@ import com.wynntils.models.items.items.game.GearItem;
 import com.wynntils.services.itemfilter.type.ItemProviderType;
 import com.wynntils.services.itemfilter.type.ItemStatProvider;
 import com.wynntils.utils.type.Pair;
+
 import java.util.List;
 import java.util.Optional;
 

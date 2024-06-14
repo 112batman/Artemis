@@ -15,9 +15,9 @@ public class LootrunTaskNameOverlay extends TextOverlay {
 
     private static final String PREVIEW_TEMPLATE =
             """
-            §eYellow: Slay at Yellow Task name
-            §9Blue: Defend at Blue Task name
-            """;
+                    §eYellow: Slay at Yellow Task name
+                    §9Blue: Defend at Blue Task name
+                    """;
 
     public LootrunTaskNameOverlay() {
         super(

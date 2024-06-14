@@ -12,4 +12,5 @@ public record TooltipStyle(
         boolean showBestValueLastAlways,
         boolean showStars,
         boolean showMaxValue // this only applies to crafted items
-        ) {}
+) {
+}

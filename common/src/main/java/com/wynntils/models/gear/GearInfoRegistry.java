@@ -27,6 +27,7 @@ import com.wynntils.models.stats.type.StatType;
 import com.wynntils.models.wynnitem.AbstractItemInfoDeserializer;
 import com.wynntils.utils.JsonUtils;
 import com.wynntils.utils.type.Pair;
+
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -34,6 +35,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Stream;
+
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 public class GearInfoRegistry {

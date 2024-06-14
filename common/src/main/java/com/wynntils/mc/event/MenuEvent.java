@@ -9,9 +9,13 @@ import net.minecraft.world.inventory.MenuType;
 import net.minecraftforge.eventbus.api.Cancelable;
 import net.minecraftforge.eventbus.api.Event;
 
-/** Fired for Menu events */
+/**
+ * Fired for Menu events
+ */
 public abstract class MenuEvent extends Event {
-    /** Fired for Menu opened events */
+    /**
+     * Fired for Menu opened events
+     */
     public abstract static class MenuOpenedEvent extends MenuEvent {
         private final MenuType<?> menuType;
         private final Component title;
@@ -49,7 +53,9 @@ public abstract class MenuEvent extends Event {
         }
     }
 
-    /** Fired for Menu closed events */
+    /**
+     * Fired for Menu closed events
+     */
     @Cancelable
     public static class MenuClosedEvent extends MenuEvent {
         private final int containerId;

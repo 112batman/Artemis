@@ -10,9 +10,10 @@ import com.wynntils.utils.colors.CommonColors;
 import com.wynntils.utils.colors.CustomColor;
 import com.wynntils.utils.mc.McUtils;
 import com.wynntils.utils.render.FontRenderer;
-import java.util.List;
 import net.minecraft.client.sounds.SoundManager;
 import net.minecraft.network.chat.Component;
+
+import java.util.List;
 
 public class ResetButton extends GeneralSettingsButton {
     private final Config<?> config;

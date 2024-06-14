@@ -14,4 +14,5 @@ public record ClassInfo(
         int level,
         int xp,
         int soulPoints,
-        int completedQuests) {}
+        int completedQuests) {
+}

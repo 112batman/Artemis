@@ -5,6 +5,7 @@
 package com.wynntils.services.itemfilter.type;
 
 import com.wynntils.models.items.WynnItem;
+
 import java.util.Optional;
 
 public record StatProviderAndFilterPair<T>(ItemStatProvider statProvider, StatFilter<T> statFilter) {

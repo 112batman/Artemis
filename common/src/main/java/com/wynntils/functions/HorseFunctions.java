@@ -9,6 +9,7 @@ import com.wynntils.core.consumers.functions.Function;
 import com.wynntils.core.consumers.functions.arguments.FunctionArguments;
 import com.wynntils.models.items.items.game.HorseItem;
 import com.wynntils.utils.type.CappedValue;
+
 import java.util.List;
 import java.util.Optional;
 

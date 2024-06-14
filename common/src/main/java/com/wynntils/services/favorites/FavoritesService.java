@@ -17,10 +17,11 @@ import com.wynntils.models.items.items.game.GearItem;
 import com.wynntils.models.items.items.game.IngredientItem;
 import com.wynntils.models.items.items.gui.IngredientPouchItem;
 import com.wynntils.utils.type.Pair;
-import java.util.List;
-import java.util.Set;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
+
+import java.util.List;
+import java.util.Set;
 
 public final class FavoritesService extends Service {
     private int revision = 1;

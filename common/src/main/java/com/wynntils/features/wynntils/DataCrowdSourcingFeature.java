@@ -14,10 +14,12 @@ import com.wynntils.models.worlds.event.WorldStateEvent;
 import com.wynntils.models.worlds.type.WorldState;
 import com.wynntils.utils.mc.McUtils;
 import com.wynntils.utils.type.ConfirmedBoolean;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
+
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
@@ -44,14 +46,14 @@ public class DataCrowdSourcingFeature extends Feature {
                 Component.literal("Wynntils Crowd Sourcing\n").withStyle(ChatFormatting.AQUA);
         component.append(Component.literal(
                         """
-                        Wynntils can collect data during your
-                        gameplay to improve the mod.
-                        This data does not contain any personal information,
-                        and is only stored locally on your computer.
-                        To share this data with the Wynntils team,
-                        you must copy it to the clipboard and send it to us,
-                        during periods when we are collecting data.
-                        """)
+                                Wynntils can collect data during your
+                                gameplay to improve the mod.
+                                This data does not contain any personal information,
+                                and is only stored locally on your computer.
+                                To share this data with the Wynntils team,
+                                you must copy it to the clipboard and send it to us,
+                                during periods when we are collecting data.
+                                """)
                 .withStyle(ChatFormatting.GRAY));
 
         component.append(Component.literal("\nThe following data types are not confirmed to be collected:\n"));

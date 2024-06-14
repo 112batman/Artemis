@@ -6,6 +6,7 @@ package com.wynntils.core.persisted.upfixers.config;
 
 import com.wynntils.core.persisted.upfixers.RenamedKeysUpfixer;
 import com.wynntils.utils.type.Pair;
+
 import java.util.List;
 
 public class NpcDialoguesOverlayConfigsMovedUpfixer extends RenamedKeysUpfixer {

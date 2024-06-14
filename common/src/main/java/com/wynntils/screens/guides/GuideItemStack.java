@@ -8,11 +8,12 @@ import com.wynntils.core.components.Handlers;
 import com.wynntils.core.text.StyledText;
 import com.wynntils.handlers.item.ItemAnnotation;
 import com.wynntils.models.wynnitem.type.ItemObtainInfo;
-import java.util.List;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.world.item.ItemStack;
+
+import java.util.List;
 
 public abstract class GuideItemStack extends ItemStack {
     protected GuideItemStack(ItemStack itemStack, ItemAnnotation annotation, String baseName) {

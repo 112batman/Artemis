@@ -9,6 +9,7 @@ import com.wynntils.models.territories.type.GuildResource;
 import com.wynntils.models.territories.type.GuildResourceValues;
 import com.wynntils.utils.colors.CustomColor;
 import com.wynntils.utils.type.CappedValue;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -59,7 +60,7 @@ public class TerritoryInfo {
      * - Pirate Town
      * - Volcano Upper
      *
-     * @param raw the input achievement description without colors
+     * @param raw     the input achievement description without colors
      * @param colored the input achievement description with colors
      */
     public TerritoryInfo(String[] raw, StyledText[] colored, boolean headquarters) {

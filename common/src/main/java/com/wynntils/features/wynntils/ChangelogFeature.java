@@ -20,7 +20,9 @@ import com.wynntils.mc.event.ScreenOpenedEvent;
 import com.wynntils.models.worlds.event.WorldStateEvent;
 import com.wynntils.screens.changelog.ChangelogScreen;
 import com.wynntils.utils.mc.McUtils;
+
 import java.util.Map;
+
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 

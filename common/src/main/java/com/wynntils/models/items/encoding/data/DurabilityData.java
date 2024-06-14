@@ -7,4 +7,5 @@ package com.wynntils.models.items.encoding.data;
 import com.wynntils.models.items.encoding.type.ItemData;
 import com.wynntils.utils.type.CappedValue;
 
-public record DurabilityData(int effectStrength, CappedValue durability) implements ItemData {}
+public record DurabilityData(int effectStrength, CappedValue durability) implements ItemData {
+}

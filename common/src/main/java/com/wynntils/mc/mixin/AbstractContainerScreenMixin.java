@@ -8,17 +8,9 @@ import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import com.llamalad7.mixinextras.sugar.Local;
 import com.wynntils.core.events.MixinHelper;
-import com.wynntils.mc.event.ContainerCloseEvent;
-import com.wynntils.mc.event.ContainerLabelRenderEvent;
-import com.wynntils.mc.event.ContainerRenderEvent;
-import com.wynntils.mc.event.InventoryKeyPressEvent;
-import com.wynntils.mc.event.InventoryMouseClickedEvent;
-import com.wynntils.mc.event.ItemTooltipRenderEvent;
-import com.wynntils.mc.event.SlotRenderEvent;
+import com.wynntils.mc.event.*;
 import com.wynntils.screens.base.TextboxScreen;
 import com.wynntils.screens.base.widgets.TextInputBoxWidget;
-import java.util.List;
-import java.util.Optional;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.Screen;
@@ -33,6 +25,9 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
+
+import java.util.List;
+import java.util.Optional;
 
 @Mixin(AbstractContainerScreen.class)
 public abstract class AbstractContainerScreenMixin {
@@ -56,11 +51,11 @@ public abstract class AbstractContainerScreenMixin {
     @WrapOperation(
             method = "renderLabels(Lnet/minecraft/client/gui/GuiGraphics;II)V",
             at =
-                    @At(
-                            value = "INVOKE",
-                            target =
-                                    "Lnet/minecraft/client/gui/GuiGraphics;drawString(Lnet/minecraft/client/gui/Font;Lnet/minecraft/network/chat/Component;IIIZ)I",
-                            ordinal = 0))
+            @At(
+                    value = "INVOKE",
+                    target =
+                            "Lnet/minecraft/client/gui/GuiGraphics;drawString(Lnet/minecraft/client/gui/Font;Lnet/minecraft/network/chat/Component;IIIZ)I",
+                    ordinal = 0))
     private int renderContainerLabel(
             GuiGraphics instance,
             Font font,
@@ -82,11 +77,11 @@ public abstract class AbstractContainerScreenMixin {
     @WrapOperation(
             method = "renderLabels(Lnet/minecraft/client/gui/GuiGraphics;II)V",
             at =
-                    @At(
-                            value = "INVOKE",
-                            target =
-                                    "Lnet/minecraft/client/gui/GuiGraphics;drawString(Lnet/minecraft/client/gui/Font;Lnet/minecraft/network/chat/Component;IIIZ)I",
-                            ordinal = 1))
+            @At(
+                    value = "INVOKE",
+                    target =
+                            "Lnet/minecraft/client/gui/GuiGraphics;drawString(Lnet/minecraft/client/gui/Font;Lnet/minecraft/network/chat/Component;IIIZ)I",
+                    ordinal = 1))
     private int renderInventoryLabel(
             GuiGraphics instance,
             Font font,
@@ -115,10 +110,10 @@ public abstract class AbstractContainerScreenMixin {
     @Inject(
             method = "renderSlot(Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/world/inventory/Slot;)V",
             at =
-                    @At(
-                            value = "INVOKE",
-                            target =
-                                    "Lnet/minecraft/client/gui/GuiGraphics;renderItemDecorations(Lnet/minecraft/client/gui/Font;Lnet/minecraft/world/item/ItemStack;IILjava/lang/String;)V"))
+            @At(
+                    value = "INVOKE",
+                    target =
+                            "Lnet/minecraft/client/gui/GuiGraphics;renderItemDecorations(Lnet/minecraft/client/gui/Font;Lnet/minecraft/world/item/ItemStack;IILjava/lang/String;)V"))
     private void renderSlotPreCount(GuiGraphics guiGraphics, Slot slot, CallbackInfo info) {
         MixinHelper.post(new SlotRenderEvent.CountPre(guiGraphics, (Screen) (Object) this, slot));
     }
@@ -137,10 +132,10 @@ public abstract class AbstractContainerScreenMixin {
     @WrapOperation(
             method = "renderTooltip(Lnet/minecraft/client/gui/GuiGraphics;II)V",
             at =
-                    @At(
-                            value = "INVOKE",
-                            target =
-                                    "Lnet/minecraft/client/gui/GuiGraphics;renderTooltip(Lnet/minecraft/client/gui/Font;Ljava/util/List;Ljava/util/Optional;II)V"),
+            @At(
+                    value = "INVOKE",
+                    target =
+                            "Lnet/minecraft/client/gui/GuiGraphics;renderTooltip(Lnet/minecraft/client/gui/Font;Ljava/util/List;Ljava/util/Optional;II)V"),
             require = 0)
     private void renderTooltipPre(
             GuiGraphics instance,
@@ -168,11 +163,11 @@ public abstract class AbstractContainerScreenMixin {
     @Inject(
             method = "renderTooltip(Lnet/minecraft/client/gui/GuiGraphics;II)V",
             at =
-                    @At(
-                            value = "INVOKE",
-                            target =
-                                    "Lnet/minecraft/client/gui/GuiGraphics;renderTooltip(Lnet/minecraft/client/gui/Font;Ljava/util/List;Ljava/util/Optional;II)V",
-                            shift = At.Shift.AFTER),
+            @At(
+                    value = "INVOKE",
+                    target =
+                            "Lnet/minecraft/client/gui/GuiGraphics;renderTooltip(Lnet/minecraft/client/gui/Font;Ljava/util/List;Ljava/util/Optional;II)V",
+                    shift = At.Shift.AFTER),
             require = 0)
     private void renderTooltipPost(GuiGraphics guiGraphics, int x, int y, CallbackInfo ci, @Local ItemStack itemStack) {
         MixinHelper.post(new ItemTooltipRenderEvent.Post(guiGraphics, itemStack, x, y));

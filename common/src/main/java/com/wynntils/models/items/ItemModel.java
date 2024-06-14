@@ -47,8 +47,10 @@ import com.wynntils.models.items.annotators.gui.SkillPointAnnotator;
 import com.wynntils.models.items.annotators.gui.SoulPointAnnotator;
 import com.wynntils.models.items.annotators.gui.TerritoryAnnotator;
 import com.wynntils.models.items.annotators.gui.TerritoryUpgradeAnnotator;
+
 import java.util.List;
 import java.util.Optional;
+
 import net.minecraft.world.item.ItemStack;
 
 public class ItemModel extends Model {

@@ -30,6 +30,7 @@ import com.wynntils.utils.mc.KeyboardUtils;
 import com.wynntils.utils.mc.McUtils;
 import com.wynntils.utils.type.Pair;
 import com.wynntils.utils.wynn.ColorScaleUtils;
+
 import java.util.Deque;
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -37,6 +38,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Optional;
 import java.util.Set;
+
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
@@ -150,7 +152,7 @@ public class ItemStatInfoFeature extends Feature {
                 showBestValueLastAlways.get(),
                 showStars.get(),
                 false // this only applies to crafted items
-                );
+        );
         LinkedList<Component> tooltips = new LinkedList<>(
                 builder.getTooltipLines(Models.Character.getClassType(), currentIdentificationStyle, decorator));
 

@@ -12,9 +12,11 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.wynntils.utils.DateFormatter;
 import com.wynntils.utils.mc.type.PoiLocation;
+
 import java.lang.reflect.Type;
 import java.time.Instant;
 import java.util.Objects;
+
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.Position;
 
@@ -185,7 +187,8 @@ public class TerritoryProfile {
         public static final GuildInfo NONE = new GuildInfo("No owner", "None");
     }
 
-    public record TerritoryLocation(int startX, int startZ, int endX, int endZ) {}
+    public record TerritoryLocation(int startX, int startZ, int endX, int endZ) {
+    }
 
     @Override
     public boolean equals(Object o) {

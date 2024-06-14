@@ -28,10 +28,10 @@ public abstract class ChatScreenMixin {
     @Inject(
             method = "Lnet/minecraft/client/gui/screens/ChatScreen;handleChatInput(Ljava/lang/String;Z)Z",
             at =
-                    @At(
-                            value = "INVOKE",
-                            target =
-                                    "Lnet/minecraft/client/multiplayer/ClientPacketListener;sendChat(Ljava/lang/String;)V"),
+            @At(
+                    value = "INVOKE",
+                    target =
+                            "Lnet/minecraft/client/multiplayer/ClientPacketListener;sendChat(Ljava/lang/String;)V"),
             cancellable = true)
     private void onPlayerChatSend(String input, boolean addToRecentChat, CallbackInfoReturnable<Boolean> cir) {
         ChatScreenSendEvent event = new ChatScreenSendEvent(input, addToRecentChat);

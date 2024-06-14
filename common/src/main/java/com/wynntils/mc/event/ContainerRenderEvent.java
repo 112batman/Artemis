@@ -10,7 +10,9 @@ import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.world.inventory.Slot;
 import net.minecraftforge.eventbus.api.Event;
 
-/** Fired on inventory render */
+/**
+ * Fired on inventory render
+ */
 public class ContainerRenderEvent extends Event {
     private final AbstractContainerScreen<?> screen;
     private final GuiGraphics guiGraphics;

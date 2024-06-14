@@ -9,9 +9,10 @@ import com.wynntils.core.components.Handler;
 import com.wynntils.core.components.Models;
 import com.wynntils.mc.event.TickEvent;
 import com.wynntils.utils.mc.McUtils;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+
 import java.util.LinkedList;
 import java.util.Queue;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 public class CommandHandler extends Handler {
     private static final int TICKS_PER_EXECUTE = 7;
@@ -49,6 +50,7 @@ public class CommandHandler extends Handler {
      * Use this when the mod requires a command to be sent, but it is not directly requested by the user.
      * If a queue is required, executions happen in the order they are queued.
      * All commands automatically log when they are executed.
+     *
      * @param command The command to queue. The leading '/' should not be included.
      */
     public void queueCommand(String command) {
@@ -65,6 +67,7 @@ public class CommandHandler extends Handler {
      * Sends a command to the Wynncraft server immediately, bypassing the queue.
      * Use this method for user initiated commands, or commands that need to be executed immediately.
      * All commands automatically log when they are executed.
+     *
      * @param command The command to execute. The leading '/' should not be included.
      */
     public void sendCommandImmediately(String command) {

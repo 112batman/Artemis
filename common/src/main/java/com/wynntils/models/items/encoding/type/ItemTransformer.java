@@ -12,6 +12,7 @@ import com.wynntils.models.stats.type.StatPossibleValues;
 import com.wynntils.models.stats.type.StatType;
 import com.wynntils.utils.type.ErrorOr;
 import com.wynntils.utils.type.RangedValue;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -21,6 +22,7 @@ import java.util.stream.Collectors;
 
 /**
  * Interface for transforming items into an item data list.
+ *
  * @param <T> The type of item to transform.
  */
 public abstract class ItemTransformer<T extends WynnItem> {

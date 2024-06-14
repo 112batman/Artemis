@@ -10,9 +10,11 @@ import com.wynntils.screens.itemfilter.widgets.GeneralFilterWidget;
 import com.wynntils.screens.itemfilter.widgets.ProviderFilterListWidget;
 import com.wynntils.services.itemfilter.type.StatFilter;
 import com.wynntils.services.itemfilter.type.StatProviderAndFilterPair;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.network.chat.Component;

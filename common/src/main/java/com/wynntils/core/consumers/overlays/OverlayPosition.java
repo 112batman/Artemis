@@ -7,10 +7,11 @@ package com.wynntils.core.consumers.overlays;
 import com.wynntils.core.components.Managers;
 import com.wynntils.utils.render.type.HorizontalAlignment;
 import com.wynntils.utils.render.type.VerticalAlignment;
+import net.minecraft.world.phys.Vec2;
+
 import java.util.Arrays;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import net.minecraft.world.phys.Vec2;
 
 public class OverlayPosition {
     private static final Pattern POSITION_PATTERN = Pattern.compile(

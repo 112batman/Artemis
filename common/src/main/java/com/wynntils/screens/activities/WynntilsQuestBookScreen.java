@@ -22,12 +22,7 @@ import com.wynntils.screens.activities.widgets.DialogueHistoryButton;
 import com.wynntils.screens.activities.widgets.QuestButton;
 import com.wynntils.screens.activities.widgets.QuestInfoButton;
 import com.wynntils.screens.base.WynntilsListScreen;
-import com.wynntils.screens.base.widgets.BackButton;
-import com.wynntils.screens.base.widgets.FilterButton;
-import com.wynntils.screens.base.widgets.PageSelectorButton;
-import com.wynntils.screens.base.widgets.ReloadButton;
-import com.wynntils.screens.base.widgets.SortOrderWidget;
-import com.wynntils.screens.base.widgets.SortableActivityScreen;
+import com.wynntils.screens.base.widgets.*;
 import com.wynntils.screens.wynntilsmenu.WynntilsMenuScreen;
 import com.wynntils.utils.StringUtils;
 import com.wynntils.utils.colors.CommonColors;
@@ -38,9 +33,6 @@ import com.wynntils.utils.render.Texture;
 import com.wynntils.utils.render.type.HorizontalAlignment;
 import com.wynntils.utils.render.type.TextShadow;
 import com.wynntils.utils.render.type.VerticalAlignment;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Collectors;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.Screen;
@@ -48,6 +40,10 @@ import net.minecraft.client.resources.language.I18n;
 import net.minecraft.network.chat.Component;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public final class WynntilsQuestBookScreen extends WynntilsListScreen<QuestInfo, QuestButton>
         implements SortableActivityScreen {
@@ -95,8 +91,9 @@ public final class WynntilsQuestBookScreen extends WynntilsListScreen<QuestInfo,
         }
     }
 
-    /** This is called on every resize. Re-registering widgets are required, re-creating them is not.
-     * */
+    /**
+     * This is called on every resize. Re-registering widgets are required, re-creating them is not.
+     */
     @Override
     protected void doInit() {
         if (firstInit) {

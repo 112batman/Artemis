@@ -13,25 +13,21 @@ import com.wynntils.models.character.type.ClassType;
 import com.wynntils.models.elements.type.Element;
 import com.wynntils.models.elements.type.Powder;
 import com.wynntils.models.elements.type.Skill;
-import com.wynntils.models.gear.type.GearInfo;
-import com.wynntils.models.gear.type.GearInstance;
-import com.wynntils.models.gear.type.GearMajorId;
-import com.wynntils.models.gear.type.GearRequirements;
-import com.wynntils.models.gear.type.GearRestrictions;
-import com.wynntils.models.gear.type.GearTier;
+import com.wynntils.models.gear.type.*;
 import com.wynntils.models.stats.type.DamageType;
 import com.wynntils.utils.StringUtils;
 import com.wynntils.utils.mc.RenderedStringUtils;
 import com.wynntils.utils.type.Pair;
 import com.wynntils.utils.type.RangedValue;
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.MutableComponent;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Optional;
 import java.util.stream.Stream;
-import net.minecraft.ChatFormatting;
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.MutableComponent;
 
 public final class GearTooltipComponent extends IdentifiableTooltipComponent<GearInfo, GearInstance> {
     private static final int PIXEL_WIDTH = 150;
@@ -44,9 +40,9 @@ public final class GearTooltipComponent extends IdentifiableTooltipComponent<Gea
         String unidentifiedPrefix = gearInstance == null && !hideUnidentified ? "Unidentified " : "";
         Component shinyPrefix = gearInstance != null && gearInstance.shinyStat().isPresent()
                 ? Component.literal("⬡ ")
-                        .withStyle(ChatFormatting.WHITE)
-                        .append(Component.literal("Shiny ")
-                                .withStyle(gearInfo.tier().getChatFormatting()))
+                .withStyle(ChatFormatting.WHITE)
+                .append(Component.literal("Shiny ")
+                        .withStyle(gearInfo.tier().getChatFormatting()))
                 : Component.empty();
         header.add(Component.empty()
                 .withStyle(gearInfo.tier().getChatFormatting())
@@ -197,7 +193,7 @@ public final class GearTooltipComponent extends IdentifiableTooltipComponent<Gea
         GearTier gearTier = gearInfo.tier();
         MutableComponent itemTypeName = showItemType
                 ? Component.literal(
-                        StringUtils.capitalizeFirst(gearInfo.type().name().toLowerCase(Locale.ROOT)))
+                StringUtils.capitalizeFirst(gearInfo.type().name().toLowerCase(Locale.ROOT)))
                 : Component.literal("Item");
         MutableComponent tier = Component.literal(gearTier.getName())
                 .withStyle(gearTier.getChatFormatting())

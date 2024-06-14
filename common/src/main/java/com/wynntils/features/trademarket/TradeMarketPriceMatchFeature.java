@@ -19,8 +19,10 @@ import com.wynntils.utils.mc.LoreUtils;
 import com.wynntils.utils.mc.McUtils;
 import com.wynntils.utils.type.Pair;
 import com.wynntils.utils.wynn.ContainerUtils;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.components.Tooltip;
 import net.minecraft.client.gui.screens.inventory.ContainerScreen;
@@ -105,7 +107,7 @@ public class TradeMarketPriceMatchFeature extends Feature {
             MutableComponent buttonTooltip = undercutBy.get() == 0
                     ? Component.translatable("feature.wynntils.tradeMarketPriceMatch.highestBuyOfferMatchesTooltip")
                     : Component.translatable(
-                            "feature.wynntils.tradeMarketPriceMatch.highestBuyOfferUndercutTooltip", undercutBy.get());
+                    "feature.wynntils.tradeMarketPriceMatch.highestBuyOfferUndercutTooltip", undercutBy.get());
             containerScreen.addRenderableWidget(new PriceButton(
                     rightPos,
                     containerScreen.topPos,
@@ -133,7 +135,7 @@ public class TradeMarketPriceMatchFeature extends Feature {
             MutableComponent buttonTooltip = undercutBy.get() == 0
                     ? Component.translatable("feature.wynntils.tradeMarketPriceMatch.lowestSellOfferMatchesTooltip")
                     : Component.translatable(
-                            "feature.wynntils.tradeMarketPriceMatch.lowestSellOfferUndercutTooltip", undercutBy.get());
+                    "feature.wynntils.tradeMarketPriceMatch.lowestSellOfferUndercutTooltip", undercutBy.get());
             containerScreen.addRenderableWidget(new PriceButton(
                     rightPos,
                     containerScreen.topPos + PriceButton.BUTTON_HEIGHT + 2,

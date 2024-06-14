@@ -19,6 +19,7 @@ import com.wynntils.models.rewards.type.CharmInstance;
 import com.wynntils.models.stats.type.StatActualValue;
 import com.wynntils.models.stats.type.StatType;
 import com.wynntils.utils.type.ErrorOr;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;

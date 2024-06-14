@@ -6,4 +6,5 @@ package com.wynntils.mc.event;
 
 import net.minecraftforge.eventbus.api.Event;
 
-public class TickAlwaysEvent extends Event {}
+public class TickAlwaysEvent extends Event {
+}

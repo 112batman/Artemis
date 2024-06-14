@@ -36,6 +36,7 @@ import com.wynntils.utils.render.type.HorizontalAlignment;
 import com.wynntils.utils.render.type.TextShadow;
 import com.wynntils.utils.render.type.VerticalAlignment;
 import com.wynntils.utils.type.Pair;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -44,6 +45,7 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.AbstractWidget;
@@ -187,7 +189,7 @@ public final class ItemFilterScreen extends WynntilsScreen {
         // region State buttons
         if (this.supportsSorting) {
             toggleSortButton = new Button.Builder(
-                            Component.literal(sortMode ? "🔍" : "⇅"), (button -> toggleSortMode()))
+                    Component.literal(sortMode ? "🔍" : "⇅"), (button -> toggleSortMode()))
                     .pos(108, 5)
                     .size(20, 20)
                     .tooltip(Tooltip.create(Component.translatable(
@@ -210,9 +212,9 @@ public final class ItemFilterScreen extends WynntilsScreen {
         boolean activeApply = applyButton != null && applyButton.active;
 
         applyButton = new Button.Builder(Component.literal("✔").withStyle(ChatFormatting.GREEN), (button -> {
-                    updateStateFromItemSearchWidget();
-                    this.applyButton.active = false;
-                }))
+            updateStateFromItemSearchWidget();
+            this.applyButton.active = false;
+        }))
                 .pos(Texture.ITEM_FILTER_BACKGROUND.width() - 39, -22)
                 .size(20, 20)
                 .tooltip(Tooltip.create(Component.translatable("screens.wynntils.itemFilter.apply")))
@@ -1076,7 +1078,7 @@ public final class ItemFilterScreen extends WynntilsScreen {
 
         sortScrollY = 30
                 + MathUtils.map(
-                        sortScrollOffset, 0, sorts.size() - MAX_SORTS_PER_PAGE, 0, MAX_SORTS_PER_PAGE * 21 - 20);
+                sortScrollOffset, 0, sorts.size() - MAX_SORTS_PER_PAGE, 0, MAX_SORTS_PER_PAGE * 21 - 20);
 
         RenderUtils.drawRect(
                 poseStack, draggingSortScroll ? CommonColors.BLACK : CommonColors.GRAY, 330, sortScrollY, 0, 6, 20);

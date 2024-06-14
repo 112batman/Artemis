@@ -5,7 +5,9 @@
 package com.wynntils.utils.wynn;
 
 import com.wynntils.utils.mc.McUtils;
+
 import java.util.Optional;
+
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.ProjectileUtil;

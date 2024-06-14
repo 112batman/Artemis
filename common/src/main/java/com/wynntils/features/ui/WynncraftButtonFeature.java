@@ -17,9 +17,11 @@ import com.wynntils.mc.event.ScreenInitEvent;
 import com.wynntils.mc.event.TitleScreenInitEvent;
 import com.wynntils.utils.mc.McUtils;
 import com.wynntils.utils.render.Texture;
+
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.util.function.Consumer;
+
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.screens.ConnectScreen;
@@ -135,7 +137,9 @@ public class WynncraftButtonFeature extends Feature {
         }
     }
 
-    /** Provides the icon for a server in the form of a {@link ResourceLocation} with utility methods */
+    /**
+     * Provides the icon for a server in the form of a {@link ResourceLocation} with utility methods
+     */
     private static final class ServerIcon {
         private static final ResourceLocation FALLBACK;
 
@@ -187,17 +191,23 @@ public class WynncraftButtonFeature extends Feature {
             this(server, null);
         }
 
-        /** Returns whether getting the icon has succeeded. */
+        /**
+         * Returns whether getting the icon has succeeded.
+         */
         public boolean isSuccess() {
             return !FALLBACK.equals(serverIconLocation);
         }
 
-        /** Returns the {@link ServerData} used to get the icon */
+        /**
+         * Returns the {@link ServerData} used to get the icon
+         */
         public ServerData getServer() {
             return server;
         }
 
-        /** Returns the icon as a {@link ResourceLocation} if found, else unknown server texture */
+        /**
+         * Returns the icon as a {@link ResourceLocation} if found, else unknown server texture
+         */
         private synchronized ResourceLocation getServerIconLocation() {
             return serverIconLocation;
         }

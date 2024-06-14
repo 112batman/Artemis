@@ -7,9 +7,10 @@ package com.wynntils.services.mapdata.providers.json;
 import com.mojang.blaze3d.platform.NativeImage;
 import com.wynntils.services.mapdata.attributes.type.MapIcon;
 import com.wynntils.utils.mc.McUtils;
-import java.io.IOException;
 import net.minecraft.client.renderer.texture.DynamicTexture;
 import net.minecraft.resources.ResourceLocation;
+
+import java.io.IOException;
 
 public class JsonIcon implements MapIcon {
     private final String iconId;

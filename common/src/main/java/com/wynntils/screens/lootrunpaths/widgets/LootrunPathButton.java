@@ -21,8 +21,10 @@ import com.wynntils.utils.render.RenderUtils;
 import com.wynntils.utils.render.type.HorizontalAlignment;
 import com.wynntils.utils.render.type.TextShadow;
 import com.wynntils.utils.render.type.VerticalAlignment;
+
 import java.io.File;
 import java.util.Objects;
+
 import net.minecraft.Util;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.core.Position;
@@ -94,7 +96,7 @@ public class LootrunPathButton extends WynntilsButton {
 
         if (button == GLFW.GLFW_MOUSE_BUTTON_RIGHT) {
             if ((KeyboardUtils.isKeyDown(GLFW.GLFW_KEY_LEFT_SHIFT)
-                            || KeyboardUtils.isKeyDown(GLFW.GLFW_KEY_RIGHT_SHIFT))
+                    || KeyboardUtils.isKeyDown(GLFW.GLFW_KEY_RIGHT_SHIFT))
                     && !isLoaded()) {
                 tryDeleteLootrun();
                 return true;
@@ -112,7 +114,8 @@ public class LootrunPathButton extends WynntilsButton {
 
     // Not called
     @Override
-    public void onPress() {}
+    public void onPress() {
+    }
 
     private void tryDeleteLootrun() {
         File file = new File(Services.LootrunPaths.LOOTRUNS, lootrun.name() + ".json");

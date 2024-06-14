@@ -5,10 +5,11 @@
 package com.wynntils.handlers.particle.type;
 
 import com.wynntils.core.components.Handlers;
-import java.util.ArrayList;
-import java.util.List;
 import net.minecraft.core.Position;
 import net.minecraft.core.particles.ParticleOptions;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class UnverifiedParticle {
     private final ParticleType particleType;

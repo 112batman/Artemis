@@ -5,6 +5,7 @@
 package com.wynntils.models.gear.type;
 
 import com.wynntils.models.stats.type.StatType;
+
 import java.util.Map;
 
 /**
@@ -14,4 +15,5 @@ import java.util.Map;
  * Use SetModel to determine the true count if necessary.
  */
 public record SetInstance(
-        SetInfo setInfo, Map<String, Boolean> activeItems, int wynnCount, Map<StatType, Integer> wynnBonuses) {}
+        SetInfo setInfo, Map<String, Boolean> activeItems, int wynnCount, Map<StatType, Integer> wynnBonuses) {
+}

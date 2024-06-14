@@ -12,11 +12,12 @@ import com.wynntils.models.rewards.type.CharmInfo;
 import com.wynntils.models.rewards.type.CharmInstance;
 import com.wynntils.models.rewards.type.CharmRequirements;
 import com.wynntils.utils.StringUtils;
-import java.util.ArrayList;
-import java.util.List;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class CharmTooltipComponent extends IdentifiableTooltipComponent<CharmInfo, CharmInstance> {
     @Override

@@ -18,12 +18,7 @@ import com.wynntils.models.activities.type.ActivitySortOrder;
 import com.wynntils.screens.activities.widgets.DiscoveryButton;
 import com.wynntils.screens.activities.widgets.DiscoveryProgressButton;
 import com.wynntils.screens.base.WynntilsListScreen;
-import com.wynntils.screens.base.widgets.BackButton;
-import com.wynntils.screens.base.widgets.FilterButton;
-import com.wynntils.screens.base.widgets.PageSelectorButton;
-import com.wynntils.screens.base.widgets.ReloadButton;
-import com.wynntils.screens.base.widgets.SortOrderWidget;
-import com.wynntils.screens.base.widgets.SortableActivityScreen;
+import com.wynntils.screens.base.widgets.*;
 import com.wynntils.screens.wynntilsmenu.WynntilsMenuScreen;
 import com.wynntils.utils.StringUtils;
 import com.wynntils.utils.colors.CommonColors;
@@ -33,15 +28,16 @@ import com.wynntils.utils.render.Texture;
 import com.wynntils.utils.render.type.HorizontalAlignment;
 import com.wynntils.utils.render.type.TextShadow;
 import com.wynntils.utils.render.type.VerticalAlignment;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Stream;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.resources.language.I18n;
 import net.minecraft.network.chat.Component;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Stream;
 
 public final class WynntilsDiscoveriesScreen extends WynntilsListScreen<DiscoveryInfo, DiscoveryButton>
         implements SortableActivityScreen {
@@ -187,7 +183,7 @@ public final class WynntilsDiscoveriesScreen extends WynntilsListScreen<Discover
                                 .withStyle(ChatFormatting.GREEN))),
                 () -> {
                     Storage<Boolean> undiscoveredTerritorySelected = Managers.Feature.getFeatureInstance(
-                                    WynntilsContentBookFeature.class)
+                            WynntilsContentBookFeature.class)
                             .undiscoveredTerritorySelected;
                     undiscoveredTerritorySelected.store(!undiscoveredTerritorySelected.get());
                     reloadElements();
@@ -207,7 +203,7 @@ public final class WynntilsDiscoveriesScreen extends WynntilsListScreen<Discover
                                 .withStyle(ChatFormatting.GREEN))),
                 () -> {
                     Storage<Boolean> undiscoveredWorldSelected = Managers.Feature.getFeatureInstance(
-                                    WynntilsContentBookFeature.class)
+                            WynntilsContentBookFeature.class)
                             .undiscoveredWorldSelected;
                     undiscoveredWorldSelected.store(!undiscoveredWorldSelected.get());
                     reloadElements();
@@ -227,7 +223,7 @@ public final class WynntilsDiscoveriesScreen extends WynntilsListScreen<Discover
                                 .withStyle(ChatFormatting.GREEN))),
                 () -> {
                     Storage<Boolean> undiscoveredSecretsSelected = Managers.Feature.getFeatureInstance(
-                                    WynntilsContentBookFeature.class)
+                            WynntilsContentBookFeature.class)
                             .undiscoveredSecretsSelected;
                     undiscoveredSecretsSelected.store(!undiscoveredSecretsSelected.get());
                     reloadElements();

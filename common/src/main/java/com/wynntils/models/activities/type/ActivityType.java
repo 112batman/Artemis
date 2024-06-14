@@ -5,6 +5,7 @@
 package com.wynntils.models.activities.type;
 
 import java.util.Optional;
+
 import net.minecraft.ChatFormatting;
 
 public enum ActivityType {
@@ -39,7 +40,9 @@ public enum ActivityType {
         return null;
     }
 
-    /** This version cannot distinguish between QUEST and STORYLINE_QUEST */
+    /**
+     * This version cannot distinguish between QUEST and STORYLINE_QUEST
+     */
     public static ActivityType from(String displayName) {
         for (ActivityType type : values()) {
             if (type.getDisplayName().equals(displayName)) return type;

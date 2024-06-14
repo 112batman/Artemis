@@ -11,12 +11,12 @@ import com.wynntils.core.persisted.Persisted;
 import com.wynntils.core.persisted.storage.Storage;
 import com.wynntils.mc.event.ResourcePackClearEvent;
 import com.wynntils.mc.event.ResourcePackEvent;
+import com.wynntils.mc.mixin.accessors.DownloadedPackSourceAccessor;
+import com.wynntils.mc.mixin.accessors.ServerPackDataAccessor;
+import com.wynntils.mc.mixin.accessors.ServerPackManagerAccessor;
 import com.wynntils.utils.mc.McUtils;
-import java.io.File;
-import java.nio.charset.StandardCharsets;
-import java.util.List;
-import java.util.Optional;
 import net.minecraft.SharedConstants;
+import net.minecraft.client.resources.server.ServerPackManager;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.packs.FilePackResources;
 import net.minecraft.server.packs.PackType;
@@ -24,6 +24,11 @@ import net.minecraft.server.packs.repository.Pack;
 import net.minecraft.server.packs.repository.PackSource;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+
+import java.io.File;
+import java.nio.charset.StandardCharsets;
+import java.util.List;
+import java.util.Optional;
 
 public final class ResourcePackService extends Service {
     @Persisted
@@ -75,11 +80,11 @@ public final class ResourcePackService extends Service {
     }
 
     private Optional<String> getCurrentPreloadedHash() {
-        Pack pack = McUtils.mc().getDownloadedPackSource().serverPack;
-        if (!(pack instanceof PreloadedPack preloadedPack)) return Optional.empty();
+        Optional<ServerPackManager.ServerPackData> pack = ((ServerPackManagerAccessor) ((DownloadedPackSourceAccessor) McUtils.mc().getDownloadedPackSource()).getManager()).getPacks().stream().findFirst();
+        if (pack.isEmpty()) return Optional.empty();
 
-        String currentHash = preloadedPack.getHash();
-        return Optional.ofNullable(currentHash);
+        String currentHash = ((ServerPackDataAccessor) pack.get()).getHash().toString();
+        return Optional.of(currentHash);
     }
 
     private void preloadResourcePack() {
@@ -106,7 +111,7 @@ public final class ResourcePackService extends Service {
             return;
         }
 
-        McUtils.mc().getDownloadedPackSource().serverPack = pack;
+        ((DownloadedPackSourceAccessor) McUtils.mc().getDownloadedPackSource()).setPackSource(consumer -> consumer.accept(pack));
     }
 
     private Pack getPackForHash(String hash) {

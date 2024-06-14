@@ -25,9 +25,11 @@ import com.wynntils.utils.colors.CustomColor;
 import com.wynntils.utils.mc.KeyboardUtils;
 import com.wynntils.utils.render.RenderUtils;
 import com.wynntils.utils.render.Texture;
+
 import java.util.Map;
 import java.util.Optional;
 import java.util.TreeMap;
+
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.network.chat.Component;
@@ -247,7 +249,8 @@ public class ProfessionHighlightFeature extends Feature {
         }
 
         @Override
-        public void onPress() {}
+        public void onPress() {
+        }
     }
 
     private enum HighlightSelectionMode {

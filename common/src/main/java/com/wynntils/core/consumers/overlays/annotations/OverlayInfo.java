@@ -6,6 +6,7 @@ package com.wynntils.core.consumers.overlays.annotations;
 
 import com.wynntils.core.consumers.overlays.RenderState;
 import com.wynntils.mc.event.RenderEvent;
+
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

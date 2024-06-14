@@ -12,12 +12,14 @@ import com.wynntils.core.net.UrlId;
 import com.wynntils.models.worlds.event.WorldStateEvent;
 import com.wynntils.models.worlds.type.WorldState;
 import com.wynntils.services.leaderboard.type.LeaderboardBadge;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.UUID;
+
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 public class LeaderboardService extends Service {

@@ -12,9 +12,11 @@ import com.wynntils.utils.mc.RenderedStringUtils;
 import com.wynntils.utils.render.FontRenderer;
 import com.wynntils.utils.render.RenderUtils;
 import com.wynntils.utils.render.Texture;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
@@ -61,7 +63,8 @@ public class PresetButton extends WynntilsButton implements TooltipProvider {
     }
 
     @Override
-    public void onPress() {}
+    public void onPress() {
+    }
 
     @Override
     public List<Component> getTooltipLines() {

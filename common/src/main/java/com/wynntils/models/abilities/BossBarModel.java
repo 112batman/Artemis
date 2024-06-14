@@ -13,6 +13,7 @@ import com.wynntils.models.abilities.bossbars.CorruptedBar;
 import com.wynntils.models.abilities.bossbars.FocusBar;
 import com.wynntils.models.abilities.bossbars.ManaBankBar;
 import com.wynntils.models.abilities.bossbars.OphanimBar;
+
 import java.util.Arrays;
 import java.util.List;
 

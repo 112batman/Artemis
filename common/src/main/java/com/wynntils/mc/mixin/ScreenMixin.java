@@ -6,11 +6,7 @@ package com.wynntils.mc.mixin;
 
 import com.wynntils.core.consumers.screens.WynntilsScreen;
 import com.wynntils.core.events.MixinHelper;
-import com.wynntils.mc.event.PauseMenuInitEvent;
-import com.wynntils.mc.event.ScreenFocusEvent;
-import com.wynntils.mc.event.ScreenInitEvent;
-import com.wynntils.mc.event.ScreenRenderEvent;
-import com.wynntils.mc.event.TitleScreenInitEvent;
+import com.wynntils.mc.event.*;
 import com.wynntils.mc.extension.ScreenExtension;
 import com.wynntils.screens.base.widgets.TextInputBoxWidget;
 import net.minecraft.client.Minecraft;

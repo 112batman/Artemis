@@ -5,6 +5,7 @@
 package com.wynntils.services.mapdata.type;
 
 import com.wynntils.services.mapdata.attributes.type.MapAttributes;
+
 import java.util.List;
 import java.util.Optional;
 

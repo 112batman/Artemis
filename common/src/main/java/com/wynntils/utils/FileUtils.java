@@ -5,6 +5,7 @@
 package com.wynntils.utils;
 
 import com.wynntils.core.WynntilsMod;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -98,9 +99,9 @@ public final class FileUtils {
 
     private static void copyFileWindows(File sourceFile, File destFile) {
         try (FileInputStream inputStream = new FileInputStream(sourceFile);
-                FileChannel source = inputStream.getChannel();
-                FileOutputStream outputStream = new FileOutputStream(destFile);
-                FileChannel destination = outputStream.getChannel()) {
+             FileChannel source = inputStream.getChannel();
+             FileOutputStream outputStream = new FileOutputStream(destFile);
+             FileChannel destination = outputStream.getChannel()) {
             destination.transferFrom(source, 0, source.size());
         } catch (Exception e) {
             WynntilsMod.warn("Failed to copy file " + sourceFile + " to " + destFile, e);

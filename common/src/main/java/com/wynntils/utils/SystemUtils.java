@@ -7,6 +7,7 @@ package com.wynntils.utils;
 import com.mojang.blaze3d.pipeline.RenderTarget;
 import com.mojang.blaze3d.platform.NativeImage;
 import com.mojang.blaze3d.systems.RenderSystem;
+
 import java.awt.Image;
 import java.awt.Toolkit;
 import java.awt.datatransfer.DataFlavor;
@@ -56,7 +57,7 @@ public final class SystemUtils {
 
         @Override
         public DataFlavor[] getTransferDataFlavors() {
-            return new DataFlavor[] {DataFlavor.imageFlavor};
+            return new DataFlavor[]{DataFlavor.imageFlavor};
         }
 
         @Override

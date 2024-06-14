@@ -5,6 +5,7 @@
 package com.wynntils.services.map.pois;
 
 import com.wynntils.utils.mc.type.PoiLocation;
+
 import java.util.function.Supplier;
 
 public abstract class DynamicIconPoi extends IconPoi {

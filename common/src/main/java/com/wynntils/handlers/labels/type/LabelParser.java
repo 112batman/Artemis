@@ -12,6 +12,7 @@ import net.minecraft.world.entity.Entity;
 public interface LabelParser<T extends LabelInfo> {
     /**
      * Parses the label and returns the label info. If the label is not valid for this parser, returns null.
+     *
      * @return The label info, or null if the label is not valid for this parser.
      */
     T getInfo(StyledText label, Location location, Entity entity);

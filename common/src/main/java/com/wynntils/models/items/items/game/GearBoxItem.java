@@ -9,6 +9,7 @@ import com.wynntils.models.gear.type.GearType;
 import com.wynntils.models.items.properties.GearTierItemProperty;
 import com.wynntils.models.items.properties.LeveledItemProperty;
 import com.wynntils.utils.type.RangedValue;
+
 import java.util.Objects;
 
 public class GearBoxItem extends GameItem implements GearTierItemProperty, LeveledItemProperty {

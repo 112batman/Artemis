@@ -5,6 +5,7 @@
 package com.wynntils.models.profession.type;
 
 import com.wynntils.core.persisted.config.NullableConfig;
+
 import java.util.List;
 import java.util.Locale;
 

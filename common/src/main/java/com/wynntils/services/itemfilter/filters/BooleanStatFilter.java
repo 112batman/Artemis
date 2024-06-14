@@ -6,6 +6,7 @@ package com.wynntils.services.itemfilter.filters;
 
 import com.wynntils.services.itemfilter.type.StatFilter;
 import com.wynntils.services.itemfilter.type.StatFilterFactory;
+
 import java.util.Optional;
 
 public class BooleanStatFilter extends StatFilter<Boolean> {

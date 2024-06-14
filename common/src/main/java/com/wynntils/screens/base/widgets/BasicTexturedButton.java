@@ -9,11 +9,12 @@ import com.wynntils.screens.base.TooltipProvider;
 import com.wynntils.utils.mc.ComponentUtils;
 import com.wynntils.utils.render.RenderUtils;
 import com.wynntils.utils.render.Texture;
-import java.util.List;
-import java.util.function.Consumer;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
+
+import java.util.List;
+import java.util.function.Consumer;
 
 public class BasicTexturedButton extends WynntilsButton implements TooltipProvider {
     protected static final int TOOLTIP_WIDTH = 200;
@@ -77,7 +78,8 @@ public class BasicTexturedButton extends WynntilsButton implements TooltipProvid
     }
 
     @Override
-    public void onPress() {}
+    public void onPress() {
+    }
 
     public void setTooltip(List<Component> newTooltip) {
         tooltip = ComponentUtils.wrapTooltips(newTooltip, TOOLTIP_WIDTH);

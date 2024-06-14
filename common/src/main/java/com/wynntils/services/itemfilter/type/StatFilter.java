@@ -7,6 +7,7 @@ package com.wynntils.services.itemfilter.type;
 /**
  * A filter type to be used for filtering {@link ItemStatProvider} values.
  * Create these with {@link StatFilterFactory}.
+ *
  * @param <T> The type of value this filter works on
  */
 public abstract class StatFilter<T> {

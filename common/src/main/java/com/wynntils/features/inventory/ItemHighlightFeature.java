@@ -24,7 +24,9 @@ import com.wynntils.models.items.properties.GearTierItemProperty;
 import com.wynntils.utils.colors.CustomColor;
 import com.wynntils.utils.render.RenderUtils;
 import com.wynntils.utils.render.Texture;
+
 import java.util.Optional;
+
 import net.minecraft.ChatFormatting;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.eventbus.api.EventPriority;
@@ -349,7 +351,8 @@ public class ItemHighlightFeature extends Feature {
     }
 
     private final class EmeraldPouchHighlight implements HighlightInfo {
-        private EmeraldPouchHighlight(EmeraldPouchItem item) {}
+        private EmeraldPouchHighlight(EmeraldPouchItem item) {
+        }
 
         @Override
         public boolean isHighlightEnabled() {

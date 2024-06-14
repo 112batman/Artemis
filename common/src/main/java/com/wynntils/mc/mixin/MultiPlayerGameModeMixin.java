@@ -5,11 +5,7 @@
 package com.wynntils.mc.mixin;
 
 import com.wynntils.core.events.MixinHelper;
-import com.wynntils.mc.event.ChangeCarriedItemEvent;
-import com.wynntils.mc.event.ContainerClickEvent;
-import com.wynntils.mc.event.PlayerAttackEvent;
-import com.wynntils.mc.event.PlayerInteractEvent;
-import com.wynntils.mc.event.UseItemEvent;
+import com.wynntils.mc.event.*;
 import com.wynntils.utils.mc.McUtils;
 import net.minecraft.client.multiplayer.MultiPlayerGameMode;
 import net.minecraft.client.player.LocalPlayer;
@@ -128,10 +124,10 @@ public abstract class MultiPlayerGameModeMixin {
     @Inject(
             method = "ensureHasSentCarriedItem()V",
             at =
-                    @At(
-                            value = "INVOKE",
-                            target =
-                                    "Lnet/minecraft/client/multiplayer/ClientPacketListener;send(Lnet/minecraft/network/protocol/Packet;)V"))
+            @At(
+                    value = "INVOKE",
+                    target =
+                            "Lnet/minecraft/client/multiplayer/ClientPacketListener;send(Lnet/minecraft/network/protocol/Packet;)V"))
     private void ensureHasSentCarriedItem(CallbackInfo ci) {
         MixinHelper.post(new ChangeCarriedItemEvent());
     }

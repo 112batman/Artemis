@@ -21,15 +21,11 @@ import com.wynntils.screens.maps.MainMapScreen;
 import com.wynntils.utils.mc.McUtils;
 import com.wynntils.utils.mc.type.Location;
 import com.wynntils.utils.type.Pair;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import net.minecraft.network.chat.Component;
+
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
-import net.minecraft.network.chat.Component;
 
 public final class DiscoveryModel extends Model {
     // From container query updates
@@ -247,7 +243,7 @@ public final class DiscoveryModel extends Model {
             }
 
             switch (action) {
-                    // We can't run this is on request thread
+                // We can't run this is on request thread
                 case MAP -> Managers.TickScheduler.scheduleNextTick(
                         () -> McUtils.mc().setScreen(MainMapScreen.create(x, z)));
                 case COMPASS -> Models.Marker.USER_WAYPOINTS_PROVIDER.addLocation(new Location(x, 0, z));

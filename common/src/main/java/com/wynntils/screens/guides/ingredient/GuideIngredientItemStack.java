@@ -18,14 +18,15 @@ import com.wynntils.screens.guides.GuideItemStack;
 import com.wynntils.utils.StringUtils;
 import com.wynntils.utils.type.Pair;
 import com.wynntils.utils.type.RangedValue;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.TooltipFlag;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 public final class GuideIngredientItemStack extends GuideItemStack {
     private final IngredientInfo ingredientInfo;

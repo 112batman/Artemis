@@ -9,6 +9,7 @@ import com.wynntils.models.items.properties.ProfessionItemProperty;
 import com.wynntils.models.profession.type.ProfessionType;
 import com.wynntils.services.itemfilter.type.ItemProviderType;
 import com.wynntils.services.itemfilter.type.ItemStatProvider;
+
 import java.util.List;
 import java.util.Locale;
 import java.util.Optional;

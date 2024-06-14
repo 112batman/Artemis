@@ -18,12 +18,13 @@ import com.wynntils.models.stats.type.StatType;
 import com.wynntils.utils.StringUtils;
 import com.wynntils.utils.type.Pair;
 import com.wynntils.utils.type.RangedValue;
-import java.util.ArrayList;
-import java.util.List;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.network.chat.Style;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public final class TooltipIdentifications {
     public static List<Component> buildTooltip(
@@ -152,10 +153,10 @@ public final class TooltipIdentifications {
 
         line.append(Component.literal(" "
                         + Models.Stat.getDisplayName(
-                                statType,
-                                itemInfo.getRequiredClass(),
-                                currentClass,
-                                itemInfo.getIdentificationLevelRange()))
+                        statType,
+                        itemInfo.getRequiredClass(),
+                        currentClass,
+                        itemInfo.getIdentificationLevelRange()))
                 .withStyle(ChatFormatting.GRAY));
 
         return line;
@@ -184,10 +185,10 @@ public final class TooltipIdentifications {
 
         line.append(Component.literal(" "
                         + Models.Stat.getDisplayName(
-                                statType,
-                                itemInfo.getRequiredClass(),
-                                Models.Character.getClassType(),
-                                itemInfo.getIdentificationLevelRange()))
+                        statType,
+                        itemInfo.getRequiredClass(),
+                        Models.Character.getClassType(),
+                        itemInfo.getIdentificationLevelRange()))
                 .withStyle(ChatFormatting.GRAY));
 
         return line;

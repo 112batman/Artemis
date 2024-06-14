@@ -22,11 +22,12 @@ import com.wynntils.utils.render.type.HorizontalAlignment;
 import com.wynntils.utils.render.type.TextShadow;
 import com.wynntils.utils.render.type.VerticalAlignment;
 import com.wynntils.utils.type.Pair;
-import java.util.Optional;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvents;
 import org.lwjgl.glfw.GLFW;
+
+import java.util.Optional;
 
 public class QuestButton extends WynntilsButton {
     private static final Pair<CustomColor, CustomColor> BUTTON_COLOR =
@@ -101,7 +102,8 @@ public class QuestButton extends WynntilsButton {
 
     // Not called
     @Override
-    public void onPress() {}
+    public void onPress() {
+    }
 
     @Override
     public boolean mouseClicked(double mouseX, double mouseY, int button) {

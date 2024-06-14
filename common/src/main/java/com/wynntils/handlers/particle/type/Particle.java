@@ -6,4 +6,5 @@ package com.wynntils.handlers.particle.type;
 
 import net.minecraft.core.Position;
 
-public record Particle(Position position, ParticleType particleType) {}
+public record Particle(Position position, ParticleType particleType) {
+}

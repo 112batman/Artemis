@@ -14,6 +14,7 @@ import com.wynntils.utils.UnsignedByteUtils;
 import com.wynntils.utils.type.ArrayReader;
 import com.wynntils.utils.type.ErrorOr;
 import com.wynntils.utils.type.UnsignedByte;
+
 import java.util.ArrayList;
 import java.util.List;
 

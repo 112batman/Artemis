@@ -30,17 +30,13 @@ import com.wynntils.services.mapdata.providers.builtin.ServiceListProvider;
 import com.wynntils.utils.mc.type.Location;
 import com.wynntils.utils.mc.type.PoiLocation;
 import com.wynntils.utils.render.Texture;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+
 import java.lang.reflect.Type;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
-import java.util.Set;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 public class PoiService extends Service {
     public static final Gson GSON = new GsonBuilder()
@@ -104,7 +100,8 @@ public class PoiService extends Service {
     private void loadCaves() {
         Download dl = Managers.Net.download(UrlId.DATA_STATIC_CAVE_INFO);
         dl.handleReader(reader -> {
-            Type type = new TypeToken<List<CaveProfile>>() {}.getType();
+            Type type = new TypeToken<List<CaveProfile>>() {
+            }.getType();
 
             List<CaveProfile> profiles = GSON.fromJson(reader, type);
 
@@ -204,7 +201,8 @@ public class PoiService extends Service {
     private void loadServices() {
         Download dl = Managers.Net.download(UrlId.DATA_STATIC_SERVICES);
         dl.handleReader(reader -> {
-            Type type = new TypeToken<List<ServiceProfile>>() {}.getType();
+            Type type = new TypeToken<List<ServiceProfile>>() {
+            }.getType();
 
             List<ServiceProfile> serviceList = GSON.fromJson(reader, type);
             for (ServiceProfile service : serviceList) {
@@ -224,7 +222,8 @@ public class PoiService extends Service {
     private void loadCombat() {
         Download dl = Managers.Net.download(UrlId.DATA_STATIC_COMBAT_LOCATIONS);
         dl.handleReader(reader -> {
-            Type type = new TypeToken<List<CombatProfileList>>() {}.getType();
+            Type type = new TypeToken<List<CombatProfileList>>() {
+            }.getType();
 
             List<CombatProfileList> combatProfileLists = GSON.fromJson(reader, type);
             for (CombatProfileList combatList : combatProfileLists) {
@@ -284,5 +283,6 @@ public class PoiService extends Service {
             String difficulty,
             int requirements,
             List<String> rewards,
-            Location location) {}
+            Location location) {
+    }
 }

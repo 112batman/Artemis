@@ -19,13 +19,7 @@ import com.wynntils.screens.base.TooltipProvider;
 import com.wynntils.screens.base.widgets.SearchWidget;
 import com.wynntils.screens.base.widgets.TextInputBoxWidget;
 import com.wynntils.screens.base.widgets.WynntilsButton;
-import com.wynntils.screens.settings.widgets.CategoryButton;
-import com.wynntils.screens.settings.widgets.ConfigTile;
-import com.wynntils.screens.settings.widgets.ConfigurableButton;
-import com.wynntils.screens.settings.widgets.SettingsCategoryTabButton;
-import com.wynntils.screens.settings.widgets.SettingsPageTabButton;
-import com.wynntils.screens.settings.widgets.SettingsSearchWidget;
-import com.wynntils.screens.settings.widgets.SettingsSideTabButton;
+import com.wynntils.screens.settings.widgets.*;
 import com.wynntils.utils.MathUtils;
 import com.wynntils.utils.StringUtils;
 import com.wynntils.utils.colors.CommonColors;
@@ -37,14 +31,6 @@ import com.wynntils.utils.render.Texture;
 import com.wynntils.utils.render.type.HorizontalAlignment;
 import com.wynntils.utils.render.type.TextShadow;
 import com.wynntils.utils.render.type.VerticalAlignment;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Objects;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.AbstractWidget;
@@ -54,6 +40,10 @@ import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.resources.language.I18n;
 import net.minecraft.network.chat.Component;
 import org.lwjgl.glfw.GLFW;
+
+import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public final class WynntilsBookSettingsScreen extends WynntilsScreen {
     // Constants
@@ -374,12 +364,12 @@ public final class WynntilsBookSettingsScreen extends WynntilsScreen {
 
         if (!draggingConfigurableScroll
                 && MathUtils.isInside(
-                        (int) adjustedMouseX,
-                        (int) adjustedMouseY,
-                        CONFIGURABLE_SCROLL_X,
-                        CONFIGURABLE_SCROLL_X + Texture.CONFIG_BOOK_SCROLL_BUTTON.width(),
-                        (int) configurableScrollRenderY,
-                        (int) (configurableScrollRenderY + Texture.CONFIG_BOOK_SCROLL_BUTTON.height() / 2))) {
+                (int) adjustedMouseX,
+                (int) adjustedMouseY,
+                CONFIGURABLE_SCROLL_X,
+                CONFIGURABLE_SCROLL_X + Texture.CONFIG_BOOK_SCROLL_BUTTON.width(),
+                (int) configurableScrollRenderY,
+                (int) (configurableScrollRenderY + Texture.CONFIG_BOOK_SCROLL_BUTTON.height() / 2))) {
             draggingConfigurableScroll = true;
             return true;
         }
@@ -387,12 +377,12 @@ public final class WynntilsBookSettingsScreen extends WynntilsScreen {
         if (!draggingConfigScroll
                 && (configs.size() > CONFIGS_PER_PAGE)
                 && MathUtils.isInside(
-                        (int) adjustedMouseX,
-                        (int) adjustedMouseY,
-                        CONFIG_SCROLL_X,
-                        CONFIG_SCROLL_X + Texture.CONFIG_BOOK_SCROLL_BUTTON.width(),
-                        (int) configScrollRenderY,
-                        (int) (configScrollRenderY + Texture.CONFIG_BOOK_SCROLL_BUTTON.height() / 2))) {
+                (int) adjustedMouseX,
+                (int) adjustedMouseY,
+                CONFIG_SCROLL_X,
+                CONFIG_SCROLL_X + Texture.CONFIG_BOOK_SCROLL_BUTTON.width(),
+                (int) configScrollRenderY,
+                (int) (configScrollRenderY + Texture.CONFIG_BOOK_SCROLL_BUTTON.height() / 2))) {
             draggingConfigScroll = true;
             return true;
         }
@@ -916,11 +906,11 @@ public final class WynntilsBookSettingsScreen extends WynntilsScreen {
 
         configurableScrollRenderY = SCROLL_START_Y
                 + MathUtils.map(
-                        configurablesScrollOffset,
-                        0,
-                        getMaxConfigurableScrollOffset(),
-                        0,
-                        SCROLL_AREA_HEIGHT - Texture.CONFIG_BOOK_SCROLL_BUTTON.height() / 2f);
+                configurablesScrollOffset,
+                0,
+                getMaxConfigurableScrollOffset(),
+                0,
+                SCROLL_AREA_HEIGHT - Texture.CONFIG_BOOK_SCROLL_BUTTON.height() / 2f);
 
         RenderUtils.drawHoverableTexturedRect(
                 poseStack,
@@ -955,11 +945,11 @@ public final class WynntilsBookSettingsScreen extends WynntilsScreen {
 
         configScrollRenderY = SCROLL_START_Y
                 + MathUtils.map(
-                        configScrollOffset,
-                        0,
-                        getMaxConfigScrollOffset(),
-                        0,
-                        SCROLL_AREA_HEIGHT - Texture.CONFIG_BOOK_SCROLL_BUTTON.height() / 2f);
+                configScrollOffset,
+                0,
+                getMaxConfigScrollOffset(),
+                0,
+                SCROLL_AREA_HEIGHT - Texture.CONFIG_BOOK_SCROLL_BUTTON.height() / 2f);
 
         RenderUtils.drawHoverableTexturedRect(
                 poseStack,

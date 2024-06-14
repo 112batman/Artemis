@@ -5,6 +5,7 @@
 package com.wynntils.handlers.scoreboard;
 
 import com.google.common.collect.ImmutableList;
+import com.google.common.collect.Lists;
 import com.wynntils.core.WynntilsMod;
 import com.wynntils.core.components.Handler;
 import com.wynntils.core.text.PartStyle;
@@ -19,22 +20,21 @@ import com.wynntils.models.worlds.event.WorldStateEvent;
 import com.wynntils.models.worlds.type.WorldState;
 import com.wynntils.utils.mc.McUtils;
 import com.wynntils.utils.type.Pair;
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.MutableComponent;
+import net.minecraft.network.chat.numbers.BlankFormat;
+import net.minecraft.world.scores.*;
+import net.minecraft.world.scores.criteria.ObjectiveCriteria;
+import net.minecraftforge.eventbus.api.EventPriority;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import org.apache.commons.lang3.StringUtils;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 import java.util.regex.Pattern;
-import net.minecraft.ChatFormatting;
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.MutableComponent;
-import net.minecraft.world.scores.DisplaySlot;
-import net.minecraft.world.scores.Objective;
-import net.minecraft.world.scores.Score;
-import net.minecraft.world.scores.Scoreboard;
-import net.minecraft.world.scores.criteria.ObjectiveCriteria;
-import net.minecraftforge.eventbus.api.EventPriority;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import org.apache.commons.lang3.StringUtils;
 
 public final class ScoreboardHandler extends Handler {
     private static final Pattern NEXT_LINE_PATTERN = Pattern.compile("À+");
@@ -114,14 +114,19 @@ public final class ScoreboardHandler extends Handler {
     private List<ScoreboardLine> getCurrentScoreboardState(String currentScoreboardName) {
         Scoreboard scoreboard = McUtils.mc().level.getScoreboard();
         Objective objective = scoreboard.getObjective(currentScoreboardName);
-        List<Score> lines = new ArrayList<>(scoreboard.getPlayerScores(objective));
+        ReadOnlyScoreInfo inf = scoreboard.getPlayerScoreInfo(() -> objective.getName(), objective);
+        if (inf instanceof Score ss) {
+            List<Score> lines = Lists.newArrayList(ss);
 
-        // Lines are by default in reverse order
-        Collections.reverse(lines);
+            // Lines are by default in reverse order
+            Collections.reverse(lines);
 
-        return lines.stream()
-                .map(s -> new ScoreboardLine(StyledText.fromString(s.getOwner()), s.getScore()))
-                .toList();
+            return lines.stream()
+                    .map(s -> new ScoreboardLine(StyledText.fromString(s.display().getString()), s.value()))
+                    .toList();
+        } else {
+            return Lists.newArrayList();
+        }
     }
 
     private List<ScoreboardPart> getValidScoreboardParts(List<ScoreboardLine> reconstructedScoreboard) {
@@ -327,7 +332,10 @@ public final class ScoreboardHandler extends Handler {
                 SCOREBOARD_KEY,
                 ObjectiveCriteria.DUMMY,
                 SCOREBOARD_TITLE_COMPONENT,
-                ObjectiveCriteria.RenderType.INTEGER);
+                ObjectiveCriteria.RenderType.INTEGER,
+                true,
+                new BlankFormat()
+        );
 
         scoreboard.setDisplayObjective(DisplaySlot.SIDEBAR, wynntilsObjective);
 
@@ -336,7 +344,7 @@ public final class ScoreboardHandler extends Handler {
         int currentScoreboardLine = MAX_SCOREBOARD_LINE;
 
         // Insert the first line at the top
-        scoreboard.getOrCreatePlayerScore("À", wynntilsObjective).setScore(currentScoreboardLine);
+        scoreboard.getOrCreatePlayerScore(() -> "À", wynntilsObjective).set(currentScoreboardLine);
         currentScoreboardLine--;
 
         int separatorCount = 2;
@@ -349,21 +357,22 @@ public final class ScoreboardHandler extends Handler {
             if (!scoreboardSegment.isVisible()) continue;
 
             scoreboard
-                    .getOrCreatePlayerScore(scoreboardSegment.getHeader().getString(), wynntilsObjective)
-                    .setScore(currentScoreboardLine);
+                    .getOrCreatePlayerScore(() -> scoreboardSegment.getHeader().getString(), wynntilsObjective)
+                    .set(currentScoreboardLine);
             currentScoreboardLine--;
 
             for (StyledText line : scoreboardSegment.getContent()) {
                 scoreboard
-                        .getOrCreatePlayerScore(line.getString(), wynntilsObjective)
-                        .setScore(currentScoreboardLine);
+                        .getOrCreatePlayerScore(() -> line.getString(), wynntilsObjective)
+                        .set(currentScoreboardLine);
                 currentScoreboardLine--;
             }
 
             if (i != segments.size() - 1) {
+                int finalSeparatorCount = separatorCount;
                 scoreboard
-                        .getOrCreatePlayerScore(StringUtils.repeat('À', separatorCount), wynntilsObjective)
-                        .setScore(currentScoreboardLine);
+                        .getOrCreatePlayerScore(() -> StringUtils.repeat('À', finalSeparatorCount), wynntilsObjective)
+                        .set(currentScoreboardLine);
                 currentScoreboardLine--;
                 separatorCount++;
             }
@@ -394,13 +403,16 @@ public final class ScoreboardHandler extends Handler {
         }
 
         @Override
-        public void onSegmentChange(ScoreboardSegment newValue) {}
+        public void onSegmentChange(ScoreboardSegment newValue) {
+        }
 
         @Override
-        public void onSegmentRemove(ScoreboardSegment segment) {}
+        public void onSegmentRemove(ScoreboardSegment segment) {
+        }
 
         @Override
-        public void reset() {}
+        public void reset() {
+        }
 
         @Override
         public String toString() {

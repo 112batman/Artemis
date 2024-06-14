@@ -4,13 +4,14 @@
  */
 package com.wynntils.screens.gearviewer;
 
-import java.util.List;
 import net.minecraft.world.Container;
 import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
+
+import java.util.List;
 
 public final class GearViewerMenu extends AbstractContainerMenu {
     private GearViewerMenu(Container container) {

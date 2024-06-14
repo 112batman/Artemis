@@ -4,4 +4,5 @@
  */
 package com.wynntils.models.wynnitem.type;
 
-public record MaterialConversionInfo(int id, int type, String name) {}
+public record MaterialConversionInfo(int id, int type, String name) {
+}

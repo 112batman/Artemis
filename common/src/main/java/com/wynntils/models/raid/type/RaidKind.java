@@ -5,6 +5,7 @@
 package com.wynntils.models.raid.type;
 
 import com.wynntils.core.text.StyledText;
+
 import java.util.List;
 import java.util.regex.Pattern;
 

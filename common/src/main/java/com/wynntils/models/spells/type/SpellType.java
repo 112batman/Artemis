@@ -6,6 +6,7 @@ package com.wynntils.models.spells.type;
 
 import com.wynntils.core.components.Models;
 import com.wynntils.models.character.type.ClassType;
+
 import java.util.Arrays;
 
 public enum SpellType {
@@ -84,8 +85,8 @@ public enum SpellType {
             // must appear
             if (name.startsWith(spellType.name)
                     && (name.length() == spellType.name.length()
-                            || String.valueOf(name.charAt(spellType.name.length()))
-                                    .isBlank())) {
+                    || String.valueOf(name.charAt(spellType.name.length()))
+                    .isBlank())) {
                 return spellType;
             }
         }

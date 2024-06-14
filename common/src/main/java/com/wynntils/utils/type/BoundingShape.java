@@ -39,6 +39,6 @@ public interface BoundingShape {
         // If the distance is less than the sum of the radii, the circles intersect
         return (deltaX * deltaX + deltaZ * deltaZ)
                 < ((boundingCircle1.radius() + boundingCircle2.radius())
-                        * (boundingCircle1.radius() + boundingCircle2.radius()));
+                * (boundingCircle1.radius() + boundingCircle2.radius()));
     }
 }

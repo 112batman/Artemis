@@ -14,9 +14,11 @@ import com.google.gson.stream.JsonToken;
 import com.google.gson.stream.JsonWriter;
 import com.wynntils.core.WynntilsMod;
 import com.wynntils.core.persisted.config.NullableConfig;
+
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
+
 import org.apache.commons.lang3.text.WordUtils;
 
 public final class EnumUtils {

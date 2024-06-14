@@ -11,23 +11,13 @@ import com.wynntils.services.mapdata.attributes.type.MapIcon;
 import com.wynntils.services.mapdata.attributes.type.ResolvedMapAttributes;
 import com.wynntils.services.mapdata.attributes.type.ResolvedMapVisibility;
 import com.wynntils.services.mapdata.providers.MapDataProvider;
-import com.wynntils.services.mapdata.providers.builtin.BuiltInProvider;
-import com.wynntils.services.mapdata.providers.builtin.CategoriesProvider;
-import com.wynntils.services.mapdata.providers.builtin.CharacterProvider;
-import com.wynntils.services.mapdata.providers.builtin.CombatListProvider;
-import com.wynntils.services.mapdata.providers.builtin.MapIconsProvider;
-import com.wynntils.services.mapdata.providers.builtin.PlaceListProvider;
-import com.wynntils.services.mapdata.providers.builtin.ServiceListProvider;
-import com.wynntils.services.mapdata.providers.builtin.WaypointsProvider;
+import com.wynntils.services.mapdata.providers.builtin.*;
 import com.wynntils.services.mapdata.providers.json.JsonProvider;
 import com.wynntils.services.mapdata.type.MapCategory;
 import com.wynntils.services.mapdata.type.MapFeature;
+
 import java.io.File;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Stream;
 
 public class MapDataService extends Service {
@@ -158,7 +148,9 @@ public class MapDataService extends Service {
 
     // endregion
 
-    /** This method requires a MapVisibility with all values non-empty to work correctly. */
+    /**
+     * This method requires a MapVisibility with all values non-empty to work correctly.
+     */
     public float calculateVisibility(ResolvedMapVisibility mapVisibility, float zoomLevel) {
         float min = mapVisibility.min();
         float max = mapVisibility.max();

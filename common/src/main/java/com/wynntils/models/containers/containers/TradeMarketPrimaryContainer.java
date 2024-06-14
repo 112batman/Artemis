@@ -8,6 +8,7 @@ import com.wynntils.models.containers.Container;
 import com.wynntils.models.containers.type.ContainerBounds;
 import com.wynntils.models.containers.type.HighlightableProfessionProperty;
 import com.wynntils.models.containers.type.ScrollableContainerProperty;
+
 import java.util.regex.Pattern;
 
 public class TradeMarketPrimaryContainer extends Container

@@ -11,9 +11,10 @@ import com.wynntils.models.character.type.ClassType;
 import com.wynntils.models.items.properties.CraftedItemProperty;
 import com.wynntils.utils.mc.LoreUtils;
 import com.wynntils.utils.type.Pair;
-import java.util.List;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
+
+import java.util.List;
 
 public final class CraftedTooltipBuilder extends TooltipBuilder {
     private final CraftedItemProperty craftedItem;

@@ -5,6 +5,7 @@
 package com.wynntils.services.map.type;
 
 import com.wynntils.utils.render.Texture;
+
 import java.util.Arrays;
 
 public enum ServiceKind {

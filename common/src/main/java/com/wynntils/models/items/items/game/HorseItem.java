@@ -6,6 +6,7 @@ package com.wynntils.models.items.items.game;
 
 import com.wynntils.models.horse.type.HorseTier;
 import com.wynntils.utils.type.CappedValue;
+
 import java.util.Optional;
 
 public class HorseItem extends GameItem {

@@ -11,14 +11,15 @@ import com.wynntils.utils.MathUtils;
 import com.wynntils.utils.mc.McUtils;
 import com.wynntils.utils.render.RenderUtils;
 import com.wynntils.utils.render.Texture;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.AbstractWidget;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 public final class IconFilterScreen extends WynntilsGridLayoutScreen {
     // Constants
@@ -91,12 +92,12 @@ public final class IconFilterScreen extends WynntilsGridLayoutScreen {
 
         // region include/exclude all buttons
         includeAllButton = new Button.Builder(
-                        Component.translatable("screens.wynntils.iconFilter.includeAll"), (button) -> {
-                            icons.replaceAll((key, value) -> true);
-                            button.active = false;
-                            excludeAllButton.active = true;
-                            populateIcons();
-                        })
+                Component.translatable("screens.wynntils.iconFilter.includeAll"), (button) -> {
+            icons.replaceAll((key, value) -> true);
+            button.active = false;
+            excludeAllButton.active = true;
+            populateIcons();
+        })
                 .pos((int) backgroundX, (int) (dividedHeight * 3))
                 .size(filterButtonWidth, 20)
                 .build();
@@ -106,12 +107,12 @@ public final class IconFilterScreen extends WynntilsGridLayoutScreen {
         this.addRenderableWidget(includeAllButton);
 
         excludeAllButton = new Button.Builder(
-                        Component.translatable("screens.wynntils.iconFilter.excludeAll"), (button) -> {
-                            icons.replaceAll((key, value) -> false);
-                            button.active = false;
-                            includeAllButton.active = true;
-                            populateIcons();
-                        })
+                Component.translatable("screens.wynntils.iconFilter.excludeAll"), (button) -> {
+            icons.replaceAll((key, value) -> false);
+            button.active = false;
+            includeAllButton.active = true;
+            populateIcons();
+        })
                 .pos((int) backgroundX + filterButtonWidth + 5, (int) (dividedHeight * 3))
                 .size(filterButtonWidth, 20)
                 .build();
@@ -124,7 +125,7 @@ public final class IconFilterScreen extends WynntilsGridLayoutScreen {
         // region done button
         this.addRenderableWidget(
                 new Button.Builder(Component.translatable("screens.wynntils.iconFilter.done"), (button) -> McUtils.mc()
-                                .setScreen(previousScreen))
+                        .setScreen(previousScreen))
                         .pos((int) (dividedWidth * 44), (int) (dividedHeight * 3))
                         .size(filterButtonWidth, 20)
                         .build());

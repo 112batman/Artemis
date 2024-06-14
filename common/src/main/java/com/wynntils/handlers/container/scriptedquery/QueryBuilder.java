@@ -7,6 +7,7 @@ package com.wynntils.handlers.container.scriptedquery;
 import com.wynntils.core.WynntilsMod;
 import com.wynntils.handlers.container.type.ContainerAction;
 import com.wynntils.handlers.container.type.ContainerPredicate;
+
 import java.util.LinkedList;
 import java.util.function.Consumer;
 
@@ -17,7 +18,7 @@ import java.util.function.Consumer;
  * 1) a startAction (to open the container)
  * 2) a verification (to check the container that opened, if any)
  * 3) a handleContent (to actually consume the content of the container)
- *
+ * <p>
  * A QueryStep with no verification will assume no new container is opened.
  * A QueryStep with no handleContent will just perform a no-op for consuming the content.
  */

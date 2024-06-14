@@ -15,10 +15,12 @@ import com.wynntils.models.players.type.GuildInfo;
 import com.wynntils.models.players.type.GuildMemberInfo;
 import com.wynntils.models.players.type.GuildRank;
 import com.wynntils.utils.mc.McUtils;
+
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
+
 import net.minecraft.ChatFormatting;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;

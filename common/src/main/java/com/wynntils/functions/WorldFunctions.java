@@ -15,6 +15,7 @@ import com.wynntils.models.worlds.profile.ServerProfile;
 import com.wynntils.utils.mc.McUtils;
 import com.wynntils.utils.mc.type.Location;
 import com.wynntils.utils.type.CappedValue;
+
 import java.util.List;
 import java.util.Locale;
 

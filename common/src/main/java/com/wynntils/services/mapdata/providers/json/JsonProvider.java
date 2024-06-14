@@ -4,13 +4,7 @@
  */
 package com.wynntils.services.mapdata.providers.json;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonDeserializationContext;
-import com.google.gson.JsonDeserializer;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParseException;
+import com.google.gson.*;
 import com.google.gson.stream.MalformedJsonException;
 import com.wynntils.core.WynntilsMod;
 import com.wynntils.core.components.Managers;
@@ -24,12 +18,8 @@ import com.wynntils.utils.JsonUtils;
 import com.wynntils.utils.colors.CustomColor;
 import com.wynntils.utils.mc.McUtils;
 import com.wynntils.utils.mc.type.Location;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.Reader;
+
+import java.io.*;
 import java.lang.reflect.Type;
 import java.net.URI;
 import java.nio.charset.StandardCharsets;
@@ -65,13 +55,14 @@ public final class JsonProvider implements MapDataProvider {
 
     /**
      * Load a bundled resource from the mod jar
-     * @param id The id of the resource
+     *
+     * @param id       The id of the resource
      * @param filename The filename of the resource
      * @return The loaded json provider
      */
     public static JsonProvider loadBundledResource(String id, String filename) {
         try (InputStream inputStream = WynntilsMod.getModResourceAsStream(filename);
-                Reader targetReader = new InputStreamReader(inputStream, StandardCharsets.UTF_8)) {
+             Reader targetReader = new InputStreamReader(inputStream, StandardCharsets.UTF_8)) {
             return GSON.fromJson(targetReader, JsonProvider.class);
         } catch (MalformedJsonException e) {
             McUtils.sendErrorToClient("Error parsing map data for '" + id + "'");
@@ -89,7 +80,8 @@ public final class JsonProvider implements MapDataProvider {
 
     /**
      * Load a local resource from a file
-     * @param id The id of the resource
+     *
+     * @param id   The id of the resource
      * @param file The file to load
      * @return The loaded json provider
      */
@@ -112,8 +104,9 @@ public final class JsonProvider implements MapDataProvider {
 
     /**
      * Load an online resource from a url
-     * @param id The id of the resource
-     * @param url The url to load
+     *
+     * @param id               The id of the resource
+     * @param url              The url to load
      * @param registerCallback The callback to call with the loaded provider
      */
     public static void loadOnlineResource(String id, String url, BiConsumer<String, MapDataProvider> registerCallback) {

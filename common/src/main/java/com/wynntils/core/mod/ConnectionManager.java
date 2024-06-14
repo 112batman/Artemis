@@ -10,12 +10,13 @@ import com.wynntils.core.mod.event.WynncraftConnectionEvent;
 import com.wynntils.mc.event.ConnectionEvent.ConnectedEvent;
 import com.wynntils.mc.event.ConnectionEvent.DisconnectedEvent;
 import com.wynntils.mc.event.ScreenOpenedEvent;
+import net.minecraft.client.gui.screens.DisconnectedScreen;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+
 import java.util.List;
 import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import net.minecraft.client.gui.screens.DisconnectedScreen;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 public final class ConnectionManager extends Manager {
     private static final Pattern WYNNCRAFT_SERVER_PATTERN =

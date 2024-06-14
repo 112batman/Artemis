@@ -4,12 +4,9 @@
  */
 package com.wynntils.models.players.profile;
 
-import com.google.gson.JsonDeserializationContext;
-import com.google.gson.JsonDeserializer;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParseException;
+import com.google.gson.*;
 import com.wynntils.utils.colors.CustomColor;
+
 import java.lang.reflect.Type;
 
 public record GuildProfile(String prefix, String name, CustomColor color) {

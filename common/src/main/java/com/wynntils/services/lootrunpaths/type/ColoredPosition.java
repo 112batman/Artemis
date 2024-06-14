@@ -6,4 +6,5 @@ package com.wynntils.services.lootrunpaths.type;
 
 import net.minecraft.world.phys.Vec3;
 
-public record ColoredPosition(Vec3 position, int color) {}
+public record ColoredPosition(Vec3 position, int color) {
+}

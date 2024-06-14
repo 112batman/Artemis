@@ -7,4 +7,5 @@ package com.wynntils.models.items.encoding.type;
 /**
  * Interface for data that can be encoded into bytes.
  */
-public interface ItemData {}
+public interface ItemData {
+}

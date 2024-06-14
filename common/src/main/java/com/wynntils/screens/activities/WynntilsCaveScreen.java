@@ -22,11 +22,7 @@ import com.wynntils.models.activities.type.ActivityType;
 import com.wynntils.screens.activities.widgets.CaveButton;
 import com.wynntils.screens.activities.widgets.CaveProgressButton;
 import com.wynntils.screens.base.WynntilsListScreen;
-import com.wynntils.screens.base.widgets.BackButton;
-import com.wynntils.screens.base.widgets.PageSelectorButton;
-import com.wynntils.screens.base.widgets.ReloadButton;
-import com.wynntils.screens.base.widgets.SortOrderWidget;
-import com.wynntils.screens.base.widgets.SortableActivityScreen;
+import com.wynntils.screens.base.widgets.*;
 import com.wynntils.screens.wynntilsmenu.WynntilsMenuScreen;
 import com.wynntils.services.map.MapTexture;
 import com.wynntils.utils.StringUtils;
@@ -41,14 +37,15 @@ import com.wynntils.utils.render.type.HorizontalAlignment;
 import com.wynntils.utils.render.type.TextShadow;
 import com.wynntils.utils.render.type.VerticalAlignment;
 import com.wynntils.utils.type.BoundingBox;
-import java.util.List;
-import java.util.Optional;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.resources.language.I18n;
 import net.minecraft.network.chat.Component;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+
+import java.util.List;
+import java.util.Optional;
 
 public final class WynntilsCaveScreen extends WynntilsListScreen<CaveInfo, CaveButton>
         implements SortableActivityScreen {

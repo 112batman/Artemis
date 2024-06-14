@@ -7,13 +7,7 @@ package com.wynntils.screens.overlays.placement;
 import com.google.common.collect.Lists;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.wynntils.core.components.Managers;
-import com.wynntils.core.consumers.overlays.Corner;
-import com.wynntils.core.consumers.overlays.CustomNameProperty;
-import com.wynntils.core.consumers.overlays.Edge;
-import com.wynntils.core.consumers.overlays.Overlay;
-import com.wynntils.core.consumers.overlays.OverlayPosition;
-import com.wynntils.core.consumers.overlays.OverlaySize;
-import com.wynntils.core.consumers.overlays.SectionCoordinates;
+import com.wynntils.core.consumers.overlays.*;
 import com.wynntils.core.consumers.screens.WynntilsScreen;
 import com.wynntils.core.persisted.config.Config;
 import com.wynntils.core.text.StyledText;
@@ -31,13 +25,6 @@ import com.wynntils.utils.render.type.HorizontalAlignment;
 import com.wynntils.utils.render.type.TextShadow;
 import com.wynntils.utils.render.type.VerticalAlignment;
 import com.wynntils.utils.type.Pair;
-import java.util.Arrays;
-import java.util.EnumMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.stream.Collectors;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.Button;
@@ -48,6 +35,9 @@ import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.phys.Vec2;
 import org.lwjgl.glfw.GLFW;
+
+import java.util.*;
+import java.util.stream.Collectors;
 
 public final class OverlayManagementScreen extends WynntilsScreen {
     // This is used to calculate alignment lines
@@ -393,7 +383,8 @@ public final class OverlayManagementScreen extends WynntilsScreen {
             case CORNER -> handleOverlayCornerDrag(dragX, dragY);
             case EDGE -> handleOverlayEdgeDrag(dragX, dragY);
             case AREA -> handleOverlayBodyDrag(dragX, dragY);
-            default -> {}
+            default -> {
+            }
         }
 
         return false;
@@ -798,20 +789,20 @@ public final class OverlayManagementScreen extends WynntilsScreen {
                         150)));
 
         this.addRenderableWidget(new Button.Builder(
-                        Component.translatable("screens.wynntils.overlayManagement.close"), button -> {
-                            onClose();
-                            McUtils.mc().setScreen(previousScreen);
-                        })
+                Component.translatable("screens.wynntils.overlayManagement.close"), button -> {
+            onClose();
+            McUtils.mc().setScreen(previousScreen);
+        })
                 .pos(this.width / 2 - BUTTON_WIDTH - 12, yPos)
                 .size(BUTTON_WIDTH, BUTTON_HEIGHT)
                 .tooltip(Tooltip.create(Component.translatable("screens.wynntils.overlayManagement.closeTooltip")))
                 .build());
 
         this.addRenderableWidget(new Button.Builder(
-                        buttonsAtBottom ? Component.literal("🠝") : Component.literal("🠟"), button -> {
-                            buttonsAtBottom = !buttonsAtBottom;
-                            setupButtons();
-                        })
+                buttonsAtBottom ? Component.literal("🠝") : Component.literal("🠟"), button -> {
+            buttonsAtBottom = !buttonsAtBottom;
+            setupButtons();
+        })
                 .pos(this.width / 2 - 10, yPos)
                 .size(BUTTON_HEIGHT, BUTTON_HEIGHT)
                 .tooltip(Tooltip.create(
@@ -821,11 +812,11 @@ public final class OverlayManagementScreen extends WynntilsScreen {
                 .build());
 
         this.addRenderableWidget(new Button.Builder(
-                        Component.translatable("screens.wynntils.overlayManagement.apply"), button -> {
-                            Managers.Config.saveConfig();
-                            onClose();
-                            McUtils.mc().setScreen(previousScreen);
-                        })
+                Component.translatable("screens.wynntils.overlayManagement.apply"), button -> {
+            Managers.Config.saveConfig();
+            onClose();
+            McUtils.mc().setScreen(previousScreen);
+        })
                 .pos(this.width / 2 + 12, yPos)
                 .size(BUTTON_WIDTH, BUTTON_HEIGHT)
                 .tooltip(Tooltip.create(Component.translatable("screens.wynntils.overlayManagement.applyTooltip")))

@@ -5,6 +5,7 @@
 package com.wynntils.models.containers.containers;
 
 import com.wynntils.models.containers.Container;
+
 import java.util.regex.Pattern;
 
 public class SeaskipperContainer extends Container {

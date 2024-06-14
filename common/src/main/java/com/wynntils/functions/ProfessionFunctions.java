@@ -10,6 +10,7 @@ import com.wynntils.core.consumers.functions.arguments.FunctionArguments;
 import com.wynntils.models.profession.type.HarvestInfo;
 import com.wynntils.models.profession.type.ProfessionType;
 import com.wynntils.utils.StringUtils;
+
 import java.util.List;
 import java.util.Optional;
 

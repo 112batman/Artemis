@@ -8,9 +8,10 @@ import com.wynntils.core.text.StyledText;
 import com.wynntils.handlers.labels.type.LabelInfo;
 import com.wynntils.handlers.labels.type.LabelParser;
 import com.wynntils.utils.mc.type.Location;
+import net.minecraft.world.entity.Entity;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import net.minecraft.world.entity.Entity;
 
 public class GuildSeasonLeaderboardLabelParser implements LabelParser {
     // Test in GuildSeasonLeaderboardLabelParser_GUILD_SEASON_LEADERBOARD_PATTERN

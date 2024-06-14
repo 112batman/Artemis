@@ -13,12 +13,13 @@ import com.wynntils.mc.event.MenuEvent;
 import com.wynntils.mc.event.ScreenClosedEvent;
 import com.wynntils.utils.mc.McUtils;
 import com.wynntils.utils.wynn.ContainerUtils;
-import java.util.HashSet;
-import java.util.Optional;
-import java.util.Set;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+
+import java.util.HashSet;
+import java.util.Optional;
+import java.util.Set;
 
 public class WrappedScreenHandler extends Handler {
     private final Set<WrappedScreenHolder> wrappedScreenHolders = new HashSet<>();

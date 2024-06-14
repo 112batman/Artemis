@@ -10,6 +10,7 @@ import com.google.gson.JsonObject;
 import com.wynntils.core.persisted.PersistedValue;
 import com.wynntils.core.persisted.upfixers.Upfixer;
 import com.wynntils.services.map.pois.CustomPoi;
+
 import java.util.Set;
 
 public class CustomPoiVisbilityUpfixer implements Upfixer {

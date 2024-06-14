@@ -4,4 +4,5 @@
  */
 package com.wynntils.models.abilitytree.type;
 
-public record ArchetypeRequirement(String name, int required) {}
+public record ArchetypeRequirement(String name, int required) {
+}

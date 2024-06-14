@@ -14,6 +14,7 @@ import com.google.gson.JsonPrimitive;
 import com.wynntils.core.WynntilsMod;
 import com.wynntils.core.crowdsource.type.CrowdSourcedDataGameVersion;
 import com.wynntils.core.crowdsource.type.CrowdSourcedDataType;
+
 import java.lang.reflect.Type;
 import java.util.Map;
 import java.util.Set;
@@ -31,7 +32,8 @@ public class CrowdSourcedData {
     private final Map<CrowdSourcedDataGameVersion, Map<CrowdSourcedDataType, Set<Object>>> data =
             new ConcurrentSkipListMap<>();
 
-    CrowdSourcedData() {}
+    CrowdSourcedData() {
+    }
 
     CrowdSourcedData(Map<CrowdSourcedDataGameVersion, Map<CrowdSourcedDataType, Set<Object>>> deserializedData) {
         data.putAll(deserializedData);

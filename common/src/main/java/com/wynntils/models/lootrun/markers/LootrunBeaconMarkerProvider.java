@@ -16,6 +16,7 @@ import com.wynntils.services.map.pois.MarkerPoi;
 import com.wynntils.utils.EnumUtils;
 import com.wynntils.utils.colors.CommonColors;
 import com.wynntils.utils.mc.type.PoiLocation;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -65,6 +66,6 @@ public class LootrunBeaconMarkerProvider implements MarkerProvider<MarkerPoi> {
         // FIXME: Feature-Model dependency
         return Models.Lootrun.getState().isRunning()
                 && Managers.Feature.getFeatureInstance(CustomLootrunBeaconsFeature.class)
-                        .isEnabled();
+                .isEnabled();
     }
 }

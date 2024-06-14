@@ -23,6 +23,7 @@ import com.wynntils.core.persisted.PersistedValue;
 import com.wynntils.core.persisted.upfixers.UpfixerType;
 import com.wynntils.utils.JsonUtils;
 import com.wynntils.utils.mc.McUtils;
+
 import java.io.File;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
@@ -33,6 +34,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
 import java.util.stream.Stream;
+
 import org.apache.commons.lang3.reflect.FieldUtils;
 
 public final class ConfigManager extends Manager {
@@ -275,7 +277,8 @@ public final class ConfigManager extends Manager {
     public boolean importConfig(String jsonInput, List<Configurable> configsToImport) {
         try {
             Map<String, Object> configData =
-                    Managers.Json.GSON.fromJson(jsonInput, new TypeToken<HashMap<String, Object>>() {}.getType());
+                    Managers.Json.GSON.fromJson(jsonInput, new TypeToken<HashMap<String, Object>>() {
+                    }.getType());
 
             if (configData == null) {
                 WynntilsMod.warn("Unable to import config due to invalid input");

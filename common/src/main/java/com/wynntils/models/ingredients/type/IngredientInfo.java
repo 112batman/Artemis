@@ -10,6 +10,7 @@ import com.wynntils.models.stats.type.StatType;
 import com.wynntils.models.wynnitem.type.ItemMaterial;
 import com.wynntils.utils.type.Pair;
 import com.wynntils.utils.type.RangedValue;
+
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -26,4 +27,5 @@ public record IngredientInfo(
         int duration,
         int charges,
         int durabilityModifier,
-        List<Pair<StatType, RangedValue>> variableStats) {}
+        List<Pair<StatType, RangedValue>> variableStats) {
+}

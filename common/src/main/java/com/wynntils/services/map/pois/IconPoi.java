@@ -45,9 +45,9 @@ public abstract class IconPoi implements Poi {
                         zoom,
                         minZoom
                                 * (1
-                                        - Managers.Feature.getFeatureInstance(MainMapFeature.class)
-                                                .poiFadeAdjustment
-                                                .get()),
+                                - Managers.Feature.getFeatureInstance(MainMapFeature.class)
+                                .poiFadeAdjustment
+                                .get()),
                         minZoom,
                         0f,
                         1f),

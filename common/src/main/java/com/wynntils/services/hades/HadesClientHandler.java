@@ -11,18 +11,14 @@ import com.wynntils.features.players.HadesFeature;
 import com.wynntils.hades.objects.HadesConnection;
 import com.wynntils.hades.protocol.interfaces.adapters.IHadesClientAdapter;
 import com.wynntils.hades.protocol.packets.client.HCPacketAuthenticate;
-import com.wynntils.hades.protocol.packets.server.HSPacketAuthenticationResponse;
-import com.wynntils.hades.protocol.packets.server.HSPacketClearMutual;
-import com.wynntils.hades.protocol.packets.server.HSPacketDisconnect;
-import com.wynntils.hades.protocol.packets.server.HSPacketDiscordLobbyServer;
-import com.wynntils.hades.protocol.packets.server.HSPacketPong;
-import com.wynntils.hades.protocol.packets.server.HSPacketUpdateMutual;
+import com.wynntils.hades.protocol.packets.server.*;
 import com.wynntils.services.hades.event.HadesEvent;
 import com.wynntils.services.hades.event.HadesUserAddedEvent;
 import com.wynntils.utils.mc.McUtils;
-import java.util.Optional;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
+
+import java.util.Optional;
 
 public class HadesClientHandler implements IHadesClientAdapter {
     private final HadesConnection hadesConnection;

@@ -12,8 +12,9 @@ import com.wynntils.models.beacons.type.Beacon;
 import com.wynntils.models.lootrun.event.LootrunBeaconSelectedEvent;
 import com.wynntils.models.lootrun.type.LootrunLocation;
 import com.wynntils.models.lootrun.type.LootrunTaskType;
-import java.util.Optional;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+
+import java.util.Optional;
 
 public class LootrunLocationDataCollector extends CrowdSourcedDataCollector<LootrunTaskLocation> {
     @SubscribeEvent

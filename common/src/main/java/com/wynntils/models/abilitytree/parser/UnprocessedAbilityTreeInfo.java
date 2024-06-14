@@ -9,15 +9,9 @@ import com.wynntils.models.abilitytree.type.AbilityTreeConnectionType;
 import com.wynntils.models.abilitytree.type.AbilityTreeInfo;
 import com.wynntils.models.abilitytree.type.AbilityTreeLocation;
 import com.wynntils.models.abilitytree.type.AbilityTreeSkillNode;
-import java.util.ArrayList;
-import java.util.Deque;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
 import net.minecraft.world.item.ItemStack;
+
+import java.util.*;
 
 public class UnprocessedAbilityTreeInfo {
     private final List<AbilityTreeSkillNode> nodes = new ArrayList<>();

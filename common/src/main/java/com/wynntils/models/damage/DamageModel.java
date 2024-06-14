@@ -13,12 +13,14 @@ import com.wynntils.models.damage.type.DamageDealtEvent;
 import com.wynntils.models.damage.type.FocusedDamageEvent;
 import com.wynntils.models.stats.type.DamageType;
 import com.wynntils.utils.type.TimedSet;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
 import net.minecraft.world.entity.decoration.ArmorStand;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 
@@ -82,10 +84,10 @@ public final class DamageModel extends Model {
 
     public double getAverageAreaDamagePerSecond(int seconds) {
         return areaDamageSet.getEntries().stream()
-                        .filter(timedEntry ->
-                                (System.currentTimeMillis() - timedEntry.getCreation()) <= seconds * 1000L)
-                        .mapToInt(TimedSet.TimedEntry::getEntry)
-                        .sum()
+                .filter(timedEntry ->
+                        (System.currentTimeMillis() - timedEntry.getCreation()) <= seconds * 1000L)
+                .mapToInt(TimedSet.TimedEntry::getEntry)
+                .sum()
                 / (double) seconds;
     }
 

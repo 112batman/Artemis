@@ -9,6 +9,7 @@ import com.wynntils.models.containers.type.ContainerBounds;
 import com.wynntils.models.containers.type.PersonalStorageType;
 import com.wynntils.models.containers.type.SearchableContainerProperty;
 import com.wynntils.services.itemfilter.type.ItemProviderType;
+
 import java.util.List;
 import java.util.regex.Pattern;
 

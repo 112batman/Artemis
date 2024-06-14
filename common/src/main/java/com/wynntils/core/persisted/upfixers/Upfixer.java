@@ -7,6 +7,7 @@ package com.wynntils.core.persisted.upfixers;
 import com.google.common.base.CaseFormat;
 import com.google.gson.JsonObject;
 import com.wynntils.core.persisted.PersistedValue;
+
 import java.util.Set;
 
 @FunctionalInterface

@@ -9,8 +9,9 @@ import com.wynntils.screens.base.TextboxScreen;
 import com.wynntils.screens.base.widgets.SearchWidget;
 import com.wynntils.utils.render.RenderUtils;
 import com.wynntils.utils.render.Texture;
-import java.util.function.Consumer;
 import net.minecraft.client.gui.Font;
+
+import java.util.function.Consumer;
 
 public class QuestBookSearchWidget extends SearchWidget {
     public QuestBookSearchWidget(

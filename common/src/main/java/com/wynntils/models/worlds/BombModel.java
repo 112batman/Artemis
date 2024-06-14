@@ -15,6 +15,7 @@ import com.wynntils.models.worlds.bossbars.InfoBar;
 import com.wynntils.models.worlds.event.WorldStateEvent;
 import com.wynntils.models.worlds.type.BombInfo;
 import com.wynntils.models.worlds.type.BombType;
+
 import java.util.Comparator;
 import java.util.EnumMap;
 import java.util.List;
@@ -24,6 +25,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Predicate;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 
@@ -169,5 +171,6 @@ public final class BombModel extends Model {
         }
     }
 
-    private record BombKey(String server, BombType type) {}
+    private record BombKey(String server, BombType type) {
+    }
 }

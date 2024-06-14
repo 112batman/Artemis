@@ -14,8 +14,10 @@ import com.wynntils.core.consumers.commands.Command;
 import com.wynntils.models.players.type.WynnPlayerInfo;
 import com.wynntils.utils.DateFormatter;
 import com.wynntils.utils.mc.McUtils;
+
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
+
 import net.minecraft.ChatFormatting;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;

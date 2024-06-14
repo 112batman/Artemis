@@ -8,7 +8,9 @@ import com.wynntils.core.events.EventThread;
 import net.minecraftforge.eventbus.api.Cancelable;
 import net.minecraftforge.eventbus.api.Event;
 
-/** Fires on receiving {@link net.minecraft.network.protocol.game.ClientboundResourcePackPacket} */
+/**
+ * Fires on receiving {@link net.minecraft.network.protocol.game.ClientboundResourcePackPacket}
+ */
 @EventThread(EventThread.Type.IO)
 @Cancelable
 public class ResourcePackEvent extends Event {

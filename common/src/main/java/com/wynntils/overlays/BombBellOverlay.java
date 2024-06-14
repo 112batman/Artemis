@@ -21,11 +21,12 @@ import com.wynntils.utils.render.buffered.BufferedFontRenderer;
 import com.wynntils.utils.render.type.HorizontalAlignment;
 import com.wynntils.utils.render.type.TextShadow;
 import com.wynntils.utils.render.type.VerticalAlignment;
+import net.minecraft.client.renderer.MultiBufferSource;
+
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Supplier;
-import net.minecraft.client.renderer.MultiBufferSource;
 
 public class BombBellOverlay extends Overlay {
     @Persisted

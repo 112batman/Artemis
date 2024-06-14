@@ -125,6 +125,7 @@ public final class McUtils {
     /**
      * Sends some chat message directly to the server.
      * Does not respect ChatTabFeature settings.
+     *
      * @param message The message to send.
      */
     public static void sendChat(String message) {

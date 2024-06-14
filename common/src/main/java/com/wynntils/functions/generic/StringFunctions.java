@@ -9,10 +9,11 @@ import com.wynntils.core.consumers.functions.arguments.FunctionArguments;
 import com.wynntils.utils.StringUtils;
 import com.wynntils.utils.type.CappedValue;
 import com.wynntils.utils.type.RangedValue;
+import net.minecraft.network.chat.Component;
+
 import java.util.List;
 import java.util.regex.Pattern;
 import java.util.regex.PatternSyntaxException;
-import net.minecraft.network.chat.Component;
 
 public class StringFunctions {
     public static class FormatFunction extends GenericFunction<String> {

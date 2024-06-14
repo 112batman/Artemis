@@ -15,10 +15,12 @@ import com.wynntils.models.abilities.type.ShamanMaskType;
 import com.wynntils.models.statuseffects.event.StatusEffectsChangedEvent;
 import com.wynntils.models.statuseffects.type.StatusEffect;
 import com.wynntils.models.worlds.event.WorldStateEvent;
+
 import java.util.List;
 import java.util.Optional;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 public final class ShamanMaskModel extends Model {

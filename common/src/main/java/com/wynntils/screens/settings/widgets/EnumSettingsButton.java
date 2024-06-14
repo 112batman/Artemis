@@ -7,10 +7,11 @@ package com.wynntils.screens.settings.widgets;
 import com.wynntils.core.persisted.config.Config;
 import com.wynntils.utils.mc.ComponentUtils;
 import com.wynntils.utils.mc.McUtils;
-import java.util.EnumSet;
-import java.util.List;
 import net.minecraft.network.chat.Component;
 import org.lwjgl.glfw.GLFW;
+
+import java.util.EnumSet;
+import java.util.List;
 
 public class EnumSettingsButton<E extends Enum<E>> extends GeneralSettingsButton {
     private final Config<E> config;

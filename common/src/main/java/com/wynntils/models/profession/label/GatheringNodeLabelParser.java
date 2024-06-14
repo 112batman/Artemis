@@ -9,11 +9,12 @@ import com.wynntils.handlers.labels.type.LabelParser;
 import com.wynntils.models.profession.type.MaterialProfile;
 import com.wynntils.utils.mc.type.Location;
 import com.wynntils.utils.type.Pair;
+import net.minecraft.ChatFormatting;
+import net.minecraft.world.entity.Entity;
+
 import java.util.Optional;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import net.minecraft.ChatFormatting;
-import net.minecraft.world.entity.Entity;
 
 public class GatheringNodeLabelParser implements LabelParser<ProfessionGatheringNodeLabelInfo> {
     // Note: At the moment, only Dernic appends to the end of the label, but not consistently..

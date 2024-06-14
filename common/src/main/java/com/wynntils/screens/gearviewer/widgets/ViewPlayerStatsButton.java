@@ -9,11 +9,12 @@ import com.wynntils.core.components.Managers;
 import com.wynntils.core.net.UrlId;
 import com.wynntils.screens.base.widgets.WynntilsButton;
 import com.wynntils.utils.mc.McUtils;
-import java.util.List;
-import java.util.Map;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvents;
+
+import java.util.List;
+import java.util.Map;
 
 public class ViewPlayerStatsButton extends WynntilsButton {
     private static final List<Component> VIEW_STATS_TOOLTIP =

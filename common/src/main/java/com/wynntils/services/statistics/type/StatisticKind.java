@@ -6,7 +6,9 @@ package com.wynntils.services.statistics.type;
 
 import com.google.common.base.CaseFormat;
 import com.wynntils.services.statistics.CustomStatFormatters;
+
 import java.util.Locale;
+
 import net.minecraft.client.resources.language.I18n;
 
 public enum StatisticKind {

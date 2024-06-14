@@ -15,6 +15,7 @@ import com.wynntils.utils.type.UnsignedByte;
 public class StartDataTransformer extends DataTransformer<StartData> {
     /**
      * Decodes the start data block. This is specially handled by the {@link ItemTransformerRegistry}.
+     *
      * @param byteReader The byte reader to read the data from.
      * @return The decoded start data.
      */
@@ -37,8 +38,8 @@ public class StartDataTransformer extends DataTransformer<StartData> {
     @Override
     public ErrorOr<UnsignedByte[]> encodeData(ItemTransformingVersion version, StartData data) {
         return switch (version) {
-            case VERSION_1 -> ErrorOr.of(new UnsignedByte[] {
-                UnsignedByte.of(data.version().getId()),
+            case VERSION_1 -> ErrorOr.of(new UnsignedByte[]{
+                    UnsignedByte.of(data.version().getId()),
             });
         };
     }

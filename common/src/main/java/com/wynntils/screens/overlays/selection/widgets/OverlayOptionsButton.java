@@ -15,10 +15,11 @@ import com.wynntils.utils.render.Texture;
 import com.wynntils.utils.render.type.HorizontalAlignment;
 import com.wynntils.utils.render.type.TextShadow;
 import com.wynntils.utils.render.type.VerticalAlignment;
-import java.util.List;
-import java.util.function.Consumer;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
+
+import java.util.List;
+import java.util.function.Consumer;
 
 public class OverlayOptionsButton extends BasicTexturedButton {
     private final StyledText message;
@@ -51,12 +52,12 @@ public class OverlayOptionsButton extends BasicTexturedButton {
         // of the button is rendered underneath the background
         if (isHovered
                 && MathUtils.isInside(
-                        mouseX,
-                        mouseY,
-                        0,
-                        Texture.OVERLAY_SELECTION_GUI.width(),
-                        0,
-                        Texture.OVERLAY_SELECTION_GUI.height())) {
+                mouseX,
+                mouseY,
+                0,
+                Texture.OVERLAY_SELECTION_GUI.width(),
+                0,
+                Texture.OVERLAY_SELECTION_GUI.height())) {
             isHovered = false;
         }
 

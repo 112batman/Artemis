@@ -11,9 +11,10 @@ import com.wynntils.screens.base.TooltipProvider;
 import com.wynntils.screens.base.widgets.WynntilsButton;
 import com.wynntils.utils.render.RenderUtils;
 import com.wynntils.utils.render.Texture;
-import java.util.List;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
+
+import java.util.List;
 
 public class CaveProgressButton extends WynntilsButton implements TooltipProvider {
     public CaveProgressButton(int x, int y, int width, int height) {
@@ -36,7 +37,8 @@ public class CaveProgressButton extends WynntilsButton implements TooltipProvide
     }
 
     @Override
-    public void onPress() {}
+    public void onPress() {
+    }
 
     @Override
     public List<Component> getTooltipLines() {

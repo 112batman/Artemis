@@ -5,6 +5,7 @@
 package com.wynntils.models.inventory;
 
 import java.util.function.Predicate;
+
 import net.minecraft.world.item.ItemStack;
 
 public class InventoryWatcher {

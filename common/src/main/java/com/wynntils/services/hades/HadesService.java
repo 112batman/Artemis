@@ -29,13 +29,6 @@ import com.wynntils.services.hades.event.HadesEvent;
 import com.wynntils.services.hades.type.PlayerStatus;
 import com.wynntils.services.map.pois.PlayerMainMapPoi;
 import com.wynntils.utils.mc.McUtils;
-import java.net.InetAddress;
-import java.net.UnknownHostException;
-import java.util.List;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.TimeUnit;
-import java.util.stream.Stream;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.network.chat.ClickEvent;
@@ -44,6 +37,14 @@ import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.network.chat.Style;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+import java.util.List;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
+import java.util.stream.Stream;
 
 public final class HadesService extends Service {
     private static final int TICKS_PER_UPDATE = 2;
@@ -204,14 +205,14 @@ public final class HadesService extends Service {
         if (!isConnected()) return;
         if (!Models.WorldState.onWorld() || McUtils.player().hasEffect(MobEffects.NIGHT_VISION)) return;
         if (!Managers.Feature.getFeatureInstance(HadesFeature.class)
-                        .shareWithParty
-                        .get()
+                .shareWithParty
+                .get()
                 && !Managers.Feature.getFeatureInstance(HadesFeature.class)
-                        .shareWithGuild
-                        .get()
+                .shareWithGuild
+                .get()
                 && !Managers.Feature.getFeatureInstance(HadesFeature.class)
-                        .shareWithFriends
-                        .get()) return;
+                .shareWithFriends
+                .get()) return;
 
         tickCountUntilUpdate--;
 

@@ -7,6 +7,7 @@ package com.wynntils.functions.generic;
 import com.wynntils.core.consumers.functions.GenericFunction;
 import com.wynntils.core.consumers.functions.arguments.FunctionArguments;
 import com.wynntils.utils.mc.type.Location;
+
 import java.util.List;
 
 public final class LocationFunctions {

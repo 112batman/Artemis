@@ -7,7 +7,9 @@ package com.wynntils.models.beacons.type;
 import com.wynntils.models.activities.type.ActivityType;
 import com.wynntils.utils.colors.CommonColors;
 import com.wynntils.utils.colors.CustomColor;
+
 import java.util.Set;
+
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;

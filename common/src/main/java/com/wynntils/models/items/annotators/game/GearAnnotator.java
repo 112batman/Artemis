@@ -12,8 +12,10 @@ import com.wynntils.handlers.item.ItemAnnotation;
 import com.wynntils.models.gear.type.GearInfo;
 import com.wynntils.models.gear.type.GearInstance;
 import com.wynntils.models.items.items.game.GearItem;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
 import net.minecraft.world.item.ItemStack;
 
 public final class GearAnnotator implements GameItemAnnotator {

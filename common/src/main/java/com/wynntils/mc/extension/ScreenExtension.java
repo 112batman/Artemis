@@ -6,4 +6,5 @@ package com.wynntils.mc.extension;
 
 import com.wynntils.screens.base.TextboxScreen;
 
-public interface ScreenExtension extends TextboxScreen {}
+public interface ScreenExtension extends TextboxScreen {
+}

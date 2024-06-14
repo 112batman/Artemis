@@ -7,7 +7,9 @@ package com.wynntils.mc.event;
 import net.minecraft.client.gui.screens.PauseScreen;
 import net.minecraftforge.eventbus.api.Event;
 
-/** Fired on initialization of {@link PauseScreen} */
+/**
+ * Fired on initialization of {@link PauseScreen}
+ */
 public final class PauseMenuInitEvent extends Event {
     private final PauseScreen pauseScreen;
 

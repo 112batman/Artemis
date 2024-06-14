@@ -17,13 +17,14 @@ import com.wynntils.utils.render.Texture;
 import com.wynntils.utils.render.type.HorizontalAlignment;
 import com.wynntils.utils.render.type.TextShadow;
 import com.wynntils.utils.render.type.VerticalAlignment;
-import java.util.ArrayList;
-import java.util.List;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.Renderable;
 import net.minecraft.client.gui.components.events.GuiEventListener;
 import net.minecraft.network.chat.Component;
 import org.lwjgl.glfw.GLFW;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public abstract class WynntilsListScreen<E, B extends WynntilsButton> extends WynntilsMenuScreenBase
         implements WynntilsPagedScreen, TextboxScreen {
@@ -258,7 +259,8 @@ public abstract class WynntilsListScreen<E, B extends WynntilsButton> extends Wy
 
     // Dummy impl
     @Override
-    public void setFocusedTextInput(TextInputBoxWidget focusedTextInput) {}
+    public void setFocusedTextInput(TextInputBoxWidget focusedTextInput) {
+    }
 
     protected int getElementsPerPage() {
         return 13;

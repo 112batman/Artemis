@@ -11,6 +11,7 @@ import com.google.gson.JsonParser;
 import com.google.gson.JsonSyntaxException;
 import com.wynntils.core.text.StyledText;
 import com.wynntils.utils.StringUtils;
+
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -18,6 +19,7 @@ import java.util.List;
 import java.util.function.Supplier;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.nbt.CompoundTag;
@@ -87,7 +89,9 @@ public final class LoreUtils {
         return StyledText.concat(getLore(itemStack));
     }
 
-    /** Get the lore NBT tag from an item, else return empty */
+    /**
+     * Get the lore NBT tag from an item, else return empty
+     */
     public static ListTag getLoreTagElseEmpty(ItemStack itemStack) {
         if (itemStack.isEmpty()) return new ListTag();
         CompoundTag display = itemStack.getTagElement("display");
@@ -99,7 +103,9 @@ public final class LoreUtils {
         return (ListTag) loreBase;
     }
 
-    /** Get the lore NBT tag from an item, else return null */
+    /**
+     * Get the lore NBT tag from an item, else return null
+     */
     public static ListTag getLoreTag(ItemStack itemStack) {
         if (itemStack.isEmpty()) return null;
         CompoundTag display = itemStack.getTagElement("display");
@@ -111,7 +117,9 @@ public final class LoreUtils {
         return (ListTag) loreBase;
     }
 
-    /** Get the lore NBT tag from an item, else return null */
+    /**
+     * Get the lore NBT tag from an item, else return null
+     */
     public static ListTag getOrCreateLoreTag(ItemStack itemStack) {
         if (itemStack.isEmpty()) return null;
 
@@ -123,7 +131,9 @@ public final class LoreUtils {
         return (ListTag) lore;
     }
 
-    /** Get the lore NBT tag from an item, else return null */
+    /**
+     * Get the lore NBT tag from an item, else return null
+     */
     public static Tag getOrCreateTag(CompoundTag tag, String key, Supplier<Tag> create) {
         return tag.contains(key) ? tag.get(key) : tag.put(key, create.get());
     }
@@ -132,7 +142,7 @@ public final class LoreUtils {
      * Replace the lore on an item's NBT tag.
      *
      * @param itemStack The {@link ItemStack} to have its
-     * @param tag The {@link ListTag} to replace with
+     * @param tag       The {@link ListTag} to replace with
      */
     public static void replaceLore(ItemStack itemStack, ListTag tag) {
         CompoundTag nbt = itemStack.getOrCreateTag();
@@ -142,7 +152,9 @@ public final class LoreUtils {
         itemStack.setTag(nbt);
     }
 
-    /** Converts a string to a usable lore tag */
+    /**
+     * Converts a string to a usable lore tag
+     */
     public static StringTag toLoreStringTag(String toConvert) {
         return StringTag.valueOf(toLoreString(toConvert));
     }
@@ -252,7 +264,7 @@ public final class LoreUtils {
      */
     public static JsonObject getJsonFromIngameLore(ItemStack itemStack) {
         String rawLore = StringUtils.substringBeforeLast(
-                        getStringLore(itemStack).getString(), "}") + "}"; // remove extra unnecessary info
+                getStringLore(itemStack).getString(), "}") + "}"; // remove extra unnecessary info
         try {
             return JsonParser.parseString(rawLore).getAsJsonObject();
         } catch (JsonSyntaxException e) {

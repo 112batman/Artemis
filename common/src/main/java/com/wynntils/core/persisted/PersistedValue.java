@@ -5,6 +5,7 @@
 package com.wynntils.core.persisted;
 
 import com.wynntils.core.components.Managers;
+
 import java.lang.reflect.Type;
 
 public abstract class PersistedValue<T> implements Comparable<PersistedValue<T>> {

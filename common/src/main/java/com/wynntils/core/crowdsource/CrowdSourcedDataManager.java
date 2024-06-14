@@ -17,6 +17,7 @@ import com.wynntils.crowdsource.ProfessionNodeLocationDataCollector;
 import com.wynntils.crowdsource.ProfessionStationLocationDataCollector;
 import com.wynntils.features.wynntils.DataCrowdSourcingFeature;
 import com.wynntils.utils.type.ConfirmedBoolean;
+
 import java.lang.reflect.ParameterizedType;
 import java.util.HashMap;
 import java.util.List;

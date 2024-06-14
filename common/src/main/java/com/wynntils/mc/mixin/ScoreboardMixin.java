@@ -7,7 +7,6 @@ package com.wynntils.mc.mixin;
 import com.google.common.collect.Maps;
 import com.wynntils.core.events.MixinHelper;
 import com.wynntils.mc.event.PlayerTeamEvent;
-import java.util.Map;
 import net.minecraft.world.scores.Objective;
 import net.minecraft.world.scores.PlayerTeam;
 import net.minecraft.world.scores.Score;
@@ -18,6 +17,8 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
+
+import java.util.Map;
 
 @Mixin(Scoreboard.class)
 public abstract class ScoreboardMixin {

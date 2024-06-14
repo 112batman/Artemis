@@ -10,6 +10,7 @@ import com.wynntils.services.itemfilter.filters.RangedStatFilters;
 import com.wynntils.services.itemfilter.type.StatFilter;
 import com.wynntils.services.itemfilter.type.StatProviderAndFilterPair;
 import com.wynntils.utils.type.CappedValue;
+
 import java.util.Optional;
 
 public class RangedCappedValueFilterWidget extends RangedNumericFilterWidget<CappedValue> {
@@ -25,7 +26,7 @@ public class RangedCappedValueFilterWidget extends RangedNumericFilterWidget<Cap
 
         if (filterPair != null
                 && filterPair.statFilter()
-                        instanceof RangedStatFilters.RangedCappedValueStatFilter cappedValueStatFilter) {
+                instanceof RangedStatFilters.RangedCappedValueStatFilter cappedValueStatFilter) {
             setMinInput(String.valueOf(cappedValueStatFilter.getMin()));
             setMaxInput(String.valueOf(cappedValueStatFilter.getMax()));
         }

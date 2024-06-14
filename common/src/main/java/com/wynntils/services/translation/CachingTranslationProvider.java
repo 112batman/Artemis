@@ -9,6 +9,7 @@ import com.google.gson.reflect.TypeToken;
 import com.wynntils.core.WynntilsMod;
 import com.wynntils.services.translation.type.TranslationProvider;
 import com.wynntils.utils.TaskUtils;
+
 import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.Type;
@@ -17,6 +18,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Consumer;
+
 import org.apache.commons.io.FileUtils;
 
 public abstract class CachingTranslationProvider implements TranslationProvider {
@@ -80,7 +82,8 @@ public abstract class CachingTranslationProvider implements TranslationProvider 
         try {
             String json = FileUtils.readFileToString(f, "UTF-8");
 
-            Type type = new TypeToken<HashMap<String, ConcurrentHashMap<String, List<String>>>>() {}.getType();
+            Type type = new TypeToken<HashMap<String, ConcurrentHashMap<String, List<String>>>>() {
+            }.getType();
             translationCaches = WynntilsMod.GSON.fromJson(json, type);
         } catch (IOException e) {
             WynntilsMod.error("Error when trying to load translation cache.", e);

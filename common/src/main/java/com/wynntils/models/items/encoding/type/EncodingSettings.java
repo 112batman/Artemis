@@ -6,7 +6,9 @@ package com.wynntils.models.items.encoding.type;
 
 /**
  * Settings for encoding items.
+ *
  * @param extendedIdentificationEncoding Whether to use extended identification encoding. This only affects identifiable items.
- * @param shareItemName Whether to share the item name. This only affects crafted and custom items.
+ * @param shareItemName                  Whether to share the item name. This only affects crafted and custom items.
  */
-public record EncodingSettings(boolean extendedIdentificationEncoding, boolean shareItemName) {}
+public record EncodingSettings(boolean extendedIdentificationEncoding, boolean shareItemName) {
+}

@@ -24,8 +24,10 @@ import com.wynntils.utils.render.type.HorizontalAlignment;
 import com.wynntils.utils.render.type.TextShadow;
 import com.wynntils.utils.render.type.VerticalAlignment;
 import com.wynntils.utils.type.CappedValue;
+
 import java.util.List;
 import java.util.Map;
+
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
 import org.lwjgl.glfw.GLFW;
@@ -139,7 +141,8 @@ public class ProviderButton extends WynntilsButton {
     }
 
     @Override
-    public void onPress() {}
+    public void onPress() {
+    }
 
     private CustomColor getRectColor() {
         if (McUtils.mc().screen instanceof ItemFilterScreen itemFilterScreen) {

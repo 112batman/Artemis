@@ -20,10 +20,11 @@ import com.wynntils.utils.render.Texture;
 import com.wynntils.utils.render.type.HorizontalAlignment;
 import com.wynntils.utils.render.type.TextShadow;
 import com.wynntils.utils.render.type.VerticalAlignment;
-import java.util.List;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
+
+import java.util.List;
 
 public class SeaskipperDestinationButton extends WynntilsButton {
     private final SeaskipperDestinationPoi destination;
@@ -123,7 +124,8 @@ public class SeaskipperDestinationButton extends WynntilsButton {
     }
 
     @Override
-    public void onPress() {}
+    public void onPress() {
+    }
 
     public SeaskipperDestinationPoi getDestination() {
         return destination;

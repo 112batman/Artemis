@@ -5,6 +5,7 @@
 package com.wynntils.handlers.actionbar;
 
 import com.wynntils.handlers.actionbar.type.ActionBarPosition;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -21,5 +22,6 @@ public interface ActionBarSegment {
 
     void update(Matcher matcher);
 
-    default void removed() {}
+    default void removed() {
+    }
 }

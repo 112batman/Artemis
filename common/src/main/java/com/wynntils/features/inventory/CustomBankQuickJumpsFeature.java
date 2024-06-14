@@ -19,10 +19,12 @@ import com.wynntils.models.containers.containers.personal.PersonalStorageContain
 import com.wynntils.models.containers.type.PersonalStorageType;
 import com.wynntils.utils.mc.McUtils;
 import com.wynntils.utils.wynn.ContainerUtils;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
+
 import net.minecraft.ChatFormatting;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
@@ -127,7 +129,7 @@ public class CustomBankQuickJumpsFeature extends Feature {
             pageDestination = currentPage;
         } else if (pageDestination != currentPage
                 && ((e.getSlot() == NEXT_PAGE_SLOT && pageDestination > currentPage)
-                        || (e.getSlot() == PREVIOUS_PAGE_SLOT && pageDestination < currentPage))) {
+                || (e.getSlot() == PREVIOUS_PAGE_SLOT && pageDestination < currentPage))) {
             jumpToDestination();
         } else if (pageDestination == currentPage) {
             quickJumping = false;

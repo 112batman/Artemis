@@ -14,6 +14,7 @@ import com.wynntils.handlers.scoreboard.type.SegmentMatcher;
 import com.wynntils.models.lootrun.type.LootrunTaskType;
 import com.wynntils.models.lootrun.type.LootrunningState;
 import com.wynntils.utils.type.CappedValue;
+
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

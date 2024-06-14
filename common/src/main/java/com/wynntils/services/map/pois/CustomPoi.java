@@ -10,6 +10,7 @@ import com.wynntils.services.map.type.DisplayPriority;
 import com.wynntils.utils.colors.CustomColor;
 import com.wynntils.utils.mc.type.PoiLocation;
 import com.wynntils.utils.render.Texture;
+
 import java.util.Objects;
 
 public class CustomPoi extends StaticIconPoi {

@@ -10,11 +10,7 @@ import com.wynntils.core.components.Models;
 import com.wynntils.core.text.StyledText;
 import com.wynntils.mc.event.ChangeCarriedItemEvent;
 import com.wynntils.mc.event.SubtitleSetTextEvent;
-import com.wynntils.models.characterstats.actionbar.CoordinatesSegment;
-import com.wynntils.models.characterstats.actionbar.HealthSegment;
-import com.wynntils.models.characterstats.actionbar.ManaSegment;
-import com.wynntils.models.characterstats.actionbar.PowderSpecialSegment;
-import com.wynntils.models.characterstats.actionbar.SprintSegment;
+import com.wynntils.models.characterstats.actionbar.*;
 import com.wynntils.models.elements.type.Powder;
 import com.wynntils.models.gear.type.GearInfo;
 import com.wynntils.models.items.items.game.GearItem;
@@ -22,15 +18,16 @@ import com.wynntils.utils.MathUtils;
 import com.wynntils.utils.mc.McUtils;
 import com.wynntils.utils.type.CappedValue;
 import com.wynntils.utils.wynn.InventoryUtils;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
 
 public final class CharacterStatsModel extends Model {
     private final CoordinatesSegment coordinatesSegment = new CoordinatesSegment(this::centerSegmentCleared);
@@ -142,7 +139,7 @@ public final class CharacterStatsModel extends Model {
 
     /**
      * Return the time in game ticks (1/20th of a second, 50ms) until the next soul point is given
-     *
+     * <p>
      * Also check that {@code {@link #getMaxSoulPoints()} >= {@link #getSoulPoints()}},
      * in which case soul points are already full
      */
@@ -162,7 +159,7 @@ public final class CharacterStatsModel extends Model {
             GearInfo gearInfo = mainHandGearItem.get().getItemInfo();
             if (gearInfo.type().isValidWeapon(Models.Character.getClassType())
                     && Models.CombatXp.getCombatLevel().current()
-                            >= gearInfo.requirements().level()) {
+                    >= gearInfo.requirements().level()) {
                 wornGear.add(gearInfo);
             }
         }

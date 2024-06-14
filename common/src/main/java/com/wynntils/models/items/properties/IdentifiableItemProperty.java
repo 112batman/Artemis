@@ -9,11 +9,13 @@ import com.wynntils.models.stats.type.StatActualValue;
 import com.wynntils.models.stats.type.StatPossibleValues;
 import com.wynntils.models.stats.type.StatType;
 import com.wynntils.utils.type.RangedValue;
+
 import java.util.List;
 import java.util.Optional;
 
 /**
  * Represents an item that can be identified, and provides the information needed to build a tooltip for it.
+ *
  * @param <T> The type of the item info
  * @param <U> The type of the item instance
  */

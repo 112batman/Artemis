@@ -11,11 +11,13 @@ import com.wynntils.handlers.item.ItemAnnotation;
 import com.wynntils.models.items.items.game.TeleportScrollItem;
 import com.wynntils.utils.mc.LoreUtils;
 import com.wynntils.utils.wynn.WynnUtils;
+
 import java.util.Arrays;
 import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
+
 import net.minecraft.world.item.ItemStack;
 
 public final class TeleportScrollAnnotator implements GameItemAnnotator {

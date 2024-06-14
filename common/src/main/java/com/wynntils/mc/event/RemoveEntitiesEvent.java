@@ -4,9 +4,10 @@
  */
 package com.wynntils.mc.event;
 
-import java.util.List;
 import net.minecraft.network.protocol.game.ClientboundRemoveEntitiesPacket;
 import net.minecraftforge.eventbus.api.Event;
+
+import java.util.List;
 
 public class RemoveEntitiesEvent extends Event {
     private final List<Integer> entityIds;

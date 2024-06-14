@@ -6,9 +6,11 @@ package com.wynntils.models.gear.type;
 
 import com.wynntils.core.text.StyledText;
 import com.wynntils.utils.StringUtils;
+
 import java.util.Arrays;
 import java.util.Locale;
 import java.util.Optional;
+
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 
@@ -56,10 +58,10 @@ public enum GearTier {
                 .filter(ChatFormatting::isColor)
                 .filter(c -> c.getColor()
                         == text.getFirstPart()
-                                .getPartStyle()
-                                .getStyle()
-                                .getColor()
-                                .getValue())
+                        .getPartStyle()
+                        .getStyle()
+                        .getColor()
+                        .getValue())
                 .findFirst();
 
         if (chatFormatting.isPresent()) {

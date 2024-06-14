@@ -12,10 +12,11 @@ import com.wynntils.models.elements.type.Skill;
 import com.wynntils.models.stats.type.StatListOrdering;
 import com.wynntils.models.wynnitem.parsing.WynnItemParser;
 import com.wynntils.utils.type.Pair;
+import net.minecraft.network.chat.Component;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
-import net.minecraft.network.chat.Component;
 
 public abstract class TooltipBuilder {
     protected static final TooltipStyle DEFAULT_TOOLTIP_STYLE =

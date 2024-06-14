@@ -14,10 +14,12 @@ public abstract class PartyEvent extends Event {
      * Fired upon obtaining a new party list.
      * Get the party list from the party model manually if required.
      */
-    public static class Listed extends PartyEvent {}
+    public static class Listed extends PartyEvent {
+    }
 
     /**
      * Fired when someone invites you to their party
+     *
      * @field playerName the name of the player who invited your
      */
     public static class Invited extends PartyEvent {
@@ -34,6 +36,7 @@ public abstract class PartyEvent extends Event {
 
     /**
      * Fired upon someone else joining the user's party
+     *
      * @field playerName the name of the player who joined
      */
     public static class OtherJoined extends PartyEvent {
@@ -50,6 +53,7 @@ public abstract class PartyEvent extends Event {
 
     /**
      * Fired upon someone else leaving the user's party
+     *
      * @field playerName the name of the player who left
      */
     public static class OtherLeft extends PartyEvent {
@@ -66,6 +70,7 @@ public abstract class PartyEvent extends Event {
 
     /**
      * Fired upon a party member disconnecting
+     *
      * @field playerName the name of the player who disconnected
      */
     public static class OtherDisconnected extends PartyEvent {

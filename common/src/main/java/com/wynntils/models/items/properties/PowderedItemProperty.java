@@ -5,6 +5,7 @@
 package com.wynntils.models.items.properties;
 
 import com.wynntils.models.elements.type.Powder;
+
 import java.util.List;
 
 public interface PowderedItemProperty {

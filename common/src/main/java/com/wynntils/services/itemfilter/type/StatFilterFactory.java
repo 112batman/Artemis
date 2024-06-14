@@ -6,11 +6,13 @@ package com.wynntils.services.itemfilter.type;
 
 import com.google.common.base.CaseFormat;
 import com.wynntils.core.persisted.Translatable;
-import java.util.Optional;
 import net.minecraft.client.resources.language.I18n;
+
+import java.util.Optional;
 
 /**
  * A factory for creating {@link StatFilter} instances.
+ *
  * @param <T>
  */
 public abstract class StatFilterFactory<T> implements Translatable {

@@ -14,24 +14,26 @@ import com.wynntils.mc.event.ScreenOpenedEvent;
 import com.wynntils.models.trademarket.type.TradeMarketPriceInfo;
 import com.wynntils.screens.trademarket.TradeMarketSearchResultHolder;
 import com.wynntils.utils.mc.LoreUtils;
+
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.TreeMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 public class TradeMarketModel extends Model {
     private static final Pattern[] ITEM_NAME_PATTERNS = {
-        // Item on the create buy order menu or create sell offer menu
-        Pattern.compile("^§6(?:Buying|Selling) [^ ]+ (.+?)(?:§6)? for .+ Each$"),
-        // Items on the trade overview menu
-        Pattern.compile("^§6(?:Buying|Selling) [^ ]+ (.+)$"),
-        // Item on the view existing sell offer menu (on the right side)
-        Pattern.compile("^§7§l[^ ]+x (.+)$")
+            // Item on the create buy order menu or create sell offer menu
+            Pattern.compile("^§6(?:Buying|Selling) [^ ]+ (.+?)(?:§6)? for .+ Each$"),
+            // Items on the trade overview menu
+            Pattern.compile("^§6(?:Buying|Selling) [^ ]+ (.+)$"),
+            // Item on the view existing sell offer menu (on the right side)
+            Pattern.compile("^§7§l[^ ]+x (.+)$")
     };
 
     private static final Pattern TRADE_MARKET_FILTER_SCREEN_TITLE_PATTERN =

@@ -7,6 +7,7 @@ package com.wynntils.models.containers.containers;
 import com.wynntils.models.containers.Container;
 import com.wynntils.models.containers.type.ContainerBounds;
 import com.wynntils.models.containers.type.HighlightableProfessionProperty;
+
 import java.util.regex.Pattern;
 
 public class IngredientPouchContainer extends Container implements HighlightableProfessionProperty {

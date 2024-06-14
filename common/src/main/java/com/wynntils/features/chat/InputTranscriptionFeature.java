@@ -20,10 +20,12 @@ import com.wynntils.mc.event.ScreenInitEvent;
 import com.wynntils.models.wynnalphabet.WynnAlphabet;
 import com.wynntils.screens.transcription.widgets.WynnAlphabetButton;
 import com.wynntils.utils.mc.McUtils;
+
 import java.util.List;
 import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
 import net.minecraft.client.gui.components.EditBox;
 import net.minecraft.client.gui.screens.ChatScreen;
 import net.minecraftforge.eventbus.api.EventPriority;

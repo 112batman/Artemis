@@ -20,12 +20,8 @@ import com.wynntils.utils.render.FontRenderer;
 import com.wynntils.utils.render.type.HorizontalAlignment;
 import com.wynntils.utils.render.type.TextShadow;
 import com.wynntils.utils.render.type.VerticalAlignment;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.regex.Pattern;
-import java.util.regex.PatternSyntaxException;
-import java.util.stream.Collectors;
 import net.minecraft.ChatFormatting;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.AbstractWidget;
 import net.minecraft.client.gui.components.Button;
@@ -35,6 +31,12 @@ import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.resources.language.I18n;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.regex.Pattern;
+import java.util.regex.PatternSyntaxException;
+import java.util.stream.Collectors;
 
 public final class ChatTabEditingScreen extends WynntilsGridLayoutScreen {
     private static final int HEADER_ROW_Y = 6;
@@ -157,7 +159,7 @@ public final class ChatTabEditingScreen extends WynntilsGridLayoutScreen {
             boolean editedFirstSetupSelected = firstSetup
                     && edited != null
                     && (edited.getFilteredTypes() == null
-                            || edited.getFilteredTypes().contains(type));
+                    || edited.getFilteredTypes().contains(type));
             boolean ticked = oldCheckboxSelected || editedFirstSetupSelected;
 
             WynntilsCheckbox newBox = new WynntilsCheckbox(
@@ -200,11 +202,13 @@ public final class ChatTabEditingScreen extends WynntilsGridLayoutScreen {
         consumingCheckbox = new Checkbox(
                 (int) (dividedWidth * 35),
                 (int) (dividedHeight * FOURTH_ROW_Y),
-                BUTTON_HEIGHT,
-                BUTTON_HEIGHT,
                 Component.translatable("screens.wynntils.chatTabsGui.consuming"),
+                Minecraft.getInstance().font,
                 consumingCheckbox != null && consumingCheckbox.selected(),
-                true);
+                (arg1, arg2) -> {
+                });
+        consumingCheckbox.setWidth(BUTTON_HEIGHT);
+        consumingCheckbox.setHeight(BUTTON_HEIGHT);
         this.addRenderableWidget(consumingCheckbox);
         if (firstSetup && edited != null) {
             consumingCheckbox.selected = edited.isConsuming();
@@ -215,10 +219,10 @@ public final class ChatTabEditingScreen extends WynntilsGridLayoutScreen {
         String saveButtonKey =
                 edited == null ? "screens.wynntils.chatTabsGui.add" : "screens.wynntils.chatTabsGui.save";
         saveButton = new Button.Builder(
-                        Component.translatable(saveButtonKey).withStyle(ChatFormatting.GREEN), (button) -> {
-                            saveChatTab();
-                            reloadChatTabsWidgets();
-                        })
+                Component.translatable(saveButtonKey).withStyle(ChatFormatting.GREEN), (button) -> {
+            saveChatTab();
+            reloadChatTabsWidgets();
+        })
                 .pos((int) (dividedWidth * 35), (int) (dividedHeight * FIFTH_ROW_Y))
                 .size((int) (dividedWidth * 8), BUTTON_HEIGHT)
                 .build();
@@ -228,17 +232,17 @@ public final class ChatTabEditingScreen extends WynntilsGridLayoutScreen {
                 ? "screens.wynntils.chatTabsGui.addAndClose"
                 : "screens.wynntils.chatTabsGui.saveAndClose";
         saveAndCloseButton = new Button.Builder(
-                        Component.translatable(saveAndCloseButtonKey).withStyle(ChatFormatting.GREEN), (button) -> {
-                            saveChatTab();
-                            this.onClose();
-                        })
+                Component.translatable(saveAndCloseButtonKey).withStyle(ChatFormatting.GREEN), (button) -> {
+            saveChatTab();
+            this.onClose();
+        })
                 .pos((int) (dividedWidth * 44), (int) (dividedHeight * FIFTH_ROW_Y))
                 .size((int) (dividedWidth * 8), BUTTON_HEIGHT)
                 .build();
         this.addRenderableWidget(saveAndCloseButton);
 
         this.addRenderableWidget(new Button.Builder(
-                        Component.translatable("screens.wynntils.chatTabsGui.cancel"), (button) -> this.onClose())
+                Component.translatable("screens.wynntils.chatTabsGui.cancel"), (button) -> this.onClose())
                 .pos((int) (dividedWidth * 53), (int) (dividedHeight * FIFTH_ROW_Y))
                 .size((int) (dividedWidth * 8), BUTTON_HEIGHT)
                 .build());
@@ -455,9 +459,9 @@ public final class ChatTabEditingScreen extends WynntilsGridLayoutScreen {
         ChatFormatting color = edited == null ? ChatFormatting.GREEN : ChatFormatting.WHITE;
 
         chatTabsWidgets.add(new Button.Builder(
-                        Component.translatable("screens.wynntils.chatTabsGui.new")
-                                .withStyle(color),
-                        (button) -> McUtils.mc().setScreen(ChatTabEditingScreen.create()))
+                Component.translatable("screens.wynntils.chatTabsGui.new")
+                        .withStyle(color),
+                (button) -> McUtils.mc().setScreen(ChatTabEditingScreen.create()))
                 .pos(
                         (int) (dividedWidth * 13),
                         initialVerticalOffset + (int) (dividedHeight * (chatTabs.size() * 5 + 1)))

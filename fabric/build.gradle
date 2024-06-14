@@ -104,8 +104,8 @@ jar {
 
 shadowJar {
     configurations = [
-        project.configurations.shadowCommon,
-        project.configurations.shadowImplementation
+            project.configurations.shadowCommon,
+            project.configurations.shadowImplementation
     ]
 
     archiveClassifier = "dev-shadow"

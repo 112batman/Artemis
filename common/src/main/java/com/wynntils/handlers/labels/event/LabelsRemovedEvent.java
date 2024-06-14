@@ -5,9 +5,10 @@
 package com.wynntils.handlers.labels.event;
 
 import com.wynntils.handlers.labels.type.LabelInfo;
+import net.minecraftforge.eventbus.api.Event;
+
 import java.util.Collections;
 import java.util.List;
-import net.minecraftforge.eventbus.api.Event;
 
 public class LabelsRemovedEvent extends Event {
     private final List<LabelInfo> removedLabels;

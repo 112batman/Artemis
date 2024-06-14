@@ -95,7 +95,8 @@ public class GuidePowderItemStackButton extends WynntilsButton {
 
     /* no-op */
     @Override
-    public void onPress() {}
+    public void onPress() {
+    }
 
     public GuidePowderItemStack getItemStack() {
         return itemStack;

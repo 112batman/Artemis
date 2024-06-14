@@ -8,6 +8,7 @@ import com.google.common.base.CaseFormat;
 import com.wynntils.models.items.WynnItem;
 import com.wynntils.models.items.items.gui.TerritoryItem;
 import com.wynntils.models.territories.type.GuildResourceValues;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;

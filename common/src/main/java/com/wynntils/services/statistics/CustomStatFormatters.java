@@ -6,10 +6,12 @@ package com.wynntils.services.statistics;
 
 import com.wynntils.services.statistics.type.StatFormatter;
 import com.wynntils.utils.StringUtils;
+
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.text.NumberFormat;
 import java.util.Locale;
+
 import net.minecraft.Util;
 
 public final class CustomStatFormatters {

@@ -7,9 +7,11 @@ package com.wynntils.utils.mc;
 import com.google.gson.JsonObject;
 import com.mojang.authlib.GameProfile;
 import com.mojang.authlib.properties.Property;
+
 import java.nio.charset.Charset;
 import java.util.Base64;
 import java.util.UUID;
+
 import net.minecraft.client.multiplayer.ClientPacketListener;
 import net.minecraft.client.multiplayer.PlayerInfo;
 import net.minecraft.client.resources.DefaultPlayerSkin;

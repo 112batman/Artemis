@@ -20,7 +20,9 @@ import com.wynntils.utils.mc.McUtils;
 import com.wynntils.utils.render.type.HorizontalAlignment;
 import com.wynntils.utils.render.type.TextShadow;
 import com.wynntils.utils.render.type.VerticalAlignment;
+
 import java.util.List;
+
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.renderer.GameRenderer;
@@ -521,18 +523,18 @@ public final class RenderUtils {
      * drawProgressBar
      * Draws a progress bar (textureY1 and textureY2 now specify both textures with background being on top of the bar)
      *
-     * @param poseStack poseStack to use
-     * @param texture   the texture to use
+     * @param poseStack   poseStack to use
+     * @param texture     the texture to use
      * @param customColor the color for the bar
-     * @param x1        left x on screen
-     * @param y1        top y on screen
-     * @param x2        right x on screen
-     * @param y2        bottom right on screen
-     * @param textureX1 texture left x for the part
-     * @param textureY1 texture top y for the part (top of background)
-     * @param textureX2 texture right x for the part
-     * @param textureY2 texture bottom y for the part (bottom of bar)
-     * @param progress  progress of the bar, 0.0f to 1.0f is left to right and 0.0f to -1.0f is right to left
+     * @param x1          left x on screen
+     * @param y1          top y on screen
+     * @param x2          right x on screen
+     * @param y2          bottom right on screen
+     * @param textureX1   texture left x for the part
+     * @param textureY1   texture top y for the part (top of background)
+     * @param textureX2   texture right x for the part
+     * @param textureY2   texture bottom y for the part (bottom of bar)
+     * @param progress    progress of the bar, 0.0f to 1.0f is left to right and 0.0f to -1.0f is right to left
      */
     public static void drawColoredProgressBar(
             PoseStack poseStack,
@@ -1009,10 +1011,10 @@ public final class RenderUtils {
      * white will allow drawing.
      *
      * @param texture mask texture(please use Textures.Masks)
-     * @param x1 bottom-left x(on screen)
-     * @param y1 bottom-left y(on screen)
-     * @param x2 top-right x(on screen)
-     * @param y2 top-right y(on screen)
+     * @param x1      bottom-left x(on screen)
+     * @param y1      bottom-left y(on screen)
+     * @param x2      top-right x(on screen)
+     * @param y2      top-right y(on screen)
      */
     public static void createMask(
             PoseStack poseStack,

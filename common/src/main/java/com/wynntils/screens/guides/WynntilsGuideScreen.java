@@ -6,16 +6,13 @@ package com.wynntils.screens.guides;
 
 import com.wynntils.core.WynntilsMod;
 import com.wynntils.screens.base.WynntilsListScreen;
-import com.wynntils.screens.base.widgets.BackButton;
-import com.wynntils.screens.base.widgets.ItemFilterUIButton;
-import com.wynntils.screens.base.widgets.ItemSearchWidget;
-import com.wynntils.screens.base.widgets.PageSelectorButton;
-import com.wynntils.screens.base.widgets.WynntilsButton;
+import com.wynntils.screens.base.widgets.*;
 import com.wynntils.services.itemfilter.type.ItemProviderType;
 import com.wynntils.services.itemfilter.type.ItemSearchQuery;
 import com.wynntils.utils.render.Texture;
-import java.util.List;
 import net.minecraft.network.chat.Component;
+
+import java.util.List;
 
 public abstract class WynntilsGuideScreen<E, B extends WynntilsButton> extends WynntilsListScreen<E, B> {
     private List<ItemProviderType> supportedProviderTypes;

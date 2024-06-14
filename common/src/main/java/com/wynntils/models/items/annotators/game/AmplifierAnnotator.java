@@ -9,8 +9,10 @@ import com.wynntils.handlers.item.GameItemAnnotator;
 import com.wynntils.handlers.item.ItemAnnotation;
 import com.wynntils.models.items.items.game.AmplifierItem;
 import com.wynntils.utils.MathUtils;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
 import net.minecraft.world.item.ItemStack;
 
 public final class AmplifierAnnotator implements GameItemAnnotator {

@@ -6,10 +6,11 @@ package com.wynntils.core.consumers.commands;
 
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 import com.wynntils.core.persisted.Translatable;
-import java.util.List;
-import java.util.stream.Stream;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;
+
+import java.util.List;
+import java.util.stream.Stream;
 
 public abstract class Command implements Translatable {
     public abstract String getCommandName();

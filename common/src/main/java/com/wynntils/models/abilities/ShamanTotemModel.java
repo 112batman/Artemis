@@ -19,12 +19,14 @@ import com.wynntils.models.character.event.CharacterUpdateEvent;
 import com.wynntils.models.spells.event.SpellEvent;
 import com.wynntils.models.spells.type.SpellType;
 import com.wynntils.utils.mc.McUtils;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
 import net.minecraft.core.Position;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.decoration.ArmorStand;
@@ -192,7 +194,7 @@ public class ShamanTotemModel extends Model {
         for (ShamanTotem totem : totems) {
             if (totem != null
                     && (destroyedEntities.contains(totem.getTimerEntityId())
-                            || destroyedEntities.contains(totem.getVisibleEntityId()))) {
+                    || destroyedEntities.contains(totem.getVisibleEntityId()))) {
                 removeTotem(totem.getTotemNumber());
             }
         }
@@ -221,6 +223,7 @@ public class ShamanTotemModel extends Model {
 
     /**
      * Removes the given totem from the list of totems.
+     *
      * @param totem The totem to remove. Must be 1, 2, or 3
      */
     private void removeTotem(int totem) {
@@ -255,6 +258,7 @@ public class ShamanTotemModel extends Model {
 
     /**
      * Gets the totem bound to the given timerId.
+     *
      * @param timerId The timerId that is checked against the totems
      * @return The totem bound to the given timerId, or null if no totem is bound
      */

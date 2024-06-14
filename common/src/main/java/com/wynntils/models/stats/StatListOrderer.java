@@ -14,6 +14,7 @@ import com.wynntils.models.stats.type.StatListDelimiter;
 import com.wynntils.models.stats.type.StatListOrdering;
 import com.wynntils.models.stats.type.StatType;
 import com.wynntils.utils.ListUtils;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;

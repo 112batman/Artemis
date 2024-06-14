@@ -7,10 +7,11 @@ package com.wynntils.screens.base.widgets;
 import com.wynntils.screens.itemfilter.ItemFilterScreen;
 import com.wynntils.services.itemfilter.type.ItemProviderType;
 import com.wynntils.utils.mc.McUtils;
-import java.util.List;
 import net.minecraft.client.gui.components.Tooltip;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
+
+import java.util.List;
 
 public class ItemFilterUIButton extends WynntilsButton {
     private final SearchWidget searchWidget;

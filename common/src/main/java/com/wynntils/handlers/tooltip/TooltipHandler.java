@@ -14,16 +14,13 @@ import com.wynntils.handlers.tooltip.impl.identifiable.IdentifiableTooltipCompon
 import com.wynntils.handlers.tooltip.impl.identifiable.components.CharmTooltipComponent;
 import com.wynntils.handlers.tooltip.impl.identifiable.components.GearTooltipComponent;
 import com.wynntils.handlers.tooltip.impl.identifiable.components.TomeTooltipComponent;
-import com.wynntils.models.items.items.game.CharmItem;
-import com.wynntils.models.items.items.game.CraftedConsumableItem;
-import com.wynntils.models.items.items.game.CraftedGearItem;
-import com.wynntils.models.items.items.game.GearItem;
-import com.wynntils.models.items.items.game.TomeItem;
+import com.wynntils.models.items.items.game.*;
 import com.wynntils.models.items.properties.CraftedItemProperty;
 import com.wynntils.models.items.properties.IdentifiableItemProperty;
+import net.minecraft.world.item.ItemStack;
+
 import java.util.HashMap;
 import java.util.Map;
-import net.minecraft.world.item.ItemStack;
 
 public class TooltipHandler extends Handler {
     private final Map<Class<? extends IdentifiableItemProperty>, IdentifiableTooltipComponent>

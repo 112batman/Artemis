@@ -7,6 +7,7 @@ package com.wynntils.services.itemfilter.statproviders.territory;
 import com.wynntils.models.items.items.gui.TerritoryItem;
 import com.wynntils.models.territories.type.GuildResource;
 import com.wynntils.utils.type.CappedValue;
+
 import java.util.List;
 import java.util.Locale;
 import java.util.Optional;
